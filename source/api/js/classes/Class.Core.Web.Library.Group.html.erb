@@ -1,0 +1,327 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web.Library <span class="divider">/</span>
+  </li>
+    <li>
+    Group
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Library.Group">Core.Web.Library.Group</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>A representation of a group of libraries to be loaded at the same time.
+Libraries will be retrieved asynchronously, and then installed once ALL the libraries have
+been retrieved.  Installation will be done in the order in which the add() method was
+invoked to add libraries to the group (without regard for the order in which the 
+HTTP server returns the library code).
+
+A "load" event will be fired (listeners registered via <code>addLoadListener()</code>) when the group
+has completed loading and the libraries have been installed.  The "success" property of the fired event
+will be set to true in the event that all libraries were successfully loaded, and false otherwise.
+In the event of a library loading failure, the following properties will be available in the event:
+<ul>
+ <li><code>url</code>: the URL of the failed library.</li>
+ <li><code>ex</code>: the exception which occurred when attempting to load the library.</li>
+ <li><code>cancel</code>: a boolean flag, initially set to false, which may be set to true to avoid
+  having the library loader throw an exception for the failure.  If unset, the exception will be thrown.</li>
+</ul></p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Core.Web.Library.Group()</a></code><br/>
+Creates a new library group.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerList">_listenerList</a></code><br/>
+Listener storage.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._libraries">_libraries</a></code><br/>
+Array of libraries to be loaded.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._loadedCount">_loadedCount</a></code><br/>
+Number of libraries which have been loaded.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._totalCount">_totalCount</a></code><br/>
+Number of libraries to load.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.add">add(libraryUrl)</a></code><br/>
+Adds a library to the library group.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addLoadListener">addLoadListener(l)</a></code><br/>
+Adds a listener to be notified when all libraries in the group have been loaded.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasNewLibraries">hasNewLibraries()</a></code><br/>
+Determines if this library group contains any new (not previously loaded)
+libraries.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._install">_install()</a></code><br/>
+Installs all libraries in the group.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._notifyRetrieved">_notifyRetrieved()</a></code><br/>
+Event listener invoked when a single library has been successfully retrieved.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.load">load()</a></code><br/>
+Initializes library loading.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeLoadListener">removeLoadListener(l)</a></code><br/>
+Removes a listener from being notified when all libraries in the group have been loaded.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.Library.Group()</span>
+
+<dl>
+<dd>Creates a new library group.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.add"></a>
+<span class="DetailPropertyName">add</span>
+
+<dl>
+<dd>Adds a library to the library group.
+Libraries which have previously been loaded will not be loaded again.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>libraryUrl</code> 
+<em>(String)</em>
+- the URL from which to retrieve the library.</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addLoadListener"></a>
+<span class="DetailPropertyName">addLoadListener</span>
+
+<dl>
+<dd>Adds a listener to be notified when all libraries in the group have been loaded.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to add</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasNewLibraries"></a>
+<span class="DetailPropertyName">hasNewLibraries</span>
+
+<dl>
+<dd>Determines if this library group contains any new (not previously loaded)
+libraries.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if any new libraries exist
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._install"></a>
+<span class="DetailPropertyName">_install</span>
+
+<dl>
+<dd>Installs all libraries in the group.
+This method is invoked once all libraries have been successfully
+retrieved.  It will invoke any registered load listeners
+once the libraries have been installed.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._notifyRetrieved"></a>
+<span class="DetailPropertyName">_notifyRetrieved</span>
+
+<dl>
+<dd>Event listener invoked when a single library has been successfully retrieved.
+When all libraries have been retrieved, this method will invoke _install().
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.load"></a>
+<span class="DetailPropertyName">load</span>
+
+<dl>
+<dd>Initializes library loading.  When this method is invoked
+the libraries will be asynchronously loaded.  This method
+will return before the libraries have been loaded.
+Once this method has been invoked, add() may no longer
+be invoked.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeLoadListener"></a>
+<span class="DetailPropertyName">removeLoadListener</span>
+
+<dl>
+<dd>Removes a listener from being notified when all libraries in the group have been loaded.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

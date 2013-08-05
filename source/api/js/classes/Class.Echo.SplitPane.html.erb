@@ -1,0 +1,455 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo <span class="divider">/</span>
+  </li>
+    <li>
+    SplitPane
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Component">Echo.Component</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.SplitPane">Echo.SplitPane</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>SplitPane component: a pane component which displays two components
+horizontally or vertically adjacent to one another, optionally allowing the
+user to apportion space between the two using a resize handle. May have at
+most two child components. Supports pane components as children.</p>
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.ORIENTATION_HORIZONTAL_LEADING_TRAILING">ORIENTATION_HORIZONTAL_LEADING_TRAILING</a></code><br/>
+Orientation property value indicating a leading / trailing layout.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.ORIENTATION_HORIZONTAL_TRAILING_LEADING">ORIENTATION_HORIZONTAL_TRAILING_LEADING</a></code><br/>
+Orientation property value indicating a trailing / leading layout.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.ORIENTATION_HORIZONTAL_LEFT_RIGHT">ORIENTATION_HORIZONTAL_LEFT_RIGHT</a></code><br/>
+Orientation property value indicating a left / right layout.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.ORIENTATION_HORIZONTAL_RIGHT_LEFT">ORIENTATION_HORIZONTAL_RIGHT_LEFT</a></code><br/>
+Orientation property value indicating a right / left layout.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.ORIENTATION_VERTICAL_TOP_BOTTOM">ORIENTATION_VERTICAL_TOP_BOTTOM</a></code><br/>
+Orientation property value indicating a top / bottom layout.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.ORIENTATION_VERTICAL_BOTTOM_TOP">ORIENTATION_VERTICAL_BOTTOM_TOP</a></code><br/>
+Orientation property value indicating a bottom / top layout.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.DEFAULT_SEPARATOR_POSITION">DEFAULT_SEPARATOR_POSITION</a></code><br/>
+Default separator position.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.DEFAULT_SEPARATOR_SIZE_FIXED">DEFAULT_SEPARATOR_SIZE_FIXED</a></code><br/>
+Default separator size for fixed SplitPanes.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.DEFAULT_SEPARATOR_SIZE_RESIZABLE">DEFAULT_SEPARATOR_SIZE_RESIZABLE</a></code><br/>
+Default separator size for resizable SplitPanes.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.DEFAULT_SEPARATOR_COLOR">DEFAULT_SEPARATOR_COLOR</a></code><br/>
+Default separator color.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.OVERFLOW_AUTO">OVERFLOW_AUTO</a></code><br/>
+Setting for <code>overflow</code> property that scrollbars should be displayed when content overflows.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.OVERFLOW_HIDDEN">OVERFLOW_HIDDEN</a></code><br/>
+Setting for <code>overflow</code> property indicating that overflowing content should be hidden.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.OVERFLOW_SCROLL">OVERFLOW_SCROLL</a></code><br/>
+Setting for <code>overflow</code> property indicating that scrollbars should always be displayed.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.componentType">componentType</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.pane">pane</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getFocusOrder">getFocusOrder()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Component</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Component#Method.add">add</a></code>, <code><a href="Class.Echo.Component#Method.addListener">addListener</a></code>, <code><a href="Class.Echo.Component#Method.fireEvent">fireEvent</a></code>, <code><a href="Class.Echo.Component#Method.get">get</a></code>, <code><a href="Class.Echo.Component#Method.getComponent">getComponent</a></code>, <code><a href="Class.Echo.Component#Method.getComponentCount">getComponentCount</a></code>, <code><a href="Class.Echo.Component#Method.getIndex">getIndex</a></code>, <code><a href="Class.Echo.Component#Method.getLayoutDirection">getLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getLocale">getLocale</a></code>, <code><a href="Class.Echo.Component#Method.getLocalStyleData">getLocalStyleData</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLayoutDirection">getRenderLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLocale">getRenderLocale</a></code>, <code><a href="Class.Echo.Component#Method.getStyle">getStyle</a></code>, <code><a href="Class.Echo.Component#Method.getStyleName">getStyleName</a></code>, <code><a href="Class.Echo.Component#Method.indexOf">indexOf</a></code>, <code><a href="Class.Echo.Component#Method.isActive">isActive</a></code>, <code><a href="Class.Echo.Component#Method.isAncestorOf">isAncestorOf</a></code>, <code><a href="Class.Echo.Component#Method.isEnabled">isEnabled</a></code>, <code><a href="Class.Echo.Component#Method.isRenderEnabled">isRenderEnabled</a></code>, <code><a href="Class.Echo.Component#Method.register">register</a></code>, <code><a href="Class.Echo.Component#Method.render">render</a></code>, <code><a href="Class.Echo.Component#Method.renderIndex">renderIndex</a></code>, <code><a href="Class.Echo.Component#Method.remove">remove</a></code>, <code><a href="Class.Echo.Component#Method.removeAll">removeAll</a></code>, <code><a href="Class.Echo.Component#Method.removeListener">removeListener</a></code>, <code><a href="Class.Echo.Component#Method.removeAllListeners">removeAllListeners</a></code>, <code><a href="Class.Echo.Component#Method.set">set</a></code>, <code><a href="Class.Echo.Component#Method.setEnabled">setEnabled</a></code>, <code><a href="Class.Echo.Component#Method.setIndex">setIndex</a></code>, <code><a href="Class.Echo.Component#Method.setLayoutDirection">setLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.setLocale">setLocale</a></code>, <code><a href="Class.Echo.Component#Method.setStyle">setStyle</a></code>, <code><a href="Class.Echo.Component#Method.setStyleName">setStyleName</a></code>, <code><a href="Class.Echo.Component#Method.toString">toString</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Style Properties</th>
+</tr>
+
+<tr>
+<td><code>autoPositioned</code></td>
+<td>
+<code>Boolean</code>
+</td>
+<td>flag indicating whether the pane should set the
+    separator position automatically based on size of first child. This
+    feature is only available on vertically oriented panes, where the first
+    child contains non-pane content.</td>
+</td>
+</tr>
+<tr>
+<td><code>orientation</code></td>
+<td>
+<code>Number</code>
+</td>
+<td>the orientation of the SplitPane, one of the
+    following values:
+    <ul>
+    <li><code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code> (the default)</li>
+    <li><code>ORIENTATION_HORIZONTAL_TRAILING_LEADING</code></li>
+    <li><code>ORIENTATION_HORIZONTAL_LEFT_RIGHT</code></li>
+    <li><code>ORIENTATION_HORIZONTAL_RIGHT_LEFT</code></li>
+    <li><code>ORIENTATION_VERTICAL_TOP_BOTTOM</code></li>
+    <li><code>ORIENTATION_VERTICAL_BOTTOM_TOP</code></li>
+    </ul></td>
+</td>
+</tr>
+<tr>
+<td><code>resizable</code></td>
+<td>
+<code>Boolean</code>
+</td>
+<td>flag indicating whether the pane separator can be
+    moved</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorColor</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the separator color</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorHeight</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the height of the separator (this property is
+    used to determine the size of the separator in vertical orientations)</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorHorizontalImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>a FillImage used to paint the
+    separator for horizontal orientations</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorHorizontalRolloverImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>a FillImage used to paint
+    the separator for horizontal orientations when the mouse is over it</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorPosition</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>an extent specifying the position of the
+    separator</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorRolloverColor</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the rollover separator color</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorVerticalImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>a FillImage used to paint the
+    separator for vertical orientations</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorVerticalRolloverImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>a FillImage used to paint the
+    separator for vertical orientations when the mouse is over it</td>
+</td>
+</tr>
+<tr>
+<td><code>separatorWidth</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the width of the separator (this property is
+    used to determine the size of the separator in horizontal orientations)</td>
+</td>
+</tr>
+</table> 
+<br/>
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Layout Data Properties</th>
+</tr>
+<tr>
+<td colspan="3">These properties may be set on <code>layoutData</code> property values of immediate child components to describe 
+how the child should be rendered within the container.</td>
+</tr>
+
+<tr>
+<td><code>alignment</code></td>
+<td>
+Alignment (<code>String</code> or <code>Object</code>)
+</td>
+<td>the alignment of the child component within its
+     subpane</td>
+</td>
+</tr>
+<tr>
+<td><code>background</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the background of the child component's subpane</td>
+</td>
+</tr>
+<tr>
+<td><code>backgroundImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>the background image of the child
+     component's subpane</td>
+</td>
+</tr>
+<tr>
+<td><code>insets</code></td>
+<td>
+Insets (<code>Number</code>, <code>String</code>, or <code>Object</code>)
+</td>
+<td>the insets margin of the child component's subpane</td>
+</td>
+</tr>
+<tr>
+<td><code>maximumSize</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the maximum size of the child component's subpane</td>
+</td>
+</tr>
+<tr>
+<td><code>minimumSize</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the minimum size of the child component's subpane</td>
+</td>
+</tr>
+<tr>
+<td><code>overflow</code></td>
+<td>
+<code>Number</code>
+</td>
+<td>the layout behavior to use when the child component is
+     larger than its containing subpane, one of the following values:
+     <ul>
+     <li><code>OVERFLOW_AUTO</code> (the default)</li>
+     <li><code>OVERFLOW_HIDDEN</code></li>
+     <li><code>OVERFLOW_SCROLL</code></li>
+     </ul></td>
+</td>
+</tr>
+</table> 
+<br/>
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.getFocusOrder"></a>
+<span class="DetailPropertyName">getFocusOrder</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

@@ -1,0 +1,252 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras <span class="divider">/</span>
+  </li>
+    <li>
+    MenuStateModel
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Extras.MenuStateModel">Extras.MenuStateModel</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Representation of menu model state, describing which items are selected and/or disabled.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.MenuStateModel()</a></code><br/>
+Creates a new <code>MenuStateModel</code>.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._disabledItems">_disabledItems</a></code><br/>
+Disabled menu item ids.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._selectedItems">_selectedItems</a></code><br/>
+Selected menu item ids.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isEnabled">isEnabled(modelId)</a></code><br/>
+Determines if the specified menu item is enabled.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isSelected">isSelected(modelId)</a></code><br/>
+Determines if the specified menu item is selected.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setEnabled">setEnabled(modelId, enabled)</a></code><br/>
+Sets the enabled state of a menu item.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setSelected">setSelected(modelId, selected)</a></code><br/>
+Sets the selection state of a menu item.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Extras.MenuStateModel()</span>
+
+<dl>
+<dd>Creates a new <code>MenuStateModel</code>.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.isEnabled"></a>
+<span class="DetailPropertyName">isEnabled</span>
+
+<dl>
+<dd>Determines if the specified menu item is enabled.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>modelId</code> 
+<em>(String)</em>
+- the item model id</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the item is enabled
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isSelected"></a>
+<span class="DetailPropertyName">isSelected</span>
+
+<dl>
+<dd>Determines if the specified menu item is selected.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>modelId</code> 
+<em>(String)</em>
+- the item model id</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the item is selected
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setEnabled"></a>
+<span class="DetailPropertyName">setEnabled</span>
+
+<dl>
+<dd>Sets the enabled state of a menu item.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>modelId</code> 
+<em>(String)</em>
+- the item model id</dd>
+<dd>
+<code>enabled</code> 
+<em>(Boolean)</em>
+- the enabled state</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setSelected"></a>
+<span class="DetailPropertyName">setSelected</span>
+
+<dl>
+<dd>Sets the selection state of a menu item.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>modelId</code> 
+<em>(String)</em>
+- the item model id</dd>
+<dd>
+<code>selected</code> 
+<em>(Boolean)</em>
+- the selection state</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

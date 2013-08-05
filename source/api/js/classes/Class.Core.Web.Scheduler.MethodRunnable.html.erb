@@ -1,0 +1,163 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web.Scheduler <span class="divider">/</span>
+  </li>
+    <li>
+    MethodRunnable
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Scheduler.Runnable">Core.Web.Scheduler.Runnable</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Core.Web.Scheduler.MethodRunnable">Core.Web.Scheduler.MethodRunnable</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>A runnable task implementation that invokes a function at regular intervals.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Core.Web.Scheduler.MethodRunnable(time, repeat, f)</a></code><br/>
+Creates a new Runnable.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.f">f</a></code><br/>
+The function to invoke.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.run">run()</a></code><br/>
+Default run() implementation.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Core.Web.Scheduler.Runnable</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Core.Web.Scheduler.Runnable#Method.run">run</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.Scheduler.Runnable(time, repeat, f)</span>
+
+<dl>
+<dd>Creates a new Runnable.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>time</code> 
+<em>(Number)</em>
+- the time interval, in milliseconds, after which the Runnable should be executed
+       (may be null/undefined to execute task immediately, in such cases repeat must be false)</dd>
+<dd>
+<code>repeat</code> 
+<em>(Boolean)</em>
+- a flag indicating whether the task should be repeated</dd>
+<dd>
+<code>f</code> 
+<em>(Function)</em>
+- a function to invoke, may be null/undefined</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.run"></a>
+<span class="DetailPropertyName">run</span>
+
+<dl>
+<dd>Default run() implementation. Should be overridden by subclasses.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

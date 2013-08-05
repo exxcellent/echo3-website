@@ -1,0 +1,1412 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo <span class="divider">/</span>
+  </li>
+    <li>
+    Component
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Component">Echo.Component</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.AbstractButton">Echo.AbstractButton</a></code>, <code><a href="Class.Echo.AbstractListComponent">Echo.AbstractListComponent</a></code>, <code><a href="Class.Echo.Arc.ChildContainer">Echo.Arc.ChildContainer</a></code>, <code><a href="Class.Echo.Column">Echo.Column</a></code>, <code><a href="Class.Echo.Composite">Echo.Composite</a></code>, <code><a href="Class.Echo.ContentPane">Echo.ContentPane</a></code>, <code><a href="Class.Echo.Grid">Echo.Grid</a></code>, <code><a href="Class.Echo.Label">Echo.Label</a></code>, <code><a href="Class.Echo.Row">Echo.Row</a></code>, <code><a href="Class.Echo.SplitPane">Echo.SplitPane</a></code>, <code><a href="Class.Echo.TextComponent">Echo.TextComponent</a></code>, <code><a href="Class.Echo.WindowPane">Echo.WindowPane</a></code>, <code><a href="Class.Extras.AccordionPane">Extras.AccordionPane</a></code>, <code><a href="Class.Extras.BorderPane">Extras.BorderPane</a></code>, <code><a href="Class.Extras.CalendarSelect">Extras.CalendarSelect</a></code>, <code><a href="Class.Extras.ColorSelect">Extras.ColorSelect</a></code>, <code><a href="Class.Extras.Group">Extras.Group</a></code>, <code><a href="Class.Extras.MenuComponent">Extras.MenuComponent</a></code>, <code><a href="Class.Extras.RichTextArea">Extras.RichTextArea</a></code>, <code><a href="Class.Extras.Sync.RichTextArea.OverlayPane">Extras.Sync.RichTextArea.OverlayPane</a></code>, <code><a href="Class.Extras.Sync.RichTextArea.TableSizeSelector">Extras.Sync.RichTextArea.TableSizeSelector</a></code>, <code><a href="Class.Extras.TabPane">Extras.TabPane</a></code>, <code><a href="Class.Extras.ToolTipContainer">Extras.ToolTipContainer</a></code>, <code><a href="Class.Extras.TransitionPane">Extras.TransitionPane</a></code>, <code><a href="Class.FileTransfer.AbstractUploadSelect">FileTransfer.AbstractUploadSelect</a></code></dd>
+</dl>
+
+
+
+<p>Base class for components.
+Derived classes should wishing to support hierarchal construction should provide constructors
+with a first parameter name of 'properties' which is passed to the super-constructor.
+In any case, the super-constructor must be invoked.
+A component MUST have its componentType property set before it is used in a hierarchy.  Failing to do so
+will throw an exception and/or result in indeterminate behavior.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Component(properties)</a></code><br/>
+Creates a new Component.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._nextRenderId">_nextRenderId</a></code><br/>
+The next automatically assigned client render id.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.componentType">componentType</a></code><br/>
+Component type.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.focusable">focusable</a></code><br/>
+Flag indicating whether or not the component is focusable.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.getFocusOrder">getFocusOrder</a></code><br/>
+Returns the order in which child components should be focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.pane">pane</a></code><br/>
+Flag indicating whether component is rendered as a pane (pane components consume available height).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._layoutDirection">_layoutDirection</a></code><br/>
+Component layout direction.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._locale">_locale</a></code><br/>
+Component locale.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.renderId">renderId</a></code><br/>
+The render id.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.parent">parent</a></code><br/>
+The parent component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.application">application</a></code><br/>
+The registered application.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerList">_listenerList</a></code><br/>
+Listener list.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._style">_style</a></code><br/>
+Referenced external style
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._styleName">_styleName</a></code><br/>
+Assigned style name from application-level style sheet.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._enabled">_enabled</a></code><br/>
+Enabled state of the component (default true).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.children">children</a></code><br/>
+Array of child components.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.focusNextId">focusNextId</a></code><br/>
+renderId of application-set next focusable component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.focusPreviousId">focusPreviousId</a></code><br/>
+renderId of application-set previous focusable component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._localStyle">_localStyle</a></code><br/>
+Internal style used to store properties set directly on component.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.add">add(component, index)</a></code><br/>
+Adds a component as a child.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addListener">addListener(eventType, eventTarget)</a></code><br/>
+Adds an arbitrary event listener.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.fireEvent">fireEvent(event)</a></code><br/>
+Provides notification of an arbitrary event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.get">get(name)</a></code><br/>
+Returns an arbitrary property value.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getComponent">getComponent(index)</a></code><br/>
+Retrieves the child component at the specified index.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getComponentCount">getComponentCount()</a></code><br/>
+Returns the number of child components.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getIndex">getIndex(name, index)</a></code><br/>
+Returns an arbitrary indexed property value.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getLayoutDirection">getLayoutDirection()</a></code><br/>
+Returns the component layout direction.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getLocale">getLocale()</a></code><br/>
+Returns the component locale.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getLocalStyleData">getLocalStyleData()</a></code><br/>
+Retrieves local style property map associations.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRenderLayoutDirection">getRenderLayoutDirection()</a></code><br/>
+Returns the layout direction with which the component should be rendered, based on analyzing the component's layout 
+direction, its parent's, and/or the application's.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRenderLocale">getRenderLocale()</a></code><br/>
+Returns the locale  with which the component should be rendered, based on analyzing the component's locale,
+its parent's, and/or the application's.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getStyle">getStyle()</a></code><br/>
+Returns the style assigned to this component, if any.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getStyleName">getStyleName()</a></code><br/>
+Returns the name of the style (from the application's style sheet) 
+assigned to this component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.indexOf">indexOf(component)</a></code><br/>
+Returns the index of a child component, or -1 if the component
+is not a child.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isActive">isActive()</a></code><br/>
+Determines if the component is active, that is, within the current modal context
+and ready to receive input.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isAncestorOf">isAncestorOf(c)</a></code><br/>
+Determines if this component is or is an ancestor of another component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isEnabled">isEnabled()</a></code><br/>
+Determines the enabled state of this component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isRenderEnabled">isRenderEnabled()</a></code><br/>
+Determines whether this <code>Component</code> should be rendered with
+an enabled state.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.register">register(application)</a></code><br/>
+Registers / unregisters a component that has been added/removed to/from a registered hierarchy
+(a hierarchy that is registered to an application).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.render">render(name, defaultValue)</a></code><br/>
+Returns the value of a property that should be rendered,
+based on the value set on this component, in the component's
+specified style, and/or in the application's stylesheet.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderIndex">renderIndex(name, index, defaultValue)</a></code><br/>
+Returns the value of an indexed property that should be rendered,
+based on the value set on this component, in the component's
+specified style, and/or in the application's stylesheet.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.remove">remove(componentOrIndex)</a></code><br/>
+Removes a child component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeAll">removeAll()</a></code><br/>
+Removes all child components.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeListener">removeListener(eventType, eventTarget)</a></code><br/>
+Removes an arbitrary event listener.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeAllListeners">removeAllListeners()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.set">set(name, value, rendered)</a></code><br/>
+Sets the value of a property in the internal style.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setEnabled">setEnabled(newValue)</a></code><br/>
+Sets the enabled state of the component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setIndex">setIndex(name, index, newValue, rendered)</a></code><br/>
+Sets the value of an indexed property in the internal style.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setLayoutDirection">setLayoutDirection(newValue)</a></code><br/>
+Sets a component-specific layout direction.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setLocale">setLocale(newValue)</a></code><br/>
+Sets a component-specific locale.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setStyle">setStyle(newValue)</a></code><br/>
+Sets the style of the component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setStyleName">setStyleName(newValue)</a></code><br/>
+Sets the name of the style (from the application's style sheet) 
+assigned to this component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toString">toString(longFormat)</a></code><br/>
+Returns a string representation of the component (default implementation).
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Style Properties</th>
+</tr>
+
+<tr>
+<td><code>background</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the background color</td>
+</td>
+</tr>
+<tr>
+<td><code>font</code></td>
+<td>
+Font (<code>Object</code>)
+</td>
+<td>the component font</td>
+</td>
+</tr>
+<tr>
+<td><code>foreground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the foreground color</td>
+</td>
+</tr>
+<tr>
+<td><code>layoutData</code></td>
+<td>
+</td>
+<td>layout data information, describing how the component should be rendered by its container</td>
+</td>
+</tr>
+</table> 
+<br/>
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Events</th>
+</tr>
+
+<tr>
+<td><code>property</code></td>
+<td>An event fired when the a property of the component changes.  The <code>propertyName</code> property
+       will specify the name of the changed property.  The <code>oldValue</code> and <code>newValue</code> properties
+       (may) describe the previous and current states of the property, respectively.</td>
+</tr>
+<tr>
+<td><code>init</code></td>
+<td>An event which is fired when the Component is added to a component hierarchy which is registered to an
+       application.  The "application" property of the Component will be available when the event is fired.</td>
+</tr>
+<tr>
+<td><code>dispose</code></td>
+<td>An event which is fired when the Component is about to be removed from a component hierarchy which is
+       registered to an application.  The "application" property of the Component will be available when the event is fired.</td>
+</tr>
+<tr>
+<td><code>parent</code></td>
+<td>An event which is fired when the Component's parent is changed.</td>
+</tr>
+<tr>
+<td><code>children</code></td>
+<td>An event which is fired when a child is added to or removed from the Component.</td>
+</tr>
+</table> 
+<br/>
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Echo.Component(properties)</span>
+
+<dl>
+<dd>Creates a new Component.
+The parent constructor MUST be invoked if it is overridden.  This is accomplished by including the statement
+"BaseComponent.call(this, properties)" in any derivative constructor, where "BaseComponent" is
+class from which the component is immediately derived (which may or may not be Echo.Component itself).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>properties</code> 
+- (Optional) associative mapping of initial property values (may be null)
+       By default, all properties will be placed into the local style, except for the following:
+       <ul>
+        <li><code>styleName</code> specifies the component stylesheet style name</li>
+        <li><code>style</code> specifies the referenced component style</li>
+        <li><code>renderId</code> specifies the render id</li>
+        <li><code>children</code> an array specifying the initial children of the component</li>
+        <li><code>events</code> an associative mapping between event names and listener methods</li>
+       </ul></dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.add"></a>
+<span class="DetailPropertyName">add</span>
+
+<dl>
+<dd>Adds a component as a child.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component to add</dd>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the (integer) index at which to add it (optional, omission
+       will cause component to be appended to end)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addListener"></a>
+<span class="DetailPropertyName">addListener</span>
+
+<dl>
+<dd>Adds an arbitrary event listener.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the event type name</dd>
+<dd>
+<code>eventTarget</code> 
+<em>(Function)</em>
+- the method to invoke when the event occurs 
+       (the event will be passed as the single argument)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.fireEvent"></a>
+<span class="DetailPropertyName">fireEvent</span>
+
+<dl>
+<dd>Provides notification of an arbitrary event.
+Listeners will be notified based on the event's type property.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>event</code> 
+- the event to fire</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.get"></a>
+<span class="DetailPropertyName">get</span>
+
+<dl>
+<dd>Returns an arbitrary property value.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+<em>(String)</em>
+- the name of the property</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the property value
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getComponent"></a>
+<span class="DetailPropertyName">getComponent</span>
+
+<dl>
+<dd>Retrieves the child component at the specified index.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the (integer) index</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the child component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getComponentCount"></a>
+<span class="DetailPropertyName">getComponentCount</span>
+
+<dl>
+<dd>Returns the number of child components.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the number of child components
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getIndex"></a>
+<span class="DetailPropertyName">getIndex</span>
+
+<dl>
+<dd>Returns an arbitrary indexed property value.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+<em>(String)</em>
+- the name of the property</dd>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the index to return</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the property value
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getLayoutDirection"></a>
+<span class="DetailPropertyName">getLayoutDirection</span>
+
+<dl>
+<dd>Returns the component layout direction.
+Note that in most cases it is preferable to set the layout direction of the Application, rather than individual components.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.LayoutDirection">Echo.LayoutDirection</a>)</em>
+
+the component layout direction
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getLocale"></a>
+<span class="DetailPropertyName">getLocale</span>
+
+<dl>
+<dd>Returns the component locale.
+Note that in most cases it is preferable to set the locale of the Application, rather than individual components.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the component locale
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getLocalStyleData"></a>
+<span class="DetailPropertyName">getLocalStyleData</span>
+
+<dl>
+<dd>Retrieves local style property map associations.  This method should only be used by a de-serialized for
+the purpose of rapidly loading properties into a new component.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the internal style property map associations
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getRenderLayoutDirection"></a>
+<span class="DetailPropertyName">getRenderLayoutDirection</span>
+
+<dl>
+<dd>Returns the layout direction with which the component should be rendered, based on analyzing the component's layout 
+direction, its parent's, and/or the application's.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.LayoutDirection">Echo.LayoutDirection</a>)</em>
+
+the rendering layout direction
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getRenderLocale"></a>
+<span class="DetailPropertyName">getRenderLocale</span>
+
+<dl>
+<dd>Returns the locale  with which the component should be rendered, based on analyzing the component's locale,
+its parent's, and/or the application's.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the rendering locale
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getStyle"></a>
+<span class="DetailPropertyName">getStyle</span>
+
+<dl>
+<dd>Returns the style assigned to this component, if any.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the assigned style
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getStyleName"></a>
+<span class="DetailPropertyName">getStyleName</span>
+
+<dl>
+<dd>Returns the name of the style (from the application's style sheet) 
+assigned to this component.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the style name
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.indexOf"></a>
+<span class="DetailPropertyName">indexOf</span>
+
+<dl>
+<dd>Returns the index of a child component, or -1 if the component
+is not a child.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the index
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isActive"></a>
+<span class="DetailPropertyName">isActive</span>
+
+<dl>
+<dd>Determines if the component is active, that is, within the current modal context
+and ready to receive input.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+the active state
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isAncestorOf"></a>
+<span class="DetailPropertyName">isAncestorOf</span>
+
+<dl>
+<dd>Determines if this component is or is an ancestor of another component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>c</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component to test</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if an ancestor relationship exists
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isEnabled"></a>
+<span class="DetailPropertyName">isEnabled</span>
+
+<dl>
+<dd>Determines the enabled state of this component.
+Use isRenderEnabled() to determine whether a component should be rendered as enabled.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the enabled state of this specific component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isRenderEnabled"></a>
+<span class="DetailPropertyName">isRenderEnabled</span>
+
+<dl>
+<dd>Determines whether this <code>Component</code> should be rendered with
+an enabled state.
+Disabled <code>Component</code>s are not eligible to receive user input.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the component should be rendered enabled
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.register"></a>
+<span class="DetailPropertyName">register</span>
+
+<dl>
+<dd>Registers / unregisters a component that has been added/removed to/from a registered hierarchy
+(a hierarchy that is registered to an application).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>application</code> 
+<em>(<a href="Class.Echo.Application">Echo.Application</a>)</em>
+- the application (null to unregister the component)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.render"></a>
+<span class="DetailPropertyName">render</span>
+
+<dl>
+<dd>Returns the value of a property that should be rendered,
+based on the value set on this component, in the component's
+specified style, and/or in the application's stylesheet.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+<em>(String)</em>
+- the name of the property</dd>
+<dd>
+<code>defaultValue</code> 
+- the default value to return if no value is 
+       specified in an internal property, style, or stylesheet</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the property value
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderIndex"></a>
+<span class="DetailPropertyName">renderIndex</span>
+
+<dl>
+<dd>Returns the value of an indexed property that should be rendered,
+based on the value set on this component, in the component's
+specified style, and/or in the application's stylesheet.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+<em>(String)</em>
+- the name of the property</dd>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the (integer) index of the property</dd>
+<dd>
+<code>defaultValue</code> 
+- the default value to return if no value is 
+       specified in an internal property, style, or stylesheet</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the property value
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.remove"></a>
+<span class="DetailPropertyName">remove</span>
+
+<dl>
+<dd>Removes a child component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>componentOrIndex</code> 
+- the index of the component to remove, or the component to remove
+       (values may be of type Echo.Component or Number)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeAll"></a>
+<span class="DetailPropertyName">removeAll</span>
+
+<dl>
+<dd>Removes all child components.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeListener"></a>
+<span class="DetailPropertyName">removeListener</span>
+
+<dl>
+<dd>Removes an arbitrary event listener.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the event type name</dd>
+<dd>
+<code>eventTarget</code> 
+<em>(Function)</em>
+- the method to invoke when the event occurs 
+       (the event will be passed as the single argument)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeAllListeners"></a>
+<span class="DetailPropertyName">removeAllListeners</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.set"></a>
+<span class="DetailPropertyName">set</span>
+
+<dl>
+<dd>Sets the value of a property in the internal style.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+<em>(String)</em>
+- the name of the property</dd>
+<dd>
+<code>value</code> 
+- the new value of the property</dd>
+<dd>
+<code>rendered</code> 
+- optional flag indicating whether the update has already been rendered by the containing client; 
+       if enabled, the property update will not be sent to the update manager</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setEnabled"></a>
+<span class="DetailPropertyName">setEnabled</span>
+
+<dl>
+<dd>Sets the enabled state of the component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+- the new enabled state</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setIndex"></a>
+<span class="DetailPropertyName">setIndex</span>
+
+<dl>
+<dd>Sets the value of an indexed property in the internal style.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+<em>(String)</em>
+- the name of the property</dd>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the index of the property</dd>
+<dd>
+<code>newValue</code> 
+- the new value of the property</dd>
+<dd>
+<code>rendered</code> 
+- optional flag indicating whether the update has already been rendered by the containing client; 
+       if enabled, the property update will not be sent to the update manager</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setLayoutDirection"></a>
+<span class="DetailPropertyName">setLayoutDirection</span>
+
+<dl>
+<dd>Sets a component-specific layout direction.
+Note that in most cases it is preferable to set the layout direction of the Application, 
+rather than individual components.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(<a href="Class.Echo.LayoutDirection">Echo.LayoutDirection</a>)</em>
+- the new layout direction</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setLocale"></a>
+<span class="DetailPropertyName">setLocale</span>
+
+<dl>
+<dd>Sets a component-specific locale.
+Note that in most cases it is preferable to set the locale of the Application, 
+rather than individual components.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(String)</em>
+- the new layout direction</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setStyle"></a>
+<span class="DetailPropertyName">setStyle</span>
+
+<dl>
+<dd>Sets the style of the component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+- the new style</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setStyleName"></a>
+<span class="DetailPropertyName">setStyleName</span>
+
+<dl>
+<dd>Sets the name of the style (from the application's style sheet) 
+assigned to this component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(String)</em>
+- the style name</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toString"></a>
+<span class="DetailPropertyName">toString</span>
+
+<dl>
+<dd>Returns a string representation of the component (default implementation).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>longFormat</code> 
+<em>(Boolean)</em>
+- an optional flag specifying whether all information about
+       the component should be displayed (e.g., property values)</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+a string representation of the component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+

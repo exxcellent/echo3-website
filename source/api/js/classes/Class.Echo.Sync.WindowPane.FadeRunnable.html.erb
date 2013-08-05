@@ -1,0 +1,205 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync.WindowPane <span class="divider">/</span>
+  </li>
+    <li>
+    FadeRunnable
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Scheduler.Runnable">Core.Web.Scheduler.Runnable</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.Sync.WindowPane.FadeRunnable">Echo.Sync.WindowPane.FadeRunnable</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Fade runnable for fading in/out windows.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Sync.WindowPane.FadeRunnable(div, directionOut, the, the)</a></code><br/>
+Creates a new <code>FadeRunnable</code>.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.timeInterval">timeInterval</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.repeat">repeat</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._directionOut">_directionOut</a></code><br/>
+Flag for fading in/out, set to true when fading out.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._div">_div</a></code><br/>
+The DIV element being animated.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._completeMethod">_completeMethod</a></code><br/>
+Completion callback method to be invoked when animation completes.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._time">_time</a></code><br/>
+Desired animation time in milliseconds.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.run">run()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Core.Web.Scheduler.Runnable</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Core.Web.Scheduler.Runnable#Method.run">run</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.Scheduler.Runnable(div, directionOut, the, the)</span>
+
+<dl>
+<dd>Creates a new <code>FadeRunnable</code>.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>div</code> 
+<em>(Element)</em>
+- the element being animated</dd>
+<dd>
+<code>directionOut</code> 
+<em>(Boolean)</em>
+- the animation direction, in = false, out = true</dd>
+<dd>
+<code>the</code> 
+<em>(Number)</em>
+- desired animation time, in milliseconds</dd>
+<dd>
+<code>the</code> 
+<em>(Function)</em>
+- completion method to execute when the animation completes</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.run"></a>
+<span class="DetailPropertyName">run</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

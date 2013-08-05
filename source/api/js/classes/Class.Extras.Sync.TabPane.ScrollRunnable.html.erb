@@ -1,0 +1,288 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync.TabPane <span class="divider">/</span>
+  </li>
+    <li>
+    ScrollRunnable
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Scheduler.Runnable">Core.Web.Scheduler.Runnable</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.TabPane.ScrollRunnable">Extras.Sync.TabPane.ScrollRunnable</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Runnable to manage scrolling animation.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.TabPane.ScrollRunnable(the, direction)</a></code><br/>
+Creates a new ScrollRunnable.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.repeat">repeat</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.timeInterval">timeInterval</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.reverse">reverse</a></code><br/>
+Direction of scrolling travel.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.distance">distance</a></code><br/>
+Current distance scrolled, in pixels.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.clickDistance">clickDistance</a></code><br/>
+Minimum distance to move (in case of click rather than hold
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.pixelsPerSecond">pixelsPerSecond</a></code><br/>
+Rate to scroll when scroll button held.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.initialPosition">initialPosition</a></code><br/>
+Initial scroll position.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.disposed">disposed</a></code><br/>
+Flag indicating whether the ScrollRunnable is disposed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.peer">peer</a></code><br/>
+The TabPane peer for which scrolling is being performed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.lastInvokeTime">lastInvokeTime</a></code><br/>
+Last invocation time of run() method.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Disposes of the scrolling runnable, removing it from the scheduler.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.finish">finish()</a></code><br/>
+Finishes the tab header scrolling operation in response to the user releasing the scroll button.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.run">run()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.updatePosition">updatePosition()</a></code><br/>
+Updates the scroll position of the tab pane header.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Core.Web.Scheduler.Runnable</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Core.Web.Scheduler.Runnable#Method.run">run</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.Scheduler.Runnable(the, direction)</span>
+
+<dl>
+<dd>Creates a new ScrollRunnable.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Extras.Sync.TabPane">Extras.Sync.TabPane</a>)</em>
+- synchronization peer</dd>
+<dd>
+<code>direction</code> 
+<em>(Boolean)</em>
+- of scrolling travel</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Disposes of the scrolling runnable, removing it from the scheduler.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.finish"></a>
+<span class="DetailPropertyName">finish</span>
+
+<dl>
+<dd>Finishes the tab header scrolling operation in response to the user releasing the scroll button.
+Ensures the header has been scrolled the minimum "click distance", and if not, scrolls the header
+that distance.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.run"></a>
+<span class="DetailPropertyName">run</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.updatePosition"></a>
+<span class="DetailPropertyName">updatePosition</span>
+
+<dl>
+<dd>Updates the scroll position of the tab pane header.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

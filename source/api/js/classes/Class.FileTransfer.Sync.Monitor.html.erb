@@ -1,0 +1,228 @@
+
+<ul class="breadcrumb">
+    <li>
+    FileTransfer.Sync <span class="divider">/</span>
+  </li>
+    <li>
+    Monitor
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Scheduler.Runnable">Core.Web.Scheduler.Runnable</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.FileTransfer.Sync.Monitor">FileTransfer.Sync.Monitor</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Runnable to poll server for status of file transfer.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">FileTransfer.Sync.Monitor(monitorUrl, onProgress)</a></code><br/>
+Creates a new <code>Monitor</code>.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.timeInterval">timeInterval</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._monitorUrl">_monitorUrl</a></code><br/>
+The URL to poll.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.cancel">cancel</a></code><br/>
+Flag indicating whether the upload should be canceled.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._onProgress">_onProgress</a></code><br/>
+Method to invoke with progress information.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.start">start()</a></code><br/>
+Starts the progress monitor.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processResponse">_processResponse(e)</a></code><br/>
+<code>HttpConnection</code> response listener.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.run">run()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Core.Web.Scheduler.Runnable</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Core.Web.Scheduler.Runnable#Method.run">run</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.Scheduler.Runnable(monitorUrl, onProgress)</span>
+
+<dl>
+<dd>Creates a new <code>Monitor</code>.
+The provided <code>onProgress</code> method will be invoked with progress updates.
+It must return a true value in the case that progress updates should continue.  It should
+return false once the upload has been completed, or if the upload has otherwise been disposed.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>monitorUrl</code> 
+<em>(String)</em>
+- the URL which will provide progress information</dd>
+<dd>
+<code>onProgress</code> 
+<em>(Function)</em>
+- method to invoke with progress status updates</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.start"></a>
+<span class="DetailPropertyName">start</span>
+
+<dl>
+<dd>Starts the progress monitor.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processResponse"></a>
+<span class="DetailPropertyName">_processResponse</span>
+
+<dl>
+<dd><code>HttpConnection</code> response listener.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the <code>HttpConnection</code> response event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.run"></a>
+<span class="DetailPropertyName">run</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

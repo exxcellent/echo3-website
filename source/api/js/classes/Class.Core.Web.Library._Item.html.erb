@@ -1,0 +1,207 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web.Library <span class="divider">/</span>
+  </li>
+    <li>
+    _Item
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Library._Item">Core.Web.Library._Item</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Representation of a single library to be loaded within a group</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Core.Web.Library._Item(group, url)</a></code><br/>
+Creates a new library item.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._url">_url</a></code><br/>
+URL Of library to load.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._group">_group</a></code><br/>
+Containing library group.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._content">_content</a></code><br/>
+Loaded library content (set when retrieved).
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._retrieveListener">_retrieveListener(e)</a></code><br/>
+Event listener for response from the HttpConnection used to retrieve the library.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._install">_install()</a></code><br/>
+Installs the library.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._retrieve">_retrieve()</a></code><br/>
+Asynchronously retrieves the library.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.Library._Item(group, url)</span>
+
+<dl>
+<dd>Creates a new library item.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>group</code> 
+<em>(<a href="Class.Core.Web.Library.Group">Core.Web.Library.Group</a>)</em>
+- the library group in which the item is contained</dd>
+<dd>
+<code>url</code> 
+<em>(String)</em>
+- the URL from which the library may be retrieved</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._retrieveListener"></a>
+<span class="DetailPropertyName">_retrieveListener</span>
+
+<dl>
+<dd>Event listener for response from the HttpConnection used to retrieve the library.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._install"></a>
+<span class="DetailPropertyName">_install</span>
+
+<dl>
+<dd>Installs the library.
+The library must have been loaded before invoking this method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._retrieve"></a>
+<span class="DetailPropertyName">_retrieve</span>
+
+<dl>
+<dd>Asynchronously retrieves the library.
+This method will invoke the retrieve listener when the library has been completed,
+it will return before the library has been retrieved.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

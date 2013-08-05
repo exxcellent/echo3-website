@@ -1,0 +1,311 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync.CalendarSelect <span class="divider">/</span>
+  </li>
+    <li>
+    Animation
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Extras.Sync.Animation">Extras.Sync.Animation</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.CalendarSelect.Animation">Extras.Sync.CalendarSelect.Animation</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Animation used for sliding new months/years into place.  The foreground color of the old content is also adjusted
+gradually during the transition.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.CalendarSelect.Animation(container, oldContent, newContent, vertical, forward, overlap, oldColor, newColor)</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._container">_container</a></code><br/>
+The container element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._containerBounds">_containerBounds</a></code><br/>
+Measured bounds of <code>_container</code>.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._oldContent">_oldContent</a></code><br/>
+The old content DIV.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._newContent">_newContent</a></code><br/>
+The new content DIV.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._vertical">_vertical</a></code><br/>
+Boolean flag indicating a vertical (true) or horizontal (false) direction of animation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._forward">_forward</a></code><br/>
+Boolean flag indicating a downward/rightward (true) or upward/leftward (false) direction of animation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._travel">_travel</a></code><br/>
+Distance the animated effect will move the next content, in pixels.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._overlap">_overlap</a></code><br/>
+Number of pixels to overlap new content over old content (used when animating months vertically such that shared 
+weeks are retained during animation).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._oldColor">_oldColor</a></code><br/>
+Old foreground color for old content.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._newColor">_newColor</a></code><br/>
+New foreground color for old content.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._adjust">_adjust</a></code><br/>
+CSS positioning property being adjusted to perform animation (top/bottom/left/right).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.runTime">runTime</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.init">init()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.step">step()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.complete">complete()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Extras.Sync.Animation</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Extras.Sync.Animation#Method.init">init</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.complete">complete</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.step">step</a></code>, <code><a href="Class.Extras.Sync.Animation#Method._doStep">_doStep</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.abort">abort</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.start">start</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Extras.Sync.Animation(container, oldContent, newContent, vertical, forward, overlap, oldColor, newColor)</span>
+
+<dl>
+<dd>Constructor.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>container</code> 
+<em>(Element)</em>
+- the container element</dd>
+<dd>
+<code>oldContent</code> 
+<em>(Element)</em>
+- the old content DIV</dd>
+<dd>
+<code>newContent</code> 
+<em>(Element)</em>
+- the new content DIV</dd>
+<dd>
+<code>vertical</code> 
+<em>(Boolean)</em>
+- boolean flag indicating a vertical (true) or horizontal (false) direction of animation</dd>
+<dd>
+<code>forward</code> 
+<em>(Boolean)</em>
+- boolean flag indicating a downward/rightward (true) or upward/leftward (false) direction
+                 of animation</dd>
+<dd>
+<code>overlap</code> 
+<em>(Number)</em>
+- number of pixels to overlap new content over old content (used when animating months
+                vertically such that shared weeks are retained during animation)</dd>
+<dd>
+<code>oldColor</code> 
+<em>(#Color)</em>
+- old foreground color for old content</dd>
+<dd>
+<code>newColor</code> 
+<em>(#Color)</em>
+- new foreground color for old content</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.init"></a>
+<span class="DetailPropertyName">init</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.step"></a>
+<span class="DetailPropertyName">step</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.complete"></a>
+<span class="DetailPropertyName">complete</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

@@ -1,0 +1,481 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync.Grid <span class="divider">/</span>
+  </li>
+    <li>
+    Processor
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Sync.Grid.Processor">Echo.Sync.Grid.Processor</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Performs processing on layout of grid, determining rendered cell sizes, and
+eliminating conflicting row/column spans.
+
+This object describes coordinates in terms of x and y, rather than column/row.
+The translation between x/y and column/row varies based on the grid's orientation.
+For horizontally oriented grids, the x-axis represents columns and the y-axis rows.
+For vertically oriented grids, the x-axis represents rows and the y-axis columns.</p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Echo.Sync.Grid.Processor.Cell">Echo.Sync.Grid.Processor.Cell</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Sync.Grid.Processor(grid)</a></code><br/>
+Creates a new Processor instance.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.cellArrays">cellArrays</a></code><br/>
+Two dimensional array which contains <code>Cell</code>s.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.grid">grid</a></code><br/>
+The Grid being rendered.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.gridXSize">gridXSize</a></code><br/>
+The size of the grid's x-axis.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.gridYSize">gridYSize</a></code><br/>
+The size of the grid's x-axis.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.xExtents">xExtents</a></code><br/>
+Array of extents representing cell sizes on x-axis.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.yExtents">yExtents</a></code><br/>
+Array of extents representing cell sizes on y-axis.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.horizontalOrientation">horizontalOrientation</a></code><br/>
+Flag indicating whether the grid is horizontally oriented.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addExtents">addExtents(a, b, flag)</a></code><br/>
+Adds two extents.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.calculateExtents">calculateExtents()</a></code><br/>
+Calculates sizes of columns and rows.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.createCells">createCells()</a></code><br/>
+Creates array of <code>Cell</code> instances representing child components of the grid.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getCellArray">_getCellArray(y)</a></code><br/>
+Returns an array representing the cells at the specified y-index.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getColumnCount">getColumnCount()</a></code><br/>
+Returns the number of columns that should be rendered.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getCell">getCell(column, row)</a></code><br/>
+Returns the cell that should be rendered at the
+specified position.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRowCount">getRowCount()</a></code><br/>
+Returns the number of rows that should be rendered.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.reduceX">reduceX()</a></code><br/>
+Remove duplicates from the x-axis where all cells simply
+"span over" a given x-axis coordinate.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.reduceY">reduceY()</a></code><br/>
+Remove duplicates from the y-axis where all cells simply
+"span over" a given y-axis coordinate.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderCellMatrix">renderCellMatrix(cells)</a></code><br/>
+Iterates over cells to create the cell matrix, adjusting column and row spans as of cells to ensure
+that no overlap occurs between column and row spans.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Echo.Sync.Grid.Processor(grid)</span>
+
+<dl>
+<dd>Creates a new Processor instance.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>grid</code> 
+<em>(<a href="Class.Echo.Grid">Echo.Grid</a>)</em>
+- the supported grid</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.addExtents"></a>
+<span class="DetailPropertyName">addExtents</span>
+
+<dl>
+<dd>Adds two extents.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>a</code> 
+<em>(#Extent)</em>
+- the first extent</dd>
+<dd>
+<code>b</code> 
+<em>(#Extent)</em>
+- the second extent</dd>
+<dd>
+<code>flag</code> 
+<em>(Boolean)</em>
+- indicating whether extents are horizontal</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(#Extent)</em>
+
+the sum of the extents
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.calculateExtents"></a>
+<span class="DetailPropertyName">calculateExtents</span>
+
+<dl>
+<dd>Calculates sizes of columns and rows.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.createCells"></a>
+<span class="DetailPropertyName">createCells</span>
+
+<dl>
+<dd>Creates array of <code>Cell</code> instances representing child components of the grid.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the array of <code>Cell</code> instances
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getCellArray"></a>
+<span class="DetailPropertyName">_getCellArray</span>
+
+<dl>
+<dd>Returns an array representing the cells at the specified y-index.
+If no array currently exists, one is created.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>y</code> 
+<em>(Integer)</em>
+- the y-index</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the array of cells.
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getColumnCount"></a>
+<span class="DetailPropertyName">getColumnCount</span>
+
+<dl>
+<dd>Returns the number of columns that should be rendered.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Integer)</em>
+
+the number of rendered columns
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getCell"></a>
+<span class="DetailPropertyName">getCell</span>
+
+<dl>
+<dd>Returns the cell that should be rendered at the
+specified position.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>column</code> 
+<em>(Integer)</em>
+- the column index</dd>
+<dd>
+<code>row</code> 
+<em>(Integer)</em>
+- the row index</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Sync.Grid.Processor.Cell">Echo.Sync.Grid.Processor.Cell</a>)</em>
+
+the cell
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getRowCount"></a>
+<span class="DetailPropertyName">getRowCount</span>
+
+<dl>
+<dd>Returns the number of rows that should be rendered.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Integer)</em>
+
+the number of rendered rows
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.reduceX"></a>
+<span class="DetailPropertyName">reduceX</span>
+
+<dl>
+<dd>Remove duplicates from the x-axis where all cells simply
+"span over" a given x-axis coordinate.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.reduceY"></a>
+<span class="DetailPropertyName">reduceY</span>
+
+<dl>
+<dd>Remove duplicates from the y-axis where all cells simply
+"span over" a given y-axis coordinate.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderCellMatrix"></a>
+<span class="DetailPropertyName">renderCellMatrix</span>
+
+<dl>
+<dd>Iterates over cells to create the cell matrix, adjusting column and row spans as of cells to ensure
+that no overlap occurs between column and row spans.
+Additionally determines actual y-size of grid.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>cells</code> 
+<em>(Array)</em>
+- array of <code>Echo.Sync.Grid.Processor.Cell</code> instances</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

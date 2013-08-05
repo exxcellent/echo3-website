@@ -1,0 +1,502 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web <span class="divider">/</span>
+  </li>
+    <li>
+    HttpConnection
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.HttpConnection">Core.Web.HttpConnection</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>An HTTP connection to the hosting server.  This method provides a cross
+platform wrapper for XMLHttpRequest and additionally allows method
+reference-based listener registration.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Core.Web.HttpConnection(url, method, messageObject, contentType)</a></code><br/>
+Creates a new <code>HttpConnection</code>.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._url">_url</a></code><br/>
+The URL.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._contentType">_contentType</a></code><br/>
+The request content type.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._method">_method</a></code><br/>
+The request method.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._messageObject">_messageObject</a></code><br/>
+The message content object.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerList">_listenerList</a></code><br/>
+Listener storage facility.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._disposed">_disposed</a></code><br/>
+Disposed state.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._xmlHttpRequest">_xmlHttpRequest</a></code><br/>
+Browser XMLHttpRequest object.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._requestHeaders">_requestHeaders</a></code><br/>
+Request header value map.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._preprocessWebkitDOM">_preprocessWebkitDOM(node)</a></code><br/>
+Preprocesses outgoing requests to Webkit (invoked when appropriate quirk is detected).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addResponseListener">addResponseListener(l)</a></code><br/>
+Adds a response listener to be notified when a response is received from the connection.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.connect">connect()</a></code><br/>
+Executes the HTTP connection.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Disposes of the connection.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getResponseHeader">getResponseHeader(header)</a></code><br/>
+Returns a header from the received response.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getAllResponseHeaders">getAllResponseHeaders(header)</a></code><br/>
+Returns all the headers of the response.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getStatus">getStatus()</a></code><br/>
+Returns the response status code of the HTTP connection, if available.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getResponseText">getResponseText()</a></code><br/>
+Returns the response as text.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getResponseXml">getResponseXml()</a></code><br/>
+Returns the response as an XML DOM.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processReadyStateChange">_processReadyStateChange()</a></code><br/>
+Event listener for <code>readystatechange</code> events received from
+the <code>XMLHttpRequest</code>.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeResponseListener">removeResponseListener(l)</a></code><br/>
+Removes a response listener to be notified when a response is received from the connection.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setRequestHeader">setRequestHeader(header, value)</a></code><br/>
+Sets a header in the request.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.HttpConnection(url, method, messageObject, contentType)</span>
+
+<dl>
+<dd>Creates a new <code>HttpConnection</code>.
+This method simply configures the connection, the connection
+will not be opened until <code>connect()</code> is invoked.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>url</code> 
+<em>(String)</em>
+- the target URL</dd>
+<dd>
+<code>method</code> 
+<em>(String)</em>
+- the connection method, i.e., GET or POST</dd>
+<dd>
+<code>messageObject</code> 
+- the message to send (may be a String or XML DOM)</dd>
+<dd>
+<code>contentType</code> 
+<em>(String)</em>
+- the request content-type</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._preprocessWebkitDOM"></a>
+<span class="DetailPropertyName">_preprocessWebkitDOM</span>
+
+<dl>
+<dd>Preprocesses outgoing requests to Webkit (invoked when appropriate quirk is detected).
+All less than, greater than, and ampersands are replaced with escaped values, as this render engine
+is broken in this regard and will otherwise fail. Recursively invoked on nodes, starting with
+document element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>node</code> 
+<em>(Node)</em>
+- the node to process</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addResponseListener"></a>
+<span class="DetailPropertyName">addResponseListener</span>
+
+<dl>
+<dd>Adds a response listener to be notified when a response is received from the connection.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to add</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.connect"></a>
+<span class="DetailPropertyName">connect</span>
+
+<dl>
+<dd>Executes the HTTP connection.
+This method will return before the HTTP connection has received a response.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Disposes of the connection.  This method must be invoked when the connection 
+will no longer be used/processed.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getResponseHeader"></a>
+<span class="DetailPropertyName">getResponseHeader</span>
+
+<dl>
+<dd>Returns a header from the received response.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>header</code> 
+<em>(String)</em>
+- the header to retrieve</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getAllResponseHeaders"></a>
+<span class="DetailPropertyName">getAllResponseHeaders</span>
+
+<dl>
+<dd>Returns all the headers of the response.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>header</code> 
+<em>(String)</em>
+- the header to retrieve</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getStatus"></a>
+<span class="DetailPropertyName">getStatus</span>
+
+<dl>
+<dd>Returns the response status code of the HTTP connection, if available.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Integer)</em>
+
+the response status code
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getResponseText"></a>
+<span class="DetailPropertyName">getResponseText</span>
+
+<dl>
+<dd>Returns the response as text.
+This method may only be invoked from a response handler.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the response, as text
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getResponseXml"></a>
+<span class="DetailPropertyName">getResponseXml</span>
+
+<dl>
+<dd>Returns the response as an XML DOM.
+This method may only be invoked from a response handler.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Document)</em>
+
+the response, as an XML DOM
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processReadyStateChange"></a>
+<span class="DetailPropertyName">_processReadyStateChange</span>
+
+<dl>
+<dd>Event listener for <code>readystatechange</code> events received from
+the <code>XMLHttpRequest</code>.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeResponseListener"></a>
+<span class="DetailPropertyName">removeResponseListener</span>
+
+<dl>
+<dd>Removes a response listener to be notified when a response is received from the connection.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setRequestHeader"></a>
+<span class="DetailPropertyName">setRequestHeader</span>
+
+<dl>
+<dd>Sets a header in the request.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>header</code> 
+<em>(String)</em>
+- the header to retrieve</dd>
+<dd>
+<code>value</code> 
+<em>(String)</em>
+- the value of the header</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

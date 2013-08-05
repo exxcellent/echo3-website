@@ -1,0 +1,342 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras <span class="divider">/</span>
+  </li>
+    <li>
+    DropDownMenu
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Component">Echo.Component</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.MenuComponent">Extras.MenuComponent</a></code>
+</li>
+<li style="margin-left: 45px">
+<code><a href="Class.Extras.DropDownMenu">Extras.DropDownMenu</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>DropDownMenu component. If the <code>selectionEnabled</code> property is
+set, the component will display the last chosen menu item in its closed
+state. May not contain child components.</p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.componentType">componentType</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Extras.MenuComponent</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Extras.MenuComponent#Method.doActivation">doActivation</a></code>, <code><a href="Class.Extras.MenuComponent#Method.doAction">doAction</a></code>, <code><a href="Class.Extras.MenuComponent#Method._toggleItem">_toggleItem</a></code></td>
+</tr>
+</table>
+<br/>
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Component</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Component#Method.add">add</a></code>, <code><a href="Class.Echo.Component#Method.addListener">addListener</a></code>, <code><a href="Class.Echo.Component#Method.fireEvent">fireEvent</a></code>, <code><a href="Class.Echo.Component#Method.get">get</a></code>, <code><a href="Class.Echo.Component#Method.getComponent">getComponent</a></code>, <code><a href="Class.Echo.Component#Method.getComponentCount">getComponentCount</a></code>, <code><a href="Class.Echo.Component#Method.getIndex">getIndex</a></code>, <code><a href="Class.Echo.Component#Method.getLayoutDirection">getLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getLocale">getLocale</a></code>, <code><a href="Class.Echo.Component#Method.getLocalStyleData">getLocalStyleData</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLayoutDirection">getRenderLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLocale">getRenderLocale</a></code>, <code><a href="Class.Echo.Component#Method.getStyle">getStyle</a></code>, <code><a href="Class.Echo.Component#Method.getStyleName">getStyleName</a></code>, <code><a href="Class.Echo.Component#Method.indexOf">indexOf</a></code>, <code><a href="Class.Echo.Component#Method.isActive">isActive</a></code>, <code><a href="Class.Echo.Component#Method.isAncestorOf">isAncestorOf</a></code>, <code><a href="Class.Echo.Component#Method.isEnabled">isEnabled</a></code>, <code><a href="Class.Echo.Component#Method.isRenderEnabled">isRenderEnabled</a></code>, <code><a href="Class.Echo.Component#Method.register">register</a></code>, <code><a href="Class.Echo.Component#Method.render">render</a></code>, <code><a href="Class.Echo.Component#Method.renderIndex">renderIndex</a></code>, <code><a href="Class.Echo.Component#Method.remove">remove</a></code>, <code><a href="Class.Echo.Component#Method.removeAll">removeAll</a></code>, <code><a href="Class.Echo.Component#Method.removeListener">removeListener</a></code>, <code><a href="Class.Echo.Component#Method.removeAllListeners">removeAllListeners</a></code>, <code><a href="Class.Echo.Component#Method.set">set</a></code>, <code><a href="Class.Echo.Component#Method.setEnabled">setEnabled</a></code>, <code><a href="Class.Echo.Component#Method.setIndex">setIndex</a></code>, <code><a href="Class.Echo.Component#Method.setLayoutDirection">setLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.setLocale">setLocale</a></code>, <code><a href="Class.Echo.Component#Method.setStyle">setStyle</a></code>, <code><a href="Class.Echo.Component#Method.setStyleName">setStyleName</a></code>, <code><a href="Class.Echo.Component#Method.toString">toString</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Style Properties</th>
+</tr>
+
+<tr>
+<td><code>animationTime</code></td>
+<td>
+<code>Number</code>
+</td>
+<td>the animation time (in milliseconds) (A value of
+    zero indicates animation is disabled.)</td>
+</td>
+</tr>
+<tr>
+<td><code>backgroundImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>the background image that will be displayed
+    in the drop down box (This image will also be used in child menus unless
+    a value is specified for the <code>menuBackgroundImage</code>
+    property.)</td>
+</td>
+</tr>
+<tr>
+<td><code>border</code></td>
+<td>
+Border (<code>String</code> or <code>Object</code>)
+</td>
+<td>the border that will be displayed around the drop down
+    box (This border will also be used around child menus unless a value is
+    specified for the <code>menuBorder</code> property.)</td>
+</td>
+</tr>
+<tr>
+<td><code>disabledBackground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the background color used to render disabled
+    menu items</td>
+</td>
+</tr>
+<tr>
+<td><code>disabledBackgroundImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>the background image used to render
+    disabled menu items</td>
+</td>
+</tr>
+<tr>
+<td><code>disabledExpandIcon</code></td>
+<td>
+ImageReference (<code>String</code> or <code>Object</code>)
+</td>
+<td>the expand icon displayed in the
+    drop down box</td>
+</td>
+</tr>
+<tr>
+<td><code>disabledForeground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the foreground color used to render disabled
+    menu items</td>
+</td>
+</tr>
+<tr>
+<td><code>expandIcon</code></td>
+<td>
+ImageReference (<code>String</code> or <code>Object</code>)
+</td>
+<td>the expand icon displayed in the drop down
+    box</td>
+</td>
+</tr>
+<tr>
+<td><code>expandIconWidth</code></td>
+<td>
+ImageReference (<code>String</code> or <code>Object</code>)
+</td>
+<td>the width of the expand icon displayed
+    in the drop down box</td>
+</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the height of the drop down box</td>
+</td>
+</tr>
+<tr>
+<td><code>insets</code></td>
+<td>
+Insets (<code>Number</code>, <code>String</code>, or <code>Object</code>)
+</td>
+<td>the insets of the drop down box</td>
+</td>
+</tr>
+<tr>
+<td><code>lineWrap</code></td>
+<td>
+<code>Boolean</code>
+</td>
+<td>flag indicating whether long lines should be wrapped</td>
+</td>
+</tr>
+<tr>
+<td><code>menuBackground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the background color that will be shown in child
+    menus</td>
+</td>
+</tr>
+<tr>
+<td><code>menuBackgroundImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>the background image that will be drawn
+    in child menus</td>
+</td>
+</tr>
+<tr>
+<td><code>menuBorder</code></td>
+<td>
+Border (<code>String</code> or <code>Object</code>)
+</td>
+<td>the border that will be drawn around child menus</td>
+</td>
+</tr>
+<tr>
+<td><code>menuExpandIcon</code></td>
+<td>
+ImageReference (<code>String</code> or <code>Object</code>)
+</td>
+<td>the icon used to expand child menus</td>
+</td>
+</tr>
+<tr>
+<td><code>menuFont</code></td>
+<td>
+Font (<code>Object</code>)
+</td>
+<td>the font that will be shown in child menus</td>
+</td>
+</tr>
+<tr>
+<td><code>menuForeground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the foreground color that will be shown in child
+    menus</td>
+</td>
+</tr>
+<tr>
+<td><code>menuHeight</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the height of the expanded menu</td>
+</td>
+</tr>
+<tr>
+<td><code>menuWidth</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the width of the expanded menu</td>
+</td>
+</tr>
+<tr>
+<td><code>selectionBackground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the background color used to highlight the
+    currently selected menu item</td>
+</td>
+</tr>
+<tr>
+<td><code>selectionBackgroundImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>the background image used to
+    highlight the currently selected menu item</td>
+</td>
+</tr>
+<tr>
+<td><code>selectionEnabled</code></td>
+<td>
+<code>Boolean</code>
+</td>
+<td>flag indicating whether item selection is
+    enabled</td>
+</td>
+</tr>
+<tr>
+<td><code>selectionForeground</code></td>
+<td>
+Color (<code>String</code>)
+</td>
+<td>the foreground color used to highlight the
+    currently selected menu item</td>
+</td>
+</tr>
+<tr>
+<td><code>selectionText</code></td>
+<td>
+<code>String</code>
+</td>
+<td>the text displayed in the drop down box when no
+    item is selected</td>
+</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the width of the drop down box</td>
+</td>
+</tr>
+</table> 
+<br/>
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+

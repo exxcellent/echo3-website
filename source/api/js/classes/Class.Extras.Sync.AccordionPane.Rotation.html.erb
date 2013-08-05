@@ -1,0 +1,287 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync.AccordionPane <span class="divider">/</span>
+  </li>
+    <li>
+    Rotation
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Extras.Sync.Animation">Extras.Sync.Animation</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.AccordionPane.Rotation">Extras.Sync.AccordionPane.Rotation</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Manages the rotation animation of an AccordionPane.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.AccordionPane.Rotation(parent, oldTab, newTab)</a></code><br/>
+Creates a new rotation.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._parent">_parent</a></code><br/>
+The AccordionPane peer.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._oldTab">_oldTab</a></code><br/>
+The old tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._newTab">_newTab</a></code><br/>
+The new tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._oldTabIndex">_oldTabIndex</a></code><br/>
+Index of old tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._newTabIndex">_newTabIndex</a></code><br/>
+Index of new tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._directionDown">_directionDown</a></code><br/>
+Flag indicating whether tabs will be rotating downward (true) or upward (false).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._rotatingTabCount">_rotatingTabCount</a></code><br/>
+Number of tabs which are rotating.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._regionHeight">_regionHeight</a></code><br/>
+Height of accordion pane.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._numberOfTabsAbove">_numberOfTabsAbove</a></code><br/>
+Numbers of tabs above that will not be moving.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._numberOfTabsBelow">_numberOfTabsBelow</a></code><br/>
+Number of tabs below that will not be moving.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._startPosition">_startPosition</a></code><br/>
+Initial position of extreme edge of first moving tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._animationDistance">_animationDistance</a></code><br/>
+Number of pixels across which animation will occur.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.complete">complete()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.init">init()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.step">step()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Extras.Sync.Animation</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Extras.Sync.Animation#Method.init">init</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.complete">complete</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.step">step</a></code>, <code><a href="Class.Extras.Sync.Animation#Method._doStep">_doStep</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.abort">abort</a></code>, <code><a href="Class.Extras.Sync.Animation#Method.start">start</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Extras.Sync.Animation(parent, oldTab, newTab)</span>
+
+<dl>
+<dd>Creates a new rotation.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Extras.Sync.AccordionPane">Extras.Sync.AccordionPane</a>)</em>
+- the AccordionPane peer</dd>
+<dd>
+<code>oldTab</code> 
+<em>(<a href="Class.Extras.Sync.AccordionPane.Tab">Extras.Sync.AccordionPane.Tab</a>)</em>
+- the old (current) tab</dd>
+<dd>
+<code>newTab</code> 
+<em>(<a href="Class.Extras.Sync.AccordionPane.Tab">Extras.Sync.AccordionPane.Tab</a>)</em>
+- the new tab to display</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.complete"></a>
+<span class="DetailPropertyName">complete</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.init"></a>
+<span class="DetailPropertyName">init</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.step"></a>
+<span class="DetailPropertyName">step</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

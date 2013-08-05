@@ -1,0 +1,338 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Arc <span class="divider">/</span>
+  </li>
+    <li>
+    ComponentSync
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.Arc.ComponentSync">Echo.Arc.ComponentSync</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Extras.Sync.RichTextArea">Extras.Sync.RichTextArea</a></code></dd>
+</dl>
+
+
+
+<p>Component synchronization peer for application rendered components.
+Application rendered component peers should extend this peer.
+The super-implementations of the renderAdd(), renderDispose(),
+renderDisplay(), and renderUpdate() methods must be invoked.</p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.arcApplication">arcApplication</a></code><br/>
+The embedded application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.arcClient">arcClient</a></code><br/>
+The embedded client.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.baseComponent">baseComponent</a></code><br/>
+The base component that will serve as the rendered form of this synchronization peer's supported component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._defaultDomainElement">_defaultDomainElement</a></code><br/>
+Default domain element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._applicationFocusRef">_applicationFocusRef</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.createComponent">createComponent()</a></code><br/>
+Creates the base component that will be added to the root
+of the rendering application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getDomainElement">getDomainElement()</a></code><br/>
+Returns the element in which the client should be rendered.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processApplicationFocus">_processApplicationFocus()</a></code><br/>
+Listener for application focus change events.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+Default renderAdd() implementation: appends the element returned by getDomainElement() to the parent.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+renderDisplay() implementation: must be invoked by overriding method.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+renderDispose() implementation: must be invoked by overriding method.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderHide">renderHide()</a></code><br/>
+renderHide() implementation: must be invoked by overriding method.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+Default implementation disposes of the existing client and application 
+and creates a new one.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.createComponent"></a>
+<span class="DetailPropertyName">createComponent</span>
+
+<dl>
+<dd>Creates the base component that will be added to the root
+of the rendering application.  This component should probably be a
+ContentPane or other container.
+This method must be overridden by ARC implementations.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getDomainElement"></a>
+<span class="DetailPropertyName">getDomainElement</span>
+
+<dl>
+<dd>Returns the element in which the client should be rendered.
+Default implementation creates/returns a DIV.
+May be overridden.  This implementation does not need to be invoked by overriding implementation.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Element)</em>
+
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processApplicationFocus"></a>
+<span class="DetailPropertyName">_processApplicationFocus</span>
+
+<dl>
+<dd>Listener for application focus change events.
+Registered to both the rendered application and the containing component's application.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>Default renderAdd() implementation: appends the element returned by getDomainElement() to the parent.
+May be overridden.  This implementation does not need to be invoked by overriding implementation.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>renderDisplay() implementation: must be invoked by overriding method.
+
+This method will create a new client and application instance if one does
+not exist (i.e., if this method is being called for the first time after
+renderAdd()).
+
+When the application is created, the component returned by createComponent() 
+will be added to the root component of the application.  The application will
+be installed in the DOM at the element returned by the getDomainElement().
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>renderDispose() implementation: must be invoked by overriding method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderHide"></a>
+<span class="DetailPropertyName">renderHide</span>
+
+<dl>
+<dd>renderHide() implementation: must be invoked by overriding method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>Default implementation disposes of the existing client and application 
+and creates a new one.  All application state will be lost.
+This method should thus be overridden in the event that the application
+rendered component desires to perform a more efficient update.
+This implementation may be called by the overriding implementation if
+replacing-and-redrawing is desired.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

@@ -1,0 +1,272 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync <span class="divider">/</span>
+  </li>
+    <li>
+    DropDownMenu
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.Menu">Extras.Sync.Menu</a></code>
+</li>
+<li style="margin-left: 45px">
+<code><a href="Class.Extras.Sync.DropDownMenu">Extras.Sync.DropDownMenu</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Component rendering peer: DropDownMenu</p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._contentDiv">_contentDiv</a></code><br/>
+DIV containing selected item / root content.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._selectedItem">_selectedItem</a></code><br/>
+The selected item.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createSelectionContent">_createSelectionContent(itemModel)</a></code><br/>
+Creates the selection item content to display as the menu's root node.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getSubMenuPosition">getSubMenuPosition()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processAction">processAction()</a></code><br/>
+Processes a menu action, updating selection state if selection is enabled.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processClick">_processClick(e)</a></code><br/>
+Processes a mouse click event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderMain">renderMain()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setSelection">_setSelection(itemModel)</a></code><br/>
+Sets the selection to the given menu model.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Extras.Sync.Menu</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Extras.Sync.Menu#Method.getSubMenuPosition">getSubMenuPosition</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderMain">renderMain</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.activate">activate</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.activateItem">activateItem</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.processActivation">processActivation</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.processAction">processAction</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.addMenu">addMenu</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.addMask">addMask</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.closeAll">closeAll</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.closeDescendants">closeDescendants</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.deactivate">deactivate</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.isOpen">isOpen</a></code>, <code><a href="Class.Extras.Sync.Menu#Method._overlayAdd">_overlayAdd</a></code>, <code><a href="Class.Extras.Sync.Menu#Method._overlayRemove">_overlayRemove</a></code>, <code><a href="Class.Extras.Sync.Menu#Method._openMenu">_openMenu</a></code>, <code><a href="Class.Extras.Sync.Menu#Method._processMaskClick">_processMaskClick</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.removeMask">removeMask</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderDisplay">renderDisplay</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderHide">renderHide</a></code>, <code><a href="Class.Extras.Sync.Menu#Method.renderUpdate">renderUpdate</a></code></td>
+</tr>
+</table>
+<br/>
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._createSelectionContent"></a>
+<span class="DetailPropertyName">_createSelectionContent</span>
+
+<dl>
+<dd>Creates the selection item content to display as the menu's root node.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>itemModel</code> 
+<em>(<a href="Class.Extras.ItemModel">Extras.ItemModel</a>)</em>
+- the selected item</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getSubMenuPosition"></a>
+<span class="DetailPropertyName">getSubMenuPosition</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processAction"></a>
+<span class="DetailPropertyName">processAction</span>
+
+<dl>
+<dd>Processes a menu action, updating selection state if selection is enabled.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processClick"></a>
+<span class="DetailPropertyName">_processClick</span>
+
+<dl>
+<dd>Processes a mouse click event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderMain"></a>
+<span class="DetailPropertyName">renderMain</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setSelection"></a>
+<span class="DetailPropertyName">_setSelection</span>
+
+<dl>
+<dd>Sets the selection to the given menu model.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>itemModel</code> 
+- the model to select</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

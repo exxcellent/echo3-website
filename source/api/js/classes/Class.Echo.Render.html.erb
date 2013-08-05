@@ -1,0 +1,637 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo <span class="divider">/</span>
+  </li>
+    <li>
+    Render
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render">Echo.Render</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Application rendering namespace.</p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Echo.Render.RootSync">Echo.Render.RootSync</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._loadedPeerCount">_loadedPeerCount</a></code><br/>
+Count of loaded/unloaded peers.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._nextPeerId">_nextPeerId</a></code><br/>
+Next sequentially assigned unique peer identifier.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._disposedComponents">_disposedComponents</a></code><br/>
+Map containing removed components.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._componentDepthArraySort">_componentDepthArraySort()</a></code><br/>
+An array sorting implementation to organize an array by component depth.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._doRenderDisplay">_doRenderDisplay(the, includeSelf)</a></code><br/>
+Recursively invokes renderDisplay() method on a sub-hierarchy of the
+component hierarchy.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._doRenderDisplayImpl">_doRenderDisplayImpl(component)</a></code><br/>
+Recursive work method for _doRenderDisplay().
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getComponentDepth">_getComponentDepth(component)</a></code><br/>
+Returns the depth of a specific component in the hierarchy.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._loadPeer">_loadPeer(client, component)</a></code><br/>
+Creates a component synchronization peer for a component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.notifyResize">notifyResize(parent)</a></code><br/>
+Notifies child components that the parent component has been drawn
+or resized.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processDispose">_processDispose(update)</a></code><br/>
+Invokes renderDispose() on all removed children and descendants found in the specified update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processUpdates">processUpdates(client)</a></code><br/>
+Processes all pending updates in the client's application's update manager.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.registerPeer">registerPeer(componentName, peerObject)</a></code><br/>
+Registers a component type name with an instantiable peer class.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderComponentAdd">renderComponentAdd(update, component, parentElement)</a></code><br/>
+Renders a new component inside of a DOM element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderComponentDisplay">renderComponentDisplay(parent)</a></code><br/>
+Manually invokes renderDisplay on a component (and its descendants) that was added to the
+hierarchy outside of processUpdates().
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderComponentDispose">renderComponentDispose(update, component)</a></code><br/>
+Disposes of a component and its descendants.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderComponentDisposeImpl">_renderComponentDisposeImpl(update, component)</a></code><br/>
+Recursive implementation of renderComponentDispose.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderComponentHide">renderComponentHide(component)</a></code><br/>
+Notifies a child component and its descendants that it is about to be removed from the DOM or otherwise hidden from view.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setPeerDisposedState">_setPeerDisposedState(component, disposed)</a></code><br/>
+Sets the peer disposed state of a component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._unloadPeer">_unloadPeer(component)</a></code><br/>
+Destroys a component synchronization peer for a specific components.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.updateFocus">updateFocus(client)</a></code><br/>
+Focuses the currently focused component of the application.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method._componentDepthArraySort"></a>
+<span class="DetailPropertyName">_componentDepthArraySort</span>
+
+<dl>
+<dd>An array sorting implementation to organize an array by component depth.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._doRenderDisplay"></a>
+<span class="DetailPropertyName">_doRenderDisplay</span>
+
+<dl>
+<dd>Recursively invokes renderDisplay() method on a sub-hierarchy of the
+component hierarchy.  If a peer does not provide a renderDisplay() implementation,
+it is skipped (although its descendants will NOT be skipped).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- root component of the sub-hierarchy on which renderDisplay() should be invoked</dd>
+<dd>
+<code>includeSelf</code> 
+<em>(Boolean)</em>
+- flag indicating whether renderDisplay() should be invoked on the
+       specified component (if false, it will only be invoked on child components)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._doRenderDisplayImpl"></a>
+<span class="DetailPropertyName">_doRenderDisplayImpl</span>
+
+<dl>
+<dd>Recursive work method for _doRenderDisplay().
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component on which to invoke renderDisplay()</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getComponentDepth"></a>
+<span class="DetailPropertyName">_getComponentDepth</span>
+
+<dl>
+<dd>Returns the depth of a specific component in the hierarchy.
+The root component is at depth 0, its immediate children are
+at depth 1, their children are at depth 2, and so on.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component whose depth is to be calculated</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the depth of the component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._loadPeer"></a>
+<span class="DetailPropertyName">_loadPeer</span>
+
+<dl>
+<dd>Creates a component synchronization peer for a component.
+The peer will be stored in the "peer" property of the component.
+The client will be stored in the "client" property of the component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>client</code> 
+<em>(<a href="Class.Echo.Client">Echo.Client</a>)</em>
+- the relevant Client</dd>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.notifyResize"></a>
+<span class="DetailPropertyName">notifyResize</span>
+
+<dl>
+<dd>Notifies child components that the parent component has been drawn
+or resized.  At this point the parent component is on the screen
+(the parent element is part of the DOM hierarchy).
+Child components (and their descendants) will be notified by having 
+their renderDisplay() implementations invoked.
+Note that the parent WILL NOT have its renderDisplay() method
+invoked.
+<p>
+If your component requires virtual positioning (for IE6) you should invoke
+this method after informing the virtual positioning system to recalculate
+the size of your component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component whose size changed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processDispose"></a>
+<span class="DetailPropertyName">_processDispose</span>
+
+<dl>
+<dd>Invokes renderDispose() on all removed children and descendants found in the specified update.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the update</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processUpdates"></a>
+<span class="DetailPropertyName">processUpdates</span>
+
+<dl>
+<dd>Processes all pending updates in the client's application's update manager.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>client</code> 
+<em>(<a href="Class.Echo.Client">Echo.Client</a>)</em>
+- the client</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.registerPeer"></a>
+<span class="DetailPropertyName">registerPeer</span>
+
+<dl>
+<dd>Registers a component type name with an instantiable peer class.
+Components of the specified type name will be assigned new instances of the peer class
+when rendered for the first time.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>componentName</code> 
+<em>(String)</em>
+- the component type name</dd>
+<dd>
+<code>peerObject</code> 
+<em>(Function)</em>
+- the peer class object</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderComponentAdd"></a>
+<span class="DetailPropertyName">renderComponentAdd</span>
+
+<dl>
+<dd>Renders a new component inside of a DOM element.
+This method should be called by container components in order to render their children.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the relevant ComponentUpdate</dd>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component to add</dd>
+<dd>
+<code>parentElement</code> 
+<em>(Element)</em>
+- the DOM element to which the rendered component should be added</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderComponentDisplay"></a>
+<span class="DetailPropertyName">renderComponentDisplay</span>
+
+<dl>
+<dd>Manually invokes renderDisplay on a component (and its descendants) that was added to the
+hierarchy outside of processUpdates().  This method is only used in special cases,
+e.g., by in the case of Application Rendered Components that need to render children.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent component of the sub-hierarchy on which renderDisplay() should
+       be invoked (note that renderDisplay WILL be invoked on the parent as well 
+       as its descendants)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderComponentDispose"></a>
+<span class="DetailPropertyName">renderComponentDispose</span>
+
+<dl>
+<dd>Disposes of a component and its descendants.
+This method should be invoked by any peer that will be updating a component in such
+a fashion that it will be destroying the rendering of its children and re-rendering them.
+It is not necessary to invoke this method on components that may not contain children.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the <code>ComponentUpdate</code> for which this change is being performed</dd>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the <code>Component</code> to be disposed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderComponentDisposeImpl"></a>
+<span class="DetailPropertyName">_renderComponentDisposeImpl</span>
+
+<dl>
+<dd>Recursive implementation of renderComponentDispose.  Invokes
+renderDispose() on all child peers, sets disposed state on each.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the <code>ComponentUpdate</code> for which this change is being performed</dd>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the <code>Component</code> to be disposed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderComponentHide"></a>
+<span class="DetailPropertyName">renderComponentHide</span>
+
+<dl>
+<dd>Notifies a child component and its descendants that it is about to be removed from the DOM or otherwise hidden from view.
+The <code>renderHide()</code> methods of the peers of the specified child component and its descendants will be invoked.
+<strong>It is absolutely critical that this method be invoked before the component's rendered state is removed from the DOM 
+hierarchy.</strong>
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the child component being hidden</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setPeerDisposedState"></a>
+<span class="DetailPropertyName">_setPeerDisposedState</span>
+
+<dl>
+<dd>Sets the peer disposed state of a component.
+The peer disposed state indicates whether the renderDispose()
+method of the component has been executed since it was last rendered.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component</dd>
+<dd>
+<code>disposed</code> 
+<em>(Boolean)</em>
+- the disposed state, true indicating the component has
+       been disposed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._unloadPeer"></a>
+<span class="DetailPropertyName">_unloadPeer</span>
+
+<dl>
+<dd>Destroys a component synchronization peer for a specific components.
+The peer will be removed from the "peer" property of the component.
+The client will be removed from the "client" property of the component.
+The peer to component association will be removed.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.updateFocus"></a>
+<span class="DetailPropertyName">updateFocus</span>
+
+<dl>
+<dd>Focuses the currently focused component of the application.  
+
+This method may be necessary to invoke manually by component renderers
+that use animation and may be hiding the focused component (such that
+the client browser will not focus it) when processUpdates() completes.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>client</code> 
+<em>(<a href="Class.Echo.Client">Echo.Client</a>)</em>
+- the client</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

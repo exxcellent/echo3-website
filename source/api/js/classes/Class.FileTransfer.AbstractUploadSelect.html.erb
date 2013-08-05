@@ -1,0 +1,288 @@
+
+<ul class="breadcrumb">
+    <li>
+    FileTransfer <span class="divider">/</span>
+  </li>
+    <li>
+    AbstractUploadSelect
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Component">Echo.Component</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.FileTransfer.AbstractUploadSelect">FileTransfer.AbstractUploadSelect</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.FileTransfer.MultipleUploadSelect">FileTransfer.MultipleUploadSelect</a></code>, <code><a href="Class.FileTransfer.UploadSelect">FileTransfer.UploadSelect</a></code></dd>
+</dl>
+
+
+
+<p>Abstract base class for upload components.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">FileTransfer.AbstractUploadSelect()</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.generateId">generateId()</a></code><br/>
+Generates a new unique identifier for use by the upload process manager.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.sending">sending</a></code><br/>
+Flag indicating whether the upload component is actively sending file data to the server.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.processId">processId</a></code><br/>
+The upload process id.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.cancel">cancel()</a></code><br/>
+Notifies <code>uploadCancel</code> listeners that the upload operation has been canceled.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.complete">complete()</a></code><br/>
+Notifies <code>uploadComplete</code> listeners that the upload operation has completed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.ready">ready()</a></code><br/>
+Notifies <code>uploadReady</code> listeners that the files to uploaded have been selected and are ready for uploading.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.send">send()</a></code><br/>
+Sends the upload.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Component</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Component#Method.add">add</a></code>, <code><a href="Class.Echo.Component#Method.addListener">addListener</a></code>, <code><a href="Class.Echo.Component#Method.fireEvent">fireEvent</a></code>, <code><a href="Class.Echo.Component#Method.get">get</a></code>, <code><a href="Class.Echo.Component#Method.getComponent">getComponent</a></code>, <code><a href="Class.Echo.Component#Method.getComponentCount">getComponentCount</a></code>, <code><a href="Class.Echo.Component#Method.getIndex">getIndex</a></code>, <code><a href="Class.Echo.Component#Method.getLayoutDirection">getLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getLocale">getLocale</a></code>, <code><a href="Class.Echo.Component#Method.getLocalStyleData">getLocalStyleData</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLayoutDirection">getRenderLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLocale">getRenderLocale</a></code>, <code><a href="Class.Echo.Component#Method.getStyle">getStyle</a></code>, <code><a href="Class.Echo.Component#Method.getStyleName">getStyleName</a></code>, <code><a href="Class.Echo.Component#Method.indexOf">indexOf</a></code>, <code><a href="Class.Echo.Component#Method.isActive">isActive</a></code>, <code><a href="Class.Echo.Component#Method.isAncestorOf">isAncestorOf</a></code>, <code><a href="Class.Echo.Component#Method.isEnabled">isEnabled</a></code>, <code><a href="Class.Echo.Component#Method.isRenderEnabled">isRenderEnabled</a></code>, <code><a href="Class.Echo.Component#Method.register">register</a></code>, <code><a href="Class.Echo.Component#Method.render">render</a></code>, <code><a href="Class.Echo.Component#Method.renderIndex">renderIndex</a></code>, <code><a href="Class.Echo.Component#Method.remove">remove</a></code>, <code><a href="Class.Echo.Component#Method.removeAll">removeAll</a></code>, <code><a href="Class.Echo.Component#Method.removeListener">removeListener</a></code>, <code><a href="Class.Echo.Component#Method.removeAllListeners">removeAllListeners</a></code>, <code><a href="Class.Echo.Component#Method.set">set</a></code>, <code><a href="Class.Echo.Component#Method.setEnabled">setEnabled</a></code>, <code><a href="Class.Echo.Component#Method.setIndex">setIndex</a></code>, <code><a href="Class.Echo.Component#Method.setLayoutDirection">setLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.setLocale">setLocale</a></code>, <code><a href="Class.Echo.Component#Method.setStyle">setStyle</a></code>, <code><a href="Class.Echo.Component#Method.setStyleName">setStyleName</a></code>, <code><a href="Class.Echo.Component#Method.toString">toString</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Style Properties</th>
+</tr>
+
+<tr>
+<td><code>autoSend</code></td>
+<td>
+<code>Boolean</code>
+</td>
+<td>flag indicating whether upload should be sent automatically in response to a "ready" event</td>
+</td>
+</tr>
+</table> 
+<br/>
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Echo.Component()</span>
+
+<dl>
+<dd>Constructor.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.generateId"></a>
+<span class="DetailPropertyName">generateId</span>
+
+<dl>
+<dd>Generates a new unique identifier for use by the upload process manager.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the generated identifier
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.cancel"></a>
+<span class="DetailPropertyName">cancel</span>
+
+<dl>
+<dd>Notifies <code>uploadCancel</code> listeners that the upload operation has been canceled.
+Performs no operation if an upload sending is not in progress.
+Sets sending state to false.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.complete"></a>
+<span class="DetailPropertyName">complete</span>
+
+<dl>
+<dd>Notifies <code>uploadComplete</code> listeners that the upload operation has completed.
+Performs no operation if an upload sending is not in progress.
+Sets sending state to false.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.ready"></a>
+<span class="DetailPropertyName">ready</span>
+
+<dl>
+<dd>Notifies <code>uploadReady</code> listeners that the files to uploaded have been selected and are ready for uploading.
+If the property <code>autoSend</code> is set, the <code>send()</code> method will be subsequently invoked.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.send"></a>
+<span class="DetailPropertyName">send</span>
+
+<dl>
+<dd>Sends the upload.
+Performs no operation if upload sending is already in progress.
+Sets sending state to true.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

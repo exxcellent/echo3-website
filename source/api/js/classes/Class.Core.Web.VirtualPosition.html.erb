@@ -1,0 +1,230 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web <span class="divider">/</span>
+  </li>
+    <li>
+    VirtualPosition
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.VirtualPosition">Core.Web.VirtualPosition</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Static object/namespace which provides cross-platform CSS positioning 
+capabilities. Do not instantiate.
+<p>
+Internet Explorer 6 is ordinarily handicapped by its lack
+of support for setting 'left' and 'right' or 'top' and 'bottom' positions
+simultaneously on a single document element.
+<p> 
+To use virtual positioning, simply set the left/right/top/bottom
+coordinates of an element and invoke redraw().  The redraw() method
+must be invoked whenever the size of the element should be redrawn,
+e.g., when the screen or its containing element resizes.</p>
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._OFFSETS_VERTICAL">_OFFSETS_VERTICAL</a></code><br/>
+Array containing vertical offset attributes to be added to calculation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._OFFSETS_HORIZONTAL">_OFFSETS_HORIZONTAL</a></code><br/>
+Array containing horizontal offset attributes to be added to calculation.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.enabled">enabled</a></code><br/>
+Flag indicating whether virtual positioning is required/enabled.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._calculateOffsets">_calculateOffsets(offsetNames, style)</a></code><br/>
+Calculates horizontal or vertical padding, border, and margin offsets for a particular style.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._init">_init()</a></code><br/>
+Enables and initializes the virtual positioning system.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.redraw">redraw(element)</a></code><br/>
+Redraws elements registered with the virtual positioning system.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._verifyPixelValue">_verifyPixelValue(value)</a></code><br/>
+Determines if the specified value contains a pixel dimension, e.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method._calculateOffsets"></a>
+<span class="DetailPropertyName">_calculateOffsets</span>
+
+<dl>
+<dd>Calculates horizontal or vertical padding, border, and margin offsets for a particular style.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>offsetNames</code> 
+- the names of the offsets styles to calculate, either
+       _OFFSETS_VERTICAL or _OFFSETS_HORIZONTAL.</dd>
+<dd>
+<code>style</code> 
+- the style whose offsets should be calculated</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the pixel size of the offsets, or -1 if they cannot be calculated
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._init"></a>
+<span class="DetailPropertyName">_init</span>
+
+<dl>
+<dd>Enables and initializes the virtual positioning system.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.redraw"></a>
+<span class="DetailPropertyName">redraw</span>
+
+<dl>
+<dd>Redraws elements registered with the virtual positioning system.
+Adjusts the style.height and style.width attributes of an element to 
+simulate its specified top, bottom, left, and right CSS position settings
+The calculation makes allowances for padding, margin, and border width.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+- the element to redraw</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._verifyPixelValue"></a>
+<span class="DetailPropertyName">_verifyPixelValue</span>
+
+<dl>
+<dd>Determines if the specified value contains a pixel dimension, e.g., "20px"
+Returns false if the value is null/whitespace/undefined.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>value</code> 
+- the value to evaluate</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+true if the value is a pixel dimension, false if it is not
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

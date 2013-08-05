@@ -1,0 +1,456 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web <span class="divider">/</span>
+  </li>
+    <li>
+    WebSocketConnection
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.WebSocketConnection">Core.Web.WebSocketConnection</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>An WebSocket connection to the hosting server.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Core.Web.WebSocketConnection(url, )</a></code><br/>
+Creates a new <code>WebSocketConnection</code>.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.STATE_CONNECTING">STATE_CONNECTING</a></code><br/>
+The connection has not yet been established.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.STATE_OPEN">STATE_OPEN</a></code><br/>
+The WebSocket connection is established and communication is possible.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.STATE_CLOSING">STATE_CLOSING</a></code><br/>
+The connection is going through the closing handshake.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.STATE_CLOSED">STATE_CLOSED</a></code><br/>
+The connection has been closed or could not be opened.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.STATE_DISPOSED">STATE_DISPOSED</a></code><br/>
+The connection has been disposed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.EVENT_OPEN">EVENT_OPEN</a></code><br/>
+This event occurs when socket connection is established.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.EVENT_CLOSE">EVENT_CLOSE</a></code><br/>
+This event occurs when connection is closed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.EVENT_ERROR">EVENT_ERROR</a></code><br/>
+This event occurs when there is any error in communication.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.EVENT_MESSAGE">EVENT_MESSAGE</a></code><br/>
+This event occurs when client receives data from server.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isAvailable">isAvailable()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._url">_url</a></code><br/>
+The URL.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._protocols">_protocols</a></code><br/>
+Specifies a sub-protocol that the server must support for the connection to be successful.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerList">_listenerList</a></code><br/>
+Listener storage facility.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._webSocket">_webSocket</a></code><br/>
+WebSocket object
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._eventsHandler">_eventsHandler</a></code><br/>
+Function wrapper to invoke _processReceivedEvents() method.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._disposed">_disposed</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getState">getState()</a></code><br/>
+Returns the state code of the WebSocket connection, if available.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addEventListener">addEventListener(event, l)</a></code><br/>
+Adds a event listener to be notified when a events (open, close, error, message) is received from the websocket.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeEventListener">removeEventListener(event, l)</a></code><br/>
+Removes a response listener to be notified when a events (open, close, error, message) is received from the websocket.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.sendData">sendData()</a></code><br/>
+Transmits data using the socket.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processReceivedEvents">_processReceivedEvents()</a></code><br/>
+Event listener for <code>open, close, error, message</code> 
+events received from the <code>WebSocket</code>.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.open">open()</a></code><br/>
+Open the web socket.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.close">close()</a></code><br/>
+Closes of the socket.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Web.WebSocketConnection(url, )</span>
+
+<dl>
+<dd>Creates a new <code>WebSocketConnection</code>.
+This method simply configures the connection, the connection
+will not be opened until <code>open()</code> is invoked.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>url</code> 
+<em>(String)</em>
+- the target URL</dd>
+<dd>
+<code></code> 
+- {String or Array of Strings} protocols specifies a sub-protocol (optional)</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.isAvailable"></a>
+<span class="DetailPropertyName">isAvailable</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.getState"></a>
+<span class="DetailPropertyName">getState</span>
+
+<dl>
+<dd>Returns the state code of the WebSocket connection, if available.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Integer)</em>
+
+the state code
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addEventListener"></a>
+<span class="DetailPropertyName">addEventListener</span>
+
+<dl>
+<dd>Adds a event listener to be notified when a events (open, close, error, message) is received from the websocket.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>event</code> 
+<em>(String)</em>
+- type</dd>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to add</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeEventListener"></a>
+<span class="DetailPropertyName">removeEventListener</span>
+
+<dl>
+<dd>Removes a response listener to be notified when a events (open, close, error, message) is received from the websocket.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>event</code> 
+<em>(String)</em>
+- type</dd>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.sendData"></a>
+<span class="DetailPropertyName">sendData</span>
+
+<dl>
+<dd>Transmits data using the socket.
+If the socket is not open, it must throw an exception.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code></code> 
+- {String, Blob or ArrayBuffer} data to be sent</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processReceivedEvents"></a>
+<span class="DetailPropertyName">_processReceivedEvents</span>
+
+<dl>
+<dd>Event listener for <code>open, close, error, message</code> 
+events received from the <code>WebSocket</code>.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.open"></a>
+<span class="DetailPropertyName">open</span>
+
+<dl>
+<dd>Open the web socket.
+This method will return before the Web Socket has received a event.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.close"></a>
+<span class="DetailPropertyName">close</span>
+
+<dl>
+<dd>Closes of the socket.
+This method must be invoked when the socket will no longer be used/processed.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

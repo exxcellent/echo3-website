@@ -1,0 +1,651 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Update <span class="divider">/</span>
+  </li>
+    <li>
+    Manager
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Update.Manager">Echo.Update.Manager</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Monitors and records updates made to the application between repaints.
+Provides API to determine changes to component hierarchy since last update
+in order to efficiently repaint the screen.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Update.Manager(application)</a></code><br/>
+Creates a new Update Manager.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._componentUpdateMap">_componentUpdateMap</a></code><br/>
+Associative mapping between component ids and Echo.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.fullRefreshRequired">fullRefreshRequired</a></code><br/>
+Flag indicating whether a full refresh or incremental update will be performed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.application">application</a></code><br/>
+The application whose updates are being managed.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._hasUpdates">_hasUpdates</a></code><br/>
+Flag indicating whether any updates are pending.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerList">_listenerList</a></code><br/>
+Internal listener list for update listeners.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._idMap">_idMap</a></code><br/>
+Associative mapping between component ids and component instances for all
+updates held in this manager object.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._removedIdMap">_removedIdMap</a></code><br/>
+Associative mapping from the ids of components which are to be removed in this update to the components themselves.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._lastAncestorTestParentId">_lastAncestorTestParentId</a></code><br/>
+The id of the last parent component whose child was analyzed by
+_isAncestorBeingAdded() that resulted in that method returning false.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addUpdateListener">addUpdateListener(l)</a></code><br/>
+Adds a listener to receive notification of update events.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createComponentUpdate">_createComponentUpdate(parent)</a></code><br/>
+Creates a new ComponentUpdate object (or returns an existing one) for a
+specific parent component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Permanently disposes of the Update Manager, freeing any resources.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._fireUpdate">_fireUpdate()</a></code><br/>
+Notifies update listeners of an event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getUpdates">getUpdates()</a></code><br/>
+Returns the current pending updates.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasUpdates">hasUpdates()</a></code><br/>
+Determines if any updates exist in the Update Manager.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._isAncestorBeingAdded">_isAncestorBeingAdded(component)</a></code><br/>
+Determines if an ancestor of the specified component is being added.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processComponentAdd">_processComponentAdd(parent, child)</a></code><br/>
+Processes a child addition to a component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processComponentLayoutDataUpdate">_processComponentLayoutDataUpdate(updatedComponent)</a></code><br/>
+Process a layout data update to a child component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processComponentListenerUpdate">_processComponentListenerUpdate(updatedComponent)</a></code><br/>
+Process a layout data update to a child component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processComponentRemove">_processComponentRemove(parent, child)</a></code><br/>
+Processes a child removal from a component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processComponentPropertyUpdate">_processComponentPropertyUpdate(component, propertyName, oldValue, newValue)</a></code><br/>
+Processes a property update to a component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processFullRefresh">_processFullRefresh()</a></code><br/>
+Processes an event requiring a full-refresh.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processComponentUpdate">_processComponentUpdate(component, propertyName, oldValue, newValue)</a></code><br/>
+Processes component update notification received from the application instance.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.purge">purge()</a></code><br/>
+Purges updates that are processed from the manager.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeUpdateListener">removeUpdateListener(l)</a></code><br/>
+Removes a listener from receiving notification of update events.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toString">toString()</a></code><br/>
+Returns a string representation.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Echo.Update.Manager(application)</span>
+
+<dl>
+<dd>Creates a new Update Manager.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>application</code> 
+<em>(<a href="Class.Echo.Application">Echo.Application</a>)</em>
+- the supported application</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.addUpdateListener"></a>
+<span class="DetailPropertyName">addUpdateListener</span>
+
+<dl>
+<dd>Adds a listener to receive notification of update events.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to add</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._createComponentUpdate"></a>
+<span class="DetailPropertyName">_createComponentUpdate</span>
+
+<dl>
+<dd>Creates a new ComponentUpdate object (or returns an existing one) for a
+specific parent component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent Component</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+
+a ComponentUpdate instance for that Component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Permanently disposes of the Update Manager, freeing any resources.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._fireUpdate"></a>
+<span class="DetailPropertyName">_fireUpdate</span>
+
+<dl>
+<dd>Notifies update listeners of an event.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getUpdates"></a>
+<span class="DetailPropertyName">getUpdates</span>
+
+<dl>
+<dd>Returns the current pending updates.  Returns null in the event that that no pending updates exist.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+an array containing all component updates (as Echo.Update.ComponentUpdates)
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasUpdates"></a>
+<span class="DetailPropertyName">hasUpdates</span>
+
+<dl>
+<dd>Determines if any updates exist in the Update Manager.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if any updates are present
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._isAncestorBeingAdded"></a>
+<span class="DetailPropertyName">_isAncestorBeingAdded</span>
+
+<dl>
+<dd>Determines if an ancestor of the specified component is being added.
+This method must be invoked by all hierarchy modification operations.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component to evaluate</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the component or an ancestor of the component is being added
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processComponentAdd"></a>
+<span class="DetailPropertyName">_processComponentAdd</span>
+
+<dl>
+<dd>Processes a child addition to a component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent component</dd>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the added child component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processComponentLayoutDataUpdate"></a>
+<span class="DetailPropertyName">_processComponentLayoutDataUpdate</span>
+
+<dl>
+<dd>Process a layout data update to a child component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>updatedComponent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the updated component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processComponentListenerUpdate"></a>
+<span class="DetailPropertyName">_processComponentListenerUpdate</span>
+
+<dl>
+<dd>Process a layout data update to a child component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>updatedComponent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the updated component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processComponentRemove"></a>
+<span class="DetailPropertyName">_processComponentRemove</span>
+
+<dl>
+<dd>Processes a child removal from a component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent component</dd>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the removed child component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processComponentPropertyUpdate"></a>
+<span class="DetailPropertyName">_processComponentPropertyUpdate</span>
+
+<dl>
+<dd>Processes a property update to a component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the updated component</dd>
+<dd>
+<code>propertyName</code> 
+<em>(String)</em>
+- the updated property name</dd>
+<dd>
+<code>oldValue</code> 
+- the previous value of the property</dd>
+<dd>
+<code>newValue</code> 
+- the new value of the property</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processFullRefresh"></a>
+<span class="DetailPropertyName">_processFullRefresh</span>
+
+<dl>
+<dd>Processes an event requiring a full-refresh.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processComponentUpdate"></a>
+<span class="DetailPropertyName">_processComponentUpdate</span>
+
+<dl>
+<dd>Processes component update notification received from the application instance.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the updated component</dd>
+<dd>
+<code>propertyName</code> 
+<em>(String)</em>
+- the updated property name</dd>
+<dd>
+<code>oldValue</code> 
+- the previous value of the property</dd>
+<dd>
+<code>newValue</code> 
+- the new value of the property</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.purge"></a>
+<span class="DetailPropertyName">purge</span>
+
+<dl>
+<dd>Purges updates that are processed from the manager.
+Invoked after the client has repainted the screen.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeUpdateListener"></a>
+<span class="DetailPropertyName">removeUpdateListener</span>
+
+<dl>
+<dd>Removes a listener from receiving notification of update events.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>l</code> 
+<em>(Function)</em>
+- the listener to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toString"></a>
+<span class="DetailPropertyName">toString</span>
+
+<dl>
+<dd>Returns a string representation.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+a string representation
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+

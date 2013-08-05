@@ -1,0 +1,973 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Update <span class="divider">/</span>
+  </li>
+    <li>
+    ComponentUpdate
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Representation of an update to a single existing component which is currently rendered on the screen.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Update.ComponentUpdate(parent)</a></code><br/>
+Creates a new ComponentUpdate.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.PropertyUpdate">PropertyUpdate(oldValue, newValue)</a></code><br/>
+Data object representing the old and new states of a changed property.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._manager">_manager</a></code><br/>
+The <code>Manager</code> to which this update belongs.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.parent">parent</a></code><br/>
+The parent component represented in this <code>ComponentUpdate</code>.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.renderContext">renderContext</a></code><br/>
+Storage for contextual information used by application container to render this update.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._addedChildIds">_addedChildIds</a></code><br/>
+The set of child Component ids added to the <code>parent</code>.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._propertyUpdates">_propertyUpdates</a></code><br/>
+A mapping between property names of the parent component and 
+<code>PropertyUpdate</code>s.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._removedChildIds">_removedChildIds</a></code><br/>
+The set of child Component ids removed from the <code>parent</code>.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._removedDescendantIds">_removedDescendantIds</a></code><br/>
+The set of descendant Component ids which are implicitly removed 
+as they were children of removed children.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._updatedLayoutDataChildIds">_updatedLayoutDataChildIds</a></code><br/>
+The set of child Component ids whose <code>LayoutData</code> 
+was updated.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerUpdates">_listenerUpdates</a></code><br/>
+The set of listener types which have been added to/removed from the component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processed">_processed</a></code><br/>
+Indicates that current update is processed.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._addChild">_addChild(child)</a></code><br/>
+Records the addition of a child to the parent component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._appendRemovedDescendants">_appendRemovedDescendants(update)</a></code><br/>
+Appends removed children and descendants from another update to this
+update as removed descendants.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getAddedChildren">getAddedChildren()</a></code><br/>
+Returns an array containing the children added in this update,
+or null if none were added.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRemovedChildren">getRemovedChildren()</a></code><br/>
+Returns an array containing the children removed in this update,
+or null if none were removed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRemovedDescendants">getRemovedDescendants()</a></code><br/>
+Returns an array containing the descendants of any children removed in
+this update, or null if none were removed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getUpdatedLayoutDataChildren">getUpdatedLayoutDataChildren()</a></code><br/>
+Returns an array containing the children of this component whose
+LayoutDatas have changed in this update, or null if no such
+changes were made.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasAddedChildren">hasAddedChildren()</a></code><br/>
+Determines if any children were added during this update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasRemovedChildren">hasRemovedChildren()</a></code><br/>
+Determines if any children were removed during this update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasUpdatedLayoutDataChildren">hasUpdatedLayoutDataChildren()</a></code><br/>
+Determines if any children had their LayoutData changed during this update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasUpdatedProperties">hasUpdatedProperties()</a></code><br/>
+Determines if this update has any changed properties.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getUpdatedProperty">getUpdatedProperty(name)</a></code><br/>
+Returns a <code>PropertyUpdate</code> describing an update to the
+property with the given <code>name</code>.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasUpdatedChildren">hasUpdatedChildren()</a></code><br/>
+Determines if any children had their update during this update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getChildrenUpdate">getChildrenUpdate()</a></code><br/>
+Returns a collection of <code>Echo.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isListenerTypeUpdated">isListenerTypeUpdated(listenerType)</a></code><br/>
+Determines if any listeners of a specific type were added or removed
+from the component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getUpdatedPropertyNames">getUpdatedPropertyNames()</a></code><br/>
+Returns the names of all properties being updated in this update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasUpdatedPropertyIn">hasUpdatedPropertyIn(updatedPropertySet)</a></code><br/>
+Determines if any of the specified properties has been
+updated in this update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isUpdatedPropertySetIn">isUpdatedPropertySetIn(updatedPropertySet)</a></code><br/>
+Determines if the set of updated property names is contained
+within the specified set.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._removeChild">_removeChild(child)</a></code><br/>
+Records the removal of a child from the parent component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._removeDescendant">_removeDescendant(descendant)</a></code><br/>
+Records the removal of a descendant of the parent component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toString">toString()</a></code><br/>
+Returns a string representation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._updateLayoutData">_updateLayoutData(child)</a></code><br/>
+Records the update of the LayoutData of a child component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._updateListener">_updateListener(listenerType)</a></code><br/>
+Records the addition or removal of listeners to the parent component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._updateProperty">_updateProperty(propertyName, oldValue, newValue)</a></code><br/>
+Records the update of a property of the parent component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.markAsProcessed">markAsProcessed()</a></code><br/>
+Mark a current update as processed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isProcessed">isProcessed()</a></code><br/>
+Checks whether the current update is processed!
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Echo.Update.ComponentUpdate(parent)</span>
+
+<dl>
+<dd>Creates a new ComponentUpdate.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the updated component</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.PropertyUpdate"></a>
+<span class="DetailPropertyName">PropertyUpdate</span>
+
+<dl>
+<dd>Data object representing the old and new states of a changed property.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>oldValue</code> 
+- the old value of the property</dd>
+<dd>
+<code>newValue</code> 
+- the new value of the property</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._addChild"></a>
+<span class="DetailPropertyName">_addChild</span>
+
+<dl>
+<dd>Records the addition of a child to the parent component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the added child</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._appendRemovedDescendants"></a>
+<span class="DetailPropertyName">_appendRemovedDescendants</span>
+
+<dl>
+<dd>Appends removed children and descendants from another update to this
+update as removed descendants.
+This method is invoked when a component is removed that is an ancestor
+of a component that has an update in the update manager.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(Echo.Update.CompoentUpdate)</em>
+- the update from which to pull 
+       removed components/descendants</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getAddedChildren"></a>
+<span class="DetailPropertyName">getAddedChildren</span>
+
+<dl>
+<dd>Returns an array containing the children added in this update,
+or null if none were added.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the added children
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getRemovedChildren"></a>
+<span class="DetailPropertyName">getRemovedChildren</span>
+
+<dl>
+<dd>Returns an array containing the children removed in this update,
+or null if none were removed.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the removed children
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getRemovedDescendants"></a>
+<span class="DetailPropertyName">getRemovedDescendants</span>
+
+<dl>
+<dd>Returns an array containing the descendants of any children removed in
+this update, or null if none were removed.  The removed children
+themselves are not returned by this method.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the removed descendants
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getUpdatedLayoutDataChildren"></a>
+<span class="DetailPropertyName">getUpdatedLayoutDataChildren</span>
+
+<dl>
+<dd>Returns an array containing the children of this component whose
+LayoutDatas have changed in this update, or null if no such
+changes were made.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the updated layout data children
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasAddedChildren"></a>
+<span class="DetailPropertyName">hasAddedChildren</span>
+
+<dl>
+<dd>Determines if any children were added during this update.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if any children were added
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasRemovedChildren"></a>
+<span class="DetailPropertyName">hasRemovedChildren</span>
+
+<dl>
+<dd>Determines if any children were removed during this update.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if any children were removed
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasUpdatedLayoutDataChildren"></a>
+<span class="DetailPropertyName">hasUpdatedLayoutDataChildren</span>
+
+<dl>
+<dd>Determines if any children had their LayoutData changed during this update.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if any children had their LayoutData changed
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasUpdatedProperties"></a>
+<span class="DetailPropertyName">hasUpdatedProperties</span>
+
+<dl>
+<dd>Determines if this update has any changed properties.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if properties are being updated
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getUpdatedProperty"></a>
+<span class="DetailPropertyName">getUpdatedProperty</span>
+
+<dl>
+<dd>Returns a <code>PropertyUpdate</code> describing an update to the
+property with the given <code>name</code>.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>name</code> 
+- the name of the property being updated</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Echo.Update.ComponentUpdate.PropertyUpdate)</em>
+
+the <code>PropertyUpdate</code>, or null if none exists
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasUpdatedChildren"></a>
+<span class="DetailPropertyName">hasUpdatedChildren</span>
+
+<dl>
+<dd>Determines if any children had their update during this update.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if manager who serves this update contains updates for the children
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getChildrenUpdate"></a>
+<span class="DetailPropertyName">getChildrenUpdate</span>
+
+<dl>
+<dd>Returns a collection of <code>Echo.Update.ComponentUpdate</code> 
+contains child's update during this update.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+updates of all updated children during this update
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isListenerTypeUpdated"></a>
+<span class="DetailPropertyName">isListenerTypeUpdated</span>
+
+<dl>
+<dd>Determines if any listeners of a specific type were added or removed
+from the component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>listenerType</code> 
+<em>(String)</em>
+- the type of listener to query</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getUpdatedPropertyNames"></a>
+<span class="DetailPropertyName">getUpdatedPropertyNames</span>
+
+<dl>
+<dd>Returns the names of all properties being updated in this update.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the names of all updated properties, if no properties are updated an
+        empty array is returned
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasUpdatedPropertyIn"></a>
+<span class="DetailPropertyName">hasUpdatedPropertyIn</span>
+
+<dl>
+<dd>Determines if any of the specified properties has been
+updated in this update.  The provided object should have
+have keys for the desired property names and  values that evaluate 
+to true, e.g. to determine if either the "text" and/or "icon" properties
+changed, specify {text: true, icon: true}.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>updatedPropertySet</code> 
+- the updated property set</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if any of the specified properties has been updated in this update
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isUpdatedPropertySetIn"></a>
+<span class="DetailPropertyName">isUpdatedPropertySetIn</span>
+
+<dl>
+<dd>Determines if the set of updated property names is contained
+within the specified set.  The provided object should have
+have keys for the desired property names and  values that evaluate 
+to true, e.g. to determine if no properties other than "text" and "icon"
+changed, specify {text: true, icon: true}.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>updatedPropertySet</code> 
+- the updated property set</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the set of updated property names is contained within the specified set
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._removeChild"></a>
+<span class="DetailPropertyName">_removeChild</span>
+
+<dl>
+<dd>Records the removal of a child from the parent component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the removed child</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._removeDescendant"></a>
+<span class="DetailPropertyName">_removeDescendant</span>
+
+<dl>
+<dd>Records the removal of a descendant of the parent component.
+All children of a removed component are recorded as removed
+descendants when the child is removed.
+This method will recursively invoke itself on children of
+the specified descendant.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>descendant</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the removed descendant</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toString"></a>
+<span class="DetailPropertyName">toString</span>
+
+<dl>
+<dd>Returns a string representation.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+a string representation
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._updateLayoutData"></a>
+<span class="DetailPropertyName">_updateLayoutData</span>
+
+<dl>
+<dd>Records the update of the LayoutData of a child component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the child component whose layout data was updated</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._updateListener"></a>
+<span class="DetailPropertyName">_updateListener</span>
+
+<dl>
+<dd>Records the addition or removal of listeners to the parent component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>listenerType</code> 
+<em>(String)</em>
+- the listener type</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._updateProperty"></a>
+<span class="DetailPropertyName">_updateProperty</span>
+
+<dl>
+<dd>Records the update of a property of the parent component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>propertyName</code> 
+<em>(String)</em>
+- the name of the property</dd>
+<dd>
+<code>oldValue</code> 
+- the previous value of the property</dd>
+<dd>
+<code>newValue</code> 
+- the new value of the property</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.markAsProcessed"></a>
+<span class="DetailPropertyName">markAsProcessed</span>
+
+<dl>
+<dd>Mark a current update as processed. (from Echo.Render.processUpdates(client))
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isProcessed"></a>
+<span class="DetailPropertyName">isProcessed</span>
+
+<dl>
+<dd>Checks whether the current update is processed!
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(boolean)</em>
+
+processed whether or not
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+

@@ -1,0 +1,530 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync.Menu <span class="divider">/</span>
+  </li>
+    <li>
+    RenderedMenu
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Extras.Sync.Menu.RenderedMenu">Extras.Sync.Menu.RenderedMenu</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>A single on-screen rendered menu.</p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.Menu.RenderedMenu.FadeAnimation">Extras.Sync.Menu.RenderedMenu.FadeAnimation</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.Menu.RenderedMenu(menuSync, menuModel)</a></code><br/>
+Creates a new <code>RenderedMenu</code>.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.menuSync">menuSync</a></code><br/>
+The containing menu synchronization peer.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.component">component</a></code><br/>
+The menu component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.client">client</a></code><br/>
+The relevant client instance.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.element">element</a></code><br/>
+The root element of the menu.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.itemElements">itemElements</a></code><br/>
+Mapping between model ids and menu item TR elements.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.menuModel">menuModel</a></code><br/>
+The displayed menu model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.width">width</a></code><br/>
+The rendered pixel width of the model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.height">height</a></code><br/>
+The rendered pixel height of the model.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._activeItem">_activeItem</a></code><br/>
+The currently active menu item.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.stateModel">stateModel</a></code><br/>
+The menu state model.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.close">close()</a></code><br/>
+Closes the menu, removing it from the screen.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.create">create()</a></code><br/>
+Renders DOM element hierarchy of menu.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getItemElement">_getItemElement(element)</a></code><br/>
+Returns the menu item TR element which is a parent of the specified element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getItemModel">_getItemModel(element)</a></code><br/>
+Determines a ItemModel id based on a menu item DOM element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getSubMenuPosition">getSubMenuPosition()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.open">open(x, y)</a></code><br/>
+Opens the rendered menu, displaying it on the screen at the specified position.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processClick">_processClick(e)</a></code><br/>
+Processes a mouse click event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processItemEnter">_processItemEnter(e)</a></code><br/>
+Processes a mouse rollover enter event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processItemExit">_processItemExit(e)</a></code><br/>
+Processes a mouse rollover exit event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processRollover">_processRollover(e, state)</a></code><br/>
+Processes mouse rollover events.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setActiveItem">_setActiveItem(itemModel, execute)</a></code><br/>
+Sets the active item.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setItemHighlight">_setItemHighlight(itemModel, state)</a></code><br/>
+Sets the highlight state of an item.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Extras.Sync.Menu.RenderedMenu(menuSync, menuModel)</span>
+
+<dl>
+<dd>Creates a new <code>RenderedMenu</code>.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>menuSync</code> 
+<em>(<a href="Class.Extras.Sync.Menu">Extras.Sync.Menu</a>)</em>
+- the menu synchronization peer</dd>
+<dd>
+<code>menuModel</code> 
+<em>(<a href="Class.Extras.MenuModel">Extras.MenuModel</a>)</em>
+- the menu model</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.close"></a>
+<span class="DetailPropertyName">close</span>
+
+<dl>
+<dd>Closes the menu, removing it from the screen.
+Disposes all resources, object should be released for garbage collection after invocation.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.create"></a>
+<span class="DetailPropertyName">create</span>
+
+<dl>
+<dd>Renders DOM element hierarchy of menu.  Does not display it within document (open() method will later
+be used to perform this operation).
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getItemElement"></a>
+<span class="DetailPropertyName">_getItemElement</span>
+
+<dl>
+<dd>Returns the menu item TR element which is a parent of the specified element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+- an element which is a descendant of a TR element representing a menu item</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Element)</em>
+
+the TR element
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getItemModel"></a>
+<span class="DetailPropertyName">_getItemModel</span>
+
+<dl>
+<dd>Determines a ItemModel id based on a menu item DOM element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+- the DOM element</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the ItemModel id
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getSubMenuPosition"></a>
+<span class="DetailPropertyName">getSubMenuPosition</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.open"></a>
+<span class="DetailPropertyName">open</span>
+
+<dl>
+<dd>Opens the rendered menu, displaying it on the screen at the specified position.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>x</code> 
+<em>(Number)</em>
+- the horizontal pixel position</dd>
+<dd>
+<code>y</code> 
+<em>(Number)</em>
+- the vertical pixel position</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processClick"></a>
+<span class="DetailPropertyName">_processClick</span>
+
+<dl>
+<dd>Processes a mouse click event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processItemEnter"></a>
+<span class="DetailPropertyName">_processItemEnter</span>
+
+<dl>
+<dd>Processes a mouse rollover enter event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processItemExit"></a>
+<span class="DetailPropertyName">_processItemExit</span>
+
+<dl>
+<dd>Processes a mouse rollover exit event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processRollover"></a>
+<span class="DetailPropertyName">_processRollover</span>
+
+<dl>
+<dd>Processes mouse rollover events.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+<dd>
+<code>state</code> 
+<em>(Boolean)</em>
+- the rollover state, true indicating the mouse is currently rolled over an item</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setActiveItem"></a>
+<span class="DetailPropertyName">_setActiveItem</span>
+
+<dl>
+<dd>Sets the active item.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>itemModel</code> 
+<em>(<a href="Class.Extras.ItemModel">Extras.ItemModel</a>)</em>
+- the item</dd>
+<dd>
+<code>execute</code> 
+<em>(Boolean)</em>
+- flag indicating whether the item should be executed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setItemHighlight"></a>
+<span class="DetailPropertyName">_setItemHighlight</span>
+
+<dl>
+<dd>Sets the highlight state of an item.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>itemModel</code> 
+<em>(<a href="Class.Extras.ItemModel">Extras.ItemModel</a>)</em>
+- the item</dd>
+<dd>
+<code>state</code> 
+<em>(Boolean)</em>
+- the highlight state</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

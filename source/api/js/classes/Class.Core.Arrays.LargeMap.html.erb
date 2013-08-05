@@ -1,0 +1,226 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Arrays <span class="divider">/</span>
+  </li>
+    <li>
+    LargeMap
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Arrays.LargeMap">Core.Arrays.LargeMap</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Associative array wrapper which periodically recreates the associative array
+in order to avoid memory leakage and performance problems on certain browser
+platforms, i.e., Internet Explorer 6.
+Null values are not permitted as keys.  Setting a key to a null value
+will result in the key being removed.</p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Core.Arrays.LargeMap()</a></code><br/>
+Creates a new LargeMap.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.garbageCollectEnabled">garbageCollectEnabled</a></code><br/>
+Flag indicating whether forced garbage collection should be enabled.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._removeCount">_removeCount</a></code><br/>
+Number of removes since last associative array re-creation.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.garbageCollectionInterval">garbageCollectionInterval</a></code><br/>
+Number (integer) of removes between associative array re-creation.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.map">map</a></code><br/>
+Associative mapping.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._garbageCollect">_garbageCollect()</a></code><br/>
+Performs 'garbage-collection' operations, recreating the array.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.remove">remove(key)</a></code><br/>
+Removes the value referenced by the specified key.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toString">toString()</a></code><br/>
+Returns a string representation, for debugging purposes only.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Core.Arrays.LargeMap()</span>
+
+<dl>
+<dd>Creates a new LargeMap.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._garbageCollect"></a>
+<span class="DetailPropertyName">_garbageCollect</span>
+
+<dl>
+<dd>Performs 'garbage-collection' operations, recreating the array.
+This operation is necessary due to Internet Explorer memory leak
+issues.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.remove"></a>
+<span class="DetailPropertyName">remove</span>
+
+<dl>
+<dd>Removes the value referenced by the specified key.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>key</code> 
+- the key</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toString"></a>
+<span class="DetailPropertyName">toString</span>
+
+<dl>
+<dd>Returns a string representation, for debugging purposes only.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+a string representation of the map
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+

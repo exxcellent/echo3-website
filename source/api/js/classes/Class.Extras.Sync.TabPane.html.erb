@@ -1,0 +1,1062 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync <span class="divider">/</span>
+  </li>
+    <li>
+    TabPane
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.TabPane">Extras.Sync.TabPane</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Component rendering peer: TabPane.
+This class should not be extended by developers, the implementation is subject to change.</p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.TabPane.ScrollRunnable">Extras.Sync.TabPane.ScrollRunnable</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.TabPane.Tab">Extras.Sync.TabPane.Tab</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.TabPane()</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._TABLE">_TABLE</a></code><br/>
+Prototype zero-padding table/tbody/tr hierarchy.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._supportedPartialProperties">_supportedPartialProperties</a></code><br/>
+Supported partial update properties.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createTable">_createTable()</a></code><br/>
+Generates a zero-pading table/tbody/tr hierarchy.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._icons">_icons</a></code><br/>
+Name-to-ImageReference map for icons used by the TabPane, e.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._div">_div</a></code><br/>
+Primary DIV element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._contentContainerDiv">_contentContainerDiv</a></code><br/>
+DIV element which contains content.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._headerContainerBoundsDiv">_headerContainerBoundsDiv</a></code><br/>
+Element containing _headerContainerDiv.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._headerContainerDiv">_headerContainerDiv</a></code><br/>
+Element containing tab headers.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._activeTabId">_activeTabId</a></code><br/>
+The renderId of the active tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._displayedTabId">_displayedTabId</a></code><br/>
+The renderId of the displayed tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._previousControlDiv">_previousControlDiv</a></code><br/>
+Scroll previous arrow.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._nextControlDiv">_nextControlDiv</a></code><br/>
+Scroll next arrow.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._pendingRollover">_pendingRollover</a></code><br/>
+Data object containing information about a pending update to a tab's rollover state.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._rolloverTabId">_rolloverTabId</a></code><br/>
+The tab which is currently rolled over.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._rolloverTabCloseState">_rolloverTabCloseState</a></code><br/>
+Flag indicating whether the current rolled over tab's close icon is rolled over.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._rolloverRunnable">_rolloverRunnable</a></code><br/>
+Runnable used to delay rendering of rollover effects to avoid flicker.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._tabs">_tabs</a></code><br/>
+Array containing <code>Extras.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._totalTabWidth">_totalTabWidth</a></code><br/>
+Combined width of all tabs, in pixels.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._headerHeight">_headerHeight</a></code><br/>
+Height of the header, in pixels.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._layoutRequired">_layoutRequired</a></code><br/>
+Flag indicating whether a re-layout operation is required.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._headerImageLoadingComplete">_headerImageLoadingComplete</a></code><br/>
+Flag indicating whether header images have been completely loaded.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._headerUpdateRequired">_headerUpdateRequired</a></code><br/>
+Flag indicating whether a full header re-render operation is required.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._tabSelectListenerRef">_tabSelectListenerRef</a></code><br/>
+Method reference to <code>_tabSelectListener</code> of instance.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._scrollRunnable">_scrollRunnable</a></code><br/>
+The ScrollRunnable currently scrolling the tab headers.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.scrollPosition">scrollPosition</a></code><br/>
+Current scroll position of tab header, in pixels.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._rtl">_rtl</a></code><br/>
+Flag indicating rendered layout direction of component (true if right-to-left).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._focusAnchor">_focusAnchor</a></code><br/>
+Focus proxy element which keeps track of the browser focus for the tab pane.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._focusAnchorDiv">_focusAnchorDiv</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._addTab">_addTab(update, tab, index)</a></code><br/>
+Adds a tab and renders it.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderLayout">_renderLayout()</a></code><br/>
+Measures the height of the header region of the tab pane, adjusting the content region's size to accommodate it.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderHeaderPositions">_renderHeaderPositions()</a></code><br/>
+Positions tabs.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getActiveTabId">_getActiveTabId()</a></code><br/>
+Determines the renderId of the active tab child component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getSeparatorHeight">_getSeparatorHeight()</a></code><br/>
+Determines the pxiel height of the separation between inactive tabs and the tab content area.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getTabById">_getTabById(tabId)</a></code><br/>
+Retrieves the tab instance with the specified tab id.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isChildVisible">isChildVisible()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processScrollRollover">_processScrollRollover(e)</a></code><br/>
+Handler for mouse rollover enter/exit events on previous/next scroll buttons.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processScrollStart">_processScrollStart(e)</a></code><br/>
+Handler for mouse down event on previous/next scroll buttons.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processScrollStop">_processScrollStop(e)</a></code><br/>
+Handler for mouse up event on previous/next scroll buttons.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._removeTab">_removeTab(tab)</a></code><br/>
+Removes a specific tab.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderHeaderUpdate">_renderHeaderUpdate()</a></code><br/>
+Renders a full update to the header, if required.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setOversizeEnabled">_setOversizeEnabled(previous, enabled)</a></code><br/>
+Enables/disables the scrolling controls used when the tab header is to wide to be displayed entirely at once.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setRolloverTab">_setRolloverTab(tabId, state)</a></code><br/>
+Sets the currently rolled-over tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setRolloverTabImpl">_setRolloverTabImpl(tabId, state)</a></code><br/>
+Implementation work method for setting currently rolled over tab.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setScrollPosition">setScrollPosition(position)</a></code><br/>
+Sets the scroll position of the tab header.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._tabSelectListener">_tabSelectListener(e)</a></code><br/>
+Event listener to component instance for user tab selections.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._verifyActiveTabAvailable">_verifyActiveTabAvailable()</a></code><br/>
+Ensures an active tab is present, if possible.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processKeyDown">_processKeyDown(e)</a></code><br/>
+Keydown event handler to change tabs with the keyboard's arrow keys
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._addEventHandlers">_addEventHandlers()</a></code><br/>
+Registers event handlers on the text component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processBlur">processBlur()</a></code><br/>
+Processes a focus blur event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processFocus">processFocus()</a></code><br/>
+Processes a focus event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderFocus">renderFocus()</a></code><br/>
+Focuses the tab pane
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<div class="Header">Constructor Detail</div>
+
+<span class="DetailPropertyName">Echo.Render.ComponentSync()</span>
+
+<dl>
+<dd>Constructor.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method._createTable"></a>
+<span class="DetailPropertyName">_createTable</span>
+
+<dl>
+<dd>Generates a zero-pading table/tbody/tr hierarchy.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Element)</em>
+
+the root table element
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._addTab"></a>
+<span class="DetailPropertyName">_addTab</span>
+
+<dl>
+<dd>Adds a tab and renders it.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the component update</dd>
+<dd>
+<code>tab</code> 
+<em>(<a href="Class.Extras.Sync.TabPane.Tab">Extras.Sync.TabPane.Tab</a>)</em>
+- the tab to be added</dd>
+<dd>
+<code>index</code> 
+- the index at which the tab should be added</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderLayout"></a>
+<span class="DetailPropertyName">_renderLayout</span>
+
+<dl>
+<dd>Measures the height of the header region of the tab pane, adjusting the content region's size to accommodate it.
+Invoked in renderDisplay phase when <code>_layoutRequired</code> flag has been set.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderHeaderPositions"></a>
+<span class="DetailPropertyName">_renderHeaderPositions</span>
+
+<dl>
+<dd>Positions tabs.
+Equalizes tab heights to height of tallest tab.
+Determines and stores the object's <code>_totalTabWidth</code> and <code>_headerHeight</code> properties.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getActiveTabId"></a>
+<span class="DetailPropertyName">_getActiveTabId</span>
+
+<dl>
+<dd>Determines the renderId of the active tab child component.
+This method first queries the component's <code>activeTabId</code> property, 
+and if it is not set, the id is determined by finding the child component at the 
+index specified by the component's <code>activeTabIndex</code> property.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the active tab renderId
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getSeparatorHeight"></a>
+<span class="DetailPropertyName">_getSeparatorHeight</span>
+
+<dl>
+<dd>Determines the pxiel height of the separation between inactive tabs and the tab content area.  (For a TAB_POSITION_TOP,
+this is the bottom of the tabs to the top of tab content).
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the height
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getTabById"></a>
+<span class="DetailPropertyName">_getTabById</span>
+
+<dl>
+<dd>Retrieves the tab instance with the specified tab id.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>tabId</code> 
+- the tab render id</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Extras.Sync.TabPane.Tab">Extras.Sync.TabPane.Tab</a>)</em>
+
+the tab, or null if no tab is present with the specified id
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isChildVisible"></a>
+<span class="DetailPropertyName">isChildVisible</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processScrollRollover"></a>
+<span class="DetailPropertyName">_processScrollRollover</span>
+
+<dl>
+<dd>Handler for mouse rollover enter/exit events on previous/next scroll buttons.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the mouse rollover event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processScrollStart"></a>
+<span class="DetailPropertyName">_processScrollStart</span>
+
+<dl>
+<dd>Handler for mouse down event on previous/next scroll buttons.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the mouse down event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processScrollStop"></a>
+<span class="DetailPropertyName">_processScrollStop</span>
+
+<dl>
+<dd>Handler for mouse up event on previous/next scroll buttons.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the mouse up event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._removeTab"></a>
+<span class="DetailPropertyName">_removeTab</span>
+
+<dl>
+<dd>Removes a specific tab.  Removes its rendering from the DOM.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>tab</code> 
+<em>(<a href="Class.Extras.Sync.TabPane.Tab">Extras.Sync.TabPane.Tab</a>)</em>
+- the tab to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderHeaderUpdate"></a>
+<span class="DetailPropertyName">_renderHeaderUpdate</span>
+
+<dl>
+<dd>Renders a full update to the header, if required.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setOversizeEnabled"></a>
+<span class="DetailPropertyName">_setOversizeEnabled</span>
+
+<dl>
+<dd>Enables/disables the scrolling controls used when the tab header is to wide to be displayed entirely at once.
+This method will lazy-render the specified scrolling control if it has not been previously enabled.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>previous</code> 
+<em>(Boolean)</em>
+- flag indicating which scrolling control should be enabled/disabled, true indicating the
+       scroll-to-previous control, false indicating the scroll-to-next control</dd>
+<dd>
+<code>enabled</code> 
+<em>(Boolean)</em>
+- the new enabled state</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setRolloverTab"></a>
+<span class="DetailPropertyName">_setRolloverTab</span>
+
+<dl>
+<dd>Sets the currently rolled-over tab.
+Enqueues a slightly delayed runnable to perform the operation in order to prevent flicker.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>tabId</code> 
+<em>(String)</em>
+- the tab id (renderId of child componeent)</dd>
+<dd>
+<code>state</code> 
+<em>(Boolean)</em>
+- the rollover state of the tab</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setRolloverTabImpl"></a>
+<span class="DetailPropertyName">_setRolloverTabImpl</span>
+
+<dl>
+<dd>Implementation work method for setting currently rolled over tab.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>tabId</code> 
+<em>(String)</em>
+- the tab id (renderId of child componeent)</dd>
+<dd>
+<code>state</code> 
+<em>(Boolean)</em>
+- the rollover state of the tab</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setScrollPosition"></a>
+<span class="DetailPropertyName">setScrollPosition</span>
+
+<dl>
+<dd>Sets the scroll position of the tab header.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>position</code> 
+<em>(Number)</em>
+- the scroll position, in pixels</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+a boolean state indicating whether the scroll position could be set exactly (true) or was bounded by
+        an attempt too be scrolled to far (false)
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._tabSelectListener"></a>
+<span class="DetailPropertyName">_tabSelectListener</span>
+
+<dl>
+<dd>Event listener to component instance for user tab selections.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._verifyActiveTabAvailable"></a>
+<span class="DetailPropertyName">_verifyActiveTabAvailable</span>
+
+<dl>
+<dd>Ensures an active tab is present, if possible.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processKeyDown"></a>
+<span class="DetailPropertyName">_processKeyDown</span>
+
+<dl>
+<dd>Keydown event handler to change tabs with the keyboard's arrow keys
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._addEventHandlers"></a>
+<span class="DetailPropertyName">_addEventHandlers</span>
+
+<dl>
+<dd>Registers event handlers on the text component.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processBlur"></a>
+<span class="DetailPropertyName">processBlur</span>
+
+<dl>
+<dd>Processes a focus blur event.
+Overriding implementations must invoke.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processFocus"></a>
+<span class="DetailPropertyName">processFocus</span>
+
+<dl>
+<dd>Processes a focus event. Notifies application of focus.
+Overriding implementations must invoke.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderFocus"></a>
+<span class="DetailPropertyName">renderFocus</span>
+
+<dl>
+<dd>Focuses the tab pane
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

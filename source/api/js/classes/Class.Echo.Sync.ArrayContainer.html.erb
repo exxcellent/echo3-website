@@ -1,0 +1,376 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync <span class="divider">/</span>
+  </li>
+    <li>
+    ArrayContainer
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.Sync.ArrayContainer">Echo.Sync.ArrayContainer</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.Sync.Column">Echo.Sync.Column</a></code>, <code><a href="Class.Echo.Sync.Row">Echo.Sync.Row</a></code></dd>
+</dl>
+
+
+
+<p>Abstract base class for column/row peers.
+This class should not be extended by developers, the implementation is subject to change.</p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.cellElementNodeName">cellElementNodeName</a></code><br/>
+The DOM element name of child container cells.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.prevFocusKey">prevFocusKey</a></code><br/>
+The key code which should move focus to the previous child cell.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.prevFocusFlag">prevFocusFlag</a></code><br/>
+The Echo.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.nextFocusKey">nextFocusKey</a></code><br/>
+The key code which should move focus to the next child cell.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.nextFocusFlag">nextFocusFlag</a></code><br/>
+The Echo.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.invertFocusRtl">invertFocusRtl</a></code><br/>
+Flag indicating whether focus key should be inverted when the component is rendered with an RTL layout direction.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.element">element</a></code><br/>
+The root DOM element of the rendered array container.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.containerElement">containerElement</a></code><br/>
+The DOM element to which child elements should be added.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.spacingPrototype">spacingPrototype</a></code><br/>
+Prototype Element to be cloned and added between cells of the array container.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.cellSpacing">cellSpacing</a></code><br/>
+Number of pixels to be rendered as spacing between child cells of the container.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._childIdToElementMap">_childIdToElementMap</a></code><br/>
+Mapping between child render ids and child container cell elements.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderChildLayoutData">renderChildLayoutData(child, the)</a></code><br/>
+Abstract method which renders layout data on child cell element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyDown">clientKeyDown(e)</a></code><br/>
+Processes a key press event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderAddChild">_renderAddChild(the, the, index)</a></code><br/>
+Renders the specified child to the containerElement.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAddChildren">renderAddChildren(the)</a></code><br/>
+Renders all children.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderRemoveChild">_renderRemoveChild(the, the)</a></code><br/>
+Removes a child cell.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.renderChildLayoutData"></a>
+<span class="DetailPropertyName">renderChildLayoutData</span>
+
+<dl>
+<dd>Abstract method which renders layout data on child cell element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the child component</dd>
+<dd>
+<code>the</code> 
+<em>(Element)</em>
+- DOM element containing the child</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyDown"></a>
+<span class="DetailPropertyName">clientKeyDown</span>
+
+<dl>
+<dd>Processes a key press event.  Provides support for adjusting focus via arrow keys.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderAddChild"></a>
+<span class="DetailPropertyName">_renderAddChild</span>
+
+<dl>
+<dd>Renders the specified child to the containerElement.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- update</dd>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- child component</dd>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the index of the child within the parent</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAddChildren"></a>
+<span class="DetailPropertyName">renderAddChildren</span>
+
+<dl>
+<dd>Renders all children.  Must be invoked by derived <code>renderAdd()</code> implementations.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- update</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderRemoveChild"></a>
+<span class="DetailPropertyName">_renderRemoveChild</span>
+
+<dl>
+<dd>Removes a child cell.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- update</dd>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- child to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+
