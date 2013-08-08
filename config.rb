@@ -25,6 +25,14 @@ page "guides*", :layout => :guides
 page "api/js*", :layout => :jsapi
 page "api/java*", :layout => :javaapi
 
+helpers do
+  def active_js_accordion(current_path)
+    # Extract JS namespace from URL, e.g. "Class.Echo.Foo.Bar" -> "Echo"
+    current_path.split('/')[-1].split('.')[1]
+  end
+end
+
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
