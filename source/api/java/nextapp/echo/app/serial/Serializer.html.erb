@@ -1,0 +1,280 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../nextapp/echo/app/serial/SerialException.html" title="class in nextapp.echo.app.serial"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../nextapp/echo/app/serial/SerialPeerFactory.html" title="class in nextapp.echo.app.serial"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?nextapp/echo/app/serial/Serializer.html" target="_top">Frames</a></li>
+<li><a href="Serializer.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.app.serial</div>
+<h2 title="Class Serializer" class="title">Class Serializer</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>nextapp.echo.app.serial.Serializer</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">Serializer</span>
+extends java.lang.Object</pre>
+<div class="block">Front-end for translating XML component/style to <code>Style</code> instances.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../nextapp/echo/app/serial/Serializer.html" title="class in nextapp.echo.app.serial">Serializer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/serial/Serializer.html#forClassLoader(java.lang.ClassLoader)">forClassLoader</a></strong>(java.lang.ClassLoader&nbsp;classLoader)</code>
+<div class="block">Creates or retrieves a <code>Serializer</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Class</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/serial/Serializer.html#getClass(java.lang.String)">getClass</a></strong>(java.lang.String&nbsp;type)</code>
+<div class="block">Returns a <code>Class</code> based on an XML type value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../nextapp/echo/app/serial/SerialPropertyPeer.html" title="interface in nextapp.echo.app.serial">SerialPropertyPeer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/serial/Serializer.html#getSerialPropertyPeer(org.w3c.dom.Element)">getSerialPropertyPeer</a></strong>(org.w3c.dom.Element&nbsp;propertyElement)</code>
+<div class="block">Retrieves a <code>SerialPropertyPeer</code> specified by a type name in a property DOM element, if possible.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/serial/Serializer.html#loadStyle(nextapp.echo.app.serial.SerialContext, java.lang.String, org.w3c.dom.Element)">loadStyle</a></strong>(<a href="../../../../nextapp/echo/app/serial/SerialContext.html" title="interface in nextapp.echo.app.serial">SerialContext</a>&nbsp;serialContext,
+         java.lang.String&nbsp;componentType,
+         org.w3c.dom.Element&nbsp;containerElement)</code>
+<div class="block">Creates a <code>Style</code> object based on an XML property container.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="forClassLoader(java.lang.ClassLoader)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>forClassLoader</h4>
+<pre>public static&nbsp;<a href="../../../../nextapp/echo/app/serial/Serializer.html" title="class in nextapp.echo.app.serial">Serializer</a>&nbsp;forClassLoader(java.lang.ClassLoader&nbsp;classLoader)</pre>
+<div class="block">Creates or retrieves a <code>Serializer</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>classLoader</code> - the <code>ClassLoader</code> to use for 
+        dynamically loading peer classes</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the <code>Serializer</code></dd></dl>
+</li>
+</ul>
+<a name="getClass(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getClass</h4>
+<pre>public&nbsp;java.lang.Class&nbsp;getClass(java.lang.String&nbsp;type)
+                         throws java.lang.ClassNotFoundException</pre>
+<div class="block">Returns a <code>Class</code> based on an XML type value.
+ The provided type may be a java.lang shorthand, e.g., "s" for string, "b" for boolean.
+ If the provided type is not fully qualified, a standard Echo property type is assumed, e.g.
+ "Extent" will return the nextapp.echo.app.Extent class.
+ If the property type is fully qualified, it will simply be loaded by the classloader.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - the XML type value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the represented <code>Class</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.ClassNotFoundException</code> - in the event that no class exists with the specified type</dd></dl>
+</li>
+</ul>
+<a name="getSerialPropertyPeer(org.w3c.dom.Element)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSerialPropertyPeer</h4>
+<pre>public&nbsp;<a href="../../../../nextapp/echo/app/serial/SerialPropertyPeer.html" title="interface in nextapp.echo.app.serial">SerialPropertyPeer</a>&nbsp;getSerialPropertyPeer(org.w3c.dom.Element&nbsp;propertyElement)
+                                         throws <a href="../../../../nextapp/echo/app/serial/SerialException.html" title="class in nextapp.echo.app.serial">SerialException</a></pre>
+<div class="block">Retrieves a <code>SerialPropertyPeer</code> specified by a type name in a property DOM element, if possible.
+ Returns null in the event no type name is specified.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyElement</code> - the property element, which may or may not specify a "t" attribute specifying the type name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the <code>SerialPropertyPeer</code>, if it can be determined</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../nextapp/echo/app/serial/SerialException.html" title="class in nextapp.echo.app.serial">SerialException</a></code></dd></dl>
+</li>
+</ul>
+<a name="loadStyle(nextapp.echo.app.serial.SerialContext, java.lang.String, org.w3c.dom.Element)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>loadStyle</h4>
+<pre>public&nbsp;<a href="../../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a>&nbsp;loadStyle(<a href="../../../../nextapp/echo/app/serial/SerialContext.html" title="interface in nextapp.echo.app.serial">SerialContext</a>&nbsp;serialContext,
+              java.lang.String&nbsp;componentType,
+              org.w3c.dom.Element&nbsp;containerElement)
+                throws <a href="../../../../nextapp/echo/app/serial/SerialException.html" title="class in nextapp.echo.app.serial">SerialException</a></pre>
+<div class="block">Creates a <code>Style</code> object based on an XML property container.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>serialContext</code> - the <code>SerialContext</code> providing contextual information about the serialization</dd><dd><code>componentType</code> - the component type for which the <code>Style</code> will be used</dd><dd><code>containerElement</code> - the DOM element containing the style properties</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the generated <code>Style</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../nextapp/echo/app/serial/SerialException.html" title="class in nextapp.echo.app.serial">SerialException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../nextapp/echo/app/serial/SerialException.html" title="class in nextapp.echo.app.serial"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../nextapp/echo/app/serial/SerialPeerFactory.html" title="class in nextapp.echo.app.serial"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?nextapp/echo/app/serial/Serializer.html" target="_top">Frames</a></li>
+<li><a href="Serializer.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

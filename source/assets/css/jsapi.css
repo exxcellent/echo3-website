@@ -1,0 +1,8 @@
+div.Header {
+	font-weight: bold;
+}
+
+span.DetailPropertyName {
+	font-weight: bold;
+	color: #2e8bcc;
+}

@@ -1,0 +1,509 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../nextapp/echo/app/update/UpdateManager.html" title="class in nextapp.echo.app.update"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?nextapp/echo/app/update/ServerUpdateManager.html" target="_top">Frames</a></li>
+<li><a href="ServerUpdateManager.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.app.update</div>
+<h2 title="Class ServerUpdateManager" class="title">Class ServerUpdateManager</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>nextapp.echo.app.update.ServerUpdateManager</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">ServerUpdateManager</span>
+extends java.lang.Object
+implements java.io.Serializable</pre>
+<div class="block">Monitors updates to component hierarchy and records deltas between 
+ server state of application and client state of application.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../serialized-form.html#nextapp.echo.app.update.ServerUpdateManager">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#ServerUpdateManager(nextapp.echo.app.ApplicationInstance)">ServerUpdateManager</a></strong>(<a href="../../../../nextapp/echo/app/ApplicationInstance.html" title="class in nextapp.echo.app">ApplicationInstance</a>&nbsp;applicationInstance)</code>
+<div class="block">Creates a new <code>ServerUpdateManager</code>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#enqueueCommand(nextapp.echo.app.Command)">enqueueCommand</a></strong>(<a href="../../../../nextapp/echo/app/Command.html" title="interface in nextapp.echo.app">Command</a>&nbsp;command)</code>
+<div class="block">Enqueues a <code>Command</code> for processing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../nextapp/echo/app/update/PropertyUpdate.html" title="class in nextapp.echo.app.update">PropertyUpdate</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#getApplicationPropertyUpdate(java.lang.String)">getApplicationPropertyUpdate</a></strong>(java.lang.String&nbsp;propertyName)</code>
+<div class="block">Returns a <code>PropertyUpdate</code> representing the 
+ application-level property update with the specified name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../nextapp/echo/app/Command.html" title="interface in nextapp.echo.app">Command</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#getCommands()">getCommands</a></strong>()</code>
+<div class="block">Returns the stored <code>Command</code>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update">ServerComponentUpdate</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#getComponentUpdates()">getComponentUpdates</a></strong>()</code>
+<div class="block">Returns the stored <code>ServerComponentUpdate</code>s.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#init(nextapp.echo.app.update.ClientUpdateManager)">init</a></strong>(<a href="../../../../nextapp/echo/app/update/ClientUpdateManager.html" title="class in nextapp.echo.app.update">ClientUpdateManager</a>&nbsp;clientUpdateManager)</code>
+<div class="block">Initialization life-cycle method.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#isEmpty()">isEmpty</a></strong>()</code>
+<div class="block">Determines if the manager has no updates.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#isFullRefreshRequired()">isFullRefreshRequired</a></strong>()</code>
+<div class="block">Determines if a full refresh of the client state is required.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processApplicationPropertyUpdate(java.lang.String, java.lang.Object, java.lang.Object)">processApplicationPropertyUpdate</a></strong>(java.lang.String&nbsp;propertyName,
+                                java.lang.Object&nbsp;oldValue,
+                                java.lang.Object&nbsp;newValue)</code>
+<div class="block">Processes an update to a property of the <code>ApplicationInstance</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processComponentAdd(nextapp.echo.app.Component, nextapp.echo.app.Component)">processComponentAdd</a></strong>(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent,
+                   <a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;child)</code>
+<div class="block">Processes the addition of a component to the hierarchy.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processComponentLayoutDataUpdate(nextapp.echo.app.Component)">processComponentLayoutDataUpdate</a></strong>(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;updatedComponent)</code>
+<div class="block">Processes an update to the <code>LayoutData</code> of a component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processComponentPropertyUpdate(nextapp.echo.app.Component, java.lang.String, java.lang.Object, java.lang.Object)">processComponentPropertyUpdate</a></strong>(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;updatedComponent,
+                              java.lang.String&nbsp;propertyName,
+                              java.lang.Object&nbsp;oldValue,
+                              java.lang.Object&nbsp;newValue)</code>
+<div class="block">Processes an update to a property of a component (other than the
+ <code>LayoutData</code> property).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processComponentRemove(nextapp.echo.app.Component, nextapp.echo.app.Component)">processComponentRemove</a></strong>(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent,
+                      <a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;child)</code>
+<div class="block">Processes the removal of a component from the hierarchy.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processComponentVisibilityUpdate(nextapp.echo.app.Component)">processComponentVisibilityUpdate</a></strong>(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;updatedComponent)</code>
+<div class="block">Processes an update to the visible state of a component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#processFullRefresh()">processFullRefresh</a></strong>()</code>
+<div class="block">Processes a full refresh of the application state, in response to a 
+ severe change, such as application locale or style sheet.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ServerUpdateManager(nextapp.echo.app.ApplicationInstance)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ServerUpdateManager</h4>
+<pre>public&nbsp;ServerUpdateManager(<a href="../../../../nextapp/echo/app/ApplicationInstance.html" title="class in nextapp.echo.app">ApplicationInstance</a>&nbsp;applicationInstance)</pre>
+<div class="block">Creates a new <code>ServerUpdateManager</code>.
+ 
+ <strong>Warning:</strong> the <code>init()</code> method must be 
+ invoked before the <code>ServerUpdateManager</code> is used.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>applicationInstance</code> - the relevant <code>ApplicationInstance</code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../nextapp/echo/app/update/ServerUpdateManager.html#init(nextapp.echo.app.update.ClientUpdateManager)"><code>init(nextapp.echo.app.update.ClientUpdateManager)</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="enqueueCommand(nextapp.echo.app.Command)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enqueueCommand</h4>
+<pre>public&nbsp;void&nbsp;enqueueCommand(<a href="../../../../nextapp/echo/app/Command.html" title="interface in nextapp.echo.app">Command</a>&nbsp;command)</pre>
+<div class="block">Enqueues a <code>Command</code> for processing.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>command</code> - the command</dd></dl>
+</li>
+</ul>
+<a name="getApplicationPropertyUpdate(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getApplicationPropertyUpdate</h4>
+<pre>public&nbsp;<a href="../../../../nextapp/echo/app/update/PropertyUpdate.html" title="class in nextapp.echo.app.update">PropertyUpdate</a>&nbsp;getApplicationPropertyUpdate(java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Returns a <code>PropertyUpdate</code> representing the 
+ application-level property update with the specified name.
+ If the specified property has not been updated, null is returned.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the <code>PropertyUpdate</code></dd></dl>
+</li>
+</ul>
+<a name="getCommands()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCommands</h4>
+<pre>public&nbsp;<a href="../../../../nextapp/echo/app/Command.html" title="interface in nextapp.echo.app">Command</a>[]&nbsp;getCommands()</pre>
+<div class="block">Returns the stored <code>Command</code>s.  The commands
+ are NOT removed or modified by this call.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the commands</dd></dl>
+</li>
+</ul>
+<a name="getComponentUpdates()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponentUpdates</h4>
+<pre>public&nbsp;<a href="../../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update">ServerComponentUpdate</a>[]&nbsp;getComponentUpdates()</pre>
+<div class="block">Returns the stored <code>ServerComponentUpdate</code>s.  The updates
+ are NOT removed or modified by this call.  The updates will be returned
+ sorted by depth of their parent components within the hierarchy, but in 
+ otherwise random order.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the updates</dd></dl>
+</li>
+</ul>
+<a name="init(nextapp.echo.app.update.ClientUpdateManager)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;init(<a href="../../../../nextapp/echo/app/update/ClientUpdateManager.html" title="class in nextapp.echo.app.update">ClientUpdateManager</a>&nbsp;clientUpdateManager)</pre>
+<div class="block">Initialization life-cycle method.  Must be invoked before using 
+ the <code>ServerUpdateManager</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>clientUpdateManager</code> - the <code>ClientUpdateManager</code> that
+        will be used to process input from the client</dd></dl>
+</li>
+</ul>
+<a name="isEmpty()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEmpty</h4>
+<pre>public&nbsp;boolean&nbsp;isEmpty()</pre>
+<div class="block">Determines if the manager has no updates.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the manager has no updates</dd></dl>
+</li>
+</ul>
+<a name="isFullRefreshRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isFullRefreshRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isFullRefreshRequired()</pre>
+<div class="block">Determines if a full refresh of the client state is required.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if a full refresh is required</dd></dl>
+</li>
+</ul>
+<a name="processApplicationPropertyUpdate(java.lang.String, java.lang.Object, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processApplicationPropertyUpdate</h4>
+<pre>public&nbsp;void&nbsp;processApplicationPropertyUpdate(java.lang.String&nbsp;propertyName,
+                                    java.lang.Object&nbsp;oldValue,
+                                    java.lang.Object&nbsp;newValue)</pre>
+<div class="block">Processes an update to a property of the <code>ApplicationInstance</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd><dd><code>oldValue</code> - the previous value of the property</dd><dd><code>newValue</code> - the current value of the property</dd></dl>
+</li>
+</ul>
+<a name="processComponentAdd(nextapp.echo.app.Component, nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processComponentAdd</h4>
+<pre>public&nbsp;void&nbsp;processComponentAdd(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent,
+                       <a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;child)</pre>
+<div class="block">Processes the addition of a component to the hierarchy.
+ Creates/updates a <code>ServerComponentUpdate</code> if required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - a component which currently exists in the hierarchy</dd><dd><code>child</code> - the component which was added to <code>parent</code></dd></dl>
+</li>
+</ul>
+<a name="processComponentLayoutDataUpdate(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processComponentLayoutDataUpdate</h4>
+<pre>public&nbsp;void&nbsp;processComponentLayoutDataUpdate(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;updatedComponent)</pre>
+<div class="block">Processes an update to the <code>LayoutData</code> of a component.
+ Creates/updates a <code>ServerComponentUpdate</code> if required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>updatedComponent</code> - a component which currently exists in the 
+        hierarchy whose <code>LayoutData</code> has changed</dd></dl>
+</li>
+</ul>
+<a name="processComponentPropertyUpdate(nextapp.echo.app.Component, java.lang.String, java.lang.Object, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processComponentPropertyUpdate</h4>
+<pre>public&nbsp;void&nbsp;processComponentPropertyUpdate(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;updatedComponent,
+                                  java.lang.String&nbsp;propertyName,
+                                  java.lang.Object&nbsp;oldValue,
+                                  java.lang.Object&nbsp;newValue)</pre>
+<div class="block">Processes an update to a property of a component (other than the
+ <code>LayoutData</code> property).
+ Creates/updates a <code>ServerComponentUpdate</code> if required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>updatedComponent</code> - the component whose property(s) changed.</dd><dd><code>propertyName</code> - the name of the changed property</dd><dd><code>oldValue</code> - The previous value of the property</dd><dd><code>newValue</code> - The new value of the property</dd></dl>
+</li>
+</ul>
+<a name="processComponentRemove(nextapp.echo.app.Component, nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processComponentRemove</h4>
+<pre>public&nbsp;void&nbsp;processComponentRemove(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent,
+                          <a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;child)</pre>
+<div class="block">Processes the removal of a component from the hierarchy.
+ Creates/updates a <code>ServerComponentUpdate</code> if required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - a component which currently exists in the hierarchy</dd><dd><code>child</code> - the component which was removed from <code>parent</code></dd></dl>
+</li>
+</ul>
+<a name="processComponentVisibilityUpdate(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processComponentVisibilityUpdate</h4>
+<pre>public&nbsp;void&nbsp;processComponentVisibilityUpdate(<a href="../../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;updatedComponent)</pre>
+<div class="block">Processes an update to the visible state of a component.
+ Creates/updates a <code>ServerComponentUpdate</code> if required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>updatedComponent</code> - a component which currently exists in the 
+        hierarchy whose visible state has changed.</dd></dl>
+</li>
+</ul>
+<a name="processFullRefresh()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>processFullRefresh</h4>
+<pre>public&nbsp;void&nbsp;processFullRefresh()</pre>
+<div class="block">Processes a full refresh of the application state, in response to a 
+ severe change, such as application locale or style sheet.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../nextapp/echo/app/update/UpdateManager.html" title="class in nextapp.echo.app.update"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?nextapp/echo/app/update/ServerUpdateManager.html" target="_top">Frames</a></li>
+<li><a href="ServerUpdateManager.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

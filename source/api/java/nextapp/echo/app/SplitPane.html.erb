@@ -1,0 +1,1304 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/app/SelectField.html" title="class in nextapp.echo.app"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/app/StreamImageReference.html" title="class in nextapp.echo.app"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/app/SplitPane.html" target="_top">Frames</a></li>
+<li><a href="SplitPane.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.app</div>
+<h2 title="Class SplitPane" class="title">Class SplitPane</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">nextapp.echo.app.Component</a></li>
+<li>
+<ul class="inheritance">
+<li>nextapp.echo.app.SplitPane</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable, <a href="../../../nextapp/echo/app/Pane.html" title="interface in nextapp.echo.app">Pane</a>, <a href="../../../nextapp/echo/app/PaneContainer.html" title="interface in nextapp.echo.app">PaneContainer</a>, <a href="../../../nextapp/echo/app/RenderIdSupport.html" title="interface in nextapp.echo.app">RenderIdSupport</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">SplitPane</span>
+extends <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>
+implements <a href="../../../nextapp/echo/app/Pane.html" title="interface in nextapp.echo.app">Pane</a>, <a href="../../../nextapp/echo/app/PaneContainer.html" title="interface in nextapp.echo.app">PaneContainer</a></pre>
+<div class="block">SplitPane component: a pane component which displays two components horizontally or vertically
+ adjacent to one another, optionally allowing the user to apportion space between the two using a resize handle.
+ May have at most two child components.  Supports <code>Pane</code> components as children. 
+ <p>
+ <b>Child LayoutData</b>: Children of this component may provide
+ layout information using the 
+ <code>nextapp.echo.app.layout.SplitPaneLayoutData</code> layout data object.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/layout/SplitPaneLayoutData.html" title="class in nextapp.echo.app.layout"><code>SplitPaneLayoutData</code></a>, 
+<a href="../../../serialized-form.html#nextapp.echo.app.SplitPane">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_HORIZONTAL">ORIENTATION_HORIZONTAL</a></strong></code>
+<div class="block">Shorthand for <code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_HORIZONTAL_LEADING_TRAILING">ORIENTATION_HORIZONTAL_LEADING_TRAILING</a></strong></code>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the leading position.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_HORIZONTAL_LEFT_RIGHT">ORIENTATION_HORIZONTAL_LEFT_RIGHT</a></strong></code>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the left position.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_HORIZONTAL_RIGHT_LEFT">ORIENTATION_HORIZONTAL_RIGHT_LEFT</a></strong></code>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the right position.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_HORIZONTAL_TRAILING_LEADING">ORIENTATION_HORIZONTAL_TRAILING_LEADING</a></strong></code>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the trailing position.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_VERTICAL">ORIENTATION_VERTICAL</a></strong></code>
+<div class="block">Shorthand for <code>ORIENTATION_VERTICAL_TOP_BOTTOM</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_VERTICAL_BOTTOM_TOP">ORIENTATION_VERTICAL_BOTTOM_TOP</a></strong></code>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out vertically with the
+ first (fixed-size) pane in the bottom position.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#ORIENTATION_VERTICAL_TOP_BOTTOM">ORIENTATION_VERTICAL_TOP_BOTTOM</a></strong></code>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out vertically with the
+ first (fixed-size) pane in the top position.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_AUTO_POSITIONED">PROPERTY_AUTO_POSITIONED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_ORIENTATION">PROPERTY_ORIENTATION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_RESIZABLE">PROPERTY_RESIZABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_COLOR">PROPERTY_SEPARATOR_COLOR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_HEIGHT">PROPERTY_SEPARATOR_HEIGHT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_HORIZONTAL_IMAGE">PROPERTY_SEPARATOR_HORIZONTAL_IMAGE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_HORIZONTAL_ROLLOVER_IMAGE">PROPERTY_SEPARATOR_HORIZONTAL_ROLLOVER_IMAGE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_POSITION">PROPERTY_SEPARATOR_POSITION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_ROLLOVER_COLOR">PROPERTY_SEPARATOR_ROLLOVER_COLOR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_VERTICAL_IMAGE">PROPERTY_SEPARATOR_VERTICAL_IMAGE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_VERTICAL_ROLLOVER_IMAGE">PROPERTY_SEPARATOR_VERTICAL_ROLLOVER_IMAGE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_VISIBLE">PROPERTY_SEPARATOR_VISIBLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#PROPERTY_SEPARATOR_WIDTH">PROPERTY_SEPARATOR_WIDTH</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_nextapp.echo.app.Component">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;nextapp.echo.app.<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></h3>
+<code><a href="../../../nextapp/echo/app/Component.html#CHILD_VISIBLE_CHANGED_PROPERTY">CHILD_VISIBLE_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#CHILDREN_CHANGED_PROPERTY">CHILDREN_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#ENABLED_CHANGED_PROPERTY">ENABLED_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#FOCUS_NEXT_ID_CHANGED_PROPERTY">FOCUS_NEXT_ID_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#FOCUS_PREVIOUS_ID_CHANGED_PROPERTY">FOCUS_PREVIOUS_ID_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#LAYOUT_DIRECTION_CHANGED_PROPERTY">LAYOUT_DIRECTION_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#LOCALE_CHANGED_PROPERTY">LOCALE_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_BACKGROUND">PROPERTY_BACKGROUND</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_FONT">PROPERTY_FONT</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_FOREGROUND">PROPERTY_FOREGROUND</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_LAYOUT_DATA">PROPERTY_LAYOUT_DATA</a>, <a href="../../../nextapp/echo/app/Component.html#STYLE_CHANGED_PROPERTY">STYLE_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#STYLE_NAME_CHANGED_PROPERTY">STYLE_NAME_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#VISIBLE_CHANGED_PROPERTY">VISIBLE_CHANGED_PROPERTY</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#SplitPane()">SplitPane</a></strong>()</code>
+<div class="block">Creates a new <code>SplitPane</code> with default (horizontal) 
+ orientation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#SplitPane(int)">SplitPane</a></strong>(int&nbsp;orientation)</code>
+<div class="block">Creates a new <code>SplitPane</code> with the specified orientation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#SplitPane(int, boolean)">SplitPane</a></strong>(int&nbsp;orientation,
+         boolean&nbsp;autoPositioned)</code>
+<div class="block">Creates a new <code>SplitPane</code> with the specified orientation
+ and auto-positioned state.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#SplitPane(int, nextapp.echo.app.Extent)">SplitPane</a></strong>(int&nbsp;orientation,
+         <a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;separatorPosition)</code>
+<div class="block">Creates a new <code>SplitPane</code> with the specified orientation and
+ separator position.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getOrientation()">getOrientation</a></strong>()</code>
+<div class="block">Returns the orientation of the <code>SplitPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorColor()">getSeparatorColor</a></strong>()</code>
+<div class="block">Returns the color of the pane separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorHeight()">getSeparatorHeight</a></strong>()</code>
+<div class="block">Returns the height of the pane separator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorHorizontalImage()">getSeparatorHorizontalImage</a></strong>()</code>
+<div class="block">Returns the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorHorizontalRolloverImage()">getSeparatorHorizontalRolloverImage</a></strong>()</code>
+<div class="block">Returns the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorPosition()">getSeparatorPosition</a></strong>()</code>
+<div class="block">Returns the position of the pane separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorRolloverColor()">getSeparatorRolloverColor</a></strong>()</code>
+<div class="block">Returns the color of the pane separator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorVerticalImage()">getSeparatorVerticalImage</a></strong>()</code>
+<div class="block">Returns the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorVerticalRolloverImage()">getSeparatorVerticalRolloverImage</a></strong>()</code>
+<div class="block">Returns the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#getSeparatorWidth()">getSeparatorWidth</a></strong>()</code>
+<div class="block">Returns the width of the pane separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#isAutoPositioned()">isAutoPositioned</a></strong>()</code>
+<div class="block">Determines if the <code>SplitPane</code> is auto-positioned.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#isResizable()">isResizable</a></strong>()</code>
+<div class="block">Determines if the <code>SplitPane</code> is resizable.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#isSeparatorVisible(boolean)">isSeparatorVisible</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Determines if the separator should be rendered visible.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#isValidChild(nextapp.echo.app.Component)">isValidChild</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</code>
+<div class="block">No more than two children may be added.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#isValidParent(nextapp.echo.app.Component)">isValidParent</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent)</code>
+<div class="block">Determines if this <code>Component</code> is valid to be added as a
+ child of the given parent <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#processInput(java.lang.String, java.lang.Object)">processInput</a></strong>(java.lang.String&nbsp;inputName,
+            java.lang.Object&nbsp;inputValue)</code>
+<div class="block">Processes client input specific to the <code>Component</code> 
+ received from the <code>UpdateManager</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setAutoPositioned(boolean)">setAutoPositioned</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the <code>SplitPane</code> is auto-positioned.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setOrientation(int)">setOrientation</a></strong>(int&nbsp;newValue)</code>
+<div class="block">Sets the orientation of the <code>SplitPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setResizable(boolean)">setResizable</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the <code>SplitPane</code> is resizable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorColor(nextapp.echo.app.Color)">setSeparatorColor</a></strong>(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</code>
+<div class="block">Sets the color of the pane separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorHeight(nextapp.echo.app.Extent)">setSeparatorHeight</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the height of the pane separator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorHorizontalImage(nextapp.echo.app.FillImage)">setSeparatorHorizontalImage</a></strong>(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</code>
+<div class="block">Sets the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorHorizontalRolloverImage(nextapp.echo.app.FillImage)">setSeparatorHorizontalRolloverImage</a></strong>(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</code>
+<div class="block">Sets the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorPosition(nextapp.echo.app.Extent)">setSeparatorPosition</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the position of the pane separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorRolloverColor(nextapp.echo.app.Color)">setSeparatorRolloverColor</a></strong>(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</code>
+<div class="block">Sets the rollover color of the pane separator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorVerticalImage(nextapp.echo.app.FillImage)">setSeparatorVerticalImage</a></strong>(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</code>
+<div class="block">Sets the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorVerticalRolloverImage(nextapp.echo.app.FillImage)">setSeparatorVerticalRolloverImage</a></strong>(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</code>
+<div class="block">Sets the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorVisible(boolean)">setSeparatorVisible</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the separator is visible.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/SplitPane.html#setSeparatorWidth(nextapp.echo.app.Extent)">setSeparatorWidth</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the width of the pane separator.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_nextapp.echo.app.Component">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;nextapp.echo.app.<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></h3>
+<code><a href="../../../nextapp/echo/app/Component.html#add(nextapp.echo.app.Component)">add</a>, <a href="../../../nextapp/echo/app/Component.html#add(nextapp.echo.app.Component, int)">add</a>, <a href="../../../nextapp/echo/app/Component.html#addPropertyChangeListener(java.beans.PropertyChangeListener)">addPropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">addPropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#dispose()">dispose</a>, <a href="../../../nextapp/echo/app/Component.html#firePropertyChange(java.lang.String, java.lang.Object, java.lang.Object)">firePropertyChange</a>, <a href="../../../nextapp/echo/app/Component.html#get(java.lang.String)">get</a>, <a href="../../../nextapp/echo/app/Component.html#getApplicationInstance()">getApplicationInstance</a>, <a href="../../../nextapp/echo/app/Component.html#getBackground()">getBackground</a>, <a href="../../../nextapp/echo/app/Component.html#getComponent(int)">getComponent</a>, <a href="../../../nextapp/echo/app/Component.html#getComponent(java.lang.String)">getComponent</a>, <a href="../../../nextapp/echo/app/Component.html#getComponentCount()">getComponentCount</a>, <a href="../../../nextapp/echo/app/Component.html#getComponents()">getComponents</a>, <a href="../../../nextapp/echo/app/Component.html#getEventListenerList()">getEventListenerList</a>, <a href="../../../nextapp/echo/app/Component.html#getFocusNextId()">getFocusNextId</a>, <a href="../../../nextapp/echo/app/Component.html#getFocusPreviousId()">getFocusPreviousId</a>, <a href="../../../nextapp/echo/app/Component.html#getFont()">getFont</a>, <a href="../../../nextapp/echo/app/Component.html#getForeground()">getForeground</a>, <a href="../../../nextapp/echo/app/Component.html#getId()">getId</a>, <a href="../../../nextapp/echo/app/Component.html#getIndex(java.lang.String, int)">getIndex</a>, <a href="../../../nextapp/echo/app/Component.html#getLastRenderId()">getLastRenderId</a>, <a href="../../../nextapp/echo/app/Component.html#getLayoutData()">getLayoutData</a>, <a href="../../../nextapp/echo/app/Component.html#getLayoutDirection()">getLayoutDirection</a>, <a href="../../../nextapp/echo/app/Component.html#getLocale()">getLocale</a>, <a href="../../../nextapp/echo/app/Component.html#getLocalStyle()">getLocalStyle</a>, <a href="../../../nextapp/echo/app/Component.html#getParent()">getParent</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderId()">getRenderId</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderIndexedProperty(java.lang.String, int)">getRenderIndexedProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderIndexedProperty(java.lang.String, int, java.lang.Object)">getRenderIndexedProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderLocale()">getRenderLocale</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderProperty(java.lang.String)">getRenderProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderProperty(java.lang.String, java.lang.Object)">getRenderProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getStyle()">getStyle</a>, <a href="../../../nextapp/echo/app/Component.html#getStyleName()">getStyleName</a>, <a href="../../../nextapp/echo/app/Component.html#getVisibleComponent(int)">getVisibleComponent</a>, <a href="../../../nextapp/echo/app/Component.html#getVisibleComponentCount()">getVisibleComponentCount</a>, <a href="../../../nextapp/echo/app/Component.html#getVisibleComponents()">getVisibleComponents</a>, <a href="../../../nextapp/echo/app/Component.html#hasEventListenerList()">hasEventListenerList</a>, <a href="../../../nextapp/echo/app/Component.html#indexOf(nextapp.echo.app.Component)">indexOf</a>, <a href="../../../nextapp/echo/app/Component.html#init()">init</a>, <a href="../../../nextapp/echo/app/Component.html#isAncestorOf(nextapp.echo.app.Component)">isAncestorOf</a>, <a href="../../../nextapp/echo/app/Component.html#isEnabled()">isEnabled</a>, <a href="../../../nextapp/echo/app/Component.html#isFocusTraversalParticipant()">isFocusTraversalParticipant</a>, <a href="../../../nextapp/echo/app/Component.html#isRegistered()">isRegistered</a>, <a href="../../../nextapp/echo/app/Component.html#isRenderEnabled()">isRenderEnabled</a>, <a href="../../../nextapp/echo/app/Component.html#isRenderVisible()">isRenderVisible</a>, <a href="../../../nextapp/echo/app/Component.html#isVisible()">isVisible</a>, <a href="../../../nextapp/echo/app/Component.html#remove(nextapp.echo.app.Component)">remove</a>, <a href="../../../nextapp/echo/app/Component.html#remove(int)">remove</a>, <a href="../../../nextapp/echo/app/Component.html#removeAll()">removeAll</a>, <a href="../../../nextapp/echo/app/Component.html#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">removePropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#set(java.lang.String, java.lang.Object)">set</a>, <a href="../../../nextapp/echo/app/Component.html#setBackground(nextapp.echo.app.Color)">setBackground</a>, <a href="../../../nextapp/echo/app/Component.html#setComponents(nextapp.echo.app.Component[])">setComponents</a>, <a href="../../../nextapp/echo/app/Component.html#setEnabled(boolean)">setEnabled</a>, <a href="../../../nextapp/echo/app/Component.html#setFocusNextId(java.lang.String)">setFocusNextId</a>, <a href="../../../nextapp/echo/app/Component.html#setFocusPreviousId(java.lang.String)">setFocusPreviousId</a>, <a href="../../../nextapp/echo/app/Component.html#setFocusTraversalParticipant(boolean)">setFocusTraversalParticipant</a>, <a href="../../../nextapp/echo/app/Component.html#setFont(nextapp.echo.app.Font)">setFont</a>, <a href="../../../nextapp/echo/app/Component.html#setForeground(nextapp.echo.app.Color)">setForeground</a>, <a href="../../../nextapp/echo/app/Component.html#setId(java.lang.String)">setId</a>, <a href="../../../nextapp/echo/app/Component.html#setIndex(java.lang.String, int, java.lang.Object)">setIndex</a>, <a href="../../../nextapp/echo/app/Component.html#setLayoutData(nextapp.echo.app.LayoutData)">setLayoutData</a>, <a href="../../../nextapp/echo/app/Component.html#setLayoutDirection(nextapp.echo.app.LayoutDirection)">setLayoutDirection</a>, <a href="../../../nextapp/echo/app/Component.html#setLocale(java.util.Locale)">setLocale</a>, <a href="../../../nextapp/echo/app/Component.html#setRenderId(java.lang.String)">setRenderId</a>, <a href="../../../nextapp/echo/app/Component.html#setStyle(nextapp.echo.app.Style)">setStyle</a>, <a href="../../../nextapp/echo/app/Component.html#setStyleName(java.lang.String)">setStyleName</a>, <a href="../../../nextapp/echo/app/Component.html#setVisible(boolean)">setVisible</a>, <a href="../../../nextapp/echo/app/Component.html#validate()">validate</a>, <a href="../../../nextapp/echo/app/Component.html#verifyInput(java.lang.String, java.lang.Object)">verifyInput</a>, <a href="../../../nextapp/echo/app/Component.html#visibleIndexOf(nextapp.echo.app.Component)">visibleIndexOf</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ORIENTATION_HORIZONTAL_LEADING_TRAILING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_HORIZONTAL_LEADING_TRAILING</h4>
+<pre>public static final&nbsp;int ORIENTATION_HORIZONTAL_LEADING_TRAILING</pre>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the leading position.
+ The leading position is on the left side for left-to-right languages
+ and on the right side for right-to-left languages.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_HORIZONTAL_LEADING_TRAILING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_HORIZONTAL_TRAILING_LEADING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_HORIZONTAL_TRAILING_LEADING</h4>
+<pre>public static final&nbsp;int ORIENTATION_HORIZONTAL_TRAILING_LEADING</pre>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the trailing position.
+ The trailing position is on the right side for left-to-right languages
+ and on the left side for right-to-left languages.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_HORIZONTAL_TRAILING_LEADING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_HORIZONTAL_LEFT_RIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_HORIZONTAL_LEFT_RIGHT</h4>
+<pre>public static final&nbsp;int ORIENTATION_HORIZONTAL_LEFT_RIGHT</pre>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the left position.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_HORIZONTAL_LEFT_RIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_HORIZONTAL_RIGHT_LEFT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_HORIZONTAL_RIGHT_LEFT</h4>
+<pre>public static final&nbsp;int ORIENTATION_HORIZONTAL_RIGHT_LEFT</pre>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out horizontally with the
+ first (fixed-size) pane in the right position.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_HORIZONTAL_RIGHT_LEFT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_VERTICAL_TOP_BOTTOM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_VERTICAL_TOP_BOTTOM</h4>
+<pre>public static final&nbsp;int ORIENTATION_VERTICAL_TOP_BOTTOM</pre>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out vertically with the
+ first (fixed-size) pane in the top position.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_VERTICAL_BOTTOM_TOP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_VERTICAL_BOTTOM_TOP</h4>
+<pre>public static final&nbsp;int ORIENTATION_VERTICAL_BOTTOM_TOP</pre>
+<div class="block">An <code>orientation</code> constant indicating that the 
+ <code>SplitPane</code> should be laid out vertically with the
+ first (fixed-size) pane in the bottom position.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_VERTICAL_BOTTOM_TOP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_HORIZONTAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_HORIZONTAL</h4>
+<pre>public static final&nbsp;int ORIENTATION_HORIZONTAL</pre>
+<div class="block">Shorthand for <code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code>.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_HORIZONTAL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ORIENTATION_VERTICAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ORIENTATION_VERTICAL</h4>
+<pre>public static final&nbsp;int ORIENTATION_VERTICAL</pre>
+<div class="block">Shorthand for <code>ORIENTATION_VERTICAL_TOP_BOTTOM</code>.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.ORIENTATION_VERTICAL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_AUTO_POSITIONED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_AUTO_POSITIONED</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_AUTO_POSITIONED</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_AUTO_POSITIONED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_ORIENTATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_ORIENTATION</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_ORIENTATION</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_ORIENTATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_RESIZABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_RESIZABLE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_RESIZABLE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_RESIZABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_COLOR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_COLOR</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_COLOR</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_COLOR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_HEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_HEIGHT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_HORIZONTAL_IMAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_HORIZONTAL_IMAGE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_HORIZONTAL_IMAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_HORIZONTAL_IMAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_HORIZONTAL_ROLLOVER_IMAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_HORIZONTAL_ROLLOVER_IMAGE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_HORIZONTAL_ROLLOVER_IMAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_HORIZONTAL_ROLLOVER_IMAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_POSITION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_POSITION</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_POSITION</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_POSITION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_ROLLOVER_COLOR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_ROLLOVER_COLOR</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_ROLLOVER_COLOR</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_ROLLOVER_COLOR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_WIDTH</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_WIDTH</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_VERTICAL_IMAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_VERTICAL_IMAGE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_VERTICAL_IMAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_VERTICAL_IMAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_VERTICAL_ROLLOVER_IMAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_VERTICAL_ROLLOVER_IMAGE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_VERTICAL_ROLLOVER_IMAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_VERTICAL_ROLLOVER_IMAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_SEPARATOR_VISIBLE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PROPERTY_SEPARATOR_VISIBLE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_SEPARATOR_VISIBLE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.SplitPane.PROPERTY_SEPARATOR_VISIBLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="SplitPane()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SplitPane</h4>
+<pre>public&nbsp;SplitPane()</pre>
+<div class="block">Creates a new <code>SplitPane</code> with default (horizontal) 
+ orientation.</div>
+</li>
+</ul>
+<a name="SplitPane(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SplitPane</h4>
+<pre>public&nbsp;SplitPane(int&nbsp;orientation)</pre>
+<div class="block">Creates a new <code>SplitPane</code> with the specified orientation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>orientation</code> - a constant representing the orientation, one of the 
+        following values:
+        <ul>
+         <li><code>ORIENTATION_HORIZONTAL</code></li>
+         <li><code>ORIENTATION_VERTICAL</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_TRAILING_LEADING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEFT_RIGHT</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_RIGHT_LEFT</code></li>
+         <li><code>ORIENTATION_VERTICAL_TOP_BOTTOM</code></li>
+         <li><code>ORIENTATION_VERTICAL_BOTTOM_TOP</code></li>
+        </ul></dd></dl>
+</li>
+</ul>
+<a name="SplitPane(int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SplitPane</h4>
+<pre>public&nbsp;SplitPane(int&nbsp;orientation,
+         boolean&nbsp;autoPositioned)</pre>
+<div class="block">Creates a new <code>SplitPane</code> with the specified orientation
+ and auto-positioned state.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>orientation</code> - a constant representing the orientation, one of the 
+        following values:
+        <ul>
+         <li><code>ORIENTATION_HORIZONTAL</code></li>
+         <li><code>ORIENTATION_VERTICAL</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_TRAILING_LEADING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEFT_RIGHT</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_RIGHT_LEFT</code></li>
+         <li><code>ORIENTATION_VERTICAL_TOP_BOTTOM</code></li>
+         <li><code>ORIENTATION_VERTICAL_BOTTOM_TOP</code></li>
+        </ul></dd><dd><code>autoPositioned</code> - flag indicating whether the separator position
+        should be automatically positioned</dd></dl>
+</li>
+</ul>
+<a name="SplitPane(int, nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SplitPane</h4>
+<pre>public&nbsp;SplitPane(int&nbsp;orientation,
+         <a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;separatorPosition)</pre>
+<div class="block">Creates a new <code>SplitPane</code> with the specified orientation and
+ separator position.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>orientation</code> - a constant representing the orientation, one of the 
+        following values:
+        <ul>
+         <li><code>ORIENTATION_HORIZONTAL</code></li>
+         <li><code>ORIENTATION_VERTICAL</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_TRAILING_LEADING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEFT_RIGHT</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_RIGHT_LEFT</code></li>
+         <li><code>ORIENTATION_VERTICAL_TOP_BOTTOM</code></li>
+         <li><code>ORIENTATION_VERTICAL_BOTTOM_TOP</code></li>
+        </ul></dd><dd><code>separatorPosition</code> - the initial position of the separator.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getOrientation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOrientation</h4>
+<pre>public&nbsp;int&nbsp;getOrientation()</pre>
+<div class="block">Returns the orientation of the <code>SplitPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a constant representing the orientation, one of the following 
+         values:
+         <ul>
+          <li><code>ORIENTATION_HORIZONTAL</code></li>
+          <li><code>ORIENTATION_VERTICAL</code></li>
+          <li><code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code></li>
+          <li><code>ORIENTATION_HORIZONTAL_TRAILING_LEADING</code></li>
+          <li><code>ORIENTATION_HORIZONTAL_LEFT_RIGHT</code></li>
+          <li><code>ORIENTATION_HORIZONTAL_RIGHT_LEFT</code></li>
+          <li><code>ORIENTATION_VERTICAL_TOP_BOTTOM</code></li>
+          <li><code>ORIENTATION_VERTICAL_BOTTOM_TOP</code></li>
+         </ul></dd></dl>
+</li>
+</ul>
+<a name="getSeparatorColor()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorColor</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;getSeparatorColor()</pre>
+<div class="block">Returns the color of the pane separator.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the color</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorHeight</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getSeparatorHeight()</pre>
+<div class="block">Returns the height of the pane separator.  This value is relevant only 
+ when the <code>SplitPane</code> has a vertical orientation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the separator width</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorHorizontalImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorHorizontalImage</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;getSeparatorHorizontalImage()</pre>
+<div class="block">Returns the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the image</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorHorizontalRolloverImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorHorizontalRolloverImage</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;getSeparatorHorizontalRolloverImage()</pre>
+<div class="block">Returns the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the image</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorPosition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorPosition</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getSeparatorPosition()</pre>
+<div class="block">Returns the position of the pane separator.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the separator position</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorRolloverColor()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorRolloverColor</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;getSeparatorRolloverColor()</pre>
+<div class="block">Returns the color of the pane separator.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the color</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorVerticalImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorVerticalImage</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;getSeparatorVerticalImage()</pre>
+<div class="block">Returns the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the image</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorVerticalRolloverImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorVerticalRolloverImage</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;getSeparatorVerticalRolloverImage()</pre>
+<div class="block">Returns the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the image</dd></dl>
+</li>
+</ul>
+<a name="getSeparatorWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparatorWidth</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getSeparatorWidth()</pre>
+<div class="block">Returns the width of the pane separator.  This value is relevant only 
+ when the <code>SplitPane</code> has a horizontal orientation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the separator width</dd></dl>
+</li>
+</ul>
+<a name="isAutoPositioned()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAutoPositioned</h4>
+<pre>public&nbsp;boolean&nbsp;isAutoPositioned()</pre>
+<div class="block">Determines if the <code>SplitPane</code> is auto-positioned.
+ Auto positioning indicates that the separator position should
+ be set automatically based on the size of the first child.
+ This feature is only available on vertically oriented panes, where the
+ first child contains non-pane content.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the <code>SplitPane</code> is auto-positioned</dd></dl>
+</li>
+</ul>
+<a name="isResizable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isResizable</h4>
+<pre>public&nbsp;boolean&nbsp;isResizable()</pre>
+<div class="block">Determines if the <code>SplitPane</code> is resizable.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the <code>SplitPane</code> is resizable</dd></dl>
+</li>
+</ul>
+<a name="isSeparatorVisible(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSeparatorVisible</h4>
+<pre>public&nbsp;boolean&nbsp;isSeparatorVisible(boolean&nbsp;newValue)</pre>
+<div class="block">Determines if the separator should be rendered visible.
+ The separator will always be displayed if a <code>SplitPane</code>
+ is resizable, regardless of the value of this property.
+ This property has a default value of <code>true</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the <code>SplitPane</code> should provide
+         a visible separator.</dd></dl>
+</li>
+</ul>
+<a name="isValidChild(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isValidChild</h4>
+<pre>public&nbsp;boolean&nbsp;isValidChild(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</pre>
+<div class="block">No more than two children may be added.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/Component.html#isValidChild(nextapp.echo.app.Component)">isValidChild</a></code>&nbsp;in class&nbsp;<code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>component</code> - the <code>Component</code> to evaluate as a child</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is a valid child</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#isValidChild(nextapp.echo.app.Component)"><code>Component.isValidChild(nextapp.echo.app.Component)</code></a></dd></dl>
+</li>
+</ul>
+<a name="isValidParent(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isValidParent</h4>
+<pre>public&nbsp;boolean&nbsp;isValidParent(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../nextapp/echo/app/Component.html#isValidParent(nextapp.echo.app.Component)">Component</a></code></strong></div>
+<div class="block">Determines if this <code>Component</code> is valid to be added as a
+ child of the given parent <code>Component</code>. Default
+ implementation always returns true, may be overridden to provide specific
+ behavior.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/Component.html#isValidParent(nextapp.echo.app.Component)">isValidParent</a></code>&nbsp;in class&nbsp;<code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - the <code>Component</code> to evaluate as a parent</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is a valid parent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#isValidParent(nextapp.echo.app.Component)"><code>Component.isValidParent(nextapp.echo.app.Component)</code></a></dd></dl>
+</li>
+</ul>
+<a name="processInput(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processInput</h4>
+<pre>public&nbsp;void&nbsp;processInput(java.lang.String&nbsp;inputName,
+                java.lang.Object&nbsp;inputValue)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)">Component</a></code></strong></div>
+<div class="block">Processes client input specific to the <code>Component</code> 
+ received from the <code>UpdateManager</code>.
+ Derivative implementations should take care to invoke 
+ <code>super.processInput()</code>.
+ 
+ <strong>Security note:</strong>  Because input to this method is 
+ likely from a remote client, it should be treated as potentially hostile.
+ All input to this method should be carefully verified.
+ For example, directly invoking <code>set()</code> method with the
+ provided input would constitute a security hole.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)">processInput</a></code>&nbsp;in class&nbsp;<code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>inputName</code> - the name of the input</dd><dd><code>inputValue</code> - the value of the input</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)"><code>Component.processInput(java.lang.String, java.lang.Object)</code></a></dd></dl>
+</li>
+</ul>
+<a name="setAutoPositioned(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAutoPositioned</h4>
+<pre>public&nbsp;void&nbsp;setAutoPositioned(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the <code>SplitPane</code> is auto-positioned.
+ Auto positioning indicates that the separator position should
+ be set automatically based on the size of the first child.
+ This feature is only available on vertically oriented panes, where the
+ first child contains non-pane content.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the <code>SplitPane</code> separator
+        should be automatically positioned.</dd></dl>
+</li>
+</ul>
+<a name="setOrientation(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOrientation</h4>
+<pre>public&nbsp;void&nbsp;setOrientation(int&nbsp;newValue)</pre>
+<div class="block">Sets the orientation of the <code>SplitPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - a constant representing the orientation, one of the 
+        following values:
+        <ul>
+         <li><code>ORIENTATION_HORIZONTAL</code></li>
+         <li><code>ORIENTATION_VERTICAL</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEADING_TRAILING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_TRAILING_LEADING</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_LEFT_RIGHT</code></li>
+         <li><code>ORIENTATION_HORIZONTAL_RIGHT_LEFT</code></li>
+         <li><code>ORIENTATION_VERTICAL_TOP_BOTTOM</code></li>
+         <li><code>ORIENTATION_VERTICAL_BOTTOM_TOP</code></li>
+        </ul></dd></dl>
+</li>
+</ul>
+<a name="setResizable(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setResizable</h4>
+<pre>public&nbsp;void&nbsp;setResizable(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the <code>SplitPane</code> is resizable.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the <code>SplitPane</code> should allow the
+        resizing of panes by dragging the separator, false if it should
+        not</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorVisible(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorVisible</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorVisible(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the separator is visible.
+ The separator will always be displayed if a <code>SplitPane</code>
+ is resizable, regardless of the value of this property.
+ This property has a default value of <code>true</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the <code>SplitPane</code> should provide
+        a visible separator.</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorColor(nextapp.echo.app.Color)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorColor</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorColor(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</pre>
+<div class="block">Sets the color of the pane separator.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new color</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorHeight(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorHeight</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorHeight(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the height of the pane separator.  This value is only relevant
+ when the <code>SplitPane</code> has a vertical orientation.
+ This property may not be specified in percent units.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new height</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorHorizontalImage(nextapp.echo.app.FillImage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorHorizontalImage</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorHorizontalImage(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</pre>
+<div class="block">Sets the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new image</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorHorizontalRolloverImage(nextapp.echo.app.FillImage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorHorizontalRolloverImage</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorHorizontalRolloverImage(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</pre>
+<div class="block">Sets the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a horizontal orientation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new image</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorPosition(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorPosition</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorPosition(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the position of the pane separator.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new position</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorRolloverColor(nextapp.echo.app.Color)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorRolloverColor</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorRolloverColor(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</pre>
+<div class="block">Sets the rollover color of the pane separator.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new color</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorVerticalImage(nextapp.echo.app.FillImage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorVerticalImage</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorVerticalImage(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</pre>
+<div class="block">Sets the fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new image</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorVerticalRolloverImage(nextapp.echo.app.FillImage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeparatorVerticalRolloverImage</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorVerticalRolloverImage(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</pre>
+<div class="block">Sets the rollover fill image of the pane separator that is displayed when the
+ <code>SplitPane</code> has a vertical orientation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new image</dd></dl>
+</li>
+</ul>
+<a name="setSeparatorWidth(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setSeparatorWidth</h4>
+<pre>public&nbsp;void&nbsp;setSeparatorWidth(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the width of the pane separator.  This value is only relevant
+ when the <code>SplitPane</code> has a horizontal orientation.
+ This property may not be specified in percent units.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new width</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/app/SelectField.html" title="class in nextapp.echo.app"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/app/StreamImageReference.html" title="class in nextapp.echo.app"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/app/SplitPane.html" target="_top">Frames</a></li>
+<li><a href="SplitPane.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

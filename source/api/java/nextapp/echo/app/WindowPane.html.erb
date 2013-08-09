@@ -1,0 +1,2848 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/app/Window.html" title="class in nextapp.echo.app"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/app/WindowPane.html" target="_top">Frames</a></li>
+<li><a href="WindowPane.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.app</div>
+<h2 title="Class WindowPane" class="title">Class WindowPane</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">nextapp.echo.app.Component</a></li>
+<li>
+<ul class="inheritance">
+<li>nextapp.echo.app.WindowPane</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable, <a href="../../../nextapp/echo/app/FloatingPane.html" title="interface in nextapp.echo.app">FloatingPane</a>, <a href="../../../nextapp/echo/app/ModalSupport.html" title="interface in nextapp.echo.app">ModalSupport</a>, <a href="../../../nextapp/echo/app/Pane.html" title="interface in nextapp.echo.app">Pane</a>, <a href="../../../nextapp/echo/app/PaneContainer.html" title="interface in nextapp.echo.app">PaneContainer</a>, <a href="../../../nextapp/echo/app/RenderIdSupport.html" title="interface in nextapp.echo.app">RenderIdSupport</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">WindowPane</span>
+extends <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>
+implements <a href="../../../nextapp/echo/app/FloatingPane.html" title="interface in nextapp.echo.app">FloatingPane</a>, <a href="../../../nextapp/echo/app/ModalSupport.html" title="interface in nextapp.echo.app">ModalSupport</a>, <a href="../../../nextapp/echo/app/PaneContainer.html" title="interface in nextapp.echo.app">PaneContainer</a></pre>
+<div class="block">WindowPane component: displays content in a movable and/or resizable window. May only be added to a <code>ContentPane</code>. May
+ contain at most one child component. May contain <code>Pane</code>s as children.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#nextapp.echo.app.WindowPane">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#DISPOSE_ON_CLOSE">DISPOSE_ON_CLOSE</a></strong></code>
+<div class="block">A constant for the <code>defaultCloseOperation</code> property 
+ indicating that a window should be removed from the component
+ hierarchy when a user attempts to close it.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#DO_NOTHING_ON_CLOSE">DO_NOTHING_ON_CLOSE</a></strong></code>
+<div class="block">A constant for the <code>defaultCloseOperation</code> property 
+ indicating that nothing should be done when the user attempts 
+ to close a window.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#HIDE_ON_CLOSE">HIDE_ON_CLOSE</a></strong></code>
+<div class="block">A constant for the <code>defaultCloseOperation</code> property 
+ indicating that a window should be hidden when the user attempts 
+ to close it.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#INPUT_CLOSE">INPUT_CLOSE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#INPUT_MAXIMIZE">INPUT_MAXIMIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#INPUT_MINIMIZE">INPUT_MINIMIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_BACKGROUND_IMAGE">PROPERTY_BACKGROUND_IMAGE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_BORDER">PROPERTY_BORDER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_BOX_SHADOW">PROPERTY_BOX_SHADOW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CLOSABLE">PROPERTY_CLOSABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CLOSE_ANIMATION_TIME">PROPERTY_CLOSE_ANIMATION_TIME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CLOSE_ICON">PROPERTY_CLOSE_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CLOSE_ICON_INSETS">PROPERTY_CLOSE_ICON_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CLOSE_ROLLOVER_ICON">PROPERTY_CLOSE_ROLLOVER_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CONTENT_HEIGHT">PROPERTY_CONTENT_HEIGHT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CONTENT_WIDTH">PROPERTY_CONTENT_WIDTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CONTROLS_INSETS">PROPERTY_CONTROLS_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_CONTROLS_SPACING">PROPERTY_CONTROLS_SPACING</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_DEFAULT_CLOSE_OPERATION">PROPERTY_DEFAULT_CLOSE_OPERATION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_HEIGHT">PROPERTY_HEIGHT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_ICON">PROPERTY_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_ICON_INSETS">PROPERTY_ICON_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_INSETS">PROPERTY_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MAXIMIZE_ENABLED">PROPERTY_MAXIMIZE_ENABLED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MAXIMIZE_ICON">PROPERTY_MAXIMIZE_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MAXIMIZE_ICON_INSETS">PROPERTY_MAXIMIZE_ICON_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MAXIMIZE_ROLLOVER_ICON">PROPERTY_MAXIMIZE_ROLLOVER_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MAXIMUM_HEIGHT">PROPERTY_MAXIMUM_HEIGHT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MAXIMUM_WIDTH">PROPERTY_MAXIMUM_WIDTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MINIMIZE_ENABLED">PROPERTY_MINIMIZE_ENABLED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MINIMIZE_ICON">PROPERTY_MINIMIZE_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MINIMIZE_ICON_INSETS">PROPERTY_MINIMIZE_ICON_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MINIMIZE_ROLLOVER_ICON">PROPERTY_MINIMIZE_ROLLOVER_ICON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MINIMUM_HEIGHT">PROPERTY_MINIMUM_HEIGHT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MINIMUM_WIDTH">PROPERTY_MINIMUM_WIDTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_MOVABLE">PROPERTY_MOVABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_OPEN_ANIMATION_TIME">PROPERTY_OPEN_ANIMATION_TIME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_POSITION_X">PROPERTY_POSITION_X</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_POSITION_Y">PROPERTY_POSITION_Y</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_RADIUS">PROPERTY_RADIUS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_RESIZABLE">PROPERTY_RESIZABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE">PROPERTY_TITLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE_BACKGROUND">PROPERTY_TITLE_BACKGROUND</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE_BACKGROUND_IMAGE">PROPERTY_TITLE_BACKGROUND_IMAGE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE_FONT">PROPERTY_TITLE_FONT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE_FOREGROUND">PROPERTY_TITLE_FOREGROUND</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE_HEIGHT">PROPERTY_TITLE_HEIGHT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_TITLE_INSETS">PROPERTY_TITLE_INSETS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_WIDTH">PROPERTY_WIDTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#PROPERTY_Z_INDEX">PROPERTY_Z_INDEX</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_nextapp.echo.app.Component">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;nextapp.echo.app.<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></h3>
+<code><a href="../../../nextapp/echo/app/Component.html#CHILD_VISIBLE_CHANGED_PROPERTY">CHILD_VISIBLE_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#CHILDREN_CHANGED_PROPERTY">CHILDREN_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#ENABLED_CHANGED_PROPERTY">ENABLED_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#FOCUS_NEXT_ID_CHANGED_PROPERTY">FOCUS_NEXT_ID_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#FOCUS_PREVIOUS_ID_CHANGED_PROPERTY">FOCUS_PREVIOUS_ID_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#LAYOUT_DIRECTION_CHANGED_PROPERTY">LAYOUT_DIRECTION_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#LOCALE_CHANGED_PROPERTY">LOCALE_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_BACKGROUND">PROPERTY_BACKGROUND</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_FONT">PROPERTY_FONT</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_FOREGROUND">PROPERTY_FOREGROUND</a>, <a href="../../../nextapp/echo/app/Component.html#PROPERTY_LAYOUT_DATA">PROPERTY_LAYOUT_DATA</a>, <a href="../../../nextapp/echo/app/Component.html#STYLE_CHANGED_PROPERTY">STYLE_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#STYLE_NAME_CHANGED_PROPERTY">STYLE_NAME_CHANGED_PROPERTY</a>, <a href="../../../nextapp/echo/app/Component.html#VISIBLE_CHANGED_PROPERTY">VISIBLE_CHANGED_PROPERTY</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_nextapp.echo.app.ModalSupport">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;nextapp.echo.app.<a href="../../../nextapp/echo/app/ModalSupport.html" title="interface in nextapp.echo.app">ModalSupport</a></h3>
+<code><a href="../../../nextapp/echo/app/ModalSupport.html#MODAL_CHANGED_PROPERTY">MODAL_CHANGED_PROPERTY</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#WindowPane()">WindowPane</a></strong>()</code>
+<div class="block">Creates a  new <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#WindowPane(java.lang.String, nextapp.echo.app.Extent, nextapp.echo.app.Extent)">WindowPane</a></strong>(java.lang.String&nbsp;title,
+          <a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;width,
+          <a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;height)</code>
+<div class="block">Creates a new <code>WindowPane</code> with the specified title
+ and dimensions.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#addWindowPaneListener(nextapp.echo.app.event.WindowPaneListener)">addWindowPaneListener</a></strong>(<a href="../../../nextapp/echo/app/event/WindowPaneListener.html" title="interface in nextapp.echo.app.event">WindowPaneListener</a>&nbsp;l)</code>
+<div class="block">Adds a <code>WindowPaneListener</code> (or <code>WindowPaneControlListener</code>) to receive event notifications.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#fireWindowClosing()">fireWindowClosing</a></strong>()</code>
+<div class="block">Notifies <code>WindowPaneListener</code>s that the user has requested 
+ to close this <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#fireWindowMaximized()">fireWindowMaximized</a></strong>()</code>
+<div class="block">Notifies <code>WindowPaneListener</code>s that the user has maximized the <code>WindowPane</code></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#fireWindowMinimized()">fireWindowMinimized</a></strong>()</code>
+<div class="block">Notifies <code>WindowPaneListener</code>s that the user has minimized the <code>WindowPane</code></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getBackgroundImage()">getBackgroundImage</a></strong>()</code>
+<div class="block">Returns the background image of the <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImageBorder.html" title="class in nextapp.echo.app">FillImageBorder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getBorder()">getBorder</a></strong>()</code>
+<div class="block">Returns the border which surrounds the entire <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/BoxShadow.html" title="class in nextapp.echo.app">BoxShadow</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getBoxShadow()">getBoxShadow</a></strong>()</code>
+<div class="block">Returns the specific box shadow (CSS3) setting of this component, if any.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getCloseAnimationTime()">getCloseAnimationTime</a></strong>()</code>
+<div class="block">Returns the animation time for the window closing effect.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getCloseIcon()">getCloseIcon</a></strong>()</code>
+<div class="block">Returns the close button icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getCloseIconInsets()">getCloseIconInsets</a></strong>()</code>
+<div class="block">Returns the inset margin around the close button icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getCloseRolloverIcon()">getCloseRolloverIcon</a></strong>()</code>
+<div class="block">Returns the close button rollover icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getContentHeight()">getContentHeight</a></strong>()</code>
+<div class="block">Returns the configured height of the content region of the window.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getContentWidth()">getContentWidth</a></strong>()</code>
+<div class="block">Returns the configured width of the content region of the window.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getControlsInsets()">getControlsInsets</a></strong>()</code>
+<div class="block">Returns the inset margin around the window controls 
+ (e.g., close, minimize, and maximize buttons)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getControlsSpacing()">getControlsSpacing</a></strong>()</code>
+<div class="block">Returns the spacing between the window control icons
+ (e.g., close, minimize, and maximize buttons).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getDefaultCloseOperation()">getDefaultCloseOperation</a></strong>()</code>
+<div class="block">Returns the default close operation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getHeight()">getHeight</a></strong>()</code>
+<div class="block">Returns the configured height of the overall window, including its border.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getIcon()">getIcon</a></strong>()</code>
+<div class="block">Returns the icon displayed in the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getIconInsets()">getIconInsets</a></strong>()</code>
+<div class="block">Returns the inset margin around the icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getInsets()">getInsets</a></strong>()</code>
+<div class="block">Returns the inset of the window content.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMaximizeIcon()">getMaximizeIcon</a></strong>()</code>
+<div class="block">Returns the maximize button icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMaximizeIconInsets()">getMaximizeIconInsets</a></strong>()</code>
+<div class="block">Returns the inset margin around the maximize button icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMaximizeRolloverIcon()">getMaximizeRolloverIcon</a></strong>()</code>
+<div class="block">Returns the maximize button rollover icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMaximumHeight()">getMaximumHeight</a></strong>()</code>
+<div class="block">Returns the maximum height of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMaximumWidth()">getMaximumWidth</a></strong>()</code>
+<div class="block">Returns the maximum width of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMinimizeIcon()">getMinimizeIcon</a></strong>()</code>
+<div class="block">Returns the minimize button icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMinimizeIconInsets()">getMinimizeIconInsets</a></strong>()</code>
+<div class="block">Returns the inset margin around the minimize button icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMinimizeRolloverIcon()">getMinimizeRolloverIcon</a></strong>()</code>
+<div class="block">Returns the minimize button rollover icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMinimumHeight()">getMinimumHeight</a></strong>()</code>
+<div class="block">Returns the minimum height of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getMinimumWidth()">getMinimumWidth</a></strong>()</code>
+<div class="block">Returns the minimum width of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getOpenAnimationTime()">getOpenAnimationTime</a></strong>()</code>
+<div class="block">Returns the animation time for the window opening effect.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getPositionX()">getPositionX</a></strong>()</code>
+<div class="block">Returns the horizontal (Y) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getPositionY()">getPositionY</a></strong>()</code>
+<div class="block">Returns the vertical (Y) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getRadius()">getRadius</a></strong>()</code>
+<div class="block">Returns the corder radius of the component (or null of radius applied).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitle()">getTitle</a></strong>()</code>
+<div class="block">Returns the title of the <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitleBackground()">getTitleBackground</a></strong>()</code>
+<div class="block">Returns the background color of the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitleBackgroundImage()">getTitleBackgroundImage</a></strong>()</code>
+<div class="block">Returns the background image of the title region.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitleFont()">getTitleFont</a></strong>()</code>
+<div class="block">Returns the font of the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitleForeground()">getTitleForeground</a></strong>()</code>
+<div class="block">Returns the foreground color of the title region.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitleHeight()">getTitleHeight</a></strong>()</code>
+<div class="block">Returns the height of the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getTitleInsets()">getTitleInsets</a></strong>()</code>
+<div class="block">Returns the insets of the title region.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getWidth()">getWidth</a></strong>()</code>
+<div class="block">Returns the configured width of the overall window, including its border.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#getZIndex()">getZIndex</a></strong>()</code>
+<div class="block">Returns the z-index of the window with respect to its parent
+ <code>ContentPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isClosable()">isClosable</a></strong>()</code>
+<div class="block">Determines if the window is closable via a provided close button in
+ the title bar.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isMaximizeEnabled()">isMaximizeEnabled</a></strong>()</code>
+<div class="block">Determines if the window can be maximized via a provided close button in
+ the title bar.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isMinimizeEnabled()">isMinimizeEnabled</a></strong>()</code>
+<div class="block">Determines if the window can be minimized via a provided close button in
+ the title bar.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isModal()">isModal</a></strong>()</code>
+<div class="block">Determines the modal state of this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isMovable()">isMovable</a></strong>()</code>
+<div class="block">Determines if the window is movable.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isResizable()">isResizable</a></strong>()</code>
+<div class="block">Determines if the window is resizable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isValidChild(nextapp.echo.app.Component)">isValidChild</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</code>
+<div class="block">Limit content to a single child.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#isValidParent(nextapp.echo.app.Component)">isValidParent</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent)</code>
+<div class="block">Only allow <code>ContentPane</code>s as parents.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#processInput(java.lang.String, java.lang.Object)">processInput</a></strong>(java.lang.String&nbsp;inputName,
+            java.lang.Object&nbsp;inputValue)</code>
+<div class="block">Processes client input specific to the <code>Component</code> 
+ received from the <code>UpdateManager</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#removeWindowPaneListener(nextapp.echo.app.event.WindowPaneListener)">removeWindowPaneListener</a></strong>(<a href="../../../nextapp/echo/app/event/WindowPaneListener.html" title="interface in nextapp.echo.app.event">WindowPaneListener</a>&nbsp;l)</code>
+<div class="block">Removes a <code>WindowPaneListener</code> (or <code>WindowPaneControlListener</code>) from receiving event notifications.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setBackgroundImage(nextapp.echo.app.FillImage)">setBackgroundImage</a></strong>(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</code>
+<div class="block">Sets the background image of the <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setBorder(nextapp.echo.app.FillImageBorder)">setBorder</a></strong>(<a href="../../../nextapp/echo/app/FillImageBorder.html" title="class in nextapp.echo.app">FillImageBorder</a>&nbsp;newValue)</code>
+<div class="block">Sets the border which surrounds the entire <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setBoxShadow(nextapp.echo.app.BoxShadow)">setBoxShadow</a></strong>(<a href="../../../nextapp/echo/app/BoxShadow.html" title="class in nextapp.echo.app">BoxShadow</a>&nbsp;newValue)</code>
+<div class="block">Sets the <code>BoxShadow (CSS3)</code> of this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setClosable(boolean)">setClosable</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the window is closable via a provided close button in
+ the title bar.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setCloseAnimationTime(int)">setCloseAnimationTime</a></strong>(int&nbsp;newValue)</code>
+<div class="block">Sets the animation time for the window closing effect.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setCloseIcon(nextapp.echo.app.ImageReference)">setCloseIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the close button icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setCloseIconInsets(nextapp.echo.app.Insets)">setCloseIconInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the inset margin around the close button icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setCloseRolloverIcon(nextapp.echo.app.ImageReference)">setCloseRolloverIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the close button rollover icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setContentHeight(nextapp.echo.app.Extent)">setContentHeight</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the content height of the <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setContentWidth(nextapp.echo.app.Extent)">setContentWidth</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the content width of the <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setControlsInsets(nextapp.echo.app.Insets)">setControlsInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the inset margin around the window controls 
+ (e.g., close, minimize, and maximize buttons).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setControlsSpacing(nextapp.echo.app.Extent)">setControlsSpacing</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the spacing between the window control icons
+ (e.g., close, minimize, and maximize buttons).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setDefaultCloseOperation(int)">setDefaultCloseOperation</a></strong>(int&nbsp;newValue)</code>
+<div class="block">Sets the default close operation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setHeight(nextapp.echo.app.Extent)">setHeight</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the overall height of the <code>WindowPane</code>, including its border.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setIcon(nextapp.echo.app.ImageReference)">setIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the icon displayed in the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setIconInsets(nextapp.echo.app.Insets)">setIconInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the inset margin around the icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setInsets(nextapp.echo.app.Insets)">setInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the inset of the window content.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMaximizeEnabled(boolean)">setMaximizeEnabled</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the window can be maximized via a provided button in
+ the title bar.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMaximizeIcon(nextapp.echo.app.ImageReference)">setMaximizeIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the maximize button icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMaximizeIconInsets(nextapp.echo.app.Insets)">setMaximizeIconInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the inset margin around the maximize button icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMaximizeRolloverIcon(nextapp.echo.app.ImageReference)">setMaximizeRolloverIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the maximize button rollover icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMaximumHeight(nextapp.echo.app.Extent)">setMaximumHeight</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the maximum height of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMaximumWidth(nextapp.echo.app.Extent)">setMaximumWidth</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the maximum width of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMinimizeEnabled(boolean)">setMinimizeEnabled</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the window can be minimized via a provided button in
+ the title bar.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMinimizeIcon(nextapp.echo.app.ImageReference)">setMinimizeIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the minimize button icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMinimizeIconInsets(nextapp.echo.app.Insets)">setMinimizeIconInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the inset margin around the minimize button icon.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMinimizeRolloverIcon(nextapp.echo.app.ImageReference)">setMinimizeRolloverIcon</a></strong>(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</code>
+<div class="block">Sets the minimize button rollover icon.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMinimumHeight(nextapp.echo.app.Extent)">setMinimumHeight</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the minimum height of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMinimumWidth(nextapp.echo.app.Extent)">setMinimumWidth</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the minimum width of the content region of the 
+ <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setModal(boolean)">setModal</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets the modal state of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setMovable(boolean)">setMovable</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the window is movable.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setOpenAnimationTime(int)">setOpenAnimationTime</a></strong>(int&nbsp;newValue)</code>
+<div class="block">Sets the animation time for the window opening effect.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setPositionX(nextapp.echo.app.Extent)">setPositionX</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the horizontal (X) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setPositionY(nextapp.echo.app.Extent)">setPositionY</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the vertical (Y) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setRadius(nextapp.echo.app.Insets)">setRadius</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the radius of the corners of the component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setResizable(boolean)">setResizable</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets whether the window is resizable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitle(java.lang.String)">setTitle</a></strong>(java.lang.String&nbsp;newValue)</code>
+<div class="block">Sets the title of the <code>WindowPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitleBackground(nextapp.echo.app.Color)">setTitleBackground</a></strong>(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</code>
+<div class="block">Sets the background color of the title region.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitleBackgroundImage(nextapp.echo.app.FillImage)">setTitleBackgroundImage</a></strong>(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</code>
+<div class="block">Sets the background image of the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitleFont(nextapp.echo.app.Font)">setTitleFont</a></strong>(<a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a>&nbsp;newValue)</code>
+<div class="block">Sets the font of the title region.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitleForeground(nextapp.echo.app.Color)">setTitleForeground</a></strong>(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</code>
+<div class="block">Sets the foreground color of the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitleHeight(nextapp.echo.app.Extent)">setTitleHeight</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the height of the title region.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setTitleInsets(nextapp.echo.app.Insets)">setTitleInsets</a></strong>(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</code>
+<div class="block">Sets the insets of the title region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setWidth(nextapp.echo.app.Extent)">setWidth</a></strong>(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</code>
+<div class="block">Sets the overall width of the <code>WindowPane</code>, including its border.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#setZIndex(int)">setZIndex</a></strong>(int&nbsp;newValue)</code>
+<div class="block">Sets the z-index of the window with respect to its parent
+ <code>ContentPane</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#userClose()">userClose</a></strong>()</code>
+<div class="block">Processes a user request to close the window (via the close button).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#userMaximize()">userMaximize</a></strong>()</code>
+<div class="block">Processes a user request to maximize the window (via the close button).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/WindowPane.html#userMinimize()">userMinimize</a></strong>()</code>
+<div class="block">Processes a user request to minimize the window (via the close button).</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_nextapp.echo.app.Component">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;nextapp.echo.app.<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></h3>
+<code><a href="../../../nextapp/echo/app/Component.html#add(nextapp.echo.app.Component)">add</a>, <a href="../../../nextapp/echo/app/Component.html#add(nextapp.echo.app.Component, int)">add</a>, <a href="../../../nextapp/echo/app/Component.html#addPropertyChangeListener(java.beans.PropertyChangeListener)">addPropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">addPropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#dispose()">dispose</a>, <a href="../../../nextapp/echo/app/Component.html#firePropertyChange(java.lang.String, java.lang.Object, java.lang.Object)">firePropertyChange</a>, <a href="../../../nextapp/echo/app/Component.html#get(java.lang.String)">get</a>, <a href="../../../nextapp/echo/app/Component.html#getApplicationInstance()">getApplicationInstance</a>, <a href="../../../nextapp/echo/app/Component.html#getBackground()">getBackground</a>, <a href="../../../nextapp/echo/app/Component.html#getComponent(int)">getComponent</a>, <a href="../../../nextapp/echo/app/Component.html#getComponent(java.lang.String)">getComponent</a>, <a href="../../../nextapp/echo/app/Component.html#getComponentCount()">getComponentCount</a>, <a href="../../../nextapp/echo/app/Component.html#getComponents()">getComponents</a>, <a href="../../../nextapp/echo/app/Component.html#getEventListenerList()">getEventListenerList</a>, <a href="../../../nextapp/echo/app/Component.html#getFocusNextId()">getFocusNextId</a>, <a href="../../../nextapp/echo/app/Component.html#getFocusPreviousId()">getFocusPreviousId</a>, <a href="../../../nextapp/echo/app/Component.html#getFont()">getFont</a>, <a href="../../../nextapp/echo/app/Component.html#getForeground()">getForeground</a>, <a href="../../../nextapp/echo/app/Component.html#getId()">getId</a>, <a href="../../../nextapp/echo/app/Component.html#getIndex(java.lang.String, int)">getIndex</a>, <a href="../../../nextapp/echo/app/Component.html#getLastRenderId()">getLastRenderId</a>, <a href="../../../nextapp/echo/app/Component.html#getLayoutData()">getLayoutData</a>, <a href="../../../nextapp/echo/app/Component.html#getLayoutDirection()">getLayoutDirection</a>, <a href="../../../nextapp/echo/app/Component.html#getLocale()">getLocale</a>, <a href="../../../nextapp/echo/app/Component.html#getLocalStyle()">getLocalStyle</a>, <a href="../../../nextapp/echo/app/Component.html#getParent()">getParent</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderId()">getRenderId</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderIndexedProperty(java.lang.String, int)">getRenderIndexedProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderIndexedProperty(java.lang.String, int, java.lang.Object)">getRenderIndexedProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderLocale()">getRenderLocale</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderProperty(java.lang.String)">getRenderProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getRenderProperty(java.lang.String, java.lang.Object)">getRenderProperty</a>, <a href="../../../nextapp/echo/app/Component.html#getStyle()">getStyle</a>, <a href="../../../nextapp/echo/app/Component.html#getStyleName()">getStyleName</a>, <a href="../../../nextapp/echo/app/Component.html#getVisibleComponent(int)">getVisibleComponent</a>, <a href="../../../nextapp/echo/app/Component.html#getVisibleComponentCount()">getVisibleComponentCount</a>, <a href="../../../nextapp/echo/app/Component.html#getVisibleComponents()">getVisibleComponents</a>, <a href="../../../nextapp/echo/app/Component.html#hasEventListenerList()">hasEventListenerList</a>, <a href="../../../nextapp/echo/app/Component.html#indexOf(nextapp.echo.app.Component)">indexOf</a>, <a href="../../../nextapp/echo/app/Component.html#init()">init</a>, <a href="../../../nextapp/echo/app/Component.html#isAncestorOf(nextapp.echo.app.Component)">isAncestorOf</a>, <a href="../../../nextapp/echo/app/Component.html#isEnabled()">isEnabled</a>, <a href="../../../nextapp/echo/app/Component.html#isFocusTraversalParticipant()">isFocusTraversalParticipant</a>, <a href="../../../nextapp/echo/app/Component.html#isRegistered()">isRegistered</a>, <a href="../../../nextapp/echo/app/Component.html#isRenderEnabled()">isRenderEnabled</a>, <a href="../../../nextapp/echo/app/Component.html#isRenderVisible()">isRenderVisible</a>, <a href="../../../nextapp/echo/app/Component.html#isVisible()">isVisible</a>, <a href="../../../nextapp/echo/app/Component.html#remove(nextapp.echo.app.Component)">remove</a>, <a href="../../../nextapp/echo/app/Component.html#remove(int)">remove</a>, <a href="../../../nextapp/echo/app/Component.html#removeAll()">removeAll</a>, <a href="../../../nextapp/echo/app/Component.html#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">removePropertyChangeListener</a>, <a href="../../../nextapp/echo/app/Component.html#set(java.lang.String, java.lang.Object)">set</a>, <a href="../../../nextapp/echo/app/Component.html#setBackground(nextapp.echo.app.Color)">setBackground</a>, <a href="../../../nextapp/echo/app/Component.html#setComponents(nextapp.echo.app.Component[])">setComponents</a>, <a href="../../../nextapp/echo/app/Component.html#setEnabled(boolean)">setEnabled</a>, <a href="../../../nextapp/echo/app/Component.html#setFocusNextId(java.lang.String)">setFocusNextId</a>, <a href="../../../nextapp/echo/app/Component.html#setFocusPreviousId(java.lang.String)">setFocusPreviousId</a>, <a href="../../../nextapp/echo/app/Component.html#setFocusTraversalParticipant(boolean)">setFocusTraversalParticipant</a>, <a href="../../../nextapp/echo/app/Component.html#setFont(nextapp.echo.app.Font)">setFont</a>, <a href="../../../nextapp/echo/app/Component.html#setForeground(nextapp.echo.app.Color)">setForeground</a>, <a href="../../../nextapp/echo/app/Component.html#setId(java.lang.String)">setId</a>, <a href="../../../nextapp/echo/app/Component.html#setIndex(java.lang.String, int, java.lang.Object)">setIndex</a>, <a href="../../../nextapp/echo/app/Component.html#setLayoutData(nextapp.echo.app.LayoutData)">setLayoutData</a>, <a href="../../../nextapp/echo/app/Component.html#setLayoutDirection(nextapp.echo.app.LayoutDirection)">setLayoutDirection</a>, <a href="../../../nextapp/echo/app/Component.html#setLocale(java.util.Locale)">setLocale</a>, <a href="../../../nextapp/echo/app/Component.html#setRenderId(java.lang.String)">setRenderId</a>, <a href="../../../nextapp/echo/app/Component.html#setStyle(nextapp.echo.app.Style)">setStyle</a>, <a href="../../../nextapp/echo/app/Component.html#setStyleName(java.lang.String)">setStyleName</a>, <a href="../../../nextapp/echo/app/Component.html#setVisible(boolean)">setVisible</a>, <a href="../../../nextapp/echo/app/Component.html#validate()">validate</a>, <a href="../../../nextapp/echo/app/Component.html#verifyInput(java.lang.String, java.lang.Object)">verifyInput</a>, <a href="../../../nextapp/echo/app/Component.html#visibleIndexOf(nextapp.echo.app.Component)">visibleIndexOf</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="INPUT_CLOSE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INPUT_CLOSE</h4>
+<pre>public static final&nbsp;java.lang.String INPUT_CLOSE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.INPUT_CLOSE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INPUT_MINIMIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INPUT_MINIMIZE</h4>
+<pre>public static final&nbsp;java.lang.String INPUT_MINIMIZE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.INPUT_MINIMIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INPUT_MAXIMIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INPUT_MAXIMIZE</h4>
+<pre>public static final&nbsp;java.lang.String INPUT_MAXIMIZE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.INPUT_MAXIMIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_BACKGROUND_IMAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_BACKGROUND_IMAGE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_BACKGROUND_IMAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_BACKGROUND_IMAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_BORDER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_BORDER</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_BORDER</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_BORDER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_BOX_SHADOW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_BOX_SHADOW</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_BOX_SHADOW</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_BOX_SHADOW">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CLOSABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CLOSABLE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CLOSABLE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CLOSABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CLOSE_ANIMATION_TIME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CLOSE_ANIMATION_TIME</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CLOSE_ANIMATION_TIME</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CLOSE_ANIMATION_TIME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CLOSE_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CLOSE_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CLOSE_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CLOSE_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CLOSE_ICON_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CLOSE_ICON_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CLOSE_ICON_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CLOSE_ICON_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CLOSE_ROLLOVER_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CLOSE_ROLLOVER_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CLOSE_ROLLOVER_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CLOSE_ROLLOVER_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CONTENT_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CONTENT_HEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CONTENT_HEIGHT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CONTENT_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CONTENT_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CONTENT_WIDTH</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CONTENT_WIDTH</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CONTENT_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CONTROLS_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CONTROLS_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CONTROLS_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CONTROLS_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_CONTROLS_SPACING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_CONTROLS_SPACING</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_CONTROLS_SPACING</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_CONTROLS_SPACING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_DEFAULT_CLOSE_OPERATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_DEFAULT_CLOSE_OPERATION</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_DEFAULT_CLOSE_OPERATION</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_DEFAULT_CLOSE_OPERATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_HEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_HEIGHT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_ICON_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_ICON_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_ICON_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_ICON_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MAXIMIZE_ENABLED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MAXIMIZE_ENABLED</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MAXIMIZE_ENABLED</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MAXIMIZE_ENABLED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MAXIMIZE_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MAXIMIZE_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MAXIMIZE_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MAXIMIZE_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MAXIMIZE_ICON_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MAXIMIZE_ICON_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MAXIMIZE_ICON_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MAXIMIZE_ICON_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MAXIMIZE_ROLLOVER_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MAXIMIZE_ROLLOVER_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MAXIMIZE_ROLLOVER_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MAXIMIZE_ROLLOVER_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MAXIMUM_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MAXIMUM_HEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MAXIMUM_HEIGHT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MAXIMUM_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MAXIMUM_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MAXIMUM_WIDTH</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MAXIMUM_WIDTH</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MAXIMUM_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MINIMIZE_ENABLED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MINIMIZE_ENABLED</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MINIMIZE_ENABLED</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MINIMIZE_ENABLED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MINIMIZE_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MINIMIZE_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MINIMIZE_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MINIMIZE_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MINIMIZE_ICON_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MINIMIZE_ICON_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MINIMIZE_ICON_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MINIMIZE_ICON_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MINIMIZE_ROLLOVER_ICON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MINIMIZE_ROLLOVER_ICON</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MINIMIZE_ROLLOVER_ICON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MINIMIZE_ROLLOVER_ICON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MINIMUM_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MINIMUM_HEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MINIMUM_HEIGHT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MINIMUM_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MINIMUM_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MINIMUM_WIDTH</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MINIMUM_WIDTH</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MINIMUM_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_MOVABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_MOVABLE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_MOVABLE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_MOVABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_OPEN_ANIMATION_TIME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_OPEN_ANIMATION_TIME</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_OPEN_ANIMATION_TIME</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_OPEN_ANIMATION_TIME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_POSITION_X">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_POSITION_X</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_POSITION_X</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_POSITION_X">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_POSITION_Y">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_POSITION_Y</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_POSITION_Y</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_POSITION_Y">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_RADIUS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_RADIUS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_RADIUS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_RADIUS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_RESIZABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_RESIZABLE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_RESIZABLE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_RESIZABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE_BACKGROUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE_BACKGROUND</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE_BACKGROUND</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE_BACKGROUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE_BACKGROUND_IMAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE_BACKGROUND_IMAGE</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE_BACKGROUND_IMAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE_BACKGROUND_IMAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE_FONT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE_FONT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE_FONT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE_FONT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE_FOREGROUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE_FOREGROUND</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE_FOREGROUND</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE_FOREGROUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE_HEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE_HEIGHT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_TITLE_INSETS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_TITLE_INSETS</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_TITLE_INSETS</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_TITLE_INSETS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_WIDTH</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_WIDTH</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_Z_INDEX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_Z_INDEX</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_Z_INDEX</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.PROPERTY_Z_INDEX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DO_NOTHING_ON_CLOSE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DO_NOTHING_ON_CLOSE</h4>
+<pre>public static final&nbsp;int DO_NOTHING_ON_CLOSE</pre>
+<div class="block">A constant for the <code>defaultCloseOperation</code> property 
+ indicating that nothing should be done when the user attempts 
+ to close a window.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.DO_NOTHING_ON_CLOSE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HIDE_ON_CLOSE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HIDE_ON_CLOSE</h4>
+<pre>public static final&nbsp;int HIDE_ON_CLOSE</pre>
+<div class="block">A constant for the <code>defaultCloseOperation</code> property 
+ indicating that a window should be hidden when the user attempts 
+ to close it.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.HIDE_ON_CLOSE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DISPOSE_ON_CLOSE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DISPOSE_ON_CLOSE</h4>
+<pre>public static final&nbsp;int DISPOSE_ON_CLOSE</pre>
+<div class="block">A constant for the <code>defaultCloseOperation</code> property 
+ indicating that a window should be removed from the component
+ hierarchy when a user attempts to close it.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.WindowPane.DISPOSE_ON_CLOSE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="WindowPane()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WindowPane</h4>
+<pre>public&nbsp;WindowPane()</pre>
+<div class="block">Creates a  new <code>WindowPane</code>.</div>
+</li>
+</ul>
+<a name="WindowPane(java.lang.String, nextapp.echo.app.Extent, nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>WindowPane</h4>
+<pre>public&nbsp;WindowPane(java.lang.String&nbsp;title,
+          <a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;width,
+          <a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;height)</pre>
+<div class="block">Creates a new <code>WindowPane</code> with the specified title
+ and dimensions.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>title</code> - the title</dd><dd><code>width</code> - The width</dd><dd><code>height</code> - The height</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="addWindowPaneListener(nextapp.echo.app.event.WindowPaneListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addWindowPaneListener</h4>
+<pre>public&nbsp;void&nbsp;addWindowPaneListener(<a href="../../../nextapp/echo/app/event/WindowPaneListener.html" title="interface in nextapp.echo.app.event">WindowPaneListener</a>&nbsp;l)</pre>
+<div class="block">Adds a <code>WindowPaneListener</code> (or <code>WindowPaneControlListener</code>) to receive event notifications.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>l</code> - the <code>WindowPaneListener</code> to add</dd></dl>
+</li>
+</ul>
+<a name="fireWindowClosing()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fireWindowClosing</h4>
+<pre>protected&nbsp;void&nbsp;fireWindowClosing()</pre>
+<div class="block">Notifies <code>WindowPaneListener</code>s that the user has requested 
+ to close this <code>WindowPane</code>.</div>
+</li>
+</ul>
+<a name="fireWindowMaximized()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fireWindowMaximized</h4>
+<pre>protected&nbsp;void&nbsp;fireWindowMaximized()</pre>
+<div class="block">Notifies <code>WindowPaneListener</code>s that the user has maximized the <code>WindowPane</code></div>
+</li>
+</ul>
+<a name="fireWindowMinimized()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fireWindowMinimized</h4>
+<pre>protected&nbsp;void&nbsp;fireWindowMinimized()</pre>
+<div class="block">Notifies <code>WindowPaneListener</code>s that the user has minimized the <code>WindowPane</code></div>
+</li>
+</ul>
+<a name="getBackgroundImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBackgroundImage</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;getBackgroundImage()</pre>
+<div class="block">Returns the background image of the <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the background image</dd></dl>
+</li>
+</ul>
+<a name="getBorder()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBorder</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImageBorder.html" title="class in nextapp.echo.app">FillImageBorder</a>&nbsp;getBorder()</pre>
+<div class="block">Returns the border which surrounds the entire <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>border</dd></dl>
+</li>
+</ul>
+<a name="getBoxShadow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBoxShadow</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/BoxShadow.html" title="class in nextapp.echo.app">BoxShadow</a>&nbsp;getBoxShadow()</pre>
+<div class="block">Returns the specific box shadow (CSS3) setting of this component, if any.
+ This method will return null unless a <code>BoxShadow</code> is
+ specifically set on <strong>this</strong> <code>Component</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the box shadow property of <strong>this</strong>
+         <code>Component</code></dd></dl>
+</li>
+</ul>
+<a name="getCloseAnimationTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCloseAnimationTime</h4>
+<pre>public&nbsp;int&nbsp;getCloseAnimationTime()</pre>
+<div class="block">Returns the animation time for the window closing effect.
+ A value of 0 (the default) indicates the window will be immediately closed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the animation time, in milliseconds</dd></dl>
+</li>
+</ul>
+<a name="getCloseIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCloseIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getCloseIcon()</pre>
+<div class="block">Returns the close button icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getCloseIconInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCloseIconInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getCloseIconInsets()</pre>
+<div class="block">Returns the inset margin around the close button icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the inset margin</dd></dl>
+</li>
+</ul>
+<a name="getCloseRolloverIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCloseRolloverIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getCloseRolloverIcon()</pre>
+<div class="block">Returns the close button rollover icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getContentHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContentHeight</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getContentHeight()</pre>
+<div class="block">Returns the configured height of the content region of the window.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the height</dd></dl>
+</li>
+</ul>
+<a name="getContentWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContentWidth</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getContentWidth()</pre>
+<div class="block">Returns the configured width of the content region of the window.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the width</dd></dl>
+</li>
+</ul>
+<a name="getControlsSpacing()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getControlsSpacing</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getControlsSpacing()</pre>
+<div class="block">Returns the spacing between the window control icons
+ (e.g., close, minimize, and maximize buttons).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the controls spacing</dd></dl>
+</li>
+</ul>
+<a name="getControlsInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getControlsInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getControlsInsets()</pre>
+<div class="block">Returns the inset margin around the window controls 
+ (e.g., close, minimize, and maximize buttons)</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the inset margin</dd></dl>
+</li>
+</ul>
+<a name="getDefaultCloseOperation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultCloseOperation</h4>
+<pre>public&nbsp;int&nbsp;getDefaultCloseOperation()</pre>
+<div class="block">Returns the default close operation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the default close operation, one of the following values:
+         <ul>
+          <li>DO_NOTHING_ON_CLOSE</li>
+          <li>HIDE_ON_CLOSE</li>
+          <li>DISPOSE_ON_CLOSE</li>
+         </ul></dd></dl>
+</li>
+</ul>
+<a name="getHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeight</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getHeight()</pre>
+<div class="block">Returns the configured height of the overall window, including its border.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the height</dd></dl>
+</li>
+</ul>
+<a name="getIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getIcon()</pre>
+<div class="block">Returns the icon displayed in the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getIconInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIconInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getIconInsets()</pre>
+<div class="block">Returns the inset margin around the icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the inset margin</dd></dl>
+</li>
+</ul>
+<a name="getInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getInsets()</pre>
+<div class="block">Returns the inset of the window content.
+ This property is not rendered when the content is a <code>Pane</code>
+ component.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the inset</dd></dl>
+</li>
+</ul>
+<a name="getMaximizeIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaximizeIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getMaximizeIcon()</pre>
+<div class="block">Returns the maximize button icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getMaximizeIconInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaximizeIconInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getMaximizeIconInsets()</pre>
+<div class="block">Returns the inset margin around the maximize button icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the inset margin</dd></dl>
+</li>
+</ul>
+<a name="getMaximizeRolloverIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaximizeRolloverIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getMaximizeRolloverIcon()</pre>
+<div class="block">Returns the maximize button rollover icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getMaximumHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaximumHeight</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getMaximumHeight()</pre>
+<div class="block">Returns the maximum height of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the maximum height</dd></dl>
+</li>
+</ul>
+<a name="getMaximumWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaximumWidth</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getMaximumWidth()</pre>
+<div class="block">Returns the maximum width of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the maximum width</dd></dl>
+</li>
+</ul>
+<a name="getMinimizeIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimizeIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getMinimizeIcon()</pre>
+<div class="block">Returns the minimize button icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getMinimizeIconInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimizeIconInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getMinimizeIconInsets()</pre>
+<div class="block">Returns the inset margin around the minimize button icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the inset margin</dd></dl>
+</li>
+</ul>
+<a name="getMinimizeRolloverIcon()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimizeRolloverIcon</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;getMinimizeRolloverIcon()</pre>
+<div class="block">Returns the minimize button rollover icon.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the icon</dd></dl>
+</li>
+</ul>
+<a name="getMinimumHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimumHeight</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getMinimumHeight()</pre>
+<div class="block">Returns the minimum height of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the minimum height</dd></dl>
+</li>
+</ul>
+<a name="getMinimumWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimumWidth</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getMinimumWidth()</pre>
+<div class="block">Returns the minimum width of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the minimum width</dd></dl>
+</li>
+</ul>
+<a name="getOpenAnimationTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOpenAnimationTime</h4>
+<pre>public&nbsp;int&nbsp;getOpenAnimationTime()</pre>
+<div class="block">Returns the animation time for the window opening effect.
+ A value of 0 (the default) indicates the window will be immediately opened.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the animation time, in milliseconds</dd></dl>
+</li>
+</ul>
+<a name="getPositionX()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPositionX</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getPositionX()</pre>
+<div class="block">Returns the horizontal (Y) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the position</dd></dl>
+</li>
+</ul>
+<a name="getPositionY()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPositionY</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getPositionY()</pre>
+<div class="block">Returns the vertical (Y) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the position</dd></dl>
+</li>
+</ul>
+<a name="getRadius()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRadius</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getRadius()</pre>
+<div class="block">Returns the corder radius of the component (or null of radius applied).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the radius</dd></dl>
+</li>
+</ul>
+<a name="getTitle()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitle</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getTitle()</pre>
+<div class="block">Returns the title of the <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the title</dd></dl>
+</li>
+</ul>
+<a name="getTitleBackground()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitleBackground</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;getTitleBackground()</pre>
+<div class="block">Returns the background color of the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the color</dd></dl>
+</li>
+</ul>
+<a name="getTitleBackgroundImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitleBackgroundImage</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;getTitleBackgroundImage()</pre>
+<div class="block">Returns the background image of the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the background image</dd></dl>
+</li>
+</ul>
+<a name="getTitleFont()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitleFont</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a>&nbsp;getTitleFont()</pre>
+<div class="block">Returns the font of the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the font</dd></dl>
+</li>
+</ul>
+<a name="getTitleForeground()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitleForeground</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;getTitleForeground()</pre>
+<div class="block">Returns the foreground color of the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the color</dd></dl>
+</li>
+</ul>
+<a name="getTitleHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitleHeight</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getTitleHeight()</pre>
+<div class="block">Returns the height of the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the height</dd></dl>
+</li>
+</ul>
+<a name="getTitleInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTitleInsets</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;getTitleInsets()</pre>
+<div class="block">Returns the insets of the title region.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the insets</dd></dl>
+</li>
+</ul>
+<a name="getWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWidth</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;getWidth()</pre>
+<div class="block">Returns the configured width of the overall window, including its border.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the width</dd></dl>
+</li>
+</ul>
+<a name="getZIndex()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getZIndex</h4>
+<pre>public&nbsp;int&nbsp;getZIndex()</pre>
+<div class="block">Returns the z-index of the window with respect to its parent
+ <code>ContentPane</code>.  Windows with higher z-indices will
+ visually obscure windows with lower z-indices.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the z-index</dd></dl>
+</li>
+</ul>
+<a name="isClosable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isClosable</h4>
+<pre>public&nbsp;boolean&nbsp;isClosable()</pre>
+<div class="block">Determines if the window is closable via a provided close button in
+ the title bar.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the window is closable</dd></dl>
+</li>
+</ul>
+<a name="isMaximizeEnabled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMaximizeEnabled</h4>
+<pre>public&nbsp;boolean&nbsp;isMaximizeEnabled()</pre>
+<div class="block">Determines if the window can be maximized via a provided close button in
+ the title bar.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the window can be maximized</dd></dl>
+</li>
+</ul>
+<a name="isMinimizeEnabled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMinimizeEnabled</h4>
+<pre>public&nbsp;boolean&nbsp;isMinimizeEnabled()</pre>
+<div class="block">Determines if the window can be minimized via a provided close button in
+ the title bar.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the window can be minimized</dd></dl>
+</li>
+</ul>
+<a name="isModal()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isModal</h4>
+<pre>public&nbsp;boolean&nbsp;isModal()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../nextapp/echo/app/ModalSupport.html#isModal()">ModalSupport</a></code></strong></div>
+<div class="block">Determines the modal state of this component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/ModalSupport.html#isModal()">isModal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../nextapp/echo/app/ModalSupport.html" title="interface in nextapp.echo.app">ModalSupport</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the component is modal</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/ModalSupport.html#isModal()"><code>ModalSupport.isModal()</code></a></dd></dl>
+</li>
+</ul>
+<a name="isMovable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMovable</h4>
+<pre>public&nbsp;boolean&nbsp;isMovable()</pre>
+<div class="block">Determines if the window is movable.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the window is movable</dd></dl>
+</li>
+</ul>
+<a name="isResizable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isResizable</h4>
+<pre>public&nbsp;boolean&nbsp;isResizable()</pre>
+<div class="block">Determines if the window is resizable.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the window is resizable</dd></dl>
+</li>
+</ul>
+<a name="isValidChild(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isValidChild</h4>
+<pre>public&nbsp;boolean&nbsp;isValidChild(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</pre>
+<div class="block">Limit content to a single child.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/Component.html#isValidChild(nextapp.echo.app.Component)">isValidChild</a></code>&nbsp;in class&nbsp;<code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>component</code> - the <code>Component</code> to evaluate as a child</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is a valid child</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#isValidChild(nextapp.echo.app.Component)"><code>Component.isValidChild(nextapp.echo.app.Component)</code></a></dd></dl>
+</li>
+</ul>
+<a name="isValidParent(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isValidParent</h4>
+<pre>public&nbsp;boolean&nbsp;isValidParent(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent)</pre>
+<div class="block">Only allow <code>ContentPane</code>s as parents.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/Component.html#isValidParent(nextapp.echo.app.Component)">isValidParent</a></code>&nbsp;in class&nbsp;<code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - the <code>Component</code> to evaluate as a parent</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is a valid parent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#isValidParent(nextapp.echo.app.Component)"><code>Component.isValidParent(nextapp.echo.app.Component)</code></a></dd></dl>
+</li>
+</ul>
+<a name="processInput(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processInput</h4>
+<pre>public&nbsp;void&nbsp;processInput(java.lang.String&nbsp;inputName,
+                java.lang.Object&nbsp;inputValue)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)">Component</a></code></strong></div>
+<div class="block">Processes client input specific to the <code>Component</code> 
+ received from the <code>UpdateManager</code>.
+ Derivative implementations should take care to invoke 
+ <code>super.processInput()</code>.
+ 
+ <strong>Security note:</strong>  Because input to this method is 
+ likely from a remote client, it should be treated as potentially hostile.
+ All input to this method should be carefully verified.
+ For example, directly invoking <code>set()</code> method with the
+ provided input would constitute a security hole.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)">processInput</a></code>&nbsp;in class&nbsp;<code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>inputName</code> - the name of the input</dd><dd><code>inputValue</code> - the value of the input</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)"><code>Component.processInput(java.lang.String, java.lang.Object)</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeWindowPaneListener(nextapp.echo.app.event.WindowPaneListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeWindowPaneListener</h4>
+<pre>public&nbsp;void&nbsp;removeWindowPaneListener(<a href="../../../nextapp/echo/app/event/WindowPaneListener.html" title="interface in nextapp.echo.app.event">WindowPaneListener</a>&nbsp;l)</pre>
+<div class="block">Removes a <code>WindowPaneListener</code> (or <code>WindowPaneControlListener</code>) from receiving event notifications.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>l</code> - the <code>WindowPaneListener</code> to remove</dd></dl>
+</li>
+</ul>
+<a name="setBackgroundImage(nextapp.echo.app.FillImage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBackgroundImage</h4>
+<pre>public&nbsp;void&nbsp;setBackgroundImage(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</pre>
+<div class="block">Sets the background image of the <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new background image</dd></dl>
+</li>
+</ul>
+<a name="setBorder(nextapp.echo.app.FillImageBorder)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBorder</h4>
+<pre>public&nbsp;void&nbsp;setBorder(<a href="../../../nextapp/echo/app/FillImageBorder.html" title="class in nextapp.echo.app">FillImageBorder</a>&nbsp;newValue)</pre>
+<div class="block">Sets the border which surrounds the entire <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new border</dd></dl>
+</li>
+</ul>
+<a name="setBoxShadow(nextapp.echo.app.BoxShadow)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBoxShadow</h4>
+<pre>public&nbsp;void&nbsp;setBoxShadow(<a href="../../../nextapp/echo/app/BoxShadow.html" title="class in nextapp.echo.app">BoxShadow</a>&nbsp;newValue)</pre>
+<div class="block">Sets the <code>BoxShadow (CSS3)</code> of this <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new <code>BoxShadow</code>.</dd></dl>
+</li>
+</ul>
+<a name="setClosable(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setClosable</h4>
+<pre>public&nbsp;void&nbsp;setClosable(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the window is closable via a provided close button in
+ the title bar.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the window is closable</dd></dl>
+</li>
+</ul>
+<a name="setCloseAnimationTime(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCloseAnimationTime</h4>
+<pre>public&nbsp;void&nbsp;setCloseAnimationTime(int&nbsp;newValue)</pre>
+<div class="block">Sets the animation time for the window closing effect.
+ A value of 0 (the default) indicates the window will be immediately closed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new animation time, in milliseconds</dd></dl>
+</li>
+</ul>
+<a name="setCloseIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCloseIcon</h4>
+<pre>public&nbsp;void&nbsp;setCloseIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the close button icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setCloseIconInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCloseIconInsets</h4>
+<pre>public&nbsp;void&nbsp;setCloseIconInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the inset margin around the close button icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new inset margin</dd></dl>
+</li>
+</ul>
+<a name="setCloseRolloverIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCloseRolloverIcon</h4>
+<pre>public&nbsp;void&nbsp;setCloseRolloverIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the close button rollover icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setContentHeight(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setContentHeight</h4>
+<pre>public&nbsp;void&nbsp;setContentHeight(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the content height of the <code>WindowPane</code>.
+ This value will be overridden by the <code>height</code> property, if it is set.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new content height</dd></dl>
+</li>
+</ul>
+<a name="setContentWidth(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setContentWidth</h4>
+<pre>public&nbsp;void&nbsp;setContentWidth(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the content width of the <code>WindowPane</code>.
+ This value will be overridden by the <code>width</code> property, if it is set.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new content width</dd></dl>
+</li>
+</ul>
+<a name="setControlsSpacing(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setControlsSpacing</h4>
+<pre>public&nbsp;void&nbsp;setControlsSpacing(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the spacing between the window control icons
+ (e.g., close, minimize, and maximize buttons).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new controls spacing</dd></dl>
+</li>
+</ul>
+<a name="setControlsInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setControlsInsets</h4>
+<pre>public&nbsp;void&nbsp;setControlsInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the inset margin around the window controls 
+ (e.g., close, minimize, and maximize buttons).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new inset margin</dd></dl>
+</li>
+</ul>
+<a name="setDefaultCloseOperation(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDefaultCloseOperation</h4>
+<pre>public&nbsp;void&nbsp;setDefaultCloseOperation(int&nbsp;newValue)</pre>
+<div class="block">Sets the default close operation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new default close operation, one of the following 
+        values:
+        <ul>
+         <li>DO_NOTHING_ON_CLOSE</li>
+         <li>HIDE_ON_CLOSE</li>
+         <li>DISPOSE_ON_CLOSE</li>
+        </ul></dd></dl>
+</li>
+</ul>
+<a name="setHeight(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setHeight</h4>
+<pre>public&nbsp;void&nbsp;setHeight(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the overall height of the <code>WindowPane</code>, including its border.
+ This value will override any setting of the <code>contentHeight</code> property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new height</dd></dl>
+</li>
+</ul>
+<a name="setIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIcon</h4>
+<pre>public&nbsp;void&nbsp;setIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the icon displayed in the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setIconInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIconInsets</h4>
+<pre>public&nbsp;void&nbsp;setIconInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the inset margin around the icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new inset margin</dd></dl>
+</li>
+</ul>
+<a name="setInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setInsets</h4>
+<pre>public&nbsp;void&nbsp;setInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the inset of the window content.
+ This property is not rendered when the content is a <code>Pane</code>
+ component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new inset</dd></dl>
+</li>
+</ul>
+<a name="setMaximizeEnabled(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaximizeEnabled</h4>
+<pre>public&nbsp;void&nbsp;setMaximizeEnabled(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the window can be maximized via a provided button in
+ the title bar.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the window can be maximized</dd></dl>
+</li>
+</ul>
+<a name="setMaximizeIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaximizeIcon</h4>
+<pre>public&nbsp;void&nbsp;setMaximizeIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the maximize button icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setMaximizeIconInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaximizeIconInsets</h4>
+<pre>public&nbsp;void&nbsp;setMaximizeIconInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the inset margin around the maximize button icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new inset margin</dd></dl>
+</li>
+</ul>
+<a name="setMaximizeRolloverIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaximizeRolloverIcon</h4>
+<pre>public&nbsp;void&nbsp;setMaximizeRolloverIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the maximize button rollover icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setMaximumHeight(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaximumHeight</h4>
+<pre>public&nbsp;void&nbsp;setMaximumHeight(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the maximum height of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new maximum height</dd></dl>
+</li>
+</ul>
+<a name="setMaximumWidth(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaximumWidth</h4>
+<pre>public&nbsp;void&nbsp;setMaximumWidth(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the maximum width of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new maximum width</dd></dl>
+</li>
+</ul>
+<a name="setMinimizeEnabled(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMinimizeEnabled</h4>
+<pre>public&nbsp;void&nbsp;setMinimizeEnabled(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the window can be minimized via a provided button in
+ the title bar.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the window can be minimized</dd></dl>
+</li>
+</ul>
+<a name="setMinimizeIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMinimizeIcon</h4>
+<pre>public&nbsp;void&nbsp;setMinimizeIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the minimize button icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setMinimizeIconInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMinimizeIconInsets</h4>
+<pre>public&nbsp;void&nbsp;setMinimizeIconInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the inset margin around the minimize button icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new inset margin</dd></dl>
+</li>
+</ul>
+<a name="setMinimizeRolloverIcon(nextapp.echo.app.ImageReference)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMinimizeRolloverIcon</h4>
+<pre>public&nbsp;void&nbsp;setMinimizeRolloverIcon(<a href="../../../nextapp/echo/app/ImageReference.html" title="interface in nextapp.echo.app">ImageReference</a>&nbsp;newValue)</pre>
+<div class="block">Sets the minimize button rollover icon.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new icon</dd></dl>
+</li>
+</ul>
+<a name="setMinimumHeight(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMinimumHeight</h4>
+<pre>public&nbsp;void&nbsp;setMinimumHeight(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the minimum height of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new minimum height</dd></dl>
+</li>
+</ul>
+<a name="setMinimumWidth(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMinimumWidth</h4>
+<pre>public&nbsp;void&nbsp;setMinimumWidth(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the minimum width of the content region of the 
+ <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new minimum width</dd></dl>
+</li>
+</ul>
+<a name="setModal(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setModal</h4>
+<pre>public&nbsp;void&nbsp;setModal(boolean&nbsp;newValue)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../nextapp/echo/app/ModalSupport.html#setModal(boolean)">ModalSupport</a></code></strong></div>
+<div class="block">Sets the modal state of the <code>Component</code>.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/ModalSupport.html#setModal(boolean)">setModal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../nextapp/echo/app/ModalSupport.html" title="interface in nextapp.echo.app">ModalSupport</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new modal state</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/ModalSupport.html#setModal(boolean)"><code>ModalSupport.setModal(boolean)</code></a></dd></dl>
+</li>
+</ul>
+<a name="setMovable(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMovable</h4>
+<pre>public&nbsp;void&nbsp;setMovable(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the window is movable.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the window may be moved by the user</dd></dl>
+</li>
+</ul>
+<a name="setOpenAnimationTime(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOpenAnimationTime</h4>
+<pre>public&nbsp;void&nbsp;setOpenAnimationTime(int&nbsp;newValue)</pre>
+<div class="block">Sets the animation time for the window opening effect.
+ A value of 0 (the default) indicates the window will be immediately opened.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new animation time, in milliseconds</dd></dl>
+</li>
+</ul>
+<a name="setPositionX(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPositionX</h4>
+<pre>public&nbsp;void&nbsp;setPositionX(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the horizontal (X) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new position</dd></dl>
+</li>
+</ul>
+<a name="setPositionY(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPositionY</h4>
+<pre>public&nbsp;void&nbsp;setPositionY(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the vertical (Y) position of the <code>WindowPane</code> with
+ respect to its container.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new position</dd></dl>
+</li>
+</ul>
+<a name="setRadius(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRadius</h4>
+<pre>public&nbsp;void&nbsp;setRadius(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the radius of the corners of the component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new radius</dd></dl>
+</li>
+</ul>
+<a name="setResizable(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setResizable</h4>
+<pre>public&nbsp;void&nbsp;setResizable(boolean&nbsp;newValue)</pre>
+<div class="block">Sets whether the window is resizable.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - true if the window may be resized by the user</dd></dl>
+</li>
+</ul>
+<a name="setTitle(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitle</h4>
+<pre>public&nbsp;void&nbsp;setTitle(java.lang.String&nbsp;newValue)</pre>
+<div class="block">Sets the title of the <code>WindowPane</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the title</dd></dl>
+</li>
+</ul>
+<a name="setTitleFont(nextapp.echo.app.Font)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitleFont</h4>
+<pre>public&nbsp;void&nbsp;setTitleFont(<a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a>&nbsp;newValue)</pre>
+<div class="block">Sets the font of the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new font</dd></dl>
+</li>
+</ul>
+<a name="setTitleBackground(nextapp.echo.app.Color)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitleBackground</h4>
+<pre>public&nbsp;void&nbsp;setTitleBackground(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</pre>
+<div class="block">Sets the background color of the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new color</dd></dl>
+</li>
+</ul>
+<a name="setTitleBackgroundImage(nextapp.echo.app.FillImage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitleBackgroundImage</h4>
+<pre>public&nbsp;void&nbsp;setTitleBackgroundImage(<a href="../../../nextapp/echo/app/FillImage.html" title="class in nextapp.echo.app">FillImage</a>&nbsp;newValue)</pre>
+<div class="block">Sets the background image of the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new background image</dd></dl>
+</li>
+</ul>
+<a name="setTitleForeground(nextapp.echo.app.Color)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitleForeground</h4>
+<pre>public&nbsp;void&nbsp;setTitleForeground(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</pre>
+<div class="block">Sets the foreground color of the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new color</dd></dl>
+</li>
+</ul>
+<a name="setTitleHeight(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitleHeight</h4>
+<pre>public&nbsp;void&nbsp;setTitleHeight(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the height of the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new height</dd></dl>
+</li>
+</ul>
+<a name="setTitleInsets(nextapp.echo.app.Insets)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTitleInsets</h4>
+<pre>public&nbsp;void&nbsp;setTitleInsets(<a href="../../../nextapp/echo/app/Insets.html" title="class in nextapp.echo.app">Insets</a>&nbsp;newValue)</pre>
+<div class="block">Sets the insets of the title region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new insets</dd></dl>
+</li>
+</ul>
+<a name="setWidth(nextapp.echo.app.Extent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setWidth</h4>
+<pre>public&nbsp;void&nbsp;setWidth(<a href="../../../nextapp/echo/app/Extent.html" title="class in nextapp.echo.app">Extent</a>&nbsp;newValue)</pre>
+<div class="block">Sets the overall width of the <code>WindowPane</code>, including its border.
+ This value will override any setting of the <code>contentWidth</code> property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new width</dd></dl>
+</li>
+</ul>
+<a name="setZIndex(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setZIndex</h4>
+<pre>public&nbsp;void&nbsp;setZIndex(int&nbsp;newValue)</pre>
+<div class="block">Sets the z-index of the window with respect to its parent
+ <code>ContentPane</code>.  Windows with higher z-indices will
+ visually obscure windows with lower z-indices.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new z-index</dd></dl>
+</li>
+</ul>
+<a name="userClose()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>userClose</h4>
+<pre>public&nbsp;void&nbsp;userClose()</pre>
+<div class="block">Processes a user request to close the window (via the close button).</div>
+</li>
+</ul>
+<a name="userMaximize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>userMaximize</h4>
+<pre>public&nbsp;void&nbsp;userMaximize()</pre>
+<div class="block">Processes a user request to maximize the window (via the close button).
+ Performs no operation by default.  The client is responsible for configuring the window appropriately.</div>
+</li>
+</ul>
+<a name="userMinimize()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>userMinimize</h4>
+<pre>public&nbsp;void&nbsp;userMinimize()</pre>
+<div class="block">Processes a user request to minimize the window (via the close button).
+ Sets the window invisible.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/app/Window.html" title="class in nextapp.echo.app"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/app/WindowPane.html" target="_top">Frames</a></li>
+<li><a href="WindowPane.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

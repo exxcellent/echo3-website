@@ -1,0 +1,2167 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/app/Command.html" title="interface in nextapp.echo.app"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/app/Composite.html" title="class in nextapp.echo.app"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/app/Component.html" target="_top">Frames</a></li>
+<li><a href="Component.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.app</div>
+<h2 title="Class Component" class="title">Class Component</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>nextapp.echo.app.Component</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable, <a href="../../../nextapp/echo/app/RenderIdSupport.html" title="interface in nextapp.echo.app">RenderIdSupport</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../nextapp/echo/app/BorderedComponent.html" title="class in nextapp.echo.app">BorderedComponent</a>, <a href="../../../nextapp/echo/app/Composite.html" title="class in nextapp.echo.app">Composite</a>, <a href="../../../nextapp/echo/app/ContentPane.html" title="class in nextapp.echo.app">ContentPane</a>, <a href="../../../nextapp/echo/app/SplitPane.html" title="class in nextapp.echo.app">SplitPane</a>, <a href="../../../nextapp/echo/app/Window.html" title="class in nextapp.echo.app">Window</a>, <a href="../../../nextapp/echo/app/WindowPane.html" title="class in nextapp.echo.app">WindowPane</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">Component</span>
+extends java.lang.Object
+implements <a href="../../../nextapp/echo/app/RenderIdSupport.html" title="interface in nextapp.echo.app">RenderIdSupport</a>, java.io.Serializable</pre>
+<div class="block">A representation of an Echo component. This is an abstract base class from
+ which all Echo components are derived.
+ <p>
+ A hierarchy of <code>Component</code> objects is used to represent the
+ state of an application's user interface. A <code>Component</code> may have
+ a single parent <code>Component</code> and may contain zero or more child
+ <code>Component</code>s. Certain <code>Component</code>s may limit the
+ number or type(s) of children which may be added to them, and may even
+ establish requirements for what type(s) of parent <code>Component</code>s
+ they may be added to. In the event that an application attempts to add a
+ child <code>Component</code> to a parent <code>Component</code> in spite
+ of these requirements, an <code>IllegalChildException</code> is thrown.
+ 
+ <h3>Properties and Styles</h3>
+ <p>
+ The state of a single <code>Component</code> is represented by its
+ properties. Properties can be categorized into two types: "style" and
+ "non-style". Style properties are generally used to represent the
+ "look-and-feel" of a Component--information such as colors, fonts, location,
+ and borders. "Non-style" properties are generally used to represent
+ non-stylistic information such as data models, selection models, and locale.
+ <p>
+ "Style Properties" have a special definition because they may be stored in
+ <code>Style</code> or <code>StyleSheet</code> objects instead of as
+ properties of a specific <code>Component</code> instance. Property values
+ contained in a relevant <code>Style</code> or <code>StyleSheet</code>
+ will be used for rendering when the property values are not specified by a
+ <code>Component</code> itself. Style properties are identified by the
+ presence of a public static constant name in a <code>Component</code>
+ implementation with the prefix <code>PROPERTY_</code>. In the base
+ <code>Component</code> class itself there are several examples of style
+ properties, such as <code>PROPERTY_BACKGROUND</code>,<code>PROPERTY_FONT</code>
+ and <code>PROPERTY_LAYOUT_DATA</code>. The rendering application container
+ will use the <code>Component.getRenderProperty()</code> and
+ <code>Component.getRenderIndexedProperty()</code> to retrieve the values of
+ stylistic properties, in order that their values might be obtained from
+ the <code>Component</code>'s shared <code>Style</code> or the
+ <code>ApplicationInstance</code>'s <code>StyleSheet</code> in the event
+ they are not directly set in the <code>Component</code>.
+ <p>
+ A <code>Component</code> implementation should not store the values of
+ style properties as instance variables. Rather, the values of style
+ properties should be stored in the local <code>Style</code> instance, by
+ way of the <code>set()</code> method. The
+ <code>get()</code> method may be used to obtain the value of such
+ properties. Only style properties should be stored using these methods;
+ properties such as models should never be stored using the
+ <code>get()</code>/<code>set()</code> interface.
+ 
+ <h3>Events</h3>
+ <p>
+ Many <code>Component</code>s will provide the capability to register
+ <code>EventListener</code>s to notify interested parties when various
+ state changes occur. The base <code>Component</code> class provides an
+ <code>EventListenerList</code> as a convenient and memory efficient means
+ of storing such listeners. The internal <code>EventListenerList</code> may
+ be obtained using the <code>getEventListenerList()</code> method. The
+ <code>EventListenerList</code> is lazy-created and will only be
+ instantiated on the first invocation of the
+ <code>getEventListenerList()</code> method. If the intent is only to
+ inquire about the state of event listeners without necessarily forcing
+ instantiation of an <code>EventListenerList</code>, the
+ <code>hasEventListenerList()</code> should be queried prior to invoking
+ <code>getEventListenerList()</code>.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#nextapp.echo.app.Component">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#CHILD_VISIBLE_CHANGED_PROPERTY">CHILD_VISIBLE_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for immediate children being made visible/invisible.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#CHILDREN_CHANGED_PROPERTY">CHILDREN_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for immediate children being added/removed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#ENABLED_CHANGED_PROPERTY">ENABLED_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for enabled state changes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#FOCUS_NEXT_ID_CHANGED_PROPERTY">FOCUS_NEXT_ID_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for next focus traversal component changes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#FOCUS_PREVIOUS_ID_CHANGED_PROPERTY">FOCUS_PREVIOUS_ID_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for previous focus traversal component changes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#LAYOUT_DIRECTION_CHANGED_PROPERTY">LAYOUT_DIRECTION_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for layout direction changes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#LOCALE_CHANGED_PROPERTY">LOCALE_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for locale changes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#PROPERTY_BACKGROUND">PROPERTY_BACKGROUND</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#PROPERTY_FONT">PROPERTY_FONT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#PROPERTY_FOREGROUND">PROPERTY_FOREGROUND</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#PROPERTY_LAYOUT_DATA">PROPERTY_LAYOUT_DATA</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#STYLE_CHANGED_PROPERTY">STYLE_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for referenced <code>Style</code> changes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#STYLE_NAME_CHANGED_PROPERTY">STYLE_NAME_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for named <code>Style</code> changes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#VISIBLE_CHANGED_PROPERTY">VISIBLE_CHANGED_PROPERTY</a></strong></code>
+<div class="block">Property change event name for visibility changes.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/app/Component.html#Component()">Component</a></strong>()</code>
+<div class="block">Creates a new <code>Component</code>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#add(nextapp.echo.app.Component)">add</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</code>
+<div class="block">Adds the specified <code>Component</code> as a child of this 
+ <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#add(nextapp.echo.app.Component, int)">add</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c,
+   int&nbsp;n)</code>
+<div class="block">Adds the specified <code>Component</code> as the <code>n</code>th 
+ child of this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#addPropertyChangeListener(java.beans.PropertyChangeListener)">addPropertyChangeListener</a></strong>(java.beans.PropertyChangeListener&nbsp;l)</code>
+<div class="block">Adds a property change listener to this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">addPropertyChangeListener</a></strong>(java.lang.String&nbsp;propertyName,
+                         java.beans.PropertyChangeListener&nbsp;l)</code>
+<div class="block">Adds a property change listener to this <code>Component</code> for a specific property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#dispose()">dispose</a></strong>()</code>
+<div class="block">Life-cycle method invoked when the <code>Component</code> is removed 
+ from a registered hierarchy.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#firePropertyChange(java.lang.String, java.lang.Object, java.lang.Object)">firePropertyChange</a></strong>(java.lang.String&nbsp;propertyName,
+                  java.lang.Object&nbsp;oldValue,
+                  java.lang.Object&nbsp;newValue)</code>
+<div class="block">Reports a bound property change to <code>PropertyChangeListener</code>s
+ and to the <code>ApplicationInstance</code>'s update management system.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#get(java.lang.String)">get</a></strong>(java.lang.String&nbsp;propertyName)</code>
+<div class="block">Returns the value of the specified property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/ApplicationInstance.html" title="class in nextapp.echo.app">ApplicationInstance</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getApplicationInstance()">getApplicationInstance</a></strong>()</code>
+<div class="block">Returns the <code>ApplicationInstance</code> to which this 
+ <code>Component</code> is registered, or null if it is not currently 
+ registered.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getBackground()">getBackground</a></strong>()</code>
+<div class="block">Returns the default/base background color of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getComponent(int)">getComponent</a></strong>(int&nbsp;n)</code>
+<div class="block">Returns the <code>n</code>th immediate child component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getComponent(java.lang.String)">getComponent</a></strong>(java.lang.String&nbsp;id)</code>
+<div class="block">Recursively searches for the component with the specified id
+ by querying this component and its descendants.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getComponentCount()">getComponentCount</a></strong>()</code>
+<div class="block">Returns the number of immediate child <code>Component</code>s.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getComponents()">getComponents</a></strong>()</code>
+<div class="block">Returns an array of all immediate child <code>Component</code>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../nextapp/echo/app/event/EventListenerList.html" title="class in nextapp.echo.app.event">EventListenerList</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getEventListenerList()">getEventListenerList</a></strong>()</code>
+<div class="block">Returns the local <code>EventListenerList</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getFocusNextId()">getFocusNextId</a></strong>()</code>
+<div class="block">Returns the next focusable component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getFocusPreviousId()">getFocusPreviousId</a></strong>()</code>
+<div class="block">Returns the previous focusable component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getFont()">getFont</a></strong>()</code>
+<div class="block">Returns the default/base font of the component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getForeground()">getForeground</a></strong>()</code>
+<div class="block">Returns the default/base foreground color of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getId()">getId</a></strong>()</code>
+<div class="block">Returns the user-defined identifier of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getIndex(java.lang.String, int)">getIndex</a></strong>(java.lang.String&nbsp;propertyName,
+        int&nbsp;propertyIndex)</code>
+<div class="block">Returns the value of the specified indexed property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getLastRenderId()">getLastRenderId</a></strong>()</code>
+<div class="block">Returns the active render id of this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/LayoutData.html" title="interface in nextapp.echo.app">LayoutData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getLayoutData()">getLayoutData</a></strong>()</code>
+<div class="block">Returns the <code>LayoutData</code> object used to describe how this
+ <code>Component</code> should be laid out within its parent container.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/LayoutDirection.html" title="class in nextapp.echo.app">LayoutDirection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getLayoutDirection()">getLayoutDirection</a></strong>()</code>
+<div class="block">Returns the specific layout direction setting of this component, if any.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Locale</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getLocale()">getLocale</a></strong>()</code>
+<div class="block">Returns the specific locale setting of this component, if any.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getLocalStyle()">getLocalStyle</a></strong>()</code>
+<div class="block">Returns the <code>Style</code> object in which local style
+ properties are stored.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getParent()">getParent</a></strong>()</code>
+<div class="block">Returns the parent component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getRenderId()">getRenderId</a></strong>()</code>
+<div class="block">Returns the render id of this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getRenderIndexedProperty(java.lang.String, int)">getRenderIndexedProperty</a></strong>(java.lang.String&nbsp;propertyName,
+                        int&nbsp;propertyIndex)</code>
+<div class="block">Determines the &quot;rendered state&quot; of an indexed property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getRenderIndexedProperty(java.lang.String, int, java.lang.Object)">getRenderIndexedProperty</a></strong>(java.lang.String&nbsp;propertyName,
+                        int&nbsp;propertyIndex,
+                        java.lang.Object&nbsp;defaultValue)</code>
+<div class="block">Determines the &quot;rendered state&quot; of an indexed property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Locale</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getRenderLocale()">getRenderLocale</a></strong>()</code>
+<div class="block">Returns the rendered <code>Locale</code> of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getRenderProperty(java.lang.String)">getRenderProperty</a></strong>(java.lang.String&nbsp;propertyName)</code>
+<div class="block">Determines the &quot;rendered state&quot; of a property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getRenderProperty(java.lang.String, java.lang.Object)">getRenderProperty</a></strong>(java.lang.String&nbsp;propertyName,
+                 java.lang.Object&nbsp;defaultValue)</code>
+<div class="block">Determines the &quot;rendered state&quot; of a property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getStyle()">getStyle</a></strong>()</code>
+<div class="block">Returns the shared <code>Style</code> object assigned to this 
+ <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getStyleName()">getStyleName</a></strong>()</code>
+<div class="block">Returns the name of the <code>Style</code> in the
+ <code>ApplicationInstance</code>'s<code>StyleSheet</code> from
+ which the renderer will retrieve properties.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a></code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getVisibleComponent(int)">getVisibleComponent</a></strong>(int&nbsp;n)</code>
+<div class="block">Returns the <code>n</code>th immediate <strong>visible</strong> 
+ child <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getVisibleComponentCount()">getVisibleComponentCount</a></strong>()</code>
+<div class="block">Returns the number of <strong>visible</strong> immediate child 
+ <code>Component</code>s.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#getVisibleComponents()">getVisibleComponents</a></strong>()</code>
+<div class="block">Returns an array of all <strong>visible</strong> immediate child 
+ <code>Component</code>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#hasEventListenerList()">hasEventListenerList</a></strong>()</code>
+<div class="block">Determines if a local <code>EventListenerList</code> exists.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#indexOf(nextapp.echo.app.Component)">indexOf</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</code>
+<div class="block">Determines the index of the given <code>Component</code> within the 
+ children of this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#init()">init</a></strong>()</code>
+<div class="block">Life-cycle method invoked when the <code>Component</code> is added 
+ to a registered hierarchy.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isAncestorOf(nextapp.echo.app.Component)">isAncestorOf</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</code>
+<div class="block">Determines if this <code>Component</code> is or is an ancestor of 
+ the specified <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isEnabled()">isEnabled</a></strong>()</code>
+<div class="block">Determines the enabled state of this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isFocusTraversalParticipant()">isFocusTraversalParticipant</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use focusNextId/focusPreviousId in (rare) scenario where focus of a specific component is to be avoided.
+ This method will be removed soon.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isRegistered()">isRegistered</a></strong>()</code>
+<div class="block">Determines if the <code>Component</code> is registered to an 
+ <code>ApplicationInstance</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isRenderEnabled()">isRenderEnabled</a></strong>()</code>
+<div class="block">Determines whether this <code>Component</code> should be rendered with
+ an enabled state.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isRenderVisible()">isRenderVisible</a></strong>()</code>
+<div class="block">Determines if the <code>Component</code> and all of its parents are
+ visible.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isValidChild(nextapp.echo.app.Component)">isValidChild</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;child)</code>
+<div class="block">Determines if a given <code>Component</code> is valid to be added as a
+ child to this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isValidParent(nextapp.echo.app.Component)">isValidParent</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent)</code>
+<div class="block">Determines if this <code>Component</code> is valid to be added as a
+ child of the given parent <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#isVisible()">isVisible</a></strong>()</code>
+<div class="block">Returns the visibility state of this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#processInput(java.lang.String, java.lang.Object)">processInput</a></strong>(java.lang.String&nbsp;inputName,
+            java.lang.Object&nbsp;inputValue)</code>
+<div class="block">Processes client input specific to the <code>Component</code> 
+ received from the <code>UpdateManager</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#remove(nextapp.echo.app.Component)">remove</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</code>
+<div class="block">Removes the specified child <code>Component</code> from this
+ <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#remove(int)">remove</a></strong>(int&nbsp;n)</code>
+<div class="block">Removes the <code>Component</code> at the <code>n</code>th index.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#removeAll()">removeAll</a></strong>()</code>
+<div class="block">Removes all child <code>Component</code>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</a></strong>(java.beans.PropertyChangeListener&nbsp;l)</code>
+<div class="block">Removes a property change listener from this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">removePropertyChangeListener</a></strong>(java.lang.String&nbsp;propertyName,
+                            java.beans.PropertyChangeListener&nbsp;l)</code>
+<div class="block">Removes a property change listener from this <code>Component</code> for a specific property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#set(java.lang.String, java.lang.Object)">set</a></strong>(java.lang.String&nbsp;propertyName,
+   java.lang.Object&nbsp;newValue)</code>
+<div class="block">Sets a generic property of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setBackground(nextapp.echo.app.Color)">setBackground</a></strong>(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</code>
+<div class="block">Sets the default background color of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setComponents(nextapp.echo.app.Component[])">setComponents</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>[]&nbsp;components)</code>
+<div class="block">Sets the child components for this container, removing
+ any existing children.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setEnabled(boolean)">setEnabled</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets the enabled state of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setFocusNextId(java.lang.String)">setFocusNextId</a></strong>(java.lang.String&nbsp;newValue)</code>
+<div class="block">Sets the next focusable component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setFocusPreviousId(java.lang.String)">setFocusPreviousId</a></strong>(java.lang.String&nbsp;newValue)</code>
+<div class="block">Sets the previous focusable component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setFocusTraversalParticipant(boolean)">setFocusTraversalParticipant</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use focusNextId/focusPreviousId in (rare) scenario where focus of a specific component is to be avoided.
+ This method will be removed soon.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setFont(nextapp.echo.app.Font)">setFont</a></strong>(<a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a>&nbsp;newValue)</code>
+<div class="block">Sets the default text font of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setForeground(nextapp.echo.app.Color)">setForeground</a></strong>(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</code>
+<div class="block">Sets the default foreground color of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setId(java.lang.String)">setId</a></strong>(java.lang.String&nbsp;id)</code>
+<div class="block">Sets a user-defined identifier for this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setIndex(java.lang.String, int, java.lang.Object)">setIndex</a></strong>(java.lang.String&nbsp;propertyName,
+        int&nbsp;propertyIndex,
+        java.lang.Object&nbsp;newValue)</code>
+<div class="block">Sets a generic indexed property of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setLayoutData(nextapp.echo.app.LayoutData)">setLayoutData</a></strong>(<a href="../../../nextapp/echo/app/LayoutData.html" title="interface in nextapp.echo.app">LayoutData</a>&nbsp;newValue)</code>
+<div class="block">Sets the <code>LayoutData</code> of this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setLayoutDirection(nextapp.echo.app.LayoutDirection)">setLayoutDirection</a></strong>(<a href="../../../nextapp/echo/app/LayoutDirection.html" title="class in nextapp.echo.app">LayoutDirection</a>&nbsp;newValue)</code>
+<div class="block">Sets the <code>LayoutDirection</code> of this <code>Component</code>,
+ describing whether content is rendered left-to-right or right-to-left.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setLocale(java.util.Locale)">setLocale</a></strong>(java.util.Locale&nbsp;newValue)</code>
+<div class="block">Sets the locale of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setRenderId(java.lang.String)">setRenderId</a></strong>(java.lang.String&nbsp;renderId)</code>
+<div class="block">Sets a custom render identifier for this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setStyle(nextapp.echo.app.Style)">setStyle</a></strong>(<a href="../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a>&nbsp;newValue)</code>
+<div class="block">Sets the shared style of the <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setStyleName(java.lang.String)">setStyleName</a></strong>(java.lang.String&nbsp;newValue)</code>
+<div class="block">Sets the name of the style to use from the
+ <code>ApplicationInstance</code>-defined <code>StyleSheet</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#setVisible(boolean)">setVisible</a></strong>(boolean&nbsp;newValue)</code>
+<div class="block">Sets the visibility state of this <code>Component</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#validate()">validate</a></strong>()</code>
+<div class="block">A life-cycle method invoked before the component is rendered to ensure it
+ is in a valid state.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#verifyInput(java.lang.String, java.lang.Object)">verifyInput</a></strong>(java.lang.String&nbsp;inputName,
+           java.lang.Object&nbsp;inputValue)</code>
+<div class="block">Invoked by the <code>ClientUpdateManager</code> on each component in the
+ hierarchy whose <code>processInput()</code> method will layer be invoked
+ in the current transaction.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/app/Component.html#visibleIndexOf(nextapp.echo.app.Component)">visibleIndexOf</a></strong>(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</code>
+<div class="block">Determines the index of the given <code>Component</code> within the 
+ <strong>visible</strong> children of this <code>Component</code>.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="CHILD_VISIBLE_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHILD_VISIBLE_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String CHILD_VISIBLE_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for immediate children being made visible/invisible.
+ When used, the <code>newValue</code> of the event will represent a child made visible,
+ OR the <code>oldValue</code> will represent a child made invisible.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.CHILD_VISIBLE_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHILDREN_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHILDREN_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String CHILDREN_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for immediate children being added/removed.
+ When used, the <code>newValue</code> of the event will represent an added child,
+ OR the <code>oldValue</code> will represent a removed child.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.CHILDREN_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENABLED_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENABLED_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String ENABLED_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for enabled state changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.ENABLED_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FOCUS_NEXT_ID_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FOCUS_NEXT_ID_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String FOCUS_NEXT_ID_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for next focus traversal component changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.FOCUS_NEXT_ID_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FOCUS_PREVIOUS_ID_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FOCUS_PREVIOUS_ID_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String FOCUS_PREVIOUS_ID_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for previous focus traversal component changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.FOCUS_PREVIOUS_ID_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LAYOUT_DIRECTION_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LAYOUT_DIRECTION_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String LAYOUT_DIRECTION_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for layout direction changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.LAYOUT_DIRECTION_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOCALE_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOCALE_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String LOCALE_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for locale changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.LOCALE_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STYLE_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STYLE_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String STYLE_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for referenced <code>Style</code> changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.STYLE_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STYLE_NAME_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STYLE_NAME_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String STYLE_NAME_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for named <code>Style</code> changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.STYLE_NAME_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VISIBLE_CHANGED_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VISIBLE_CHANGED_PROPERTY</h4>
+<pre>public static final&nbsp;java.lang.String VISIBLE_CHANGED_PROPERTY</pre>
+<div class="block">Property change event name for visibility changes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.VISIBLE_CHANGED_PROPERTY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_BACKGROUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_BACKGROUND</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_BACKGROUND</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.PROPERTY_BACKGROUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_FONT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_FONT</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_FONT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.PROPERTY_FONT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_FOREGROUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROPERTY_FOREGROUND</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_FOREGROUND</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.PROPERTY_FOREGROUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROPERTY_LAYOUT_DATA">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PROPERTY_LAYOUT_DATA</h4>
+<pre>public static final&nbsp;java.lang.String PROPERTY_LAYOUT_DATA</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#nextapp.echo.app.Component.PROPERTY_LAYOUT_DATA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Component()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Component</h4>
+<pre>public&nbsp;Component()</pre>
+<div class="block">Creates a new <code>Component</code>.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="add(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>add</h4>
+<pre>public&nbsp;void&nbsp;add(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</pre>
+<div class="block">Adds the specified <code>Component</code> as a child of this 
+ <code>Component</code>.  The child will be added at the greatest
+ index.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c</code> - the child <code>Component</code> to add</dd></dl>
+</li>
+</ul>
+<a name="add(nextapp.echo.app.Component, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>add</h4>
+<pre>public&nbsp;void&nbsp;add(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c,
+       int&nbsp;n)
+         throws <a href="../../../nextapp/echo/app/IllegalChildException.html" title="class in nextapp.echo.app">IllegalChildException</a></pre>
+<div class="block">Adds the specified <code>Component</code> as the <code>n</code>th 
+ child of this component.
+ All component-add operations use this method to add components.
+ <code>Component</code>s that require notification of all child additions
+ should override this method (making sure to call the superclass' 
+ implementation).
+ If the child component currently has a parent in another hierarchy, it
+ will automatically be removed from that hierarchy before being added 
+ to this component.  This behavior will also occur if the child component
+ is currently a child of this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c</code> - the child component to add</dd><dd><code>n</code> - the index at which to add the child component, or -1 to add the
+          component at the end</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../nextapp/echo/app/IllegalChildException.html" title="class in nextapp.echo.app">IllegalChildException</a></code> - if the child is not allowed to be added
+         to this component, because it is either not valid for the 
+         component's state or is of an invalid type</dd></dl>
+</li>
+</ul>
+<a name="addPropertyChangeListener(java.beans.PropertyChangeListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPropertyChangeListener</h4>
+<pre>public&nbsp;void&nbsp;addPropertyChangeListener(java.beans.PropertyChangeListener&nbsp;l)</pre>
+<div class="block">Adds a property change listener to this <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>l</code> - the listener to add</dd></dl>
+</li>
+</ul>
+<a name="addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPropertyChangeListener</h4>
+<pre>public&nbsp;void&nbsp;addPropertyChangeListener(java.lang.String&nbsp;propertyName,
+                             java.beans.PropertyChangeListener&nbsp;l)</pre>
+<div class="block">Adds a property change listener to this <code>Component</code> for a specific property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property for which to listen</dd><dd><code>l</code> - the listener to add</dd></dl>
+</li>
+</ul>
+<a name="dispose()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dispose</h4>
+<pre>public&nbsp;void&nbsp;dispose()</pre>
+<div class="block">Life-cycle method invoked when the <code>Component</code> is removed 
+ from a registered hierarchy.  Implementations should always invoke
+ <code>super.dispose()</code>.
+ Modifications to the component hierarchy are not allowed within this 
+ method.</div>
+</li>
+</ul>
+<a name="firePropertyChange(java.lang.String, java.lang.Object, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firePropertyChange</h4>
+<pre>protected&nbsp;void&nbsp;firePropertyChange(java.lang.String&nbsp;propertyName,
+                      java.lang.Object&nbsp;oldValue,
+                      java.lang.Object&nbsp;newValue)</pre>
+<div class="block">Reports a bound property change to <code>PropertyChangeListener</code>s
+ and to the <code>ApplicationInstance</code>'s update management system.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the changed property</dd><dd><code>oldValue</code> - the previous value of the property</dd><dd><code>newValue</code> - the present value of the property</dd></dl>
+</li>
+</ul>
+<a name="get(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>public final&nbsp;java.lang.Object&nbsp;get(java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Returns the value of the specified property.
+ This method is generally used only internally by a 
+ <code>Component</code>, however there are exceptions.
+ The more specific <code>getXXX()</code> methods to retrieve 
+ property values from a <code>Component</code> whenever
+ possible.
+ See the class-level documentation for a more detailed 
+ explanation of the use of this method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the property name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property value</dd></dl>
+</li>
+</ul>
+<a name="getApplicationInstance()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getApplicationInstance</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/ApplicationInstance.html" title="class in nextapp.echo.app">ApplicationInstance</a>&nbsp;getApplicationInstance()</pre>
+<div class="block">Returns the <code>ApplicationInstance</code> to which this 
+ <code>Component</code> is registered, or null if it is not currently 
+ registered.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the application instance</dd></dl>
+</li>
+</ul>
+<a name="getBackground()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBackground</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;getBackground()</pre>
+<div class="block">Returns the default/base background color of the <code>Component</code>.
+ This property may not be relevant to certain components, though
+ even in such cases may be useful for setting a default for
+ children.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the background color</dd></dl>
+</li>
+</ul>
+<a name="getComponent(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponent</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;getComponent(int&nbsp;n)</pre>
+<div class="block">Returns the <code>n</code>th immediate child component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>n</code> - the index of the <code>Component</code> to retrieve</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the <code>Component</code> at index <code>n</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - when the index is invalid</dd></dl>
+</li>
+</ul>
+<a name="getComponent(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponent</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;getComponent(java.lang.String&nbsp;id)</pre>
+<div class="block">Recursively searches for the component with the specified id
+ by querying this component and its descendants.
+ The id value is that retrieved and set via the <code>getId()</code>
+ and <code>setId()</code> methods.  This method is in no way
+ related to <code>renderId</code>s.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - the user-defined id of the component to be retrieved</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the component with the specified id, if it either is this
+         component or is a descendant of it, or null otherwise</dd></dl>
+</li>
+</ul>
+<a name="getComponentCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponentCount</h4>
+<pre>public final&nbsp;int&nbsp;getComponentCount()</pre>
+<div class="block">Returns the number of immediate child <code>Component</code>s.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the number of immediate child <code>Component</code>s</dd></dl>
+</li>
+</ul>
+<a name="getComponents()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponents</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>[]&nbsp;getComponents()</pre>
+<div class="block">Returns an array of all immediate child <code>Component</code>s.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an array of all immediate child <code>Component</code>s</dd></dl>
+</li>
+</ul>
+<a name="getEventListenerList()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEventListenerList</h4>
+<pre>protected&nbsp;<a href="../../../nextapp/echo/app/event/EventListenerList.html" title="class in nextapp.echo.app.event">EventListenerList</a>&nbsp;getEventListenerList()</pre>
+<div class="block">Returns the local <code>EventListenerList</code>.
+ The listener list is lazily created; invoking this method will 
+ create the <code>EventListenerList</code> if required.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the listener list</dd></dl>
+</li>
+</ul>
+<a name="getFocusNextId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFocusNextId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getFocusNextId()</pre>
+<div class="block">Returns the next focusable component.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the renderId of the next focusable component</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#setFocusNextId(java.lang.String)"><code>setFocusNextId(java.lang.String)</code></a></dd></dl>
+</li>
+</ul>
+<a name="getFocusPreviousId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFocusPreviousId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getFocusPreviousId()</pre>
+<div class="block">Returns the previous focusable component.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the renderId of the previous focusable component</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#setFocusPreviousId(java.lang.String)"><code>setFocusPreviousId(java.lang.String)</code></a></dd></dl>
+</li>
+</ul>
+<a name="getFont()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFont</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a>&nbsp;getFont()</pre>
+<div class="block">Returns the default/base font of the component.
+ This property may not be relevant to certain components, though
+ even in such cases may be useful for setting a default for
+ children.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the font</dd></dl>
+</li>
+</ul>
+<a name="getForeground()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getForeground</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;getForeground()</pre>
+<div class="block">Returns the default/base foreground color of the <code>Component</code>.
+ This property may not be relevant to certain components, though
+ even in such cases may be useful for setting a default for 
+ children.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the foreground color</dd></dl>
+</li>
+</ul>
+<a name="getId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getId()</pre>
+<div class="block">Returns the user-defined identifier of the <code>Component</code>.
+ Note that the user defined identifier has no relation to the
+ <code>renderId</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the user-defined identifier</dd></dl>
+</li>
+</ul>
+<a name="getIndex(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIndex</h4>
+<pre>public final&nbsp;java.lang.Object&nbsp;getIndex(java.lang.String&nbsp;propertyName,
+                        int&nbsp;propertyIndex)</pre>
+<div class="block">Returns the value of the specified indexed property.
+ This method is generally used only internally by a 
+ <code>Component</code>, however there are exceptions.
+ The more specific <code>getXXX()</code> methods to retrieve 
+ property values from a <code>Component</code> whenever
+ possible.
+ See the class-level documentation for a more detailed 
+ explanation of the use of this method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the property name</dd><dd><code>propertyIndex</code> - the property index</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property value</dd></dl>
+</li>
+</ul>
+<a name="getLayoutData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLayoutData</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/LayoutData.html" title="interface in nextapp.echo.app">LayoutData</a>&nbsp;getLayoutData()</pre>
+<div class="block">Returns the <code>LayoutData</code> object used to describe how this
+ <code>Component</code> should be laid out within its parent container.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the layout data, or null if unset</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/LayoutData.html" title="interface in nextapp.echo.app"><code>LayoutData</code></a></dd></dl>
+</li>
+</ul>
+<a name="getLayoutDirection()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLayoutDirection</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/LayoutDirection.html" title="class in nextapp.echo.app">LayoutDirection</a>&nbsp;getLayoutDirection()</pre>
+<div class="block">Returns the specific layout direction setting of this component, if any.
+ This method will return null unless a <code>LayoutDirection</code> is
+ specifically set on <strong>this</strong> <code>Component</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the layout direction property of <strong>this</strong>
+         <code>Component</code></dd></dl>
+</li>
+</ul>
+<a name="getLocale()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocale</h4>
+<pre>public&nbsp;java.util.Locale&nbsp;getLocale()</pre>
+<div class="block">Returns the specific locale setting of this component, if any.
+ This method will return null unless a <code>Locale</code> is
+ specifically set on <strong>this</strong> <code>Component</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the locale property of <strong>this</strong> 
+         <code>Component</code></dd></dl>
+</li>
+</ul>
+<a name="getLocalStyle()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalStyle</h4>
+<pre>public&nbsp;<a href="../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a>&nbsp;getLocalStyle()</pre>
+<div class="block">Returns the <code>Style</code> object in which local style
+ properties are stored.  Access to this object is provided
+ solely for the purpose of allowing the enabling the application
+ container to render the state of the component to a client.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the local <code>Style</code></dd></dl>
+</li>
+</ul>
+<a name="getParent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParent</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;getParent()</pre>
+<div class="block">Returns the parent component.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the parent component, or null if this component has no parent</dd></dl>
+</li>
+</ul>
+<a name="getRenderId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getRenderId()</pre>
+<div class="block">Returns the render id of this component.  
+ This id is only guaranteed to be unique within 
+ the <code>ApplicationInstance</code> to which this component is 
+ registered.  This method returns null in the event that the 
+ component is not registered to an <code>ApplicationInstance</code>.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../nextapp/echo/app/RenderIdSupport.html#getRenderId()">getRenderId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../nextapp/echo/app/RenderIdSupport.html" title="interface in nextapp.echo.app">RenderIdSupport</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the <code>ApplicationInstance</code>-wide unique id of this 
+         component</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/RenderIdSupport.html#getRenderId()"><code>RenderIdSupport.getRenderId()</code></a></dd></dl>
+</li>
+</ul>
+<a name="getLastRenderId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLastRenderId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getLastRenderId()</pre>
+<div class="block">Returns the active render id of this component.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#lastRenderId"><code>lastRenderId</code></a></dd></dl>
+</li>
+</ul>
+<a name="getRenderIndexedProperty(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderIndexedProperty</h4>
+<pre>public final&nbsp;java.lang.Object&nbsp;getRenderIndexedProperty(java.lang.String&nbsp;propertyName,
+                                        int&nbsp;propertyIndex)</pre>
+<div class="block">Determines the &quot;rendered state&quot; of an indexed property.
+ The rendered state is determined by first determining if the given
+ property is locally set on this <code>Component</code>, and returning
+ it in that case.  If the property state is not set locally, the 
+ shared <code>Style</code> assigned to this component will be queried
+ for the property value.  If the property state is not set in the
+ shared <code>Style</code>, the <code>StyleSheet</code> of the
+ <code>ApplicationInstance</code> to which this <code>Component</code>
+ is registered will be queried for the property value.
+ In the event the property is not set in any of these resources,
+ null is returned.
+ <p>
+ The application container will invoke this method
+ rather than individual property getter methods to determine the state
+ of properties when rendering.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the rendered property value</dd></dl>
+</li>
+</ul>
+<a name="getRenderIndexedProperty(java.lang.String, int, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderIndexedProperty</h4>
+<pre>public final&nbsp;java.lang.Object&nbsp;getRenderIndexedProperty(java.lang.String&nbsp;propertyName,
+                                        int&nbsp;propertyIndex,
+                                        java.lang.Object&nbsp;defaultValue)</pre>
+<div class="block">Determines the &quot;rendered state&quot; of an indexed property.
+ The rendered state is determined by first determining if the given
+ property is locally set on this <code>Component</code>, and returning
+ it in that case.  If the property state is not set locally, the 
+ shared <code>Style</code> assigned to this component will be queried
+ for the property value.  If the property state is not set in the
+ shared <code>Style</code>, the <code>StyleSheet</code> of the
+ <code>ApplicationInstance</code> to which this <code>Component</code>
+ is registered will be queried for the property value.
+ In the event the property is not set in any of these resources,
+ <code>defaultValue</code> is returned.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd><dd><code>defaultValue</code> - the value to be returned if the property is not set</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property state</dd></dl>
+</li>
+</ul>
+<a name="getRenderLocale()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderLocale</h4>
+<pre>public final&nbsp;java.util.Locale&nbsp;getRenderLocale()</pre>
+<div class="block">Returns the rendered <code>Locale</code> of the <code>Component</code>.
+ If this <code>Component</code> does not itself specify a locale, its
+ ancestors will be queried recursively until a <code>Component</code>
+ providing a <code>Locale</code> is found. If no ancestors have
+ <code>Locale</code>s set, the <code>ApplicationInstance</code>'s
+ locale will be returned. In the event that no locale information is
+ available from the ancestral hierarchy of <code>Component</code>s and
+ no <code>ApplicationInstance</code> is registered, null is returned.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the locale for this component</dd></dl>
+</li>
+</ul>
+<a name="getRenderProperty(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderProperty</h4>
+<pre>public final&nbsp;java.lang.Object&nbsp;getRenderProperty(java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Determines the &quot;rendered state&quot; of a property.
+ The rendered state is determined by first determining if the given
+ property is locally set on this <code>Component</code>, and returning
+ it in that case.  If the property state is not set locally, the 
+ shared <code>Style</code> assigned to this component will be queried
+ for the property value.  If the property state is not set in the
+ shared <code>Style</code>, the <code>StyleSheet</code> of the
+ <code>ApplicationInstance</code> to which this <code>Component</code>
+ is registered will be queried for the property value.
+ In the event the property is not set in any of these resources,
+ null is returned.
+ <p>
+ The application container will invoke this method
+ rather than individual property getter methods to determine the state
+ of properties when rendering.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the rendered property value</dd></dl>
+</li>
+</ul>
+<a name="getRenderProperty(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderProperty</h4>
+<pre>public final&nbsp;java.lang.Object&nbsp;getRenderProperty(java.lang.String&nbsp;propertyName,
+                                 java.lang.Object&nbsp;defaultValue)</pre>
+<div class="block">Determines the &quot;rendered state&quot; of a property.
+ The rendered state is determined by first determining if the given
+ property is locally set on this <code>Component</code>, and returning
+ it in that case.  If the property state is not set locally, the 
+ shared <code>Style</code> assigned to this component will be queried
+ for the property value.  If the property state is not set in the
+ shared <code>Style</code>, the <code>StyleSheet</code> of the
+ <code>ApplicationInstance</code> to which this <code>Component</code>
+ is registered will be queried for the property value.
+ In the event the property is not set in any of these resources,
+ <code>defaultValue</code> is returned.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd><dd><code>defaultValue</code> - the value to be returned if the property is not set</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property state</dd></dl>
+</li>
+</ul>
+<a name="getStyle()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStyle</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a>&nbsp;getStyle()</pre>
+<div class="block">Returns the shared <code>Style</code> object assigned to this 
+ <code>Component</code>.
+ As its name implies, the <strong>shared</strong> <code>Style</code> 
+ may be shared amongst multiple <code>Component</code>s.
+ Style properties will be rendered from the specified <code>Style</code>
+ when they are not specified locally in the <code>Component</code> 
+ itself.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the shared <code>Style</code></dd></dl>
+</li>
+</ul>
+<a name="getStyleName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStyleName</h4>
+<pre>public final&nbsp;java.lang.String&nbsp;getStyleName()</pre>
+<div class="block">Returns the name of the <code>Style</code> in the
+ <code>ApplicationInstance</code>'s<code>StyleSheet</code> from
+ which the renderer will retrieve properties. The renderer will only query
+ the <code>StyleSheet</code> when properties are not specified directly
+ by the <code>Component</code> or by the <code>Component</code>'s
+ shared <code>Style</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the style name</dd></dl>
+</li>
+</ul>
+<a name="getVisibleComponent(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVisibleComponent</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;getVisibleComponent(int&nbsp;n)</pre>
+<div class="block">Returns the <code>n</code>th immediate <strong>visible</strong> 
+ child <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>n</code> - the index of the <code>Component</code> to retrieve</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the <code>Component</code> at index <code>n</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - when the index is invalid</dd></dl>
+</li>
+</ul>
+<a name="getVisibleComponentCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVisibleComponentCount</h4>
+<pre>public final&nbsp;int&nbsp;getVisibleComponentCount()</pre>
+<div class="block">Returns the number of <strong>visible</strong> immediate child 
+ <code>Component</code>s.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the number of <strong>visible</strong> immediate child 
+         <code>Component</code>s</dd></dl>
+</li>
+</ul>
+<a name="getVisibleComponents()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVisibleComponents</h4>
+<pre>public final&nbsp;<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>[]&nbsp;getVisibleComponents()</pre>
+<div class="block">Returns an array of all <strong>visible</strong> immediate child 
+ <code>Component</code>s.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an array of all <strong>visible</strong> immediate child 
+         <code>Component</code>s</dd></dl>
+</li>
+</ul>
+<a name="hasEventListenerList()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasEventListenerList</h4>
+<pre>protected&nbsp;boolean&nbsp;hasEventListenerList()</pre>
+<div class="block">Determines if a local <code>EventListenerList</code> exists.
+ If no listener list exists, it can be assured that there are thus no
+ listeners registered to it.  This method should be invoked by event
+ firing code prior to invoking <code>getListenerList()</code> to avoid
+ unnecessary creation of an <code>EventListenerList</code> in response
+ to their query.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if a local <code>EventListenerList</code> exists</dd></dl>
+</li>
+</ul>
+<a name="indexOf(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>indexOf</h4>
+<pre>public final&nbsp;int&nbsp;indexOf(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</pre>
+<div class="block">Determines the index of the given <code>Component</code> within the 
+ children of this <code>Component</code>.  If the given 
+ <code>Component</code> is not a child, <code>-1</code> is returned.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c</code> - the <code>Component</code> to analyze</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the index of the specified <code>Component</code> amongst the 
+         children of this <code>Component</code></dd></dl>
+</li>
+</ul>
+<a name="init()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;init()</pre>
+<div class="block">Life-cycle method invoked when the <code>Component</code> is added 
+ to a registered hierarchy.  Implementations should always invoke
+ <code>super.init()</code>.
+ Modifications to the component hierarchy are not allowed within this 
+ method.</div>
+</li>
+</ul>
+<a name="isAncestorOf(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAncestorOf</h4>
+<pre>public final&nbsp;boolean&nbsp;isAncestorOf(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</pre>
+<div class="block">Determines if this <code>Component</code> is or is an ancestor of 
+ the specified <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c</code> - the <code>Component</code> to test for ancestry</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if this <code>Component</code> is an ancestor of the 
+         specified <code>Component</code></dd></dl>
+</li>
+</ul>
+<a name="isEnabled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEnabled</h4>
+<pre>public final&nbsp;boolean&nbsp;isEnabled()</pre>
+<div class="block">Determines the enabled state of this <code>Component</code>.
+ Disabled<code>Component</code>s are not eligible to receive user input.
+ The application container may render disabled components with an altered
+ appearance.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the component is enabled</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#verifyInput(java.lang.String, java.lang.Object)"><code>verifyInput(java.lang.String, java.lang.Object)</code></a></dd></dl>
+</li>
+</ul>
+<a name="isFocusTraversalParticipant()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isFocusTraversalParticipant</h4>
+<pre>public&nbsp;boolean&nbsp;isFocusTraversalParticipant()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use focusNextId/focusPreviousId in (rare) scenario where focus of a specific component is to be avoided.
+ This method will be removed soon.</i></div>
+</li>
+</ul>
+<a name="isRegistered()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRegistered</h4>
+<pre>public final&nbsp;boolean&nbsp;isRegistered()</pre>
+<div class="block">Determines if the <code>Component</code> is registered to an 
+ <code>ApplicationInstance</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is registered to an 
+         <code>ApplicationInstance</code></dd></dl>
+</li>
+</ul>
+<a name="isRenderEnabled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRenderEnabled</h4>
+<pre>public final&nbsp;boolean&nbsp;isRenderEnabled()</pre>
+<div class="block">Determines whether this <code>Component</code> should be rendered with
+ an enabled state.
+ Disabled<code>Component</code>s are not eligible to receive user input.
+ The application container may render disabled components with an altered
+ appearance.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the component should be rendered enabled.</dd></dl>
+</li>
+</ul>
+<a name="isRenderVisible()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRenderVisible</h4>
+<pre>public final&nbsp;boolean&nbsp;isRenderVisible()</pre>
+<div class="block">Determines if the <code>Component</code> and all of its parents are
+ visible.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is recursively visible</dd></dl>
+</li>
+</ul>
+<a name="isValidChild(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isValidChild</h4>
+<pre>public&nbsp;boolean&nbsp;isValidChild(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;child)</pre>
+<div class="block">Determines if a given <code>Component</code> is valid to be added as a
+ child to this <code>Component</code>. Default implementation always
+ returns true, may be overridden to provide specific behavior.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>child</code> - the <code>Component</code> to evaluate as a child</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is a valid child</dd></dl>
+</li>
+</ul>
+<a name="isValidParent(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isValidParent</h4>
+<pre>public&nbsp;boolean&nbsp;isValidParent(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;parent)</pre>
+<div class="block">Determines if this <code>Component</code> is valid to be added as a
+ child of the given parent <code>Component</code>. Default
+ implementation always returns true, may be overridden to provide specific
+ behavior.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - the <code>Component</code> to evaluate as a parent</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> is a valid parent</dd></dl>
+</li>
+</ul>
+<a name="isVisible()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isVisible</h4>
+<pre>public final&nbsp;boolean&nbsp;isVisible()</pre>
+<div class="block">Returns the visibility state of this <code>Component</code>.
+ Non-visible components will not be seen by the rendering application
+ container, and will not be rendered in any fashion on the user 
+ interface.  Rendering Application Containers should ensure that no 
+ information about the state of an invisible component is provided to 
+ the user interface for security purposes.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the visibility state of this <code>Component</code></dd></dl>
+</li>
+</ul>
+<a name="processInput(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processInput</h4>
+<pre>public&nbsp;void&nbsp;processInput(java.lang.String&nbsp;inputName,
+                java.lang.Object&nbsp;inputValue)</pre>
+<div class="block">Processes client input specific to the <code>Component</code> 
+ received from the <code>UpdateManager</code>.
+ Derivative implementations should take care to invoke 
+ <code>super.processInput()</code>.
+ 
+ <strong>Security note:</strong>  Because input to this method is 
+ likely from a remote client, it should be treated as potentially hostile.
+ All input to this method should be carefully verified.
+ For example, directly invoking <code>set()</code> method with the
+ provided input would constitute a security hole.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>inputName</code> - the name of the input</dd><dd><code>inputValue</code> - the value of the input</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/update/UpdateManager.html" title="class in nextapp.echo.app.update"><code>UpdateManager</code></a></dd></dl>
+</li>
+</ul>
+<a name="remove(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>remove</h4>
+<pre>public&nbsp;void&nbsp;remove(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</pre>
+<div class="block">Removes the specified child <code>Component</code> from this
+ <code>Component</code>.
+ <p>
+ All <code>Component</code> remove operations use this method to 
+ remove <code>Component</code>s. <code>Component</code>s that require 
+ notification of all child removals should 
+ override this method (while ensuring to call the superclass' 
+ implementation).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c</code> - the child <code>Component</code> to remove</dd></dl>
+</li>
+</ul>
+<a name="remove(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>remove</h4>
+<pre>public&nbsp;void&nbsp;remove(int&nbsp;n)</pre>
+<div class="block">Removes the <code>Component</code> at the <code>n</code>th index.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>n</code> - the index of the child <code>Component</code> to remove</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - if the index is not valid</dd></dl>
+</li>
+</ul>
+<a name="removeAll()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAll</h4>
+<pre>public&nbsp;void&nbsp;removeAll()</pre>
+<div class="block">Removes all child <code>Component</code>s.</div>
+</li>
+</ul>
+<a name="removePropertyChangeListener(java.beans.PropertyChangeListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removePropertyChangeListener</h4>
+<pre>public&nbsp;void&nbsp;removePropertyChangeListener(java.beans.PropertyChangeListener&nbsp;l)</pre>
+<div class="block">Removes a property change listener from this <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>l</code> - the listener to be removed</dd></dl>
+</li>
+</ul>
+<a name="removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removePropertyChangeListener</h4>
+<pre>public&nbsp;void&nbsp;removePropertyChangeListener(java.lang.String&nbsp;propertyName,
+                                java.beans.PropertyChangeListener&nbsp;l)</pre>
+<div class="block">Removes a property change listener from this <code>Component</code> for a specific property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property for which to listen</dd><dd><code>l</code> - the listener to be removed</dd></dl>
+</li>
+</ul>
+<a name="set(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>set</h4>
+<pre>public&nbsp;void&nbsp;set(java.lang.String&nbsp;propertyName,
+       java.lang.Object&nbsp;newValue)</pre>
+<div class="block">Sets a generic property of the <code>Component</code>.
+ The value will be stored in this <code>Component</code>'s local style.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd><dd><code>newValue</code> - the value of the property</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#get(java.lang.String)"><code>get(java.lang.String)</code></a></dd></dl>
+</li>
+</ul>
+<a name="setBackground(nextapp.echo.app.Color)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBackground</h4>
+<pre>public&nbsp;void&nbsp;setBackground(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</pre>
+<div class="block">Sets the default background color of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new background <code>Color</code></dd></dl>
+</li>
+</ul>
+<a name="setComponents(nextapp.echo.app.Component[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setComponents</h4>
+<pre>public&nbsp;void&nbsp;setComponents(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>[]&nbsp;components)</pre>
+<div class="block">Sets the child components for this container, removing
+ any existing children.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>components</code> - the child components for this container.</dd></dl>
+</li>
+</ul>
+<a name="setEnabled(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEnabled</h4>
+<pre>public&nbsp;void&nbsp;setEnabled(boolean&nbsp;newValue)</pre>
+<div class="block">Sets the enabled state of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new state</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#isEnabled()"><code>isEnabled()</code></a></dd></dl>
+</li>
+</ul>
+<a name="setFocusTraversalParticipant(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFocusTraversalParticipant</h4>
+<pre>public&nbsp;void&nbsp;setFocusTraversalParticipant(boolean&nbsp;newValue)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use focusNextId/focusPreviousId in (rare) scenario where focus of a specific component is to be avoided.
+ This method will be removed soon.</i></div>
+</li>
+</ul>
+<a name="setFocusNextId(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFocusNextId</h4>
+<pre>public&nbsp;void&nbsp;setFocusNextId(java.lang.String&nbsp;newValue)</pre>
+<div class="block">Sets the next focusable component.
+ RenderIds are used for setting focus traversal order in order to avoid referencing/garbage collection issues.
+ Ensure that the component has a renderId (either by way of it having been registered with the application, or
+ having it manually set).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the <code>renderId</code> of the next focusable component</dd></dl>
+</li>
+</ul>
+<a name="setFocusPreviousId(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFocusPreviousId</h4>
+<pre>public&nbsp;void&nbsp;setFocusPreviousId(java.lang.String&nbsp;newValue)</pre>
+<div class="block">Sets the previous focusable component.
+ RenderIds are used for setting focus traversal order in order to avoid referencing/garbage collection issues.
+ Ensure that the component has a renderId (either by way of it having been registered with the application, or
+ having it manually set).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the <code>renderId</code> of the previous focusable component</dd></dl>
+</li>
+</ul>
+<a name="setFont(nextapp.echo.app.Font)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFont</h4>
+<pre>public&nbsp;void&nbsp;setFont(<a href="../../../nextapp/echo/app/Font.html" title="class in nextapp.echo.app">Font</a>&nbsp;newValue)</pre>
+<div class="block">Sets the default text font of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new <code>Font</code></dd></dl>
+</li>
+</ul>
+<a name="setForeground(nextapp.echo.app.Color)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setForeground</h4>
+<pre>public&nbsp;void&nbsp;setForeground(<a href="../../../nextapp/echo/app/Color.html" title="class in nextapp.echo.app">Color</a>&nbsp;newValue)</pre>
+<div class="block">Sets the default foreground color of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new foreground <code>Color</code></dd></dl>
+</li>
+</ul>
+<a name="setId(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setId</h4>
+<pre>public&nbsp;void&nbsp;setId(java.lang.String&nbsp;id)</pre>
+<div class="block">Sets a user-defined identifier for this <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - the new identifier</dd></dl>
+</li>
+</ul>
+<a name="setIndex(java.lang.String, int, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIndex</h4>
+<pre>public&nbsp;void&nbsp;setIndex(java.lang.String&nbsp;propertyName,
+            int&nbsp;propertyIndex,
+            java.lang.Object&nbsp;newValue)</pre>
+<div class="block">Sets a generic indexed property of the <code>Component</code>.
+ The value will be stored in this <code>Component</code>'s local style.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd><dd><code>propertyIndex</code> - the index of the property</dd><dd><code>newValue</code> - the value of the property</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#getIndex(java.lang.String, int)"><code>getIndex(java.lang.String, int)</code></a></dd></dl>
+</li>
+</ul>
+<a name="setLayoutData(nextapp.echo.app.LayoutData)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLayoutData</h4>
+<pre>public&nbsp;void&nbsp;setLayoutData(<a href="../../../nextapp/echo/app/LayoutData.html" title="interface in nextapp.echo.app">LayoutData</a>&nbsp;newValue)</pre>
+<div class="block">Sets the <code>LayoutData</code> of this <code>Component</code>.
+ A <code>LayoutData</code> implementation describes how this
+ <code>Component</code> is laid out within/interacts with its 
+ containing parent <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new <code>LayoutData</code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/LayoutData.html" title="interface in nextapp.echo.app"><code>LayoutData</code></a></dd></dl>
+</li>
+</ul>
+<a name="setLayoutDirection(nextapp.echo.app.LayoutDirection)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLayoutDirection</h4>
+<pre>public&nbsp;void&nbsp;setLayoutDirection(<a href="../../../nextapp/echo/app/LayoutDirection.html" title="class in nextapp.echo.app">LayoutDirection</a>&nbsp;newValue)</pre>
+<div class="block">Sets the <code>LayoutDirection</code> of this <code>Component</code>,
+ describing whether content is rendered left-to-right or right-to-left.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new <code>LayoutDirection</code>.</dd></dl>
+</li>
+</ul>
+<a name="setLocale(java.util.Locale)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLocale</h4>
+<pre>public&nbsp;void&nbsp;setLocale(java.util.Locale&nbsp;newValue)</pre>
+<div class="block">Sets the locale of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new locale</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#getLocale()"><code>getLocale()</code></a></dd></dl>
+</li>
+</ul>
+<a name="setRenderId(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRenderId</h4>
+<pre>public&nbsp;void&nbsp;setRenderId(java.lang.String&nbsp;renderId)</pre>
+<div class="block">Sets a custom render identifier for this <code>Component</code>.
+ The identifier may be changed without notification if another 
+ component is already using it.
+ Identifiers are limited to ASCII alphanumeric values.  
+ The first character must be an upper- or lower-case ASCII letter.
+ Underscores and other punctuation characters are not permitted.
+ Use of "TitleCase" or "camelCase" is recommended.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>renderId</code> - the new identifier</dd></dl>
+</li>
+</ul>
+<a name="setStyle(nextapp.echo.app.Style)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStyle</h4>
+<pre>public&nbsp;void&nbsp;setStyle(<a href="../../../nextapp/echo/app/Style.html" title="interface in nextapp.echo.app">Style</a>&nbsp;newValue)</pre>
+<div class="block">Sets the shared style of the <code>Component</code>.
+ Setting the shared style will have no impact on the local stylistic
+ properties of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new shared style</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#getStyle()"><code>getStyle()</code></a></dd></dl>
+</li>
+</ul>
+<a name="setStyleName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStyleName</h4>
+<pre>public&nbsp;void&nbsp;setStyleName(java.lang.String&nbsp;newValue)</pre>
+<div class="block">Sets the name of the style to use from the
+ <code>ApplicationInstance</code>-defined <code>StyleSheet</code>.
+ Setting the style name will have no impact on the local stylistic
+ properties of the <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new style name</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#getStyleName()"><code>getStyleName()</code></a></dd></dl>
+</li>
+</ul>
+<a name="setVisible(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setVisible</h4>
+<pre>public&nbsp;void&nbsp;setVisible(boolean&nbsp;newValue)</pre>
+<div class="block">Sets the visibility state of this <code>Component</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newValue</code> - the new visibility state</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../nextapp/echo/app/Component.html#isVisible()"><code>isVisible()</code></a></dd></dl>
+</li>
+</ul>
+<a name="validate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>validate</h4>
+<pre>public&nbsp;void&nbsp;validate()</pre>
+<div class="block">A life-cycle method invoked before the component is rendered to ensure it
+ is in a valid state. Default implementation is empty. Overriding
+ implementations should ensure to invoke <code>super.validate()</code>
+ out of convention.</div>
+</li>
+</ul>
+<a name="verifyInput(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyInput</h4>
+<pre>public&nbsp;boolean&nbsp;verifyInput(java.lang.String&nbsp;inputName,
+                  java.lang.Object&nbsp;inputValue)</pre>
+<div class="block">Invoked by the <code>ClientUpdateManager</code> on each component in the
+ hierarchy whose <code>processInput()</code> method will layer be invoked
+ in the current transaction.  This method should return true if the 
+ component will be capable of processing the given input in its current 
+ state or false otherwise.  This method should not do any of the actual
+ processing work if overridden (any actual processing should be done in
+ the <code>processInput()</code> implementation).
+ <p>
+ The default implementation verifies that the component is visible, 
+ enabled, and not "obscured" by the presence of any modal component.
+ If overriding this method, your implementation should invoke
+ <code>super.verifyInput()</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>inputName</code> - the name of the input</dd><dd><code>inputValue</code> - the value of the input</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the input is allowed to be processed by this component
+         in its current state</dd></dl>
+</li>
+</ul>
+<a name="visibleIndexOf(nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>visibleIndexOf</h4>
+<pre>public final&nbsp;int&nbsp;visibleIndexOf(<a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</pre>
+<div class="block">Determines the index of the given <code>Component</code> within the 
+ <strong>visible</strong> children of this <code>Component</code>.  If the
+ given <code>Component</code> is not a child, <code>-1</code> is 
+ returned.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c</code> - the <code>Component</code> to analyze</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the index of the specified <code>Component</code> amongst the 
+         <strong>visible</strong> children of this <code>Component</code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/app/Command.html" title="interface in nextapp.echo.app"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/app/Composite.html" title="class in nextapp.echo.app"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/app/Component.html" target="_top">Frames</a></li>
+<li><a href="Component.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

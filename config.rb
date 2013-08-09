@@ -3,6 +3,10 @@ require 'redcarpet' # Markdown parser
 # Reload the browser automatically whenever files change
 activate :livereload
 
+activate :relative_assets
+
+set :relative_links, true
+
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/img'
