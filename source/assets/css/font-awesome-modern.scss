@@ -1,0 +1,50 @@
+$textColor: #333;
+$bodyBackground: #fff;
+$linkColor: #08c;
+$linkColorHover: darken($linkColor, 15%);
+
+.icon-modern,
+.icon-modern-rounded {
+  display: inline-block;
+  width: (20em / 14);
+  height: (20em / 14);
+  line-height: (20em / 14);
+  text-align: center;
+  border: (1em / 14) solid;
+
+  &:before {
+    display: block;
+    text-align: center;
+  }
+}
+
+.icon-modern-rounded {
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
+
+.icon-modern-inverted {
+  color: $bodyBackground;
+  background: $textColor;
+  border-color: $textColor;
+}
+
+a {
+  .icon-modern,
+  .icon-modern-rounded {
+      display: inline-block;
+      text-decoration: none;
+  }
+
+  .icon-modern-inverted {
+    color: $bodyBackground;
+    background: $linkColor;
+    border-color: $linkColor;
+    
+    &:hover {
+      background: $linkColorHover;
+      border-color: $linkColorHover;
+    }
+  }
+}

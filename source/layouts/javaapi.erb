@@ -1,7 +1,11 @@
 <% wrap_layout :layout do %>
 
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'javaapi' %>
+<% end %>
+
 <small>
-    <h3>API</h3>
+    <h3>Echo3 Java API</h3>
 	<%= yield %>
 </small>
 <% end %>
