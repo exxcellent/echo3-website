@@ -12,7 +12,8 @@ Requirements:
 * ruby
 * rubygems
 * ruby-bundle
- 
+
+
     sudo apt-get install ruby ruby-dev rubygems
     gem install bundler
       
