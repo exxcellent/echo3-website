@@ -6,6 +6,15 @@
 		  <% blog.articles[0...5].each do |article| %>
 			<li><a href="<%= article.url %>"><%= article.title %></a></li>
 		  <% end %>
+		  
+		  <li>Releases</li>
+		  <% blog.tags.each do |tag, articles| %>
+		    <% if tag == "release" %>
+				<% articles[0...5].each do |article| %>
+				<li><a href="<%= article.url %>"><%= article.title %></a></li>
+				<% end %>
+			<% end %>
+		  <% end %>
 		</ul>
 	</div>
 	<div class="col-lg-9">

@@ -1,5 +1,7 @@
 require 'redcarpet' # Markdown parser
 
+Dir['./lib/*'].each { |f| require f }
+
 # Reload the browser automatically whenever files change
 activate :livereload
 Time.zone = "Berlin"
@@ -17,9 +19,11 @@ page "documentation/api/java/*", :directory_index => false
 # Set Markdown parser options
 set :markdown_engine, :redcarpet
 set :markdown, :layout_engine => :erb, 
-               :tables => true, 
-               :autolink => true,
-               :smartypants => true
+               :fenced_code_blocks => true,
+               :lax_html_blocks => true,
+               :renderer => Highlighter::HighlightedHTML.new
+               
+activate :highlighter
                
 
 # Custom layouts

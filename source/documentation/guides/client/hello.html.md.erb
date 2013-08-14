@@ -10,17 +10,18 @@ Just as was done with the server-side application development tutorial, we'll ki
 
 The first step toward creating a stand-alone client-side application is to create an `Echo.Application`-derived class, which will represent the state of a single instance of the application.   This class has a property called `rootComponent` which represents the region in which the application is rendered.  Whatever content is added to that component will appear on screen.  The `rootComponent` is limited to one child, so it typically makes sense to add some type of "container" component to it that can handle multiple children. For the trivial case of our "Hello, World!" application though, we'll just add a label that says "Hello, world!" within it:
 
-<pre class="code">HelloWorldApp = Core.extend(Echo.Application, {
+```javascript
+HelloWorldApp = Core.extend(Echo.Application, {
 
-    $construct: function() {
-        Echo.Application.call(this);
-        var label = new Echo.Label({
-            text: "Hello, world!"
-        });
-        this.rootComponent.add(label);
-    }
+	$construct: function() {
+		Echo.Application.call(this);
+		var label = new Echo.Label({
+			text: "Hello, world!"
+		});
+		this.rootComponent.add(label);
+	}
 });
-</pre>
+```
 
 ### The Client
 
@@ -28,12 +29,13 @@ The `Echo.Application` simply represents the state of an application, e.g., it's
 
 To create the client and start this application running within the browser, we'll declare a global function called "init()" that will be executed when the containing page is loaded.  Inside the init() method, we'll create  a new instance of `HelloWorldApp`, install it within a client, and then invoke `init()` on the client to start it.
 
-<pre class="code">init = function() {
+```javascript
+init = function() {
     var app = new HelloWorldApp();
     var client = new Echo.FreeClient(app, document.getElementById("rootArea"));
     client.init();
 };
-</pre>
+```
 
 ### The HTML Page
 

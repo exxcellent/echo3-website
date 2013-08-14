@@ -25,19 +25,21 @@ An application's implementation of the `init()` method should create a new `Wind
 for a new user by assembling a hierarchy of Echo components within it.  The following code example shows
 an `ApplicationInstance` implementation for a simple "Hello, world!" application:
 
-	public class HelloWorldApp extends ApplicationInstance {
-		public Window init() {
-			Window window = new Window();
+```java
+public class HelloWorldApp extends ApplicationInstance {
+	public Window init() {
+		Window window = new Window();
 
-			ContentPane contentPane = new ContentPane();
-			window.setContent(contentPane);
+		ContentPane contentPane = new ContentPane();
+		window.setContent(contentPane);
 
-			Label label = new Label("Hello, world!");
-			contentPane.add(label);
+		Label label = new Label("Hello, world!");
+		contentPane.add(label);
 
-			return window;
-		}
+		return window;
 	}
+}
+```
 
 **Properties**: Because an `ApplicationInstance` represents a single user of an application, it is
 safe to add properties to this class in your implementation with the expectation that the properties
@@ -54,9 +56,11 @@ your only required interaction with the `WebContainerServlet` class is to create
 returns new `ApplicationInstance`s.  The following example shows a `WebContainerServlet` that returns new
 `ApplicationInstance`s of the previous "Hello, world!" application:
 
-	public class HelloWorldServlet extends WebContainerServlet {
-		public ApplicationInstance newApplicationInstance() {
-			return new HelloWorldApp();
-		}
+```java
+public class HelloWorldServlet extends WebContainerServlet {
+	public ApplicationInstance newApplicationInstance() {
+		return new HelloWorldApp();
 	}
+}
+```
 

@@ -9,14 +9,16 @@ Development
 The website is developed using the static site generator [Middleman](http://middlemanapp.com/)
 
 Requirements:
+
 * ruby
 * rubygems
 * ruby-bundle
 
+which can be installed with aptitude:
 
     sudo apt-get install ruby ruby-dev rubygems
     gem install bundler
-      
+
 
 To get started:
 
