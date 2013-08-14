@@ -1,0 +1,350 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo
+  </li>
+    <li class="active">
+    FocusManager
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.FocusManager">Echo.FocusManager</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Provides focus management tools for an application.</p></p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.FocusManager(application)</a></code><br/>
+Focus management handler for a specific application instance.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._application">_application</a></code><br/>
+The managed application.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.find">find(component, reverse)</a></code><br/>
+Searches the component hierarchy for the next component that should
+be focused (based on the currently focused component).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.findInParent">findInParent(parentComponent, reverse, minimumDistance)</a></code><br/>
+Finds next (or previous) focusable descendant of a parent component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getDescendantIndex">_getDescendantIndex(parent, descendant)</a></code><br/>
+Determines the index of the child of <code>parent</code> in which
+<code>descendant</code> is contained.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getFocusOrder">_getFocusOrder(component)</a></code><br/>
+Returns and validates the component's natural focus order, if provided.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getNextCandidate">_getNextCandidate(component, reverse)</a></code><br/>
+Returns the next sibling candidate focus component adjacent the specified component.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.FocusManager(application)</span>
+
+<dl>
+<dd>Focus management handler for a specific application instance.
+One FocusManager is created for each application.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>application</code> 
+<em>(<a href="Class.Echo.Application">Echo.Application</a>)</em>
+- the managed application</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.find"></a>
+<span class="DetailPropertyName">find</span>
+
+<dl>
+<dd>Searches the component hierarchy for the next component that should
+be focused (based on the currently focused component).
+Container components are queried to determine the order in which their
+children should naturally be focused (certain components, e.g., SplitPanes,
+will have a child focus order that may be different from the order of their 
+children).
+This search is depth first.
+
+Search order (FORWARD):
+
+(Start on Component)
+First Child, next sibling, parent
+
+Search order (REVERSE):
+Last Child, previous sibling, parent
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component at which to begin searching</dd>
+<dd>
+<code>reverse</code> 
+<em>(Boolean)</em>
+- flag indicating the direction of the search</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the Component which should be focused
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.findInParent"></a>
+<span class="DetailPropertyName">findInParent</span>
+
+<dl>
+<dd>Finds next (or previous) focusable descendant of a parent component.
+This method requires that the application's currently focused component
+be a descendant of the specified parent component.  The search will
+be limited to descendants of the parent component, i.e., if a suitable descendant
+component cannot be found, null will be returned.
+
+The <code>minimumDistance</code> property may be used to skip a number of siblings.
+This is used by components such as "Grid" which may want to find a focusable component
+in the next row, skipping over all columns of the current row.  
+If omitted the default value of this property is 1.  As an example, a value of 2
+would skip the immediately adjacent sibling of the current focused component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parentComponent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent component to search</dd>
+<dd>
+<code>reverse</code> 
+<em>(Boolean)</em>
+- the search direction, false indicating to search forward, true
+       indicating reverse</dd>
+<dd>
+<code>minimumDistance</code> 
+<em>(Number)</em>
+- the fewest number of lateral focus moves to make before
+       returning a focusable component (optional, default value of 1)</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the focusable descendant, or null if one cannot be found
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getDescendantIndex"></a>
+<span class="DetailPropertyName">_getDescendantIndex</span>
+
+<dl>
+<dd>Determines the index of the child of <code>parent</code> in which
+<code>descendant</code> is contained.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent component</dd>
+<dd>
+<code>descendant</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the descendant component</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the descendant index, or -1 if the component is not a descendant of <code>parent</code>
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getFocusOrder"></a>
+<span class="DetailPropertyName">_getFocusOrder</span>
+
+<dl>
+<dd>Returns and validates the component's natural focus order, if provided.
+Null is returned in the event the component's natural focus order is invalid, i.e., one or more component
+indices are repeated.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the focus order, an array of component indices
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getNextCandidate"></a>
+<span class="DetailPropertyName">_getNextCandidate</span>
+
+<dl>
+<dd>Returns the next sibling candidate focus component adjacent the specified component.
+Uses the focus order provided by <code>Echo.Component.getFocusOrder()</code> if provided.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the current focused/analyzed component</dd>
+<dd>
+<code>reverse</code> 
+<em>(Boolean)</em>
+- flag indicating whether next component (false) or previous copmonent (true)
+       should be returned</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the next focus candidate
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+

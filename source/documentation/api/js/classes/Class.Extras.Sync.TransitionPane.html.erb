@@ -1,0 +1,384 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync
+  </li>
+    <li class="active">
+    TransitionPane
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.TransitionPane">Extras.Sync.TransitionPane</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Component rendering peer: TransitionPane. This class should not be extended by developers, the implementation is subject to change.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.TransitionPane.BlindTransition">Extras.Sync.TransitionPane.BlindTransition</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.TransitionPane.FadeOpacityColorTransition">Extras.Sync.TransitionPane.FadeOpacityColorTransition</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.TransitionPane.FadeOpacityTransition">Extras.Sync.TransitionPane.FadeOpacityTransition</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.TransitionPane.Transition">Extras.Sync.TransitionPane.Transition</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._containerDiv">_containerDiv</a></code><br/>
+Outermost/top-level container element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.contentDiv">contentDiv</a></code><br/>
+Content element, contains oldChildDiv/childDiv elements.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.type">type</a></code><br/>
+The transition type value (retrieved from the component).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._transition">_transition</a></code><br/>
+The transition which is actively running (null when content is not being transitioned).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._transitionClass">_transitionClass</a></code><br/>
+Reference to the Extras.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.oldChildDiv">oldChildDiv</a></code><br/>
+The element containing the old child element, which is being transitioned FROM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.childDiv">childDiv</a></code><br/>
+The element containing the current/new child element, which is being transitioned TO.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._initialContentLoaded">_initialContentLoaded</a></code><br/>
+Flag indicating whether initial content has been loaded (no transition effect is used on the first load).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.CameraPanTransition">CameraPanTransition</a></code><br/>
+Transition implementation to pan from old content to new content, as though both were either horizontally
+or vertically adjacent and the screen (camera) were moving from one to the other.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.doImmediateTransition">doImmediateTransition()</a></code><br/>
+Performs an immediate transition between old content and new content with no animated effect.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._loadTransition">_loadTransition()</a></code><br/>
+Determines the transition class that will be used to change content based on the
+type value of the supported Extras.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeOldContent">removeOldContent()</a></code><br/>
+Removes old content: remove oldChildDiv from parent, set oldChildDiv to null.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.showContent">showContent()</a></code><br/>
+Shows new content.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderAddChild">_renderAddChild(the)</a></code><br/>
+Renders new content (a new child) added in an update.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._transitionStart">_transitionStart()</a></code><br/>
+Initiates the animated transition effect.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._transitionFinish">_transitionFinish()</a></code><br/>
+Completes the animated transition effect.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.doImmediateTransition"></a>
+<span class="DetailPropertyName">doImmediateTransition</span>
+
+<dl>
+<dd>Performs an immediate transition between old content and new content with no animated effect.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._loadTransition"></a>
+<span class="DetailPropertyName">_loadTransition</span>
+
+<dl>
+<dd>Determines the transition class that will be used to change content based on the
+type value of the supported Extras.TransitionPane component.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeOldContent"></a>
+<span class="DetailPropertyName">removeOldContent</span>
+
+<dl>
+<dd>Removes old content: remove oldChildDiv from parent, set oldChildDiv to null.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.showContent"></a>
+<span class="DetailPropertyName">showContent</span>
+
+<dl>
+<dd>Shows new content.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderAddChild"></a>
+<span class="DetailPropertyName">_renderAddChild</span>
+
+<dl>
+<dd>Renders new content (a new child) added in an update.  Starts the transition.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- update</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._transitionStart"></a>
+<span class="DetailPropertyName">_transitionStart</span>
+
+<dl>
+<dd>Initiates the animated transition effect.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._transitionFinish"></a>
+<span class="DetailPropertyName">_transitionFinish</span>
+
+<dl>
+<dd>Completes the animated transition effect.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

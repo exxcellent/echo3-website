@@ -1,0 +1,40 @@
+---
+title: Echo3 3.0.1 Released!
+author: blueshift
+tags: announcement, release, 3.0.1
+---
+
+Echo3 is a light-weight open-source framework for developing rich single-page web applications.
+
+The server-side Java API enables fast &amp; complex client/server applications using a
+Swing-style component API. The identical JavaScript API allows the easy development of
+pure client-side applications using the very same clean and intuitive programming model.
+New components can be easily adopted for both platforms.
+
+SUMMARY-END
+
+Echo3 has had a very long beta phase and the 3.0 release is rock solid and incredibly
+stable. It is being successfully used in multiple large scale enterprise applications.
+
+Echo3 highlights
+
+*   Fast, scalable and stable
+*   Light-weight (less than 1MB JARs, no dependencies)
+*   Hybrid Java/JavaScript programming model Develop pure client side or server side web applications
+*   Advanced features such as sever side push, tab focus management
+*   Component based and very intuitive API
+*   Eclipse plugin for visual editing and Maven artifacts available
+*   Manages quirks &amp; supports legacy browsers
+
+The project has recently seen a lot of activity powered by current Echo3 users
+who recognize the strength and quality of Echo3 in contrast to its competitors and who want to see Echo3 develop further.
+
+Planning for 3.1 is currently underway as is an update of the website, forums, etc.
+
+To find out more about Echo3 visit [http://echo.nextapp.com](http://echo.nextapp.com)
+or find us on GitHub [https://github.com/echo3](https://github.com/echo3)
+
+The download artifacts are available on our [community website](/).
+
+The latest releases <span style="font-weight:bold">Echo3 3.0.1</span>,
+<span style="font-weight:bold">Echo3 Filetransfer 3.0.2</span> and <span style="font-weight:bold">Echo3 Extras 3.0.1</span> are also available under [Maven Central](http://search.maven.org) for easy integration into Maven-compatible dependency managers.

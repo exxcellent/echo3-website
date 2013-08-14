@@ -1,0 +1,175 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo
+  </li>
+    <li class="active">
+    Panel
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Component">Echo.Component</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.Composite">Echo.Composite</a></code>
+</li>
+<li style="margin-left: 45px">
+<code><a href="Class.Echo.Panel">Echo.Panel</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Panel component: a single child container. Provides a configurable border, margin, background image, and dimensions. May contain at most one child. May contain pane components, and may be used as a means to add pane components to containers which do not allow pane components as children. In such a case it may be necessary to manually set the height property of the Panel itself.</p></p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.componentType">componentType</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Component</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Component#Method.add">add</a></code>, <code><a href="Class.Echo.Component#Method.addListener">addListener</a></code>, <code><a href="Class.Echo.Component#Method.fireEvent">fireEvent</a></code>, <code><a href="Class.Echo.Component#Method.get">get</a></code>, <code><a href="Class.Echo.Component#Method.getComponent">getComponent</a></code>, <code><a href="Class.Echo.Component#Method.getComponentCount">getComponentCount</a></code>, <code><a href="Class.Echo.Component#Method.getIndex">getIndex</a></code>, <code><a href="Class.Echo.Component#Method.getLayoutDirection">getLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getLocale">getLocale</a></code>, <code><a href="Class.Echo.Component#Method.getLocalStyleData">getLocalStyleData</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLayoutDirection">getRenderLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.getRenderLocale">getRenderLocale</a></code>, <code><a href="Class.Echo.Component#Method.getStyle">getStyle</a></code>, <code><a href="Class.Echo.Component#Method.getStyleName">getStyleName</a></code>, <code><a href="Class.Echo.Component#Method.indexOf">indexOf</a></code>, <code><a href="Class.Echo.Component#Method.isActive">isActive</a></code>, <code><a href="Class.Echo.Component#Method.isAncestorOf">isAncestorOf</a></code>, <code><a href="Class.Echo.Component#Method.isEnabled">isEnabled</a></code>, <code><a href="Class.Echo.Component#Method.isRenderEnabled">isRenderEnabled</a></code>, <code><a href="Class.Echo.Component#Method.register">register</a></code>, <code><a href="Class.Echo.Component#Method.render">render</a></code>, <code><a href="Class.Echo.Component#Method.renderIndex">renderIndex</a></code>, <code><a href="Class.Echo.Component#Method.remove">remove</a></code>, <code><a href="Class.Echo.Component#Method.removeAll">removeAll</a></code>, <code><a href="Class.Echo.Component#Method.removeListener">removeListener</a></code>, <code><a href="Class.Echo.Component#Method.removeAllListeners">removeAllListeners</a></code>, <code><a href="Class.Echo.Component#Method.set">set</a></code>, <code><a href="Class.Echo.Component#Method.setEnabled">setEnabled</a></code>, <code><a href="Class.Echo.Component#Method.setIndex">setIndex</a></code>, <code><a href="Class.Echo.Component#Method.setLayoutDirection">setLayoutDirection</a></code>, <code><a href="Class.Echo.Component#Method.setLocale">setLocale</a></code>, <code><a href="Class.Echo.Component#Method.setStyle">setStyle</a></code>, <code><a href="Class.Echo.Component#Method.setStyleName">setStyleName</a></code>, <code><a href="Class.Echo.Component#Method.toString">toString</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Style Properties</th>
+</tr>
+
+<tr>
+<td><code>alignment</code></td>
+<td>
+Alignment (<code>String</code> or <code>Object</code>)
+</td>
+<td>the alignment of the child component within the panel</td>
+</td>
+</tr>
+<tr>
+<td><code>backgroundImage</code></td>
+<td>
+FillImage (<code>String</code> or <code>Object</code>)
+</td>
+<td>the background image</td>
+</td>
+</tr>
+<tr>
+<td><code>border</code></td>
+<td>
+Border (<code>String</code> or <code>Object</code>)
+</td>
+<td>the border surrounding the child component</td>
+</td>
+</tr>
+<tr>
+<td><code>boxShadow</code></td>
+<td>
+<code>#BoxShadow</code>
+</td>
+<td>A drop shadow displayed behind (or inside) the panel</td>
+</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the height of the panel</td>
+</td>
+</tr>
+<tr>
+<td><code>imageBorder</code></td>
+<td>
+FillImageBorder (<code>Object</code>)
+</td>
+<td>an image-based border surrounding the child component (overrides <code>border</code>
+    property when set)</td>
+</td>
+</tr>
+<tr>
+<td><code>insets</code></td>
+<td>
+Insets (<code>Number</code>, <code>String</code>, or <code>Object</code>)
+</td>
+<td>the inset padding margin between the panel border and its content</td>
+</td>
+</tr>
+<tr>
+<td><code>radius</code></td>
+<td>
+Insets (<code>Number</code>, <code>String</code>, or <code>Object</code>)
+</td>
+<td>The radius of the panel's corners (top-left, top-right, bottom-right, bottom-left)</td>
+</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>
+Extent (<code>Number</code> or <code>String</code>)
+</td>
+<td>the width of the panel</td>
+</td>
+</tr>
+</table> 
+<br/>
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+

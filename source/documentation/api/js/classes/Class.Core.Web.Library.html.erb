@@ -1,0 +1,137 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web
+  </li>
+    <li class="active">
+    Library
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Library">Core.Web.Library</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Utilities for dynamically loading additional script libraries.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Core.Web.Library.Group">Core.Web.Library.Group</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Core.Web.Library._Item">Core.Web.Library._Item</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.evalLine">evalLine</a></code><br/>
+Determined source code line number of eval() library load statement (useful for debugging on browsers which do not 
+properly report line numbers for evaluated scripts).
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.exec">exec(requiredLibraries, f)</a></code><br/>
+Loads required libraries and then executes a function.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.exec"></a>
+<span class="DetailPropertyName">exec</span>
+
+<dl>
+<dd>Loads required libraries and then executes a function.
+This is a convenience method for use by applications that
+automatically creates a Group and invokes the specified function
+once the libraries have loaded.
+This operation is asynchronous, this method will return before the specified function has been invoked.
+Any libraries which have already been loaded will NOT be re-loaded.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>requiredLibraries</code> 
+<em>(Array)</em>
+- the URLs of the libraries which must be loaded before the function can execute</dd>
+<dd>
+<code>f</code> 
+<em>(Function)</em>
+- the function to execute</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

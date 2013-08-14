@@ -1,0 +1,320 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web
+  </li>
+    <li class="active">
+    Event
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.Event">Core.Web.Event</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Event Processing System namespace. The static methods in this object provide a standard framework for handling DOM events across often-incompatible browser platforms. <p> <b>Event Propagation:</b> Capturing listeners are notified of events first, followed by bubbling listeners. During the capturing phase of event firing, listeners on higher-level DOM elements are notified before the lower-level DOM elements. During the bubbling phase of event firing, lower-level DOM elements are notified before higher-level DOM elements. <p> For example, given the DOM hierarchy <code>&lt;body&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/body&gt;</code>, with click listeners registered for both capturing and bubbling phases on all elements, the listener notification order for a click on the <code>&lt;span&gt;</code> element would be as folows: <ol> <li>Notify capturing listener of <code>&lt;body&gt;</code> element.</li> <li>Notify capturing listener of <code>&lt;div&gt;</code> element.</li> <li>Notify capturing listener of <code>&lt;span&gt;</code> element.</li> <li>Notify bubbling listener of <code>&lt;span&gt;</code> element.</li> <li>Notify bubbling listener of <code>&lt;div&gt;</code> element.</li> <li>Notify bubbling listener of <code>&lt;body&gt;</code> element.</li> </ol> <b>Listener Return Values:</b> Listeners should return a value of true if they wish to continue to allow propogation of an event, and false if they do not. <p> <b>Capturing/Bubbling Listeners:</b> This implementation allows for the registration of both capturing and bubbling event listeners on all browser platforms, including Internet Explorer, even though Internet Explorer does not inhererntly support such listeners. This is accomplished by the Event system adding a layer of abstraction between event registration and the browser, and then invoking event listeners itself. <p> This implementation relies on the fact that all event listeners will be registered through it. The implementation is in fact internally registering only bubbling-phase event listeners on the DOM. Thus, if other event listeners are registered directly on the DOM, scenarios may occur such as a direct-registered bubbling listener receiving an event before a Core.Web.Event-registered capturing listener. This is not necessarily a critical issue, but the developer should be aware of it.</p></p>
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._nextId">_nextId</a></code><br/>
+Next available sequentially assigned element identifier.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerCount">_listenerCount</a></code><br/>
+Current listener count.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.debugListenerCount">debugListenerCount</a></code><br/>
+Flag to display listener count every time an event is fired.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._capturingListenerMap">_capturingListenerMap</a></code><br/>
+Mapping between element ids and ListenerLists containing listeners to invoke during capturing phase.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._bubblingListenerMap">_bubblingListenerMap</a></code><br/>
+Mapping between element ids and ListenerLists containing listeners to invoke during bubbling phase.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.add">add(element, eventType, eventTarget, capture)</a></code><br/>
+Registers an event handler.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processEvent">_processEvent(e)</a></code><br/>
+Listener method which is invoked when ANY event registered with the event processor occurs.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.remove">remove(element, eventType, eventTarget, capture)</a></code><br/>
+Unregisters an event handler.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeAll">removeAll(element)</a></code><br/>
+Unregister all event handlers from a specific element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._removeAllImpl">_removeAllImpl(element, listenerMap)</a></code><br/>
+Implementation method for removeAll().
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toString">toString()</a></code><br/>
+toString() implementation for debugging purposes.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.add"></a>
+<span class="DetailPropertyName">add</span>
+
+<dl>
+<dd>Registers an event handler.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the DOM element on which to add the event handler</dd>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the DOM event type</dd>
+<dd>
+<code>eventTarget</code> 
+<em>(Function)</em>
+- the event handler to invoke when the event is fired</dd>
+<dd>
+<code>capture</code> 
+<em>(Boolean)</em>
+- true to fire the event during the capturing phase, false to fire the event during
+       the bubbling phase</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processEvent"></a>
+<span class="DetailPropertyName">_processEvent</span>
+
+<dl>
+<dd>Listener method which is invoked when ANY event registered with the event processor occurs.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+<em>(Event)</em>
+- </dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.remove"></a>
+<span class="DetailPropertyName">remove</span>
+
+<dl>
+<dd>Unregisters an event handler.
+
+CAUTION: If you are unregistering an event listener created with Core.method(), please see the documentation for
+Core.method() and note that a new closure-wrapped method is returned each time Core.method() is invoked.
+Thus calling removeListener(Core.method(this, this,_someListener)) will NOT remove an existing listener.
+The solution to this issue is to retain a reference to Core.method() wrapped listeners within the object
+that will register and unregister them.
+
+If you are removing all listeners registered for a particular element (e.g., one which is being disposed)
+it is more efficient to simply invoke removeAll().
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the DOM element on which to add the event handler</dd>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the DOM event type</dd>
+<dd>
+<code>eventTarget</code> 
+<em>(Function)</em>
+- the function to invoke when the event is fired</dd>
+<dd>
+<code>capture</code> 
+<em>(Boolean)</em>
+- true to fire the event during the capturing phase, false to fire the event during
+       the bubbling phase</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeAll"></a>
+<span class="DetailPropertyName">removeAll</span>
+
+<dl>
+<dd>Unregister all event handlers from a specific element.
+Use of this operation is recommended when disposing of components, it is
+more efficient than removing listeners individually and guarantees proper clean-up.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the element</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._removeAllImpl"></a>
+<span class="DetailPropertyName">_removeAllImpl</span>
+
+<dl>
+<dd>Implementation method for removeAll().
+Removes all capturing or bubbling listeners from a specific element
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the element</dd>
+<dd>
+<code>listenerMap</code> 
+<em>(<a href="Class.Core.Arrays.LargeMap">Core.Arrays.LargeMap</a>)</em>
+- the map from which the listeners should be removed, either
+       Core.Web.Event._capturingListenerMap or Core.Web.Event._bubblingListenerMap</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toString"></a>
+<span class="DetailPropertyName">toString</span>
+
+<dl>
+<dd>toString() implementation for debugging purposes.
+Displays contents of capturing and bubbling listener maps.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+string representation of listener maps
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

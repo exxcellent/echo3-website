@@ -1,0 +1,349 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo
+  </li>
+    <li class="active">
+    FreeClient
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Client">Echo.Client</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.FreeClient">Echo.FreeClient</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.Arc.Client">Echo.Arc.Client</a></code></dd>
+</dl>
+
+
+
+<p><p>FreeClient implementation. The init() and dispose() lifecycle methods must be called before the client is used, and when the client will no longer be used, respectively.</p></p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.FreeClient(application, domainElement)</a></code><br/>
+Creates a new FreeClient.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processUpdateRef">_processUpdateRef</a></code><br/>
+Method reference to <code>_processUpdate()</code>
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._doRenderRef">_doRenderRef</a></code><br/>
+Method reference to <code>_doRender()</code>
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._resourcePaths">_resourcePaths</a></code><br/>
+Resource package name to base URL mapping for resource paths.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._renderPending">_renderPending</a></code><br/>
+Flag indicating that a runnable has been enqueued to invoke _doRender().
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addResourcePath">addResourcePath(packageName, baseUrl)</a></code><br/>
+Associates a resource package name with a base URL.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Disposes of the FreeClient.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._doRender">_doRender()</a></code><br/>
+Performs rendering operations by invoking Echo.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getResourceUrl">getResourceUrl()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.init">init()</a></code><br/>
+Initializes the FreeClient.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.loadStyleSheet">loadStyleSheet(url)</a></code><br/>
+Loads an XML style sheet into the client application from a URL.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processStyleSheet">_processStyleSheet(e)</a></code><br/>
+Event listener invoked when a StyleSheet fetched via loadStyleSheet() has been retrieved.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processUpdate">_processUpdate()</a></code><br/>
+Schedules doRender() to run in next execution context.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Client</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Client#Method.getResourceUrl">getResourceUrl</a></code>, <code><a href="Class.Echo.Client#Method.verifyInput">verifyInput</a></code>, <code><a href="Class.Echo.Client#Method.dispose">dispose</a></code>, <code><a href="Class.Echo.Client#Method.addElement">addElement</a></code>, <code><a href="Class.Echo.Client#Method.configure">configure</a></code>, <code><a href="Class.Echo.Client#Method.createInputRestriction">createInputRestriction</a></code>, <code><a href="Class.Echo.Client#Method.displayError">displayError</a></code>, <code><a href="Class.Echo.Client#Method.exec">exec</a></code>, <code><a href="Class.Echo.Client#Method.fail">fail</a></code>, <code><a href="Class.Echo.Client#Method.forceRedraw">forceRedraw</a></code>, <code><a href="Class.Echo.Client#Method.getWaitIndicator">getWaitIndicator</a></code>, <code><a href="Class.Echo.Client#Method._processApplicationFocus">_processApplicationFocus</a></code>, <code><a href="Class.Echo.Client#Method._processKey">_processKey</a></code>, <code><a href="Class.Echo.Client#Method.processUpdates">processUpdates</a></code>, <code><a href="Class.Echo.Client#Method.registerRestrictionListener">registerRestrictionListener</a></code>, <code><a href="Class.Echo.Client#Method.hasRestrictionListener">hasRestrictionListener</a></code>, <code><a href="Class.Echo.Client#Method.removeInputRestriction">removeInputRestriction</a></code>, <code><a href="Class.Echo.Client#Method._setWaitVisible">_setWaitVisible</a></code>, <code><a href="Class.Echo.Client#Method.setWaitIndicator">setWaitIndicator</a></code>, <code><a href="Class.Echo.Client#Method.removeElement">removeElement</a></code>, <code><a href="Class.Echo.Client#Method._waitIndicatorActivate">_waitIndicatorActivate</a></code>, <code><a href="Class.Echo.Client#Method._windowResizeListener">_windowResizeListener</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Client(application, domainElement)</span>
+
+<dl>
+<dd>Creates a new FreeClient.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>application</code> 
+<em>(<a href="Class.Echo.Application">Echo.Application</a>)</em>
+- the application which the client will contain</dd>
+<dd>
+<code>domainElement</code> 
+<em>(Element)</em>
+- the HTML element in which the client will be rendered</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.addResourcePath"></a>
+<span class="DetailPropertyName">addResourcePath</span>
+
+<dl>
+<dd>Associates a resource package name with a base URL.
+Later inquiries to <code>getResourceUrl()</code> with the specified package name will return
+URLs with the specified <code>baseUrl</code> prepended to the resource name provided in the
+call to <code>getResourceUrl()</code>.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>packageName</code> 
+<em>(String)</em>
+- the resource package name</dd>
+<dd>
+<code>baseUrl</code> 
+<em>(String)</em>
+- the base URL to prepend to resources in the specified package</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Disposes of the FreeClient.
+This method must be invoked when the client will no longer be used, in order to clean up resources.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._doRender"></a>
+<span class="DetailPropertyName">_doRender</span>
+
+<dl>
+<dd>Performs rendering operations by invoking Echo.Render.processUpdates().
+Invoked in separate execution context (scheduled).
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getResourceUrl"></a>
+<span class="DetailPropertyName">getResourceUrl</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.init"></a>
+<span class="DetailPropertyName">init</span>
+
+<dl>
+<dd>Initializes the FreeClient.
+This method must be invoked before the client is initially used.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.loadStyleSheet"></a>
+<span class="DetailPropertyName">loadStyleSheet</span>
+
+<dl>
+<dd>Loads an XML style sheet into the client application from a URL.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>url</code> 
+<em>(String)</em>
+- the URL from which the StyleSheet should be fetched.</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processStyleSheet"></a>
+<span class="DetailPropertyName">_processStyleSheet</span>
+
+<dl>
+<dd>Event listener invoked when a StyleSheet fetched via loadStyleSheet() has been retrieved.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the HttpConnection response event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processUpdate"></a>
+<span class="DetailPropertyName">_processUpdate</span>
+
+<dl>
+<dd>Schedules doRender() to run in next execution context.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

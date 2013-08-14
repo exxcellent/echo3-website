@@ -1,0 +1,215 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync
+  </li>
+    <li class="active">
+    Alignment
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Sync.Alignment">Echo.Sync.Alignment</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Provides tools for rendering alignment properties.</p></p>
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRenderedHorizontal">getRenderedHorizontal(alignment)</a></code><br/>
+Returns the render-able horizontal component of an alignment property.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getHorizontal">getHorizontal(the)</a></code><br/>
+Returns the horizontal component of an alignment property.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getVertical">getVertical(the)</a></code><br/>
+Returns the vertical component of an alignment property.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.render">render(alignment, the, renderToElement, layoutDirectionProvider)</a></code><br/>
+Renders an alignment property to an element.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.getRenderedHorizontal"></a>
+<span class="DetailPropertyName">getRenderedHorizontal</span>
+
+<dl>
+<dd>Returns the render-able horizontal component of an alignment property.  This method
+translates leading/trailing horizontal values to left/right based on the specified layout
+direction provider.  If a provider is no given, leading defaults to left and trailing to
+right.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>alignment</code> 
+<em>(#Alignment)</em>
+- the alignment</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the rendered horizontal component, i.e., "left", "center", "right", or null
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getHorizontal"></a>
+<span class="DetailPropertyName">getHorizontal</span>
+
+<dl>
+<dd>Returns the horizontal component of an alignment property.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(#Alignment)</em>
+- alignment</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the horizontal component, i.e., "left", "center", "right", "leading", "trailing", or null
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getVertical"></a>
+<span class="DetailPropertyName">getVertical</span>
+
+<dl>
+<dd>Returns the vertical component of an alignment property.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(#Alignment)</em>
+- alignment</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the vertical component, i.e., "top", "middle", "bottom", or null
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.render"></a>
+<span class="DetailPropertyName">render</span>
+
+<dl>
+<dd>Renders an alignment property to an element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>alignment</code> 
+<em>(#Alignment)</em>
+- the alignment</dd>
+<dd>
+<code>the</code> 
+<em>(Element)</em>
+- target element</dd>
+<dd>
+<code>renderToElement</code> 
+<em>(Boolean)</em>
+- flag indicating whether the alignment state should be rendered to the element using
+       attributes (true) or CSS (false)</dd>
+<dd>
+<code>layoutDirectionProvider</code> 
+- an (optional) object providing a getRenderLayoutDirection() method to determine if the
+       element has a layout direction of left-to-right or right-to-left</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

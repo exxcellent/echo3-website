@@ -1,0 +1,335 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync
+  </li>
+    <li class="active">
+    Color
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Sync.Color">Echo.Sync.Color</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Provides tools for rendering color properties.</p></p>
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.adjust">adjust(color, r, g, b)</a></code><br/>
+Adjusts the value of the color's RGB values by the
+specified amounts, returning a new Color.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.blend">blend(value1, value2, ratio)</a></code><br/>
+Blends two colors together.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.render">render(color, element, styleAttribute)</a></code><br/>
+Renders a color to an element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderClear">renderClear(color, element, styleAttribute)</a></code><br/>
+Renders a color to an element, clearing any existing value.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderFB">renderFB(component, the)</a></code><br/>
+Renders the "foreground" and "background" color properties of a component to an element's "color" and
+"backgroundColor" properties.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toHex">toHex(red, green, blue)</a></code><br/>
+Converts red/green/blue integer values to a 6 digit hexadecimal string, preceded by a sharp, e.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.toTransparent">toTransparent(color)</a></code><br/>
+Converts the color to 'transparent' if necessary
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.adjust"></a>
+<span class="DetailPropertyName">adjust</span>
+
+<dl>
+<dd>Adjusts the value of the color's RGB values by the
+specified amounts, returning a new Color.
+The original color is unchanged.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>color</code> 
+- the color to adjust (a 24 bit hex value, e.g., #1a2b3c)</dd>
+<dd>
+<code>r</code> 
+- the amount to adjust the red value of the color (-255 to 255)</dd>
+<dd>
+<code>g</code> 
+- the amount to adjust the green value of the color (-255 to 255)</dd>
+<dd>
+<code>b</code> 
+- the amount to adjust the blue value of the color (-255 to 255)</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the adjusted color (a 24 bit hex value)
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.blend"></a>
+<span class="DetailPropertyName">blend</span>
+
+<dl>
+<dd>Blends two colors together.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>value1</code> 
+<em>(#Color)</em>
+- the first color</dd>
+<dd>
+<code>value2</code> 
+<em>(#Color)</em>
+- the second color</dd>
+<dd>
+<code>ratio</code> 
+<em>(Number)</em>
+- the blend ratio, where 0 represents the first color, 1 the second color, and 0.5 an equal blend
+       between the first and second colors</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(#Color)</em>
+
+the blended color
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.render"></a>
+<span class="DetailPropertyName">render</span>
+
+<dl>
+<dd>Renders a color to an element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>color</code> 
+<em>(#Color)</em>
+- the color</dd>
+<dd>
+<code>element</code> 
+<em>(#Element)</em>
+- the target element</dd>
+<dd>
+<code>styleAttribute</code> 
+<em>(String)</em>
+- the name of the style attribute, e.g., "color", "backgroundColor"</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderClear"></a>
+<span class="DetailPropertyName">renderClear</span>
+
+<dl>
+<dd>Renders a color to an element, clearing any existing value.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>color</code> 
+<em>(#Color)</em>
+- the color</dd>
+<dd>
+<code>element</code> 
+<em>(#Element)</em>
+- the target element</dd>
+<dd>
+<code>styleAttribute</code> 
+<em>(String)</em>
+- the name of the style attribute, e.g., "color", "backgroundColor"</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderFB"></a>
+<span class="DetailPropertyName">renderFB</span>
+
+<dl>
+<dd>Renders the "foreground" and "background" color properties of a component to an element's "color" and
+"backgroundColor" properties.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component</dd>
+<dd>
+<code>the</code> 
+<em>(Element)</em>
+- target element</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toHex"></a>
+<span class="DetailPropertyName">toHex</span>
+
+<dl>
+<dd>Converts red/green/blue integer values to a 6 digit hexadecimal string, preceded by a sharp, e.g. #1a2b3c.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>red</code> 
+<em>(Number)</em>
+- the red value, 0-255</dd>
+<dd>
+<code>green</code> 
+<em>(Number)</em>
+- the green value, 0-255</dd>
+<dd>
+<code>blue</code> 
+<em>(Number)</em>
+- the blue value, 0-255</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the hex string
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.toTransparent"></a>
+<span class="DetailPropertyName">toTransparent</span>
+
+<dl>
+<dd>Converts the color to 'transparent' if necessary
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>color</code> 
+<em>(#Color)</em>
+- to convert</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the converted color
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

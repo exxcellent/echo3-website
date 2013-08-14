@@ -1,0 +1,964 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo
+  </li>
+    <li class="active">
+    Application
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Application">Echo.Application</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.Arc.Application">Echo.Arc.Application</a></code></dd>
+</dl>
+
+
+
+<p><p>Representation of a single application instance. Derived objects must invoke constructor with root component id.</p></p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Application()</a></code><br/>
+Creates a new application instance.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._nextUid">_nextUid</a></code><br/>
+Next unique identifier.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.generateUid">generateUid()</a></code><br/>
+Generates a unique identifier.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.client">client</a></code><br/>
+The client engine hosting the application.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._idToComponentMap">_idToComponentMap</a></code><br/>
+Mapping between component ids and component instances.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._listenerList">_listenerList</a></code><br/>
+ListenerList instance for application-level events.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._locale">_locale</a></code><br/>
+Default application locale.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._modalComponents">_modalComponents</a></code><br/>
+Array of modal components.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._styleSheet">_styleSheet</a></code><br/>
+Displayed style sheet.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._focusedComponent">_focusedComponent</a></code><br/>
+Currently focused component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.rootComponent">rootComponent</a></code><br/>
+Root component instance.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.updateManager">updateManager</a></code><br/>
+UpdateManager instance monitoring changes to the application for redraws.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.focusManager">focusManager</a></code><br/>
+FocusManager instance handling application focus behavior.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.init">init()</a></code><br/>
+Performs application initialization operations.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Performs application disposal/resource cleanup operations.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isActive">isActive()</a></code><br/>
+Returns the active state of the application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addListener">addListener(eventType, eventTarget)</a></code><br/>
+Adds an arbitrary event listener.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.hasComponentUpdateListeners">hasComponentUpdateListeners()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.doDispose">doDispose()</a></code><br/>
+Invoked by application container to dispose of the application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.doInit">doInit()</a></code><br/>
+Invoked by application container to initialize of the application.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._findModalContextRoot">_findModalContextRoot(searchComponent)</a></code><br/>
+Recursively determines the current root component of the modal context.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.fireEvent">fireEvent(event)</a></code><br/>
+Provides notification of an arbitrary event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.focusNext">focusNext(reverse)</a></code><br/>
+Focuses the previous/next component based on the currently focused component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getComponentByRenderId">getComponentByRenderId(renderId)</a></code><br/>
+Retrieves the registered component with the specified render id.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getFocusedComponent">getFocusedComponent()</a></code><br/>
+Returns the focused component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getLayoutDirection">getLayoutDirection()</a></code><br/>
+Returns the default layout direction of the application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getLocale">getLocale()</a></code><br/>
+Returns the default locale of the application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getModalContextRoot">getModalContextRoot()</a></code><br/>
+Returns the root component of the modal context.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getStyleSheet">getStyleSheet()</a></code><br/>
+Returns the application style sheet.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.notifyComponentUpdate">notifyComponentUpdate(parent, propertyName, oldValue, newValue, rendered)</a></code><br/>
+Notifies the application of an update to a component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._registerComponent">_registerComponent(component)</a></code><br/>
+Registers a component with the application.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeListener">removeListener(eventType, eventTarget)</a></code><br/>
+Removes an arbitrary event listener.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setFocusedComponent">setFocusedComponent(newValue)</a></code><br/>
+Sets the focused component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setLayoutDirection">setLayoutDirection(newValue)</a></code><br/>
+Sets the application default layout direction.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setLocale">setLocale(newValue)</a></code><br/>
+Sets the application default locale.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setModal">_setModal(component, modal)</a></code><br/>
+Informs the application of the modal state of a specific component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setStyleSheet">setStyleSheet(newValue)</a></code><br/>
+Sets the application style sheet.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._unregisterComponent">_unregisterComponent(component)</a></code><br/>
+Unregisters a component from the application.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+
+<colgroup>
+<col width="20%"/>
+<col width="80%"/>
+<colgroup>
+
+<tr>
+<th colspan="3">Events</th>
+</tr>
+
+<tr>
+<td><code>componentUpdate</code></td>
+<td>An event fired when any component within the application is updated.
+       Listening for this event may degrade the performance of an application, due to the
+       frequency with which it will be fired.</td>
+</tr>
+<tr>
+<td><code>focus</code></td>
+<td>An event fired when the focused component of the application changes.</td>
+</tr>
+<tr>
+<td><code>modal</code></td>
+<td>An event fired when the modal state of the application changes.</td>
+</tr>
+</table> 
+<br/>
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Application()</span>
+
+<dl>
+<dd>Creates a new application instance.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.generateUid"></a>
+<span class="DetailPropertyName">generateUid</span>
+
+<dl>
+<dd>Generates a unique identifier.  Identifiers are unique for the duration of the existence of this namespace.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.init"></a>
+<span class="DetailPropertyName">init</span>
+
+<dl>
+<dd>Performs application initialization operations.  This method should be provided by an application implementation
+if required.  The superclass' <code>init()</code> method should always be invoked out of convention.
+The <code>client</code> property will be available.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Performs application disposal/resource cleanup operations. This method should be provided by an application
+implementation if required. The superclass' <code>dispose()</code> method should always be invoked out of convention.
+The <code>client</code> property will be available.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isActive"></a>
+<span class="DetailPropertyName">isActive</span>
+
+<dl>
+<dd>Returns the active state of the application.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+the active state of the application, a value of 
+        true indicating the application is ready for user
+        input, a value of false indicating otherwise
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addListener"></a>
+<span class="DetailPropertyName">addListener</span>
+
+<dl>
+<dd>Adds an arbitrary event listener.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the event type name</dd>
+<dd>
+<code>eventTarget</code> 
+<em>(Function)</em>
+- the method to invoke when the event occurs 
+       (the event will be passed as the single argument)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.hasComponentUpdateListeners"></a>
+<span class="DetailPropertyName">hasComponentUpdateListeners</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.doDispose"></a>
+<span class="DetailPropertyName">doDispose</span>
+
+<dl>
+<dd>Invoked by application container to dispose of the application.
+Invokes application-overridable <code>dispose()</code> method.
+Once invoked, the application will no longer function and cannot be used again.
+This method will free any resources allocated by the application.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.doInit"></a>
+<span class="DetailPropertyName">doInit</span>
+
+<dl>
+<dd>Invoked by application container to initialize of the application.
+Invokes application-overridable <code>init()</code> method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._findModalContextRoot"></a>
+<span class="DetailPropertyName">_findModalContextRoot</span>
+
+<dl>
+<dd>Recursively determines the current root component of the modal context.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>searchComponent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- (optional) the component from which to search
+       (this parameter is provided when recursively searching, if omitted the sear
+       will begin at the root component of the application).</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the current modal context root component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.fireEvent"></a>
+<span class="DetailPropertyName">fireEvent</span>
+
+<dl>
+<dd>Provides notification of an arbitrary event.
+Listeners will be notified based on the event's type property.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>event</code> 
+- the event to fire</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.focusNext"></a>
+<span class="DetailPropertyName">focusNext</span>
+
+<dl>
+<dd>Focuses the previous/next component based on the currently focused component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>reverse</code> 
+<em>(Boolean)</em>
+- false to focus the next component, true to focus the
+       previous component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getComponentByRenderId"></a>
+<span class="DetailPropertyName">getComponentByRenderId</span>
+
+<dl>
+<dd>Retrieves the registered component with the specified render id.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>renderId</code> 
+<em>(String)</em>
+- the render id</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getFocusedComponent"></a>
+<span class="DetailPropertyName">getFocusedComponent</span>
+
+<dl>
+<dd>Returns the focused component.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the focused component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getLayoutDirection"></a>
+<span class="DetailPropertyName">getLayoutDirection</span>
+
+<dl>
+<dd>Returns the default layout direction of the application.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.LayoutDirection">Echo.LayoutDirection</a>)</em>
+
+the default layout direction
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getLocale"></a>
+<span class="DetailPropertyName">getLocale</span>
+
+<dl>
+<dd>Returns the default locale of the application.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the default locale
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getModalContextRoot"></a>
+<span class="DetailPropertyName">getModalContextRoot</span>
+
+<dl>
+<dd>Returns the root component of the modal context.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+
+the root component of the modal context
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getStyleSheet"></a>
+<span class="DetailPropertyName">getStyleSheet</span>
+
+<dl>
+<dd>Returns the application style sheet.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.StyleSheet">Echo.StyleSheet</a>)</em>
+
+the application style sheet
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.notifyComponentUpdate"></a>
+<span class="DetailPropertyName">notifyComponentUpdate</span>
+
+<dl>
+<dd>Notifies the application of an update to a component.
+Fires a <code>componentUpdate</code> event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the parent component</dd>
+<dd>
+<code>propertyName</code> 
+<em>(String)</em>
+- the updated property</dd>
+<dd>
+<code>oldValue</code> 
+- the previous property value</dd>
+<dd>
+<code>newValue</code> 
+- the new property value</dd>
+<dd>
+<code>rendered</code> 
+- optional flag indicating whether the update has already been rendered by the containing client; 
+       if enabled, the property update will not be sent to the update manager</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._registerComponent"></a>
+<span class="DetailPropertyName">_registerComponent</span>
+
+<dl>
+<dd>Registers a component with the application.
+Invoked when a component is added to a hierarchy of 
+components that is registered with the application.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component to register</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeListener"></a>
+<span class="DetailPropertyName">removeListener</span>
+
+<dl>
+<dd>Removes an arbitrary event listener.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the event type name</dd>
+<dd>
+<code>eventTarget</code> 
+<em>(Function)</em>
+- the method to invoke when the event occurs 
+       (the event will be passed as the single argument)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setFocusedComponent"></a>
+<span class="DetailPropertyName">setFocusedComponent</span>
+
+<dl>
+<dd>Sets the focused component.
+A "focus" event is fired to application listeners to inform them of the change.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the new focused component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setLayoutDirection"></a>
+<span class="DetailPropertyName">setLayoutDirection</span>
+
+<dl>
+<dd>Sets the application default layout direction.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(<a href="Class.Echo.LayoutDirection">Echo.LayoutDirection</a>)</em>
+- the new layout direction</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setLocale"></a>
+<span class="DetailPropertyName">setLocale</span>
+
+<dl>
+<dd>Sets the application default locale.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(String)</em>
+- the new locale</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setModal"></a>
+<span class="DetailPropertyName">_setModal</span>
+
+<dl>
+<dd>Informs the application of the modal state of a specific component.
+When modal components are unregistered, this method must be executed
+in order to avoid a memory leak.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+- the component</dd>
+<dd>
+<code>modal</code> 
+- the modal state</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setStyleSheet"></a>
+<span class="DetailPropertyName">setStyleSheet</span>
+
+<dl>
+<dd>Sets the application style sheet.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>newValue</code> 
+<em>(<a href="Class.Echo.StyleSheet">Echo.StyleSheet</a>)</em>
+- the new style sheet</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._unregisterComponent"></a>
+<span class="DetailPropertyName">_unregisterComponent</span>
+
+<dl>
+<dd>Unregisters a component from the application.
+This method is invoked when a component is removed from a hierarchy of 
+components registered with the application.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the component to remove</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

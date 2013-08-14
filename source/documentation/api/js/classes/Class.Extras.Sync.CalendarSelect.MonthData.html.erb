@@ -1,0 +1,275 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync.CalendarSelect
+  </li>
+    <li class="active">
+    MonthData
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Extras.Sync.CalendarSelect.MonthData">Extras.Sync.CalendarSelect.MonthData</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Data object describing a month of a specific year in a specific locale (first day of week setting). Determines additional information about the month used for rendering.</p></p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.CalendarSelect.MonthData(year, month, first)</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.firstDayOfMonth">firstDayOfMonth</a></code><br/>
+First day of week of the month, Sunday = 0.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.daysInMonth">daysInMonth</a></code><br/>
+Number of days in the month.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.daysInPreviousMonth">daysInPreviousMonth</a></code><br/>
+Number of days in the previous month.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.year">year</a></code><br/>
+The year.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.month">month</a></code><br/>
+The month.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.weekCount">weekCount</a></code><br/>
+Number of full or partial weeks in the month.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.firstCellPosition">firstCellPosition</a></code><br/>
+Cell position of day 1 of the month (0 = leftmost cell, 6 = rightmost cell).
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getCellDate">getCellDate(cellIndex)</a></code><br/>
+Determines the date of the cell at the specified index.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getCellIndex">getCellIndex(day)</a></code><br/>
+Determines the cell index of the specified day in the month.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isCellAdjacent">isCellAdjacent()</a></code><br/>
+Determines if the specified cell index lies in the current month or an adjacent month.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Extras.Sync.CalendarSelect.MonthData(year, month, first)</span>
+
+<dl>
+<dd>Constructor.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>year</code> 
+<em>(Number)</em>
+- the year</dd>
+<dd>
+<code>month</code> 
+<em>(Number)</em>
+- the month</dd>
+<dd>
+<code>first</code> 
+<em>(Number)</em>
+- day of week to use when rendering the month (0 = Sunday)</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.getCellDate"></a>
+<span class="DetailPropertyName">getCellDate</span>
+
+<dl>
+<dd>Determines the date of the cell at the specified index.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>cellIndex</code> 
+<em>(Number)</em>
+- the cell index, 0 = top left cell</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Object)</em>
+
+an object describing the date at the specified cell, containing numeric month, day, and year properties
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getCellIndex"></a>
+<span class="DetailPropertyName">getCellIndex</span>
+
+<dl>
+<dd>Determines the cell index of the specified day in the month.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>day</code> 
+<em>(Number)</em>
+- the day of the month</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the cell index
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isCellAdjacent"></a>
+<span class="DetailPropertyName">isCellAdjacent</span>
+
+<dl>
+<dd>Determines if the specified cell index lies in the current month or an adjacent month.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the cell index lies in an adjacent month, false if not
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+
+

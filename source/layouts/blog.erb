@@ -1,0 +1,31 @@
+<% wrap_layout :layout do %>
+  <div class="row">
+	<div class="col-lg-3">
+		<ul style="margin-top: 20px" class="nav nav-pills nav-stacked">
+		  <li>Recent blog posts</li>
+		  <% blog.articles[0...5].each do |article| %>
+			<li><a href="<%= article.url %>"><%= article.title %></a></li>
+		  <% end %>
+		</ul>
+	</div>
+	<div class="col-lg-9">
+		<% if current_article %>
+		  <article class="blog-post">
+			<h1><%= current_article.title %></h1>
+			<% if current_page.data.author %>
+			  <h5 class="blog-post-author">Posted by: <%= current_page.data.author %> &ndash; <time><%= current_article.date.strftime('%b %d, %Y') %></time></h5>
+			<% end %>
+			<% current_article.tags.each_with_index do |tag, i| %>
+				<span class="label label-info"><%= tag %></span>
+			<% end %>
+
+			<hr>
+
+			<%= yield %>
+		  </article>
+		<% else %>
+		   <%= yield %>
+		<% end %>
+	</div>
+  </div>
+<% end %>

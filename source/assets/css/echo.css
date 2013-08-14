@@ -1,0 +1,50 @@
+.navbar-nav > li > a {
+	width: 175px;
+	height: 40px;
+	color: white;
+	font-size: 14pt;
+	text-align: center;
+	padding: 10px;
+	
+}
+.navbar-nav > li > a:hover {
+	color: white;
+}
+
+.content-wrapper {
+	min-height: 400px;
+}
+
+.jumbotron {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-weight: normal;
+	color: white;
+	background-color: #2C3E50;
+}
+
+footer {
+	color: #777;
+	margin-bottom: 10px;
+}
+
+.sidebar-head {
+	background-color: #eee;
+	font-weight: bold;
+}
+
+.sidebar-section {
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.sidebar-subsection {
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.sidebar-subsubsection {
+	padding-left: 15px;
+}
+
+

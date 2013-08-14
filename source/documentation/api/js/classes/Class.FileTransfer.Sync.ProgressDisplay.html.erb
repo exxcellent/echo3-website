@@ -1,0 +1,351 @@
+
+<ul class="breadcrumb">
+    <li>
+    FileTransfer.Sync
+  </li>
+    <li class="active">
+    ProgressDisplay
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.FileTransfer.Sync.ProgressDisplay">FileTransfer.Sync.ProgressDisplay</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.FileTransfer.Sync.DefaultProgressDisplay">FileTransfer.Sync.DefaultProgressDisplay</a></code></dd>
+</dl>
+
+
+
+<p><p>Abstract base class for file upload progress displays. A default implementation is provided by <code>FileTransfer.Sync.DefaultProgressDisplay</code>.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.FileTransfer.Sync.ProgressDisplay.File">FileTransfer.Sync.ProgressDisplay.File</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.component">component</a></code><br/>
+The upload component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.implementation">implementation</a></code><br/>
+The progress display implementation in use.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.instantiate">instantiate(component)</a></code><br/>
+Creates a new <code>ProgressDisplay</code> implementation.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.files">files</a></code><br/>
+An array of <code>FileTransfer.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.totalSize">totalSize</a></code><br/>
+The combined size of all files being uploaded, in bytes.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.initialized">initialized</a></code><br/>
+Flag indicating whether the progress display has been initialized, i.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.complete">complete()</a></code><br/>
+Notifies the progress display that all uploads have been completed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.create">create(parent)</a></code><br/>
+Creates the progress display, adding it to the parent DOM element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Disposes of the progress display, removing any attached resources.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.update">update()</a></code><br/>
+Updates the progress display.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.add">add()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getTotalProgress">getTotalProgress()</a></code><br/>
+Determines the current total progress (in bytes) by querying the progress of each individual file whose upload
+progress is being monitored.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.init">init(files)</a></code><br/>
+Initializes the progress display.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.instantiate"></a>
+<span class="DetailPropertyName">instantiate</span>
+
+<dl>
+<dd>Creates a new <code>ProgressDisplay</code> implementation.
+This method should be invoked by upload components in order to instantiate the progress display implementation.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the upload select component</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.complete"></a>
+<span class="DetailPropertyName">complete</span>
+
+<dl>
+<dd>Notifies the progress display that all uploads have been completed.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.create"></a>
+<span class="DetailPropertyName">create</span>
+
+<dl>
+<dd>Creates the progress display, adding it to the parent DOM element.
+The parent DOM element will be removed from the screen when the upload component is disposed.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parent</code> 
+<em>(Element)</em>
+- the parent DOM element</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Disposes of the progress display, removing any attached resources.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.update"></a>
+<span class="DetailPropertyName">update</span>
+
+<dl>
+<dd>Updates the progress display.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.add"></a>
+<span class="DetailPropertyName">add</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getTotalProgress"></a>
+<span class="DetailPropertyName">getTotalProgress</span>
+
+<dl>
+<dd>Determines the current total progress (in bytes) by querying the progress of each individual file whose upload
+progress is being monitored.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the current total progress, in bytes
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.init"></a>
+<span class="DetailPropertyName">init</span>
+
+<dl>
+<dd>Initializes the progress display.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>files</code> 
+<em>(Array)</em>
+- an array of <code>FileTransfer.Sync.ProgressDisplay.File</code> objects; these will be stored
+       within the progress display object for later use</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

@@ -1,0 +1,348 @@
+
+<ul class="breadcrumb">
+    <li>
+    FileTransfer.Sync.MultipleUploadSelect
+  </li>
+    <li class="active">
+    SWFUploadRender
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.FileTransfer.Sync.UploadRender">FileTransfer.Sync.UploadRender</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.FileTransfer.Sync.MultipleUploadSelect.SWFUploadRender">FileTransfer.Sync.MultipleUploadSelect.SWFUploadRender</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p><code>FileTransfer.Sync.UploadRender</code> implementation for SWFUpload component.</p></p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._buttonDiv">_buttonDiv</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._swfUploadDiv">_swfUploadDiv</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._swfUpload">_swfUpload</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._progressDisplay">_progressDisplay</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._progressFileMap">_progressFileMap</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._canceled">_canceled</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.add">add()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.cancel">cancel()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.display">display()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processNextUpload">_processNextUpload()</a></code><br/>
+Starts upload of next queued file.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processDialogComplete">_processDialogComplete()</a></code><br/>
+SWFUpload <code>file_dialog_complete_handler</code> event method.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processUploadStart">_processUploadStart()</a></code><br/>
+SWFUpload <code>upload_start_handler</code> event method.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processUploadComplete">_processUploadComplete()</a></code><br/>
+SWFUpload <code>upload_progress_handler</code> event method.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processProgress">_processProgress()</a></code><br/>
+SWFUpload <code>upload_success_handler</code> event method.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderUploadControl">_renderUploadControl()</a></code><br/>
+Renders the SWFUpload control with the specified bounds.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.send">send()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class FileTransfer.Sync.UploadRender</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.FileTransfer.Sync.UploadRender#Method.add">add</a></code>, <code><a href="Class.FileTransfer.Sync.UploadRender#Method.cancel">cancel</a></code>, <code><a href="Class.FileTransfer.Sync.UploadRender#Method.dispose">dispose</a></code>, <code><a href="Class.FileTransfer.Sync.UploadRender#Method.send">send</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.add"></a>
+<span class="DetailPropertyName">add</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.cancel"></a>
+<span class="DetailPropertyName">cancel</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.display"></a>
+<span class="DetailPropertyName">display</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processNextUpload"></a>
+<span class="DetailPropertyName">_processNextUpload</span>
+
+<dl>
+<dd>Starts upload of next queued file.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processDialogComplete"></a>
+<span class="DetailPropertyName">_processDialogComplete</span>
+
+<dl>
+<dd>SWFUpload <code>file_dialog_complete_handler</code> event method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processUploadStart"></a>
+<span class="DetailPropertyName">_processUploadStart</span>
+
+<dl>
+<dd>SWFUpload <code>upload_start_handler</code> event method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processUploadComplete"></a>
+<span class="DetailPropertyName">_processUploadComplete</span>
+
+<dl>
+<dd>SWFUpload <code>upload_progress_handler</code> event method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processProgress"></a>
+<span class="DetailPropertyName">_processProgress</span>
+
+<dl>
+<dd>SWFUpload <code>upload_success_handler</code> event method.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderUploadControl"></a>
+<span class="DetailPropertyName">_renderUploadControl</span>
+
+<dl>
+<dd>Renders the SWFUpload control with the specified bounds.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.send"></a>
+<span class="DetailPropertyName">send</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

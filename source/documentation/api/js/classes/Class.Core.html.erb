@@ -1,0 +1,466 @@
+
+<ul class="breadcrumb">
+    <li class="active">
+    Core
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core">Core</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Namespace for core functionality.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Core.Arrays.LargeMap">Core.Arrays.LargeMap</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Core.Debug">Core.Debug</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Core.ListenerList">Core.ListenerList</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Core.ResourceBundle">Core.ResourceBundle</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._copyFunction">_copyFunction(f)</a></code><br/>
+Creates a duplicate copy of a function by wrapping the original in a closure.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createFunction">_createFunction()</a></code><br/>
+Creates an empty function.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.extend">extend(baseClass, definition)</a></code><br/>
+Creates a new class, optionally extending an existing class.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.get">get(object, path)</a></code><br/>
+Retrieves a value from an object hierarchy.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._isVirtual">_isVirtual()</a></code><br/>
+Determines if the specified propertyName of the specified object is a virtual
+property, i.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._inherit">_inherit(destination, soruce, virtualProperties)</a></code><br/>
+Installs properties from source object into destination object.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.method">method(instance, method)</a></code><br/>
+Creates a new function which executes a specific method of an object instance.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processMixins">_processMixins(destination, mixins)</a></code><br/>
+Add properties of mixin objects to destination object.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.set">set(object, path)</a></code><br/>
+Sets a value in an object hierarchy.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._verifyAbstractImpl">_verifyAbstractImpl(constructorClass)</a></code><br/>
+Verifies that a concrete derivative of an abstract class implements
+abstract properties present in the base class.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method._copyFunction"></a>
+<span class="DetailPropertyName">_copyFunction</span>
+
+<dl>
+<dd>Creates a duplicate copy of a function by wrapping the original in a closure.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>f</code> 
+- the function</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+an effectively identical copy
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._createFunction"></a>
+<span class="DetailPropertyName">_createFunction</span>
+
+<dl>
+<dd>Creates an empty function.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.extend"></a>
+<span class="DetailPropertyName">extend</span>
+
+<dl>
+<dd>Creates a new class, optionally extending an existing class.
+This method may be called with one or two parameters as follows:
+<p>
+<code>Core.extend(definition)</code>
+<code>Core.extend(baseClass, definition)</code>
+<p>
+Each property of the definition object will be added to the prototype of the returned defined class.
+Properties that begin with a dollar-sign (<code>$</code>) will be processed specially:
+<p>
+<ul>
+<li>The <code>$construct</code> property, which must be a function, will be used as the constructor.
+The <code>$load</code> property, which must be a function, f provided, will be used as a static initializer,
+executed once when the class is *defined*.  The this pointer will be set to the class when
+this method is executed.</li>
+<li>The <code>$static</code> property, an object, if provided, will have its properties installed as class variables.</li>
+<li>The <code>$abstract</code> property, an object or <code>true</code>, if provided, will define methods that
+must be implemented by derivative classes.  If the value is simply <code>true</code>, the object will be marked as
+abstract (such that it does not necessarily need to provide implementations of abstract methods defined in its 
+base class.)</li>
+<li>The <code>$virtual</code> property, an object, if provided, defines methods that will be placed into the prototype
+that may be overridden by subclasses.  Attempting to override a property/method of the superclass that
+is not defined in the virtual block will result in an exception.  Having the default behavior NOT allow
+for overriding ensures that namespacing between super- and sub-types if all internal variables are instance
+during <code>Core.extend()</code>.</li>
+</ul>
+<p>
+Use of this method enables a class to be derived WITHOUT executing the constructor of the base class
+in order to create a prototype for the derived class.  This method uses a "shared prototype" architecture,
+where two objects are created, a "prototype class" and a "constructor class".  These two objects share
+the same prototype, but the "prototype class" has an empty constructor.  When a class created with
+this method is derived, the "prototype class" is used to create a prototype for the derivative.
+<p>
+This method will return the constructor class, which contains an internal reference to the 
+prototype class that will be used if the returned class is later derived by this method.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>baseClass</code> 
+<em>(Function)</em>
+- the base class</dd>
+<dd>
+<code>definition</code> 
+<em>(Object)</em>
+- an associative array containing methods and properties of the class</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the constructor class
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.get"></a>
+<span class="DetailPropertyName">get</span>
+
+<dl>
+<dd>Retrieves a value from an object hierarchy.
+
+Examples: 
+Given the following object 'o': <code>{ a: { b: 4, c: 2 }}</code>
+<ul>
+<li><code>Core.get(o, ["a", "b"]) will return <code>4</code>.</li>
+<li><code>Core.get(o, ["a", "c"]) will return <code>2</code>.</li>
+<li><code>Core.get(o, ["a", "d"]) will return <code>null</code>.</li>
+<li><code>Core.get(o, ["a"]) will return <code>{ b: 4, c: 2 }</code>.</li>
+<li><code>Core.get(o, ["b"]) will return <code>null</code>.</li>
+<li><code>Core.get(o, ["d"]) will return <code>null</code>.</li>
+</ul>
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>object</code> 
+- an arbitrary object from which the value should be retrieved</dd>
+<dd>
+<code>path</code> 
+<em>(Array)</em>
+- an array of object property names describing the path to retrieve</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the value, if found, or null if it does not exist
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._isVirtual"></a>
+<span class="DetailPropertyName">_isVirtual</span>
+
+<dl>
+<dd>Determines if the specified propertyName of the specified object is a virtual
+property, i.e., that it can be overridden by subclasses.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._inherit"></a>
+<span class="DetailPropertyName">_inherit</span>
+
+<dl>
+<dd>Installs properties from source object into destination object.
+<p>
+In the case where the destination object already has a property defined
+and the "virtualProperties" argument is provided, the "virtualProperties"
+collection will be checked to ensure that property is allowed to be
+overridden.  If "virtualProperties" is omitted, any property may be
+overridden.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>destination</code> 
+- the destination object</dd>
+<dd>
+<code>soruce</code> 
+- the source object</dd>
+<dd>
+<code>virtualProperties</code> 
+- (optional) collection of virtual properties from base class.</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.method"></a>
+<span class="DetailPropertyName">method</span>
+
+<dl>
+<dd>Creates a new function which executes a specific method of an object instance.
+Any arguments passed to the returned function will be passed to the method.
+The return value of the method will be returned by the function.
+
+CAUTION: When adding and removing methods as listeners, note that two separately
+constructed methods will not be treated as equal, even if their instance and method
+properties are the same.  Failing to heed this warning can result in a memory leak,
+as listeners would never be removed.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>instance</code> 
+- the object instance</dd>
+<dd>
+<code>method</code> 
+<em>(Function)</em>
+- the method to be invoked on the instance</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the return value provided by the method
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processMixins"></a>
+<span class="DetailPropertyName">_processMixins</span>
+
+<dl>
+<dd>Add properties of mixin objects to destination object.
+Mixins will be added in order, and any property which is already
+present in the destination object will not be overridden.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>destination</code> 
+- the destination object</dd>
+<dd>
+<code>mixins</code> 
+<em>(Array)</em>
+- the mixin objects to add</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.set"></a>
+<span class="DetailPropertyName">set</span>
+
+<dl>
+<dd>Sets a value in an object hierarchy.
+
+Examples: 
+Given the following object 'o': <code>{ a: { b: 4, c: 2 } }</code>
+<ul>
+<li><code>Core.set(o, ["a", "b"], 5)</code> will update the value of 'o' to be: <code>{ a: { b: 5, c: 2 } }</code></li>
+<li><code>Core.set(o, ["a", "d"], 7)</code> will update the value of 'o' to be:
+<code>{ a: { b: 4, c: 2, d: 7 } }</code></li>
+<li><code>Core.set(o, ["e"], 9)</code> will update the value of 'o' to be: <code>{ a: { b: 4, c: 2 }, e: 9 }</code></li>
+<li><code>Core.set(o, ["f", "g"], 8)</code> will update the value of 'o' to be: 
+<code>{ a: { b: 4, c: 2 }, f: { g: 8 } }</code></li>
+<li><code>Core.set(o, ["a"], 10)</code> will update the value of 'o' to be: <code>{ a: 10 }</code></li>
+</ul>
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>object</code> 
+- an arbitrary object from which the value should be retrieved</dd>
+<dd>
+<code>path</code> 
+<em>(Array)</em>
+- an array of object property names describing the path to retrieve</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the value, if found, or null if it does not exist
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._verifyAbstractImpl"></a>
+<span class="DetailPropertyName">_verifyAbstractImpl</span>
+
+<dl>
+<dd>Verifies that a concrete derivative of an abstract class implements
+abstract properties present in the base class.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>constructorClass</code> 
+- the class to verify</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

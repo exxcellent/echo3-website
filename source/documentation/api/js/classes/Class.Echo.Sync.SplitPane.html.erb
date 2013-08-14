@@ -1,0 +1,753 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync
+  </li>
+    <li class="active">
+    SplitPane
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.Sync.SplitPane">Echo.Sync.SplitPane</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Component rendering peer: SplitPane. This class should not be extended by developers, the implementation is subject to change.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Echo.Sync.SplitPane.ChildPane">Echo.Sync.SplitPane.ChildPane</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Sync.SplitPane()</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._childPanes">_childPanes</a></code><br/>
+Array containing two PaneConfiguration instances, representing the state of each child pane.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._paneDivs">_paneDivs</a></code><br/>
+Array containing the elements of the first and second child pane DIVs.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._separatorDiv">_separatorDiv</a></code><br/>
+The rendered separator DIV element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._autoPositioned">_autoPositioned</a></code><br/>
+Flag indicating whether separator is to be automatically positioned.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._overlay">_overlay</a></code><br/>
+Overlay DIV which covers other elements (such as IFRAMEs) when dragging which may otherwise suppress events.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._redisplayRequired">_redisplayRequired</a></code><br/>
+Flag indicating whether the renderDisplay() method must be invoked on this peer 
+(and descendant component peers).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._requested">_requested</a></code><br/>
+The user's desired position of the separator.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._rendered">_rendered</a></code><br/>
+Current rendered separator position.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processSeparatorMouseMoveRef">_processSeparatorMouseMoveRef</a></code><br/>
+Method reference to this.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processSeparatorMouseUpRef">_processSeparatorMouseUpRef</a></code><br/>
+Method reference to this.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._initialAutoSizeComplete">_initialAutoSizeComplete</a></code><br/>
+Flag indicating whether initial automatic sizing operation (which occurs on first invocation of 
+<code>renderDisplay()</code> after <code>renderAdd()</code>) has been completed.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._size">_size</a></code><br/>
+The rendered size of the SplitPane outer DIV.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyDown">clientKeyDown()</a></code><br/>
+Processes a key press event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getBoundedSeparatorPosition">_getBoundedSeparatorPosition(position)</a></code><br/>
+Converts a desired separator position into a render-able separator position that
+complies with the SplitPane's separator bounds (miniumSize and maximumSize of child
+component layout data).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getInsetsSizeAdjustment">_getInsetsSizeAdjustment(layoutData)</a></code><br/>
+Determines the number of pixels of inset margin specified in a layout data object.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getPreferredSize">getPreferredSize()</a></code><br/>
+Calculates the preferred rendered size of the SplitPane by measuring the sizes of its content and/or
+invoking getPreferredSize() on its content (if supported).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getSize">_getSize()</a></code><br/>
+Retrieves the (potentially cached) dimensions of the SplitPane outer DIV.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._hasRelocatedChildren">_hasRelocatedChildren(update)</a></code><br/>
+Determines if the specified update has caused either child of the SplitPane to
+be relocated (i.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._loadRenderData">_loadRenderData()</a></code><br/>
+Retrieves properties from Echo.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._overlayAdd">_overlayAdd()</a></code><br/>
+Adds an overlay DIV at maximum z-index to cover any objects that will not provide move mouseup freedback.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._overlayRemove">_overlayRemove()</a></code><br/>
+Removes the overlay DIV.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSeparatorMouseDown">_processSeparatorMouseDown()</a></code><br/>
+Processes a mouse down event on a SplitPane separator that is about to be dragged.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSeparatorMouseMove">_processSeparatorMouseMove()</a></code><br/>
+Processes a mouse move event on a SplitPane separator that is being dragged.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSeparatorMouseUp">_processSeparatorMouseUp()</a></code><br/>
+Processes a mouse up event on a SplitPane separator that was being dragged.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSeparatorRolloverEnter">_processSeparatorRolloverEnter()</a></code><br/>
+Processes a mouse rollover enter event on the SplitPane separator.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSeparatorRolloverExit">_processSeparatorRolloverExit()</a></code><br/>
+Processes a mouse rollover exit event on the SplitPane separator.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._redraw">_redraw(position)</a></code><br/>
+Updates the variable CSS attributes of the SplitPane.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._removeSeparatorListeners">_removeSeparatorListeners()</a></code><br/>
+Removes listeners from the separator used to monitor its state while it is being dragging.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+Adds basic structure of SplitPane to DOM, but much work is delayed for initial invocation
+of renderDisplay().
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderAddChild">_renderAddChild(update, child, index)</a></code><br/>
+Renders the addition of a child.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderRemoveChild">_renderRemoveChild(update, child)</a></code><br/>
+Renders the removal a single child component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Render.ComponentSync()</span>
+
+<dl>
+<dd>Constructor.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.clientKeyDown"></a>
+<span class="DetailPropertyName">clientKeyDown</span>
+
+<dl>
+<dd>Processes a key press event.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getBoundedSeparatorPosition"></a>
+<span class="DetailPropertyName">_getBoundedSeparatorPosition</span>
+
+<dl>
+<dd>Converts a desired separator position into a render-able separator position that
+complies with the SplitPane's separator bounds (miniumSize and maximumSize of child
+component layout data).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>position</code> 
+<em>(Number)</em>
+- requested separator position</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the bounded separator position
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getInsetsSizeAdjustment"></a>
+<span class="DetailPropertyName">_getInsetsSizeAdjustment</span>
+
+<dl>
+<dd>Determines the number of pixels of inset margin specified in a layout data object.
+Horizontal or vertical pixels will be analyzed based on the SplitPane's orientation.
+The result of this method can be subtracted from the desired height or width of a pane
+to determine the appropriate value to set for a CSS width/height attribute.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>layoutData</code> 
+<em>(Object)</em>
+- a component layout data object</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the number of inset pixels
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getPreferredSize"></a>
+<span class="DetailPropertyName">getPreferredSize</span>
+
+<dl>
+<dd>Calculates the preferred rendered size of the SplitPane by measuring the sizes of its content and/or
+invoking getPreferredSize() on its content (if supported).
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._getSize"></a>
+<span class="DetailPropertyName">_getSize</span>
+
+<dl>
+<dd>Retrieves the (potentially cached) dimensions of the SplitPane outer DIV.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Core.Web.Measure.Bounds">Core.Web.Measure.Bounds</a>)</em>
+
+the dimensions
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._hasRelocatedChildren"></a>
+<span class="DetailPropertyName">_hasRelocatedChildren</span>
+
+<dl>
+<dd>Determines if the specified update has caused either child of the SplitPane to
+be relocated (i.e., a child which existed before continues to exist, but at a
+different index).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the component update</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if a child has been relocated
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._loadRenderData"></a>
+<span class="DetailPropertyName">_loadRenderData</span>
+
+<dl>
+<dd>Retrieves properties from Echo.SplitPane component instances and
+stores them in local variables in a format more convenient for processing
+by this synchronization peer.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._overlayAdd"></a>
+<span class="DetailPropertyName">_overlayAdd</span>
+
+<dl>
+<dd>Adds an overlay DIV at maximum z-index to cover any objects that will not provide move mouseup freedback.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._overlayRemove"></a>
+<span class="DetailPropertyName">_overlayRemove</span>
+
+<dl>
+<dd>Removes the overlay DIV.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSeparatorMouseDown"></a>
+<span class="DetailPropertyName">_processSeparatorMouseDown</span>
+
+<dl>
+<dd>Processes a mouse down event on a SplitPane separator that is about to be dragged.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSeparatorMouseMove"></a>
+<span class="DetailPropertyName">_processSeparatorMouseMove</span>
+
+<dl>
+<dd>Processes a mouse move event on a SplitPane separator that is being dragged.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSeparatorMouseUp"></a>
+<span class="DetailPropertyName">_processSeparatorMouseUp</span>
+
+<dl>
+<dd>Processes a mouse up event on a SplitPane separator that was being dragged.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSeparatorRolloverEnter"></a>
+<span class="DetailPropertyName">_processSeparatorRolloverEnter</span>
+
+<dl>
+<dd>Processes a mouse rollover enter event on the SplitPane separator.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSeparatorRolloverExit"></a>
+<span class="DetailPropertyName">_processSeparatorRolloverExit</span>
+
+<dl>
+<dd>Processes a mouse rollover exit event on the SplitPane separator.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._redraw"></a>
+<span class="DetailPropertyName">_redraw</span>
+
+<dl>
+<dd>Updates the variable CSS attributes of the SplitPane.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>position</code> 
+<em>(Number)</em>
+- the pixel position of the separator</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._removeSeparatorListeners"></a>
+<span class="DetailPropertyName">_removeSeparatorListeners</span>
+
+<dl>
+<dd>Removes listeners from the separator used to monitor its state while it is being dragging.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>Adds basic structure of SplitPane to DOM, but much work is delayed for initial invocation
+of renderDisplay().
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderAddChild"></a>
+<span class="DetailPropertyName">_renderAddChild</span>
+
+<dl>
+<dd>Renders the addition of a child.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the update</dd>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the added child</dd>
+<dd>
+<code>index</code> 
+<em>(Number)</em>
+- the index of the child within the SplitPane</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderRemoveChild"></a>
+<span class="DetailPropertyName">_renderRemoveChild</span>
+
+<dl>
+<dd>Renders the removal a single child component.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the update</dd>
+<dd>
+<code>child</code> 
+<em>(<a href="Class.Echo.Component">Echo.Component</a>)</em>
+- the removed child</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

@@ -1,0 +1,373 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.html" title="class in nextapp.echo.webcontainer"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/webcontainer/AbstractConnection.html" title="class in nextapp.echo.webcontainer"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html" target="_top">Frames</a></li>
+<li><a href="AbstractComponentSynchronizePeer.EventPeer.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.webcontainer</div>
+<h2 title="Class AbstractComponentSynchronizePeer.EventPeer" class="title">Class AbstractComponentSynchronizePeer.EventPeer</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>nextapp.echo.webcontainer.AbstractComponentSynchronizePeer.EventPeer</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.html" title="class in nextapp.echo.webcontainer">AbstractComponentSynchronizePeer</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">AbstractComponentSynchronizePeer.EventPeer</span>
+extends java.lang.Object</pre>
+<div class="block">Peer for synchronizing events between client and server.
+ This is a convenience object that is used with the
+ <code>addEvent()</code> method of the <code>AbstractComponentSynchronizePeer</code>
+ object.
+ 
+ This object will often be derived with overriding implementations of the
+ <code>hasListeners()</code> method to return true in cases where the supported
+ server-side <code>Component</code> has registered listeners of the appropriate type,
+ such that only events that actually will result in code being executed will cause
+ immediate server interactions.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#AbstractComponentSynchronizePeer.EventPeer()">AbstractComponentSynchronizePeer.EventPeer</a></strong>()</code>
+<div class="block">Default constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#AbstractComponentSynchronizePeer.EventPeer(java.lang.String, java.lang.String)">AbstractComponentSynchronizePeer.EventPeer</a></strong>(java.lang.String&nbsp;eventType,
+                                          java.lang.String&nbsp;listenerPropertyName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#AbstractComponentSynchronizePeer.EventPeer(java.lang.String, java.lang.String, java.lang.Class)">AbstractComponentSynchronizePeer.EventPeer</a></strong>(java.lang.String&nbsp;eventType,
+                                          java.lang.String&nbsp;listenerPropertyName,
+                                          java.lang.Class&nbsp;eventDataClass)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Class</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#getEventDataClass()">getEventDataClass</a></strong>()</code>
+<div class="block">Returns the <code>Class</code> type of the event data that will be received from the client (used to
+ determine serialization peer to use for processing)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#getEventType()">getEventType</a></strong>()</code>
+<div class="block">Returns the client-side event type name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#getListenerPropertyName()">getListenerPropertyName</a></strong>()</code>
+<div class="block">Returns the name of the event property in the <code>Component</code>, i.e., the property name of the
+ <code>PropertyChangeEvent</code> fired when listeners are added/removed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#hasListeners(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">hasListeners</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+            <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</code>
+<div class="block">Determines if the <code>Component</code> has any listeners of this type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html#processEvent(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.Object)">processEvent</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+            <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+            java.lang.Object&nbsp;eventData)</code>
+<div class="block">Processes an event received from the client-side component.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="AbstractComponentSynchronizePeer.EventPeer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AbstractComponentSynchronizePeer.EventPeer</h4>
+<pre>public&nbsp;AbstractComponentSynchronizePeer.EventPeer()</pre>
+<div class="block">Default constructor.</div>
+</li>
+</ul>
+<a name="AbstractComponentSynchronizePeer.EventPeer(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AbstractComponentSynchronizePeer.EventPeer</h4>
+<pre>public&nbsp;AbstractComponentSynchronizePeer.EventPeer(java.lang.String&nbsp;eventType,
+                                          java.lang.String&nbsp;listenerPropertyName)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>eventType</code> - the name of the event, as serialized to the client</dd><dd><code>listenerPropertyName</code> - the name of the event property in the <code>Component</code>, i.e., the property name of the
+        <code>PropertyChangeEvent</code> fired when listeners are added/removed</dd></dl>
+</li>
+</ul>
+<a name="AbstractComponentSynchronizePeer.EventPeer(java.lang.String, java.lang.String, java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AbstractComponentSynchronizePeer.EventPeer</h4>
+<pre>public&nbsp;AbstractComponentSynchronizePeer.EventPeer(java.lang.String&nbsp;eventType,
+                                          java.lang.String&nbsp;listenerPropertyName,
+                                          java.lang.Class&nbsp;eventDataClass)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>eventType</code> - the name of the event, as serialized to the client</dd><dd><code>listenerPropertyName</code> - the name of the event property in the <code>Component</code>, i.e., the property name of the
+        <code>PropertyChangeEvent</code> fired when listeners are added/removed</dd><dd><code>eventDataClass</code> - the <code>Class</code> type of the event data that will be received from the client (used to
+        determine serialization peer to use for processing)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getEventType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEventType</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getEventType()</pre>
+<div class="block">Returns the client-side event type name.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the client-side event type name</dd></dl>
+</li>
+</ul>
+<a name="getListenerPropertyName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getListenerPropertyName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getListenerPropertyName()</pre>
+<div class="block">Returns the name of the event property in the <code>Component</code>, i.e., the property name of the
+ <code>PropertyChangeEvent</code> fired when listeners are added/removed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the name of the event property</dd></dl>
+</li>
+</ul>
+<a name="getEventDataClass()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEventDataClass</h4>
+<pre>public&nbsp;java.lang.Class&nbsp;getEventDataClass()</pre>
+<div class="block">Returns the <code>Class</code> type of the event data that will be received from the client (used to
+ determine serialization peer to use for processing)</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the event data <code>Class</code></dd></dl>
+</li>
+</ul>
+<a name="hasListeners(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasListeners</h4>
+<pre>public&nbsp;boolean&nbsp;hasListeners(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                   <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;c)</pre>
+<div class="block">Determines if the <code>Component</code> has any listeners of this type.
+ Default implementation simply returns true, should be overridden by derived implementations
+ when possible to return false when no listeners of the this type exist.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code></dd><dd><code>c</code> - the <code>Component</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the <code>Component</code> has registered listeners of this type</dd></dl>
+</li>
+</ul>
+<a name="processEvent(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>processEvent</h4>
+<pre>public&nbsp;void&nbsp;processEvent(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                java.lang.Object&nbsp;eventData)</pre>
+<div class="block">Processes an event received from the client-side component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant contextual information</dd><dd><code>component</code> - the server-side <code>Component</code></dd><dd><code>eventData</code> - the serialized event data from the client (will be of type specified by
+        <code>getEventDataClass()</code>)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.html" title="class in nextapp.echo.webcontainer"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/webcontainer/AbstractConnection.html" title="class in nextapp.echo.webcontainer"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.EventPeer.html" target="_top">Frames</a></li>
+<li><a href="AbstractComponentSynchronizePeer.EventPeer.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

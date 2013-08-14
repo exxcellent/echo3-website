@@ -1,0 +1,265 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync
+  </li>
+    <li class="active">
+    FillImage
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Sync.FillImage">Echo.Sync.FillImage</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Provides tools for rendering fill image (background image) properties.</p></p>
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.FLAG_ENABLE_IE_PNG_ALPHA_FILTER">FLAG_ENABLE_IE_PNG_ALPHA_FILTER</a></code><br/>
+Flag indicating that the Internet Explorer 6-specific PNG alpha filter should be used to render PNG alpha (transparency).
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getPosition">getPosition(fillImage)</a></code><br/>
+Determines the background-position CSS attribute of a FillImage.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getRepeat">getRepeat(fillImage)</a></code><br/>
+Determines the background-repeat CSS attribute of a FillImage.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getUrl">getUrl(fillImage)</a></code><br/>
+Returns the URL of a FillImage.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.render">render(fillImage, element, flags)</a></code><br/>
+Renders a FillImage to an element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderClear">renderClear(fillImage, element, flags)</a></code><br/>
+Renders a FillImage to an element, clearing any existing value.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.getPosition"></a>
+<span class="DetailPropertyName">getPosition</span>
+
+<dl>
+<dd>Determines the background-position CSS attribute of a FillImage.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>fillImage</code> 
+<em>(#FillImage)</em>
+- the FillImage</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the appropriate CSS background-position attribute, or null if it is not specified
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getRepeat"></a>
+<span class="DetailPropertyName">getRepeat</span>
+
+<dl>
+<dd>Determines the background-repeat CSS attribute of a FillImage.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>fillImage</code> 
+<em>(#FillImage)</em>
+- the FillImage</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the appropriate CSS background-repeat attribute, or null if it is not specified/invalid
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getUrl"></a>
+<span class="DetailPropertyName">getUrl</span>
+
+<dl>
+<dd>Returns the URL of a FillImage.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>fillImage</code> 
+<em>(#FillImage)</em>
+- the FillImage</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(String)</em>
+
+the URL
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.render"></a>
+<span class="DetailPropertyName">render</span>
+
+<dl>
+<dd>Renders a FillImage to an element.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>fillImage</code> 
+<em>(#FillImage)</em>
+- the FillImage (may be null)</dd>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the target element</dd>
+<dd>
+<code>flags</code> 
+<em>(Number)</em>
+- (optional) the rendering flags, one or more of the following values:
+       <ul>
+        <li><code>FLAG_ENABLE_IE_PNG_ALPHA_FILTER</code></li>
+       <ul></dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderClear"></a>
+<span class="DetailPropertyName">renderClear</span>
+
+<dl>
+<dd>Renders a FillImage to an element, clearing any existing value.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>fillImage</code> 
+<em>(#FillImage)</em>
+- the FillImage (may be null)</dd>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the target element</dd>
+<dd>
+<code>flags</code> 
+<em>(Number)</em>
+- (optional) the rendering flags, one or more of the following values:
+       <ul>
+        <li><code>FLAG_ENABLE_IE_PNG_ALPHA_FILTER</code></li>
+       <ul></dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

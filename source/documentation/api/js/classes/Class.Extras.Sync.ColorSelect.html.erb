@@ -1,0 +1,636 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync
+  </li>
+    <li class="active">
+    ColorSelect
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.ColorSelect">Extras.Sync.ColorSelect</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Component rendering peer: ColorSelect. This class should not be extended by developers, the implementation is subject to change.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.ColorSelect.RGB">Extras.Sync.ColorSelect.RGB</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.ColorSelect()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._h">_h</a></code><br/>
+Currently selected color hue.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._s">_s</a></code><br/>
+Currently selected color saturation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._v">_v</a></code><br/>
+Currently selected color value.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processHMouseMoveRef">_processHMouseMoveRef</a></code><br/>
+Method reference to _processHMouseMove.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processHMouseUpRef">_processHMouseUpRef</a></code><br/>
+Method reference to _processHMouseUp.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processSVMouseMoveRef">_processSVMouseMoveRef</a></code><br/>
+Method reference to _processSVMouseMove.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processSVMouseUpRef">_processSVMouseUpRef</a></code><br/>
+Method reference to _processSVMouseUp.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._cursorBorderLight">_cursorBorderLight</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._cursorBorderDark">_cursorBorderDark</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._cursorBorderShadow">_cursorBorderShadow</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._lineOpacity">_lineOpacity</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._shadowOpacity">_shadowOpacity</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._svXOffset">_svXOffset</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._svYOffset">_svYOffset</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._barRadius">_barRadius</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._boxRadius">_boxRadius</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processHMouseDown">_processHMouseDown(e)</a></code><br/>
+Processes a hue selector mouse down event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processHMouseMove">_processHMouseMove(e)</a></code><br/>
+Processes a hue selector mouse move event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processHMouseUp">_processHMouseUp(e)</a></code><br/>
+Processes a hue selector mouse up event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processHUpdate">_processHUpdate(e)</a></code><br/>
+Processes a mouse event which will update the selected hue (invoked by mouse/down move events).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSVMouseDown">_processSVMouseDown(e)</a></code><br/>
+Processes a saturation-value selector mouse down event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSVMouseMove">_processSVMouseMove(e)</a></code><br/>
+Processes a saturation-value selector mouse move event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSVMouseUp">_processSVMouseUp(e)</a></code><br/>
+Processes a saturation-value selector mouse up event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processSVUpdate">_processSVUpdate(e)</a></code><br/>
+Processes a mouse event which will update the selected saturation/value (invoked by mouse/down move events).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createHCursor">_createHCursor()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createSVCursor">_createSVCursor()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._createSVCursorLine">_createSVCursorLine()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._setColor">_setColor(rgb)</a></code><br/>
+Sets the selected color.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._storeColor">_storeColor()</a></code><br/>
+Stores color value in _h, _s, and _v in the component object.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._updateDisplayedColor">_updateDisplayedColor()</a></code><br/>
+Updates the displayed color.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Render.ComponentSync()</span>
+
+<dl>
+<dd>
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._processHMouseDown"></a>
+<span class="DetailPropertyName">_processHMouseDown</span>
+
+<dl>
+<dd>Processes a hue selector mouse down event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processHMouseMove"></a>
+<span class="DetailPropertyName">_processHMouseMove</span>
+
+<dl>
+<dd>Processes a hue selector mouse move event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processHMouseUp"></a>
+<span class="DetailPropertyName">_processHMouseUp</span>
+
+<dl>
+<dd>Processes a hue selector mouse up event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processHUpdate"></a>
+<span class="DetailPropertyName">_processHUpdate</span>
+
+<dl>
+<dd>Processes a mouse event which will update the selected hue (invoked by mouse/down move events).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSVMouseDown"></a>
+<span class="DetailPropertyName">_processSVMouseDown</span>
+
+<dl>
+<dd>Processes a saturation-value selector mouse down event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSVMouseMove"></a>
+<span class="DetailPropertyName">_processSVMouseMove</span>
+
+<dl>
+<dd>Processes a saturation-value selector mouse move event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSVMouseUp"></a>
+<span class="DetailPropertyName">_processSVMouseUp</span>
+
+<dl>
+<dd>Processes a saturation-value selector mouse up event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processSVUpdate"></a>
+<span class="DetailPropertyName">_processSVUpdate</span>
+
+<dl>
+<dd>Processes a mouse event which will update the selected saturation/value (invoked by mouse/down move events).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._createHCursor"></a>
+<span class="DetailPropertyName">_createHCursor</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._createSVCursor"></a>
+<span class="DetailPropertyName">_createSVCursor</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._createSVCursorLine"></a>
+<span class="DetailPropertyName">_createSVCursorLine</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._setColor"></a>
+<span class="DetailPropertyName">_setColor</span>
+
+<dl>
+<dd>Sets the selected color.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>rgb</code> 
+- the color to select as an 24 bit hexadecimal string color value</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._storeColor"></a>
+<span class="DetailPropertyName">_storeColor</span>
+
+<dl>
+<dd>Stores color value in _h, _s, and _v in the component object.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._updateDisplayedColor"></a>
+<span class="DetailPropertyName">_updateDisplayedColor</span>
+
+<dl>
+<dd>Updates the displayed color.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

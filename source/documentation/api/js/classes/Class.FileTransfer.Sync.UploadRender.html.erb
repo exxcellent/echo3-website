@@ -1,0 +1,192 @@
+
+<ul class="breadcrumb">
+    <li>
+    FileTransfer.Sync
+  </li>
+    <li class="active">
+    UploadRender
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.FileTransfer.Sync.UploadRender">FileTransfer.Sync.UploadRender</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.FileTransfer.Sync.DefaultUploadRender">FileTransfer.Sync.DefaultUploadRender</a></code>, <code><a href="Class.FileTransfer.Sync.MultipleUploadSelect.SWFUploadRender">FileTransfer.Sync.MultipleUploadSelect.SWFUploadRender</a></code></dd>
+</dl>
+
+
+
+<p><p>Abstract base class for "UploadRender" objects. Contains methods for managing the lifecycle of a rendered upload component. <code>add()</code>, <code>dispose()</code>, and <code>display()</code> methods are invoked by corresponding <code>renderAdd()</code>, <code>renderDispose()</code>, <code>renderDisplay()</code>, methods of <code>FileTransfer.Sync.AbstractUploadSelect</code>. Additional <code>send()</code> and <code>cancel()</code> methods are used to control the upload process. "UploadRender" objects allow a particular upload component to use an alternate renderer if necessary, e.g., a Flash-based MultipleUploadSelect can use the default renderer if the Flash plugin is not available.</p></p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.peer">peer</a></code><br/>
+Synchronization peer for file upload component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.disposed">disposed</a></code><br/>
+Flag indicating whether the object has been disposed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.display">display</a></code><br/>
+Invoked by peer when its <code>renderDisplay</code> method is invoked.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.add">add()</a></code><br/>
+Invoked to inform the renderer to add the component to the DOM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.cancel">cancel()</a></code><br/>
+Invoked to inform the renderer that it should cancel the in-progress transfer.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.dispose">dispose()</a></code><br/>
+Invoked to inform the renderer that it is being disposed, and should release any
+resources in use.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.send">send()</a></code><br/>
+Invoked to inform the renderer that is should begin sending the file.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.add"></a>
+<span class="DetailPropertyName">add</span>
+
+<dl>
+<dd>Invoked to inform the renderer to add the component to the DOM.
+The compnoent should be rendered inside the peer's main DIV, obtainiable via <code>this.peer.div</code>.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.cancel"></a>
+<span class="DetailPropertyName">cancel</span>
+
+<dl>
+<dd>Invoked to inform the renderer that it should cancel the in-progress transfer.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.dispose"></a>
+<span class="DetailPropertyName">dispose</span>
+
+<dl>
+<dd>Invoked to inform the renderer that it is being disposed, and should release any
+resources in use.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.send"></a>
+<span class="DetailPropertyName">send</span>
+
+<dl>
+<dd>Invoked to inform the renderer that is should begin sending the file.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

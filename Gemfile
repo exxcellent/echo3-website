@@ -5,6 +5,10 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.1.4"
 
 gem 'redcarpet' 
+gem 'middleman-blog'
+gem 'tzinfo'
+gem 'nokogiri'
+gem "builder"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

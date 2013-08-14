@@ -1,0 +1,675 @@
+
+<ul class="breadcrumb">
+    <li>
+    Core.Web
+  </li>
+    <li class="active">
+    DOM
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Core.Web.DOM">Core.Web.DOM</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>DOM manipulation utility method namespace.</p></p>
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._focusPendingElement">_focusPendingElement</a></code><br/>
+Temporary storage for the element about to be focused (for clients that require 'delayed' focusing).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._focusRunnable">_focusRunnable</a></code><br/>
+Runnable to invoke focus implementation (lazily created).
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addEventListener">addEventListener(eventSource, eventType, eventListener, useCapture)</a></code><br/>
+Adds an event listener to an object, using the client's supported event 
+model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.createDocument">createDocument(namespaceUri, qualifiedName)</a></code><br/>
+Creates a new XML DOM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.focusElement">focusElement(element)</a></code><br/>
+Focuses the given DOM element.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getChildElementByTagName">getChildElementByTagName(parentElement, tagName)</a></code><br/>
+Returns the first immediate child element of parentElement with the specified tag name.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getChildElementsByTagName">getChildElementsByTagName(parentElement, tagName)</a></code><br/>
+Returns an array containing all immediate child element of parentElement with the specified tag name.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getEventOffset">getEventOffset(e)</a></code><br/>
+Returns x/y coordinates of mouse relative to the element which fired an event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getEventTarget">getEventTarget(e)</a></code><br/>
+Returns the target of an event, using the client's supported event model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getEventRelatedTarget">getEventRelatedTarget(e)</a></code><br/>
+Returns the related target of an event, using the client's supported event model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isAncestorOf">isAncestorOf(ancestorNode, descendantNode)</a></code><br/>
+Determines if <code>ancestorNode</code> is or is an ancestor of
+<code>descendantNode</code>.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isDisplayed">isDisplayed(node)</a></code><br/>
+Determines if the given node is theoretically dispalyed within the document.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.preventEventDefault">preventEventDefault(e)</a></code><br/>
+Prevents the default action of an event from occurring, using the
+client's supported event model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeAllChildren">removeAllChildren(node)</a></code><br/>
+Removes all child nodes from the specified DOM node.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeEventListener">removeEventListener(eventSource, eventType, eventListener, useCapture)</a></code><br/>
+Removes an event listener from an object, using the client's supported event 
+model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeNode">removeNode(node)</a></code><br/>
+Removes the specified DOM node from the DOM tree.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._removeNodeRecursive">_removeNodeRecursive(node)</a></code><br/>
+Removes the specified DOM node from the DOM tree in a recursive manner, i.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.stopEventPropagation">stopEventPropagation(e)</a></code><br/>
+Stops an event from propagating ("bubbling") to parent nodes in the DOM, 
+using the client's supported event model.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+<div class="Header">Class Method Detail</div>
+
+<a name="Method.addEventListener"></a>
+<span class="DetailPropertyName">addEventListener</span>
+
+<dl>
+<dd>Adds an event listener to an object, using the client's supported event 
+model.  This method does NOT support method references.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>eventSource</code> 
+<em>(Element)</em>
+- the event source</dd>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the type of event (the 'on' prefix should NOT be included
+       in the event type, i.e., for mouse rollover events, "mouseover" would
+       be specified instead of "onmouseover")</dd>
+<dd>
+<code>eventListener</code> 
+<em>(Function)</em>
+- the event listener to be invoked when the event occurs</dd>
+<dd>
+<code>useCapture</code> 
+<em>(Boolean)</em>
+- a flag indicating whether the event listener should capture
+       events in the final phase of propagation (only supported by 
+       DOM Level 2 event model, not available on Internet Explorer)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.createDocument"></a>
+<span class="DetailPropertyName">createDocument</span>
+
+<dl>
+<dd>Creates a new XML DOM.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>namespaceUri</code> 
+<em>(String)</em>
+- the unique URI of the namespace of the root element in 
+       the created document (not supported for
+       Internet Explorer 6 clients, null may be specified for all clients)</dd>
+<dd>
+<code>qualifiedName</code> 
+<em>(String)</em>
+- the name of the root element of the new document (this
+       element will be created automatically)</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Document)</em>
+
+the created DOM
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.focusElement"></a>
+<span class="DetailPropertyName">focusElement</span>
+
+<dl>
+<dd>Focuses the given DOM element.
+The focus operation may be placed in the scheduler if the browser requires the focus
+operation to be performed outside of current JavaScript context (i.e., in the case
+where the element to be focused was just rendered in this context).
+Passing a null element argument will cancel any scheduler runnable attempting to 
+set the focus.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>element</code> 
+<em>(Element)</em>
+- the DOM element to focus</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getChildElementByTagName"></a>
+<span class="DetailPropertyName">getChildElementByTagName</span>
+
+<dl>
+<dd>Returns the first immediate child element of parentElement with the specified tag name.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parentElement</code> 
+<em>(Element)</em>
+- the parent element</dd>
+<dd>
+<code>tagName</code> 
+- the tag name</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Element)</em>
+
+the first child element of parentElement with the specified tag name,
+        or null if no elements match
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getChildElementsByTagName"></a>
+<span class="DetailPropertyName">getChildElementsByTagName</span>
+
+<dl>
+<dd>Returns an array containing all immediate child element of parentElement with the specified tag name.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parentElement</code> 
+<em>(Element)</em>
+- the parent element</dd>
+<dd>
+<code>tagName</code> 
+- the tag name</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Array)</em>
+
+the child elements
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getEventOffset"></a>
+<span class="DetailPropertyName">getEventOffset</span>
+
+<dl>
+<dd>Returns x/y coordinates of mouse relative to the element which fired an event.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+<em>(Event)</em>
+- the event</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+object containing 'x' and 'y' properties specifying the numeric pixel
+        coordinates of the mouse relative to the element, with {x: 0, y: 0}
+        indicating its upper-left corner
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getEventTarget"></a>
+<span class="DetailPropertyName">getEventTarget</span>
+
+<dl>
+<dd>Returns the target of an event, using the client's supported event model.
+On clients which support the W3C DOM Level 2 event specification,
+the <code>target</code> property of the event is returned.
+On clients which support only the Internet Explorer event model,
+the <code>srcElement</code> property of the event is returned.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+<em>(Event)</em>
+- the event</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Element)</em>
+
+the target
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getEventRelatedTarget"></a>
+<span class="DetailPropertyName">getEventRelatedTarget</span>
+
+<dl>
+<dd>Returns the related target of an event, using the client's supported event model.
+On clients which support the W3C DOM Level 2 event specification,
+the <code>relatedTarget</code> property of the event is returned.
+On clients which support only the Internet Explorer event model,
+the <code>toElement</code> property of the event is returned.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+<em>(Event)</em>
+- the event</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Element)</em>
+
+the target
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isAncestorOf"></a>
+<span class="DetailPropertyName">isAncestorOf</span>
+
+<dl>
+<dd>Determines if <code>ancestorNode</code> is or is an ancestor of
+<code>descendantNode</code>.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>ancestorNode</code> 
+<em>(Node)</em>
+- the potential ancestor node</dd>
+<dd>
+<code>descendantNode</code> 
+<em>(Node)</em>
+- the potential descendant node</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if <code>ancestorNode</code> is or is an ancestor of
+        <code>descendantNode</code>
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isDisplayed"></a>
+<span class="DetailPropertyName">isDisplayed</span>
+
+<dl>
+<dd>Determines if the given node is theoretically dispalyed within the document.
+The following conditions are verified:
+<ul>
+ <li><code>node</code> must be a descendant of <code>document.body</code></li>
+ <li><code>node</code>'s element ancestry must not contain a element whose CSS <code>visibility</code> state is 
+   <code>hidden</code></li>
+ <li><code>node</code>'s element ancestry must not contain a element whose CSS <code>display</code> state is 
+   <code>none</code></li>
+</ul>
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>node</code> 
+<em>(Node)</em>
+- to analyze</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+true if the node is displayed
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.preventEventDefault"></a>
+<span class="DetailPropertyName">preventEventDefault</span>
+
+<dl>
+<dd>Prevents the default action of an event from occurring, using the
+client's supported event model.
+On clients which support the W3C DOM Level 2 event specification,
+the preventDefault() method of the event is invoked.
+On clients which support only the Internet Explorer event model,
+the 'returnValue' property of the event is set to false.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+<em>(Event)</em>
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeAllChildren"></a>
+<span class="DetailPropertyName">removeAllChildren</span>
+
+<dl>
+<dd>Removes all child nodes from the specified DOM node.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>node</code> 
+<em>(Node)</em>
+- the parent node whose children should be deleted</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeEventListener"></a>
+<span class="DetailPropertyName">removeEventListener</span>
+
+<dl>
+<dd>Removes an event listener from an object, using the client's supported event 
+model.  This method does NOT support method references.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>eventSource</code> 
+<em>(Element)</em>
+- the event source</dd>
+<dd>
+<code>eventType</code> 
+<em>(String)</em>
+- the type of event (the 'on' prefix should NOT be included
+       in the event type, i.e., for mouse rollover events, "mouseover" would
+       be specified instead of "onmouseover")</dd>
+<dd>
+<code>eventListener</code> 
+<em>(Function)</em>
+- the event listener to be invoked when the event occurs</dd>
+<dd>
+<code>useCapture</code> 
+<em>(Boolean)</em>
+- a flag indicating whether the event listener should capture
+       events in the final phase of propagation (only supported by 
+       DOM Level 2 event model, not available on Internet Explorer)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeNode"></a>
+<span class="DetailPropertyName">removeNode</span>
+
+<dl>
+<dd>Removes the specified DOM node from the DOM tree. This method employs a workaround for the
+<code>QUIRK_PERFORMANCE_LARGE_DOM_REMOVE</code> quirk.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>node</code> 
+<em>(Node)</em>
+- the node which should be deleted</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._removeNodeRecursive"></a>
+<span class="DetailPropertyName">_removeNodeRecursive</span>
+
+<dl>
+<dd>Removes the specified DOM node from the DOM tree in a recursive manner, i.e. all descendants
+of the given node are removed individually. This alleviates slow performance when removing large
+DOM trees.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>node</code> 
+<em>(Node)</em>
+- the node which should be deleted</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.stopEventPropagation"></a>
+<span class="DetailPropertyName">stopEventPropagation</span>
+
+<dl>
+<dd>Stops an event from propagating ("bubbling") to parent nodes in the DOM, 
+using the client's supported event model.
+On clients which support the W3C DOM Level 2 event specification,
+the stopPropagation() method of the event is invoked.
+On clients which support only the Internet Explorer event model,
+the 'cancelBubble' property of the event is set to true.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+<em>(Event)</em>
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+
+
+

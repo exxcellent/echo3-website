@@ -1,0 +1,645 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Render
+  </li>
+    <li class="active">
+    ComponentSync
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.Arc.ChildContainerPeer">Echo.Arc.ChildContainerPeer</a></code>, <code><a href="Class.Echo.Arc.ComponentSync">Echo.Arc.ComponentSync</a></code>, <code><a href="Class.Echo.Render.RootSync">Echo.Render.RootSync</a></code>, <code><a href="Class.Echo.Sync.ArrayContainer">Echo.Sync.ArrayContainer</a></code>, <code><a href="Class.Echo.Sync.Button">Echo.Sync.Button</a></code>, <code><a href="Class.Echo.Sync.ContentPane">Echo.Sync.ContentPane</a></code>, <code><a href="Class.Echo.Sync.Grid">Echo.Sync.Grid</a></code>, <code><a href="Class.Echo.Sync.Label">Echo.Sync.Label</a></code>, <code><a href="Class.Echo.Sync.SplitPane">Echo.Sync.SplitPane</a></code>, <code><a href="Class.Echo.Sync.TextComponent">Echo.Sync.TextComponent</a></code>, <code><a href="Class.Echo.Sync.WindowPane">Echo.Sync.WindowPane</a></code>, <code><a href="Class.Extras.Sync.AccordionPane">Extras.Sync.AccordionPane</a></code>, <code><a href="Class.Extras.Sync.BorderPane">Extras.Sync.BorderPane</a></code>, <code><a href="Class.Extras.Sync.CalendarSelect">Extras.Sync.CalendarSelect</a></code>, <code><a href="Class.Extras.Sync.ColorSelect">Extras.Sync.ColorSelect</a></code>, <code><a href="Class.Extras.Sync.Group">Extras.Sync.Group</a></code>, <code><a href="Class.Extras.Sync.Menu">Extras.Sync.Menu</a></code>, <code><a href="Class.Extras.Sync.RichTextArea.OverlayPanePeer">Extras.Sync.RichTextArea.OverlayPanePeer</a></code>, <code><a href="Class.Extras.Sync.RichTextArea.TableSizeSelectorPeer">Extras.Sync.RichTextArea.TableSizeSelectorPeer</a></code>, <code><a href="Class.Extras.Sync.RichTextArea.ToolbarButtonPeer">Extras.Sync.RichTextArea.ToolbarButtonPeer</a></code>, <code><a href="Class.Extras.Sync.TabPane">Extras.Sync.TabPane</a></code>, <code><a href="Class.Extras.Sync.ToolTipContainer">Extras.Sync.ToolTipContainer</a></code>, <code><a href="Class.Extras.Sync.TransitionPane">Extras.Sync.TransitionPane</a></code>, <code><a href="Class.FileTransfer.Sync.AbstractUploadSelect">FileTransfer.Sync.AbstractUploadSelect</a></code></dd>
+</dl>
+
+
+
+<p><p>Component synchronization peer.</p></p>
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Echo.Render.ComponentSync()</a></code><br/>
+Creates a new component synchronization peer.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Class Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.FOCUS_PERMIT_ARROW_UP">FOCUS_PERMIT_ARROW_UP</a></code><br/>
+Focus flag indicating up arrow keypress events should be handled by focus manager when
+the component is focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.FOCUS_PERMIT_ARROW_DOWN">FOCUS_PERMIT_ARROW_DOWN</a></code><br/>
+Focus flag indicating down arrow keypress events should be handled by focus manager when
+the component is focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.FOCUS_PERMIT_ARROW_LEFT">FOCUS_PERMIT_ARROW_LEFT</a></code><br/>
+Focus flag indicating left arrow keypress events should be handled by focus manager when
+the component is focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.FOCUS_PERMIT_ARROW_RIGHT">FOCUS_PERMIT_ARROW_RIGHT</a></code><br/>
+Focus flag indicating right arrow keypress events should be handled by focus manager when
+the component is focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.FOCUS_PERMIT_ARROW_ALL">FOCUS_PERMIT_ARROW_ALL</a></code><br/>
+Focus flag indicating all arrow keypress events should be handled by focus manager when
+the component is focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.SIZE_HEIGHT">SIZE_HEIGHT</a></code><br/>
+Dimension value for <code>getPreferredSize()</code> indicating height should be calculated.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.SIZE_WIDTH">SIZE_WIDTH</a></code><br/>
+Dimension value for <code>getPreferredSize()</code> indicating width should be calculated.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._peerId">_peerId</a></code><br/>
+Unique peer identifier, for internal use only.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.client">client</a></code><br/>
+The client supported by this peer.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.component">component</a></code><br/>
+The component instance supported by this peer.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.displayed">displayed</a></code><br/>
+Flag indicating whether component is displayed or hidden.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.disposed">disposed</a></code><br/>
+Flag indicating that the component has been disposed, i.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd(update, parentElement)</a></code><br/>
+Renders the component to the DOM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose(update)</a></code><br/>
+Invoked when the rendered component is about to be removed from the DOM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate(update)</a></code><br/>
+Renders an update to a component, e.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyDown">clientKeyDown(e)</a></code><br/>
+(Optional) Processes a key down event received by the client's key listeners.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyPress">clientKeyPress(e)</a></code><br/>
+(Optional) Processes a key press event received by the client's key listeners.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyUp">clientKeyUp(e)</a></code><br/>
+(Optional) Processes a key up event received by the client's key listeners.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getFocusFlags">getFocusFlags()</a></code><br/>
+Returns the focus flags for the component, one or more of the following values, ORed together.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getPreferredSize">getPreferredSize(dimension)</a></code><br/>
+(Optional) Returns the preferred rendered size of the component in pixels.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isChildVisible">isChildVisible(component)</a></code><br/>
+(Optional) Determines if the specified child component is currently displayed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderFocus">renderFocus()</a></code><br/>
+(Optional) Invoked when component is rendered focused.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderHide">renderHide()</a></code><br/>
+(Optional) Invoked when a parent/ancestor component is hiding the content of this component, possibly removing it from
+the DOM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+(Optional) Invoked when the component has been added (or-readded) to the hierarchy and first appears
+on screen, and when ancestors of the component (or the containing window) have
+resized.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Render.ComponentSync()</span>
+
+<dl>
+<dd>Creates a new component synchronization peer.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>Renders the component to the DOM.
+The supplied update will refer to a ancestor component of the supported component
+being updated.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the update being rendered</dd>
+<dd>
+<code>parentElement</code> 
+<em>(Element)</em>
+- the parent DOM element to which the component should be rendered.</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>Invoked when the rendered component is about to be removed from the DOM.
+This method should dispose of any client resources in use by the component, e.g.,
+unregistering event listeners and removing any DOM elements that are not children of
+the parent component's DOM element.
+The DOM should NOT be modified to remove the element(s) representing this component
+for performance as well as aesthetic reasons (e.g., in the case where a parent component
+might be using an animated transition effect to remove the component.
+The supplied update will refer to a ancestor component of the supported component
+being updated.
+
+A component may be re-added to the screen after being disposed, e.g., in the case
+where a parent component does not possess a 'partial update' capability and removes
+a child component hierarchy and then re-renders it.  A synchronization peer should
+allow for the fact that its renderAdd() method may be invoked at some point in time
+after renderDispose() has been invoked.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the update being rendered</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>Renders an update to a component, e.g., children added/removed, properties updated.
+The supplied update will refer specifically to an update of the supported component.
+
+The provided update will contain a <code>renderContext</code> object property.
+The following properties of <code>renderContext</code> may be configured by the
+implementation, if desired:
+ 
+<ul>
+ <li><code>displayRequired</code>: an array of child component objects whose synchronization peers should have their
+ renderDisplay() methods invoked once the update cycle is complete.  The default value of null indicates the peers
+ of all descendant components and the updated component itself will have their renderDisplay() methods invoked.
+ Specifying an empty array will cause NO components to have their renderDisplay() methods invoked.
+ This property is generally used on container components (or application-rendered components) which may have property
+ updates that need not cause renderDisplay() to be invoked on their entire descendant tree for performance reasons.
+</ul>
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>update</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- the update being rendered</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if this invocation has re-rendered all child components, false otherwise
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyDown"></a>
+<span class="DetailPropertyName">clientKeyDown</span>
+
+<dl>
+<dd>(Optional) Processes a key down event received by the client's key listeners.  
+Invoked by client based on current focused component of application.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the key event, containing (processed) keyCode property</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if higher-level containers should be allowed to process the key event as well
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyPress"></a>
+<span class="DetailPropertyName">clientKeyPress</span>
+
+<dl>
+<dd>(Optional) Processes a key press event received by the client's key listeners.  
+Invoked by client based on current focused component of application.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the key event, containing (processed) charCode and keyCode properties</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if higher-level containers should be allowed to process the key event as well
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyUp"></a>
+<span class="DetailPropertyName">clientKeyUp</span>
+
+<dl>
+<dd>(Optional) Processes a key up event received by the client's key listeners.  
+Invoked by client based on current focused component of application.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the key event, containing (processed) charCode and keyCode properties</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if higher-level containers should be allowed to process the key event as well
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getFocusFlags"></a>
+<span class="DetailPropertyName">getFocusFlags</span>
+
+<dl>
+<dd>Returns the focus flags for the component, one or more of the following values, ORed together.
+<ul>
+ <li><code>FOCUS_PERMIT_ARROW_UP</code>: indicates that the container may change focus from the current component if
+  the up arrow key is pressed.</li>
+ <li><code>FOCUS_PERMIT_ARROW_DOWN</code>: indicates that the container may change focus from the current component if
+  the down arrow key is pressed.</li>
+ <li><code>FOCUS_PERMIT_ARROW_LEFT</code>: indicates that the container may change focus from the current component if
+  the left arrow key is pressed.</li>
+ <li><code>FOCUS_PERMIT_ARROW_RIGHT</code>: indicates that the container may change focus from the current component if
+  the right arrow key is pressed.</li>
+ <li><code>FOCUS_PERMIT_ARROW_ALL</code>: indicates that the container may change focus from the current component if
+  any arrow key is pressed (this is a shorthand for up, left, down, and right ORed together).</li>
+</ul>
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the focus flags
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getPreferredSize"></a>
+<span class="DetailPropertyName">getPreferredSize</span>
+
+<dl>
+<dd>(Optional) Returns the preferred rendered size of the component in pixels.  Certain parent
+components may query this method during <code>renderDisplay()</code> to determine
+the space provided to the child component.  If implemented, this method should return
+an object containing height and/or width properties specifying integer pixel values.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>dimension</code> 
+- the dimension to be calculated, one of the following values, or null
+       to specify that all dimensions should be calculated:
+       <ul>
+        <li><code>SIZE_WIDTH</code></li>
+        <li><code>SIZE_HEIGHT</code></li>
+       </ul></dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the preferred rendered size of the component
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isChildVisible"></a>
+<span class="DetailPropertyName">isChildVisible</span>
+
+<dl>
+<dd>(Optional) Determines if the specified child component is currently displayed.  Implementations
+should return true if the specified child component is on-screen and should have its <code>renderDisplay()</code>
+method invoked when required, or false if the component is off-screen.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>component</code> 
+- the child component</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the component should have its renderDisplay() method invoked
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderFocus"></a>
+<span class="DetailPropertyName">renderFocus</span>
+
+<dl>
+<dd>(Optional) Invoked when component is rendered focused.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderHide"></a>
+<span class="DetailPropertyName">renderHide</span>
+
+<dl>
+<dd>(Optional) Invoked when a parent/ancestor component is hiding the content of this component, possibly removing it from
+the DOM.  An parent/ancestor DOM element will automatically be removed/hidden, but the component may need to take action 
+to remove any rendered items not contained within that element.
+The renderDisplay() method will be invoked the when/if the component is displayed again.
+This method may be invoked on components which are already in a hidden state.
+This method will not necessarily be invoked prior to disposal.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>(Optional) Invoked when the component has been added (or-readded) to the hierarchy and first appears
+on screen, and when ancestors of the component (or the containing window) have
+resized.
+
+
+
+</dd>
+</dl>
+<hr/>
+
+

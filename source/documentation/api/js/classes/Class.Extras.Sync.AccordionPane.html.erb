@@ -1,0 +1,540 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync
+  </li>
+    <li class="active">
+    AccordionPane
+  </li>
+</ul>
+
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.AccordionPane">Extras.Sync.AccordionPane</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p><p>Component rendering peer: AccordionPane. This class should not be extended by developers, the implementation is subject to change.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.AccordionPane.Rotation">Extras.Sync.AccordionPane.Rotation</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.AccordionPane.Tab">Extras.Sync.AccordionPane.Tab</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.AccordionPane()</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._animationTime">_animationTime</a></code><br/>
+Tab rotation animation runtime, in milliseconds.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.div">div</a></code><br/>
+Root DIV.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._activeTabId">_activeTabId</a></code><br/>
+renderId of currently active tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._newImagesLoaded">_newImagesLoaded</a></code><br/>
+Flag indicating whether new images have been loaded, requiring a redraw/possible-resize of tabs.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._pendingRenderDisplay">_pendingRenderDisplay</a></code><br/>
+Flag indicating whether renderDisplay is scheduled to be executed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.rotation">rotation</a></code><br/>
+Animated rotation currently in progress (null when not animating).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.tabs">tabs</a></code><br/>
+Array of Extras.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.resetOverflowForAnimation">resetOverflowForAnimation</a></code><br/>
+Flag indicating whether content overflow should be set to hidden during animation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._tabSelectListenerRef">_tabSelectListenerRef</a></code><br/>
+Method reference to <code>_tabSelectListener</code> of instance.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.imageMonitorRef">imageMonitorRef</a></code><br/>
+Method reference to image load monitoring function.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._getTabById">_getTabById(tabId)</a></code><br/>
+Retrieves the tab instance with the specified tab id.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getTabHeight">getTabHeight(beginIndex, endIndex)</a></code><br/>
+Determines the height of one or more tabs.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._imageMonitor">_imageMonitor()</a></code><br/>
+Image monitor implementation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processRollover">_processRollover(e)</a></code><br/>
+Capturing Mouseover/out listener to prevent rollover effects from firing on children during transitions.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.redrawTabs">redrawTabs(notifyComponentUpdate)</a></code><br/>
+Immediately redraws tabs in the appropriate positions, exposing the content of the 
+selected tab.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplayTabs">renderDisplayTabs()</a></code><br/>
+Invokes renderDisplay() implementations on tabs.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._rotateTabs">_rotateTabs(oldTabId, newTabId)</a></code><br/>
+"Rotates" the AccordionPane to display the specified tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._selectTab">_selectTab(tabId)</a></code><br/>
+Selects a specific tab.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._tabSelectListener">_tabSelectListener(e)</a></code><br/>
+Event listener to component instance for user tab selections.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Render.ComponentSync()</span>
+
+<dl>
+<dd>Constructor.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method._getTabById"></a>
+<span class="DetailPropertyName">_getTabById</span>
+
+<dl>
+<dd>Retrieves the tab instance with the specified tab id.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>tabId</code> 
+- the tab id</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+the tab, or null if no tab is present with the specified id
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getTabHeight"></a>
+<span class="DetailPropertyName">getTabHeight</span>
+
+<dl>
+<dd>Determines the height of one or more tabs.
+
+If only beginIndex is specified, the height of the tab at index beginIndex will be returned.
+Note that if endIndex is specified, the tab at index endIndex will NOT be included in the calculation,
+that is, to measure the height of tabs 2, 3, and 4, it is necessary specify beginIndex as 2 and endIndex as 5 (not 4).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>beginIndex</code> 
+<em>(Number)</em>
+- the begin index, inclusive</dd>
+<dd>
+<code>endIndex</code> 
+<em>(Number)</em>
+- the end index, exclusive</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Number)</em>
+
+the tab height(s), in pixels
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._imageMonitor"></a>
+<span class="DetailPropertyName">_imageMonitor</span>
+
+<dl>
+<dd>Image monitor implementation.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processRollover"></a>
+<span class="DetailPropertyName">_processRollover</span>
+
+<dl>
+<dd>Capturing Mouseover/out listener to prevent rollover effects from firing on children during transitions.
+Returns false if transition present.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the rollover event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.redrawTabs"></a>
+<span class="DetailPropertyName">redrawTabs</span>
+
+<dl>
+<dd>Immediately redraws tabs in the appropriate positions, exposing the content of the 
+selected tab.  Any active animated rotation is aborted.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>notifyComponentUpdate</code> 
+<em>(Boolean)</em>
+- flag indicating whether child component should be notified to perform
+       renderDisplay() operations</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplayTabs"></a>
+<span class="DetailPropertyName">renderDisplayTabs</span>
+
+<dl>
+<dd>Invokes renderDisplay() implementations on tabs.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._rotateTabs"></a>
+<span class="DetailPropertyName">_rotateTabs</span>
+
+<dl>
+<dd>"Rotates" the AccordionPane to display the specified tab.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>oldTabId</code> 
+<em>(String)</em>
+- the currently displayed tab id</dd>
+<dd>
+<code>newTabId</code> 
+<em>(String)</em>
+- the id of the tab that will be displayed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._selectTab"></a>
+<span class="DetailPropertyName">_selectTab</span>
+
+<dl>
+<dd>Selects a specific tab.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>tabId</code> 
+<em>(String)</em>
+- the id of the tab to select</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._tabSelectListener"></a>
+<span class="DetailPropertyName">_tabSelectListener</span>
+
+<dl>
+<dd>Event listener to component instance for user tab selections.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

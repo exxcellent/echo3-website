@@ -2,10 +2,8 @@ require 'redcarpet' # Markdown parser
 
 # Reload the browser automatically whenever files change
 activate :livereload
-
+Time.zone = "Berlin"
 activate :relative_assets
-
-set :relative_links, true
 
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
@@ -14,8 +12,7 @@ set :images_dir, 'assets/img'
 # Automatically create directories with an index.html for *.html files -> pretty URLs
 activate :directory_indexes
 
-page "/api/java/*", :directory_index => false
-
+page "documentation/api/java/*", :directory_index => false
 
 # Set Markdown parser options
 set :markdown_engine, :redcarpet
@@ -23,17 +20,42 @@ set :markdown, :layout_engine => :erb,
                :tables => true, 
                :autolink => true,
                :smartypants => true
+               
 
 # Custom layouts
-page "guides*", :layout => :guides
-page "api/js*", :layout => :jsapi
-page "api/java*", :layout => :javaapi
+
+page "documentation*", :layout => :documentation
+page "documentation/guides*", :layout => :guides
+page "documentation/api/js*", :layout => :jsapi
+page "documentation/api/java*", :layout => :javaapi
+page "blog/*", :layout => :blog
+page "blog/feed.xml", :layout => false
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.summary_separator = /SUMMARY-END/ # content before this marker in blog posts can be used as summary
+end
 
 helpers do
   def active_js_accordion(current_path)
     # Extract JS namespace from URL, e.g. "Class.Echo.Foo.Bar" -> "Echo"
     current_path.split('/')[-1].split('.')[1]
   end
+
+  def partial_for(key, partial_name=nil)
+    @partial_names ||= {}
+    if partial_name
+      @partial_names[key] = partial_name
+    else
+      @partial_names[key]
+    end
+  end
+
+  def rendered_partial_for(key)
+    partial_name = partial_for(key)
+    partial(partial_name) if partial_name
+  end
+
 end
 
 

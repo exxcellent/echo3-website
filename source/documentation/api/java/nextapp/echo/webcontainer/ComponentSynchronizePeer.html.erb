@@ -1,0 +1,666 @@
+<div>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/webcontainer/ComponentInputProcessor.html" title="class in nextapp.echo.webcontainer"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/webcontainer/Connection.html" title="class in nextapp.echo.webcontainer"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/webcontainer/ComponentSynchronizePeer.html" target="_top">Frames</a></li>
+<li><a href="ComponentSynchronizePeer.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">nextapp.echo.webcontainer</div>
+<h2 title="Interface ComponentSynchronizePeer" class="title">Interface ComponentSynchronizePeer</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><a href="../../../nextapp/echo/webcontainer/AbstractComponentSynchronizePeer.html" title="class in nextapp.echo.webcontainer">AbstractComponentSynchronizePeer</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="strong">ComponentSynchronizePeer</span></pre>
+<div class="block">Peer for synchronizing the state of server-side <code>Component</code>
+ objects with their equivalent client-side instances.
+ 
+ Note about <code>Context</code>s.
+ Any context passed to any method in a <code>ComponentSynchronizePeer</code>
+ must contain the following items:
+ 
+ <ul>
+  <li><code>SerialContext</code></li>
+  <li><code>Connection</code></li>
+  <li><code>PropertyPeerFactory</code></li>
+  <li><code>UserInstance</code></li>
+ </ul></div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getClientComponentType(boolean)">getClientComponentType</a></strong>(boolean&nbsp;mode)</code>
+<div class="block">Returns the remote client component type name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Class</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getComponentClass()">getComponentClass</a></strong>()</code>
+<div class="block">Returns the <code>Class</code> of <code>Component</code>
+ supported by this peer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Class</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getEventDataClass(java.lang.String)">getEventDataClass</a></strong>(java.lang.String&nbsp;eventType)</code>
+<div class="block">Returns the <code>Class</code> of the event data that will
+ be provided by the specified event type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Iterator</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getEventTypes(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">getEventTypes</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+             <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</code>
+<div class="block">Determines the (client-side) types of events which, when fired on the client,
+ can result in immediate server notification.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Class</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getInputPropertyClass(java.lang.String)">getInputPropertyClass</a></strong>(java.lang.String&nbsp;propertyName)</code>
+<div class="block">Returns the <code>Class</code> of the specified input
+ property of the component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getOutputProperty(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String, int)">getOutputProperty</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                 <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                 java.lang.String&nbsp;propertyName,
+                 int&nbsp;propertyIndex)</code>
+<div class="block">Returns the value of a specific output property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.Iterator</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getOutputPropertyIndices(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">getOutputPropertyIndices</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                        <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                        java.lang.String&nbsp;propertyName)</code>
+<div class="block">Determines which indices of a particular property are set.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getOutputPropertyMethodName(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">getOutputPropertyMethodName</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                           <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                           java.lang.String&nbsp;propertyName)</code>
+<div class="block">Returns the name of the method that should be invoked to set the property
+ on the remote client.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.Iterator</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getOutputPropertyNames(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">getOutputPropertyNames</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                      <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</code>
+<div class="block">Returns an <code>Iterator</code> over the collection of names of all
+ output properties that should be rendered to the remote client.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Iterator</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#getUpdatedOutputPropertyNames(nextapp.echo.app.util.Context, nextapp.echo.app.Component, nextapp.echo.app.update.ServerComponentUpdate)">getUpdatedOutputPropertyNames</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                             <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                             <a href="../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update">ServerComponentUpdate</a>&nbsp;update)</code>
+<div class="block">Returns an <code>Iterator</code> over the collection of names of all
+ output properties that should be rendered to the client to complete
+ the specified <code>update</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#hasListeners(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">hasListeners</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+            <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+            java.lang.String&nbsp;clientEventType)</code>
+<div class="block">Determines if the specified component has any listeners registered of the 
+ specified event type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#hasUpdatedListeners(nextapp.echo.app.util.Context, nextapp.echo.app.Component, nextapp.echo.app.update.ServerComponentUpdate, java.lang.String)">hasUpdatedListeners</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                   <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                   <a href="../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update">ServerComponentUpdate</a>&nbsp;update,
+                   java.lang.String&nbsp;clientEventType)</code>
+<div class="block">Determines if any server-side listeners for a specific client-side event type have been
+ added or removed in the specified <code>ServerComponentUpdate</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#init(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">init</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+    <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</code>
+<div class="block">Initializes the peer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#isOutputPropertyIndexed(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">isOutputPropertyIndexed</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                       <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                       java.lang.String&nbsp;propertyName)</code>
+<div class="block">Determines if the specified output property is indexed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#isOutputPropertyReferenced(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">isOutputPropertyReferenced</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                          <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                          java.lang.String&nbsp;propertyName)</code>
+<div class="block">Determines if the specified property should be rendered-by-reference.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#processEvent(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String, java.lang.Object)">processEvent</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+            <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+            java.lang.String&nbsp;eventType,
+            java.lang.Object&nbsp;eventData)</code>
+<div class="block">Processes an event received from the client.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../nextapp/echo/webcontainer/ComponentSynchronizePeer.html#storeInputProperty(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String, int, java.lang.Object)">storeInputProperty</a></strong>(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                  <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                  java.lang.String&nbsp;propertyName,
+                  int&nbsp;propertyIndex,
+                  java.lang.Object&nbsp;newValue)</code>
+<div class="block">Processes a property update from the client.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getClientComponentType(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getClientComponentType</h4>
+<pre>java.lang.String&nbsp;getClientComponentType(boolean&nbsp;mode)</pre>
+<div class="block">Returns the remote client component type name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>mode</code> - a boolean flag indicating whether a component name (true) or style name (false) is being rendered</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the client component type name</dd></dl>
+</li>
+</ul>
+<a name="getComponentClass()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponentClass</h4>
+<pre>java.lang.Class&nbsp;getComponentClass()</pre>
+<div class="block">Returns the <code>Class</code> of <code>Component</code>
+ supported by this peer.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the <code>Class</code></dd></dl>
+</li>
+</ul>
+<a name="getEventDataClass(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEventDataClass</h4>
+<pre>java.lang.Class&nbsp;getEventDataClass(java.lang.String&nbsp;eventType)</pre>
+<div class="block">Returns the <code>Class</code> of the event data that will
+ be provided by the specified event type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>eventType</code> - the type of the event</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the event data <code>Class</code></dd></dl>
+</li>
+</ul>
+<a name="getEventTypes(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEventTypes</h4>
+<pre>java.util.Iterator&nbsp;getEventTypes(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                               <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</pre>
+<div class="block">Determines the (client-side) types of events which, when fired on the client,
+ can result in immediate server notification.
+ This method should return ALL the types of ANY such events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the <code>Component</code> being rendered</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an <code>Iterator</code> over a collection of <code>String</code>s
+         of the remote client event type names</dd></dl>
+</li>
+</ul>
+<a name="getInputPropertyClass(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInputPropertyClass</h4>
+<pre>java.lang.Class&nbsp;getInputPropertyClass(java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Returns the <code>Class</code> of the specified input
+ property of the component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propertyName</code> - the name of the property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property <code>Class</code></dd></dl>
+</li>
+</ul>
+<a name="getOutputProperty(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputProperty</h4>
+<pre>java.lang.Object&nbsp;getOutputProperty(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                                 <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                                 java.lang.String&nbsp;propertyName,
+                                 int&nbsp;propertyIndex)</pre>
+<div class="block">Returns the value of a specific output property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the <code>Component</code> being rendered</dd><dd><code>propertyName</code> - the name of the property being rendered</dd><dd><code>propertyIndex</code> - the property index (only relevant for indexed properties, -1 will
+        be provided for non-indexed properties)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property value</dd></dl>
+</li>
+</ul>
+<a name="getOutputPropertyIndices(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputPropertyIndices</h4>
+<pre>java.util.Iterator&nbsp;getOutputPropertyIndices(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                                          <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                                          java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Determines which indices of a particular property are set.
+ This method will only be invoked on properties where
+ <code>isOutputPropertyIndexed()</code> has returned true.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>propertyName</code> - the property name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an <code>Iterator</code> that returns the set indices in
+         incrementing order as <code>Integer</code>s</dd></dl>
+</li>
+</ul>
+<a name="getOutputPropertyMethodName(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputPropertyMethodName</h4>
+<pre>java.lang.String&nbsp;getOutputPropertyMethodName(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                                           <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                                           java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Returns the name of the method that should be invoked to set the property
+ on the remote client.  If null is returned, the default "setProperty()" will
+ be invoked to store the property in the remote component's style.  This
+ default behavior should be used in almost cases.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>propertyName</code> - the property name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property name</dd></dl>
+</li>
+</ul>
+<a name="getOutputPropertyNames(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputPropertyNames</h4>
+<pre>java.util.Iterator&nbsp;getOutputPropertyNames(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                                        <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</pre>
+<div class="block">Returns an <code>Iterator</code> over the collection of names of all
+ output properties that should be rendered to the remote client. Only the
+ names of properties with non-default values should be returned.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an <code>Iterator</code> of property names</dd></dl>
+</li>
+</ul>
+<a name="getUpdatedOutputPropertyNames(nextapp.echo.app.util.Context, nextapp.echo.app.Component, nextapp.echo.app.update.ServerComponentUpdate)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUpdatedOutputPropertyNames</h4>
+<pre>java.util.Iterator&nbsp;getUpdatedOutputPropertyNames(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                                               <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                                               <a href="../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update">ServerComponentUpdate</a>&nbsp;update)</pre>
+<div class="block">Returns an <code>Iterator</code> over the collection of names of all
+ output properties that should be rendered to the client to complete
+ the specified <code>update</code>.  Only the names of properties taht
+ have been updated by the <code>update</code> should be returned (including
+ those whose values have <strong>changed to null</strong>.  Client-specific
+ may be included as necessary.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>update</code> - the <code>ServerComponentUpdate</code> being rendered</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an <code>Iterator</code> of property names to update on the client</dd></dl>
+</li>
+</ul>
+<a name="hasListeners(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasListeners</h4>
+<pre>boolean&nbsp;hasListeners(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                   <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                   java.lang.String&nbsp;clientEventType)</pre>
+<div class="block">Determines if the specified component has any listeners registered of the 
+ specified event type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>clientEventType</code> - the client-side event type</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the server should be notified when the specified event type is
+         fired on the client</dd></dl>
+</li>
+</ul>
+<a name="hasUpdatedListeners(nextapp.echo.app.util.Context, nextapp.echo.app.Component, nextapp.echo.app.update.ServerComponentUpdate, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasUpdatedListeners</h4>
+<pre>boolean&nbsp;hasUpdatedListeners(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                          <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                          <a href="../../../nextapp/echo/app/update/ServerComponentUpdate.html" title="class in nextapp.echo.app.update">ServerComponentUpdate</a>&nbsp;update,
+                          java.lang.String&nbsp;clientEventType)</pre>
+<div class="block">Determines if any server-side listeners for a specific client-side event type have been
+ added or removed in the specified <code>ServerComponentUpdate</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>update</code> - the <code>ServerComponentUpdate</code> to process</dd><dd><code>clientEventType</code> - the client-side event</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if any listeners of the specified event type have been added or removed
+         on the server, thus potentially changing whether the client should or should
+         not immediately contact the server when the specified event is fired</dd></dl>
+</li>
+</ul>
+<a name="init(nextapp.echo.app.util.Context, nextapp.echo.app.Component)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>void&nbsp;init(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+        <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component)</pre>
+<div class="block">Initializes the peer.
+ This method will be invoked prior to rendering a <b>specific</b>
+ <code>Component</code> for the first time.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component being rendered</dd></dl>
+</li>
+</ul>
+<a name="isOutputPropertyIndexed(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOutputPropertyIndexed</h4>
+<pre>boolean&nbsp;isOutputPropertyIndexed(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                              <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                              java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Determines if the specified output property is indexed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>propertyName</code> - the property name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the property is indexed</dd></dl>
+</li>
+</ul>
+<a name="isOutputPropertyReferenced(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOutputPropertyReferenced</h4>
+<pre>boolean&nbsp;isOutputPropertyReferenced(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                                 <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                                 java.lang.String&nbsp;propertyName)</pre>
+<div class="block">Determines if the specified property should be rendered-by-reference.
+ Properties that are rendered-by-reference will be specified in
+ the "init" section of the outgoing server message and referenced by an identifier each time
+ they are reused by components being rendered in that server message.  This results in 
+ a bandwidth savings in cases where it is likely that the same property will be reused by
+ multiple components (and assuming the rendered property value is reasonably large).
+ The property value must implement both <code>equals()</code> and <code>hashCode()</code> or
+ the same reference must be used for reference-based rendering to be effective.
+ Rendering-by-reference is often best used for rendering model properties, e.g., a
+ <code>ListModel</code> that might be used by several listboxes on the same screen.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li>ServerMessage</li>
+        </ul></dd><dd><code>component</code> - the component</dd><dd><code>propertyName</code> - the property name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the property is rendered-by-reference</dd></dl>
+</li>
+</ul>
+<a name="processEvent(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processEvent</h4>
+<pre>void&nbsp;processEvent(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                java.lang.String&nbsp;eventType,
+                java.lang.Object&nbsp;eventData)</pre>
+<div class="block">Processes an event received from the client.
+ Implementations must take care to implement appropriate security,
+ ensuring that the client may only fire specific appropriate events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li><code>ClientMessage</code></li>
+         <li><code>ClientUpdateManager</code></li>
+        </ul></dd><dd><code>component</code> - the updated <code>Component</code></dd><dd><code>eventType</code> - the type of the event</dd><dd><code>eventData</code> - arbitrary component/event-specific event-related data</dd></dl>
+</li>
+</ul>
+<a name="storeInputProperty(nextapp.echo.app.util.Context, nextapp.echo.app.Component, java.lang.String, int, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>storeInputProperty</h4>
+<pre>void&nbsp;storeInputProperty(<a href="../../../nextapp/echo/app/util/Context.html" title="interface in nextapp.echo.app.util">Context</a>&nbsp;context,
+                      <a href="../../../nextapp/echo/app/Component.html" title="class in nextapp.echo.app">Component</a>&nbsp;component,
+                      java.lang.String&nbsp;propertyName,
+                      int&nbsp;propertyIndex,
+                      java.lang.Object&nbsp;newValue)</pre>
+<div class="block">Processes a property update from the client.
+ Implementations must take care to implement appropriate security,
+ ensuring that the client may only modify specific properties of
+ a component that are user-mutable.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the relevant <code>Context</code>, provides 
+        standard contextual information described in class description, in
+        addition to the following:
+        <ul>
+         <li><code>ClientMessage</code></li>
+         <li><code>ClientUpdateManager</code></li>
+        </ul></dd><dd><code>component</code> - the updated <code>Component</code></dd><dd><code>propertyName</code> - the name of the property</dd><dd><code>propertyIndex</code> - the index of the property 
+        (or -1 in the typical case of a non-indexed property)</dd><dd><code>newValue</code> - the new value of the property</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../nextapp/echo/webcontainer/ComponentInputProcessor.html" title="class in nextapp.echo.webcontainer"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../nextapp/echo/webcontainer/Connection.html" title="class in nextapp.echo.webcontainer"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?nextapp/echo/webcontainer/ComponentSynchronizePeer.html" target="_top">Frames</a></li>
+<li><a href="ComponentSynchronizePeer.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>

@@ -1,0 +1,601 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Sync
+  </li>
+    <li class="active">
+    TextComponent
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Echo.Sync.TextComponent">Echo.Sync.TextComponent</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.Sync.TextArea">Echo.Sync.TextArea</a></code>, <code><a href="Class.Echo.Sync.TextField">Echo.Sync.TextField</a></code></dd>
+</dl>
+
+
+
+<p><p>Component rendering peer: TextComponent. This class should not be extended by developers, the implementation is subject to change.</p><p>Note that this component has workarounds for issues with percentage-width text fields/areas in various browsers. Percentage widths are reduced based on container size and border width to ensure overall width of component meets user-set percent width specification. Workaround is also provided for Internet Explorer 6's growing textarea bug.</p></p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.input">input</a></code><br/>
+The rendered "input" element (may be a textarea).
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.container">container</a></code><br/>
+Container element which wraps the input element.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._focused">_focused</a></code><br/>
+Actual focus state of component, based on received DOM focus/blur events.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._lastProcessedValue">_lastProcessedValue</a></code><br/>
+The last processed value of the text field, i.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.percentWidth">percentWidth</a></code><br/>
+Flag indicating whether width has been set as a percentage.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._selectionStart">_selectionStart</a></code><br/>
+First index of cursor selection.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._selectionEnd">_selectionEnd</a></code><br/>
+Last index of cursor selection.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getSupportedPartialProperties">getSupportedPartialProperties()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processBlur">processBlur()</a></code><br/>
+Processes a focus blur event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processFocus">processFocus()</a></code><br/>
+Processes a focus event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.sanitizeInput">sanitizeInput()</a></code><br/>
+Invoked to ensure that input meets requirements of text field.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._renderStyle">_renderStyle()</a></code><br/>
+Renders style information: colors, borders, font, insets, etc.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._addEventHandlers">_addEventHandlers()</a></code><br/>
+Registers event handlers on the text component.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._adjustPercentWidth">_adjustPercentWidth(percentValue, reducePixels, containerPixels)</a></code><br/>
+Reduces a percentage width by a number of pixels based on the container size.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyDown">clientKeyDown()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyPress">clientKeyPress()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyUp">clientKeyUp()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processClick">_processClick()</a></code><br/>
+Processes a mouse click event.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processKeyDown">_processKeyDown(e)</a></code><br/>
+Keydown event handler to suppress input when component is inactive
+(clientKeyXXX() methods will not be invoked, even though component can potentially be focused).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processRestrictionsClear">_processRestrictionsClear()</a></code><br/>
+Event listener to process input after client input restrictions have been cleared.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._resetFocus">_resetFocus()</a></code><br/>
+Forcibly resets focus.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAddToParent">renderAddToParent(parentElement)</a></code><br/>
+Adds the input element to its parent in the DOM.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderFocus">renderFocus()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._storeSelection">_storeSelection()</a></code><br/>
+Stores the selection/cursor position within the input field.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._storeValue">_storeValue(keyEvent)</a></code><br/>
+Stores the current value of the input field, if the client will allow it.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.getSupportedPartialProperties"></a>
+<span class="DetailPropertyName">getSupportedPartialProperties</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processBlur"></a>
+<span class="DetailPropertyName">processBlur</span>
+
+<dl>
+<dd>Processes a focus blur event.
+Overriding implementations must invoke.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processFocus"></a>
+<span class="DetailPropertyName">processFocus</span>
+
+<dl>
+<dd>Processes a focus event. Notifies application of focus.
+Overriding implementations must invoke.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.sanitizeInput"></a>
+<span class="DetailPropertyName">sanitizeInput</span>
+
+<dl>
+<dd>Invoked to ensure that input meets requirements of text field.  Default implementation ensures input
+does not exceed maximum length.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._renderStyle"></a>
+<span class="DetailPropertyName">_renderStyle</span>
+
+<dl>
+<dd>Renders style information: colors, borders, font, insets, etc.
+Sets percentWidth flag.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._addEventHandlers"></a>
+<span class="DetailPropertyName">_addEventHandlers</span>
+
+<dl>
+<dd>Registers event handlers on the text component.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._adjustPercentWidth"></a>
+<span class="DetailPropertyName">_adjustPercentWidth</span>
+
+<dl>
+<dd>Reduces a percentage width by a number of pixels based on the container size.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>percentValue</code> 
+<em>(Number)</em>
+- the percent span</dd>
+<dd>
+<code>reducePixels</code> 
+<em>(Number)</em>
+- the number of pixels by which the percent span should be reduced</dd>
+<dd>
+<code>containerPixels</code> 
+<em>(Number)</em>
+- the size of the container element</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyDown"></a>
+<span class="DetailPropertyName">clientKeyDown</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyPress"></a>
+<span class="DetailPropertyName">clientKeyPress</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyUp"></a>
+<span class="DetailPropertyName">clientKeyUp</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processClick"></a>
+<span class="DetailPropertyName">_processClick</span>
+
+<dl>
+<dd>Processes a mouse click event. Notifies application of focus.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processKeyDown"></a>
+<span class="DetailPropertyName">_processKeyDown</span>
+
+<dl>
+<dd>Keydown event handler to suppress input when component is inactive
+(clientKeyXXX() methods will not be invoked, even though component can potentially be focused).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>e</code> 
+- the event</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processRestrictionsClear"></a>
+<span class="DetailPropertyName">_processRestrictionsClear</span>
+
+<dl>
+<dd>Event listener to process input after client input restrictions have been cleared.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._resetFocus"></a>
+<span class="DetailPropertyName">_resetFocus</span>
+
+<dl>
+<dd>Forcibly resets focus.  Creates hidden focusable text field, focuses it, destroys it.  Then invokes
+Echo.Render.updateFocus() to re-focus correct component.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAddToParent"></a>
+<span class="DetailPropertyName">renderAddToParent</span>
+
+<dl>
+<dd>Adds the input element to its parent in the DOM.
+Wraps the element in a special container DIV if necessary to appease Internet Explorer's various text field/area bugs,
+including percent-based text areas inducing scroll bars and the IE6 percentage width "growing" text area bug.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parentElement</code> 
+- the parent element</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderFocus"></a>
+<span class="DetailPropertyName">renderFocus</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._storeSelection"></a>
+<span class="DetailPropertyName">_storeSelection</span>
+
+<dl>
+<dd>Stores the selection/cursor position within the input field.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._storeValue"></a>
+<span class="DetailPropertyName">_storeValue</span>
+
+<dl>
+<dd>Stores the current value of the input field, if the client will allow it.
+If the client will not allow it, but the component itself is active, registers
+a restriction listener to be notified when the client is clear of input restrictions
+to store the value later.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>keyEvent</code> 
+- the user keyboard event which triggered the value storage request (optional)</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

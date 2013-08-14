@@ -4,65 +4,82 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Echo3 - Blog" />
+    
     <title><%= current_page.data.title || "Echo3 Web Framework" %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag 'metro-bootstrap' %>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+   
+    <%= stylesheet_link_tag 'bootstrap.min' %>
+    <%= stylesheet_link_tag 'echo' %>
     <%= stylesheet_link_tag 'font-awesome' %>
     <%= stylesheet_link_tag 'font-awesome-modern' %>
-
-    <%= javascript_include_tag 'jquery-1.8.0.js' %>
-    <%= javascript_include_tag 'bootstrap-tooltip.js' %>
-    <%= javascript_include_tag 'bootstrap-alert.js' %>
-    <%= javascript_include_tag 'bootstrap-button.js' %>
-    <%= javascript_include_tag 'bootstrap-carousel.js' %>
-    <%= javascript_include_tag 'bootstrap-collapse.js' %>
-    <%= javascript_include_tag 'bootstrap-dropdown.js' %>
-    <%= javascript_include_tag 'bootstrap-modal.js' %>
-    <%= javascript_include_tag 'bootstrap-popover.js' %>
-    <%= javascript_include_tag 'bootstrap-scrollspy.js' %>
-    <%= javascript_include_tag 'bootstrap-tab.js' %>
-    <%= javascript_include_tag 'bootstrap-transition.js' %>
-    <%= javascript_include_tag 'bootstrap-typeahead.js' %>
-    <%= javascript_include_tag 'jquery.validate.js' %>
-    <%= javascript_include_tag 'jquery.validate.unobtrusive.js' %>
-    <%= javascript_include_tag 'jquery.unobtrusive-ajax.js' %>
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <%= javascript_include_tag 'bootstrap.min' %>
 
     <%= yield_content :assets %>
-
+    
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <%= yield_content :head %>
 </head>
 <body class="<%= page_classes %>" data-spy="scroll" data-target=".subnav" data-offset="50" screen_capture_injected="true">
 	<div class="container">
-		<div style="color: #fff;" class="navbar">
-			<a href="/" style="background-color: #AC193D; text-shadow:none; text-decoration: none; color: white; font-size: 16pt; margin: 0; font-weight: normal; width: 214px" class="btn">About</a><a href="/demo" style="background-color: #D24726; text-shadow:none; text-decoration: none; color: white; font-size: 16pt; margin: 0; font-weight: normal; width: 214px" class="btn">Demo</a><a href="/guides" style="background-color: #008A00; text-shadow:none; text-decoration: none; color: white; font-size: 16pt; margin: 0; font-weight: normal; width: 214px" class="btn">Guides</a><a href="/api" style="background-color: #008299; text-shadow:none; text-decoration: none; color: white; font-size: 16pt; margin: 0; font-weight: normal; width: 214px" class="btn">API</a><a href="/community" style="background-color: #AC193D; text-shadow:none; text-decoration: none; color: white; font-size: 16pt; margin: 0; font-weight: normal;; width: 214px" class="btn">Community</a></div>
-		
-		<!--<div class="navbar">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</a><a class="brand" href="/">Echo3</a>
-					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<li class="<%= current_page.url == '/' ? 'active' : '' %>"><a href="/">About</a> </li>
-							<li class="<%= current_page.url == '/demo/' ? 'active' : '' %>"><a href="/demo">Demo</a> </li>
-							<li class="<%= current_page.url == '/guides/' ? 'active' : '' %>"><%= link_to 'Guides', '/guides' %> </li>
-							<li class="<%= current_page.url == '/api/' ? 'active' : '' %>"><a href="/api">API</a> </li>
-							<li class="<%= current_page.url == '/community/' ? 'active' : '' %>"><a href="/community">Community</a>
-						</ul>
+		<!-- Navbar -->
+		<div style="background: #fff" class="navbar">
+		  <a style="padding-top: 5px; margin: 0;" class="navbar-brand" href="/"><img style="height: 40px" src="/assets/img/logo-dark.png"/></a>
+		  <ul class="nav navbar-nav">
+			<li style="background-color: #094AB2"><a href="/about">about</a></li>
+			<li style="background-color: #008A00"><a href="/downloads">downloads</a></li>
+			<li style="background-color: #D24726"><a href="/demo">demo</a></li>
+			<li style="background-color: #008299"><a href="/documentation">documentation</a></li>
+			<li style="background-color: #AC193D"><a href="/community">community</a></li>
+			<li style="background-color: #D24726"><a href="/blog">blog</a></li>
+		  </ul>
+		</div>
+	
+		<!-- Content -->
+		<div class="content-wrapper">   
+		  <% sidebar = rendered_partial_for(:sidebar) || yield_content(:sidebar) %>
+		  <% if sidebar %>
+		    <div class="row">
+				<div class="col-lg-3">
+					<div id="sidebar">
+					<%= sidebar %>
 					</div>
 				</div>
+				<div class="col-lg-9">
+					<%= yield %>
+				</div>
 			</div>
+		  <% else %>
+			<%= yield %>
+		  <% end %>
 		</div>
-		-->
-	
-       <%= yield %>
 
+		<!-- Footer -->
         <footer class="footer">
 			<hr/>
-			&copy; 2013 xyz
+			<div class="row">
+				<div class="col-lg-4">
+					<small class="copyright">
+					Echo and NextApp are registered trademarks of NextApp, Inc. 
+					</small>
+				</div>
+				<div class="col-lg-4">
+					
+				</div>
+				<div class="col-lg-4 text-right">
+					<a style="color: #333; text-decoration: none" href="#echo3twitter"><i class="icon-twitter icon-modern-rounded icon-2x"></i></a>
+					<a style="color: #333; text-decoration: none" href="http://github.com/echo3"><i class="icon-github icon-modern-rounded icon-2x"></i></a>
+					<a style="color: #333; text-decoration: none" href="#googleplus"><i class="icon-google-plus icon-modern-rounded icon-2x"></i></a>
+				</div>
+			</div>
       </footer>
     </div>
 </body>

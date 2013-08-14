@@ -1,51 +1,28 @@
 ---
-title: echo3 - Demo  (Frontmatter variables for middleman, JSON or YAML)
+title: echo3 - Demo
 ---
 
-### Demo
+## Demo
 
-#### Live JS demo application (embedded as iframe)
-<iframe frameborder=0 height=800 width=100% src="demoapp/index-dev"></iframe> 
+<div style="min-height: 300px" class="tabbable"> 
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Feature showcase</a></li>
+    <li><a href="#tab2" data-toggle="tab">Custom styles</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+		<p style="margin-top: 5px">
+			<h4>Client-Side JavaScript Demo (Echo3)</h4>
+			This Echo3 client-side JavaScript demo showcases the features of the Echo3 framework.
+			This demo was written entirely using the client-side JavaScript API of Echo3, and thus does not require an application server to run.
+			<iframe frameborder=0 height=800 width=100% src="http://demo.nextapp.com/echo3csjs"></iframe> 
+		</p>
+    </div>
+    <div class="tab-pane" id="tab2">
+		<h4>Modern application style</h4>
+		Below you see a Echo demo application with flat and modern (aka metro) design elements.
+		<iframe frameborder=0 height=800 width=100% src="demoapp/index-dev"></iframe> 
+    </div>
+  </div>
+</div>
 
-This is a paragraph in markdown. It has two sentences.
-
-This is another paragraph. It also has 
-two sentences.
-
-
-#### Level-4 heading
-
-* An item in a bulleted (unordered) list
-    + A subitem, indented with 4 spaces
-* Another item in a bulleted list
-* Here's another item
-
-##### Level-5 heading
-
-* A list item
-
-    With multiple paragraphs
-
-* Another item
-
-A horizontal ruler? Why not?
-* * *
-
-*emphasis (italic)* or _emphasis (italic)_
-
-***very strong emphasis (italic and boldface)*** or ___very strong emphasis (italic and boldface)___ 
-
-Some text with `some code` inside
-
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-> "This entire paragraph of text will be enclosed in an HTML blockquote element.
-Blockquote elements are reflowable. You may arbitrarily
-wrap the text to your liking, and it will all be parsed
-into a single blockquote element."
-
-
-and a link: [Markdown](http://en.wikipedia.com/wiki/Markdown)

@@ -1,0 +1,737 @@
+
+<ul class="breadcrumb">
+    <li>
+    Extras.Sync
+  </li>
+    <li class="active">
+    Menu
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul style="padding-left: 0px">
+<li style="margin-left: 0px">Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Render.ComponentSync">Echo.Render.ComponentSync</a></code>
+</li>
+<li style="margin-left: 30px">
+<code><a href="Class.Extras.Sync.Menu">Extras.Sync.Menu</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Extras.Sync.ContextMenu">Extras.Sync.ContextMenu</a></code>, <code><a href="Class.Extras.Sync.DropDownMenu">Extras.Sync.DropDownMenu</a></code>, <code><a href="Class.Extras.Sync.MenuBarPane">Extras.Sync.MenuBarPane</a></code></dd>
+</dl>
+
+
+
+<p><p>Abstract base class for menu rendering peers. This class should not be extended by developers, the implementation is subject to change.</p></p>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th>Descendant Class Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.Menu.RenderedMenu">Extras.Sync.Menu.RenderedMenu</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Extras.Sync.Menu.RenderedMenu.FadeAnimation">Extras.Sync.Menu.RenderedMenu.FadeAnimation</a></code></td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Constructor Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a href="#Constructor">Extras.Sync.Menu()</a></code><br/>
+Constructor.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.menuModel">menuModel</a></code><br/>
+The root menu model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.stateModel">stateModel</a></code><br/>
+The menu state model.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.element">element</a></code><br/>
+The root DOM element of the rendered menu.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.activated">activated</a></code><br/>
+Flag indicating whether the menu is currently activated.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._openMenuPath">_openMenuPath</a></code><br/>
+Array containing <code>Extras.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._maskDeployed">_maskDeployed</a></code><br/>
+Flag indicating whether menu mask is deployed.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._processMaskClickRef">_processMaskClickRef</a></code><br/>
+Reference to the mask click listener.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field._overlay">_overlay</a></code><br/>
+The collection of named overlay elements (top/left/right/bottom) deployed to cover non-menu elements of the
+screen with transparent DIVs when the menu is active.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getSubMenuPosition">getSubMenuPosition(menuModel)</a></code><br/>
+Returns an object containing 'x' and 'y' properties indicating the position at 
+which a submenu should be placed.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderMain">renderMain(the)</a></code><br/>
+Renders the top level menu of the menu component (that which resides in the DOM at all times).
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.activate">activate()</a></code><br/>
+Activates the menu component.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.activateItem">activateItem(itemModel)</a></code><br/>
+Activates a menu item.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processActivation">processActivation()</a></code><br/>
+Fires an activation event in response to the menu itself being opened/activated.
+</td>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.processAction">processAction()</a></code><br/>
+Fires an action event in response to a menu option being activated.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addMenu">addMenu(menu)</a></code><br/>
+Adds a menu to the open menu path.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.addMask">addMask()</a></code><br/>
+Adds the menu mask, such that click events on elements other than the menu will be captured by the menu.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.clientKeyDown">clientKeyDown()</a></code><br/>
+Processes a key down event.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.closeAll">closeAll()</a></code><br/>
+Closes all open menus.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.closeDescendants">closeDescendants(parentMenu)</a></code><br/>
+Closes all open menus which are descendants of the specified parent menu.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.deactivate">deactivate()</a></code><br/>
+Deactivates the menu component, closing any open menus.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.isOpen">isOpen(menuModel)</a></code><br/>
+Determines if the specified menu is currently open (on-screen).
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._overlayAdd">_overlayAdd(bounds)</a></code><br/>
+Creates and adds the overlay mask elements to the screen, blocking all content except that within the specified bounds.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._overlayRemove">_overlayRemove()</a></code><br/>
+Removes the overlay mask from the screen, if present.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._openMenu">_openMenu(menuModel)</a></code><br/>
+Opens a menu.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._processMaskClick">_processMaskClick()</a></code><br/>
+Handler for clicks on the overlay mask: de-activates menu.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.removeMask">removeMask()</a></code><br/>
+Removes the menu mask.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderAdd">renderAdd()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDisplay">renderDisplay()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderDispose">renderDispose()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderFocus">renderFocus()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderHide">renderHide()</a></code><br/>
+
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.renderUpdate">renderUpdate()</a></code><br/>
+
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<tr>
+<td>Methods inherited from class Echo.Render.ComponentSync</td>
+</tr>
+<tr>
+<td>
+<code><a href="Class.Echo.Render.ComponentSync#Method.renderAdd">renderAdd</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDispose">renderDispose</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderUpdate">renderUpdate</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyDown">clientKeyDown</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyPress">clientKeyPress</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.clientKeyUp">clientKeyUp</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getFocusFlags">getFocusFlags</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.getPreferredSize">getPreferredSize</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.isChildVisible">isChildVisible</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderFocus">renderFocus</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderHide">renderHide</a></code>, <code><a href="Class.Echo.Render.ComponentSync#Method.renderDisplay">renderDisplay</a></code></td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+<a name="Constructor"></a>
+
+<strong>Constructor Detail</strong>
+
+<span class="DetailPropertyName">Echo.Render.ComponentSync()</span>
+
+<dl>
+<dd>Constructor.  Must be invoked by derivative class constructors.
+
+</dd>
+</dl>
+<hr/>
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.getSubMenuPosition"></a>
+<span class="DetailPropertyName">getSubMenuPosition</span>
+
+<dl>
+<dd>Returns an object containing 'x' and 'y' properties indicating the position at 
+which a submenu should be placed.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>menuModel</code> 
+<em>(<a href="Class.Extras.MenuModel">Extras.MenuModel</a>)</em>
+- the submenu</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderMain"></a>
+<span class="DetailPropertyName">renderMain</span>
+
+<dl>
+<dd>Renders the top level menu of the menu component (that which resides in the DOM at all times).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Update.ComponentUpdate">Echo.Update.ComponentUpdate</a>)</em>
+- hierarchy update for which the rendering is being performed</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.activate"></a>
+<span class="DetailPropertyName">activate</span>
+
+<dl>
+<dd>Activates the menu component.
+Adds rendering mask to screen, sets menu component as modal.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.activateItem"></a>
+<span class="DetailPropertyName">activateItem</span>
+
+<dl>
+<dd>Activates a menu item.  Displays submenu if item is a submenu.  Invokes menu action if item
+is a menu option.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>itemModel</code> 
+<em>(<a href="Class.Extras.ItemModel">Extras.ItemModel</a>)</em>
+- the item model to activate.</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processActivation"></a>
+<span class="DetailPropertyName">processActivation</span>
+
+<dl>
+<dd>Fires an activation event in response to the menu itself being opened/activated.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.processAction"></a>
+<span class="DetailPropertyName">processAction</span>
+
+<dl>
+<dd>Fires an action event in response to a menu option being activated.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addMenu"></a>
+<span class="DetailPropertyName">addMenu</span>
+
+<dl>
+<dd>Adds a menu to the open menu path.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>menu</code> 
+<em>(<a href="Class.Extras.MenuModel">Extras.MenuModel</a>)</em>
+- the menu to add</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.addMask"></a>
+<span class="DetailPropertyName">addMask</span>
+
+<dl>
+<dd>Adds the menu mask, such that click events on elements other than the menu will be captured by the menu.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.clientKeyDown"></a>
+<span class="DetailPropertyName">clientKeyDown</span>
+
+<dl>
+<dd>Processes a key down event.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.closeAll"></a>
+<span class="DetailPropertyName">closeAll</span>
+
+<dl>
+<dd>Closes all open menus.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.closeDescendants"></a>
+<span class="DetailPropertyName">closeDescendants</span>
+
+<dl>
+<dd>Closes all open menus which are descendants of the specified parent menu.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>parentMenu</code> 
+<em>(<a href="Class.Extras.MenuModel">Extras.MenuModel</a>)</em>
+- the parent menu</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.deactivate"></a>
+<span class="DetailPropertyName">deactivate</span>
+
+<dl>
+<dd>Deactivates the menu component, closing any open menus.
+Removes rendering mask from screen, sets menu component as non-modal.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.isOpen"></a>
+<span class="DetailPropertyName">isOpen</span>
+
+<dl>
+<dd>Determines if the specified menu is currently open (on-screen).
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>menuModel</code> 
+<em>(<a href="Class.Extras.MenuModel">Extras.MenuModel</a>)</em>
+- the menu</dd>
+</dl>
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(Boolean)</em>
+
+true if the menu is open
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._overlayAdd"></a>
+<span class="DetailPropertyName">_overlayAdd</span>
+
+<dl>
+<dd>Creates and adds the overlay mask elements to the screen, blocking all content except that within the specified bounds.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>bounds</code> 
+- an object containing the pixel bounds of the region NOT to be blocked, must provide top, left, width, and
+       height integer properties</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._overlayRemove"></a>
+<span class="DetailPropertyName">_overlayRemove</span>
+
+<dl>
+<dd>Removes the overlay mask from the screen, if present.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._openMenu"></a>
+<span class="DetailPropertyName">_openMenu</span>
+
+<dl>
+<dd>Opens a menu.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>menuModel</code> 
+<em>(<a href="Class.Extras.MenuModel">Extras.MenuModel</a>)</em>
+- the menu to open</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._processMaskClick"></a>
+<span class="DetailPropertyName">_processMaskClick</span>
+
+<dl>
+<dd>Handler for clicks on the overlay mask: de-activates menu.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.removeMask"></a>
+<span class="DetailPropertyName">removeMask</span>
+
+<dl>
+<dd>Removes the menu mask.
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderAdd"></a>
+<span class="DetailPropertyName">renderAdd</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDisplay"></a>
+<span class="DetailPropertyName">renderDisplay</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderDispose"></a>
+<span class="DetailPropertyName">renderDispose</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderFocus"></a>
+<span class="DetailPropertyName">renderFocus</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderHide"></a>
+<span class="DetailPropertyName">renderHide</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.renderUpdate"></a>
+<span class="DetailPropertyName">renderUpdate</span>
+
+<dl>
+<dd>
+
+
+
+</dd>
+</dl>
+<hr/>
+
+
