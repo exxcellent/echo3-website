@@ -1,7 +1,7 @@
 require "nokogiri"
 
-
 def index(current_package, current_class)
+  # Build a <ul> based navigation menu for the Java API JavaDoc.
   f = File.open("source/documentation/api/java/overview-frame.html.erb")
   @doc = Nokogiri::HTML(f)
   packages = "<ul class=\"nav nav-pills nav-stacked\">\n"
