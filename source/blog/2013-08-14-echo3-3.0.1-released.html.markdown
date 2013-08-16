@@ -36,5 +36,5 @@ or find us on GitHub [https://github.com/echo3](https://github.com/echo3)
 
 The download artifacts are available on our [community website](/).
 
-The latest releases <span style="font-weight:bold">Echo3 3.0.1</span>,
-<span style="font-weight:bold">Echo3 Filetransfer 3.0.2</span> and <span style="font-weight:bold">Echo3 Extras 3.0.1</span> are also available under [Maven Central](http://search.maven.org) for easy integration into Maven-compatible dependency managers.
+The latest releases **Echo3 3.0.1**,
+**Echo3 Filetransfer 3.0.2** and **Echo3 Extras 3.0.1** are also available under [Maven Central](http://search.maven.org) for easy integration into Maven-compatible dependency managers.

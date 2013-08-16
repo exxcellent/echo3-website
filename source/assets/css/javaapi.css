@@ -80,6 +80,28 @@ code {
 	color: #428BCA;
 }
 
+ul > .package {
+	padding-left: 5px;
+}
+
+ul > .type {
+	padding-left: 10px;
+}
+
+ul > .type a {
+	color: black;
+}
+
+ul > .class {
+	padding-left: 20px;
+}
+
+ul > .class a {
+	margin-left: 20px;
+	padding: 0;
+}
+
+
 pre {
 	background-color: #fff;
 	border: none;

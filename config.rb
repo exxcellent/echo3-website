@@ -30,6 +30,7 @@ activate :highlighter
 
 page "documentation*", :layout => :documentation
 page "documentation/guides*", :layout => :guides
+page "documentation/api*", :layout => :api
 page "documentation/api/js*", :layout => :jsapi
 page "documentation/api/java*", :layout => :javaapi
 page "blog/*", :layout => :blog
@@ -41,6 +42,13 @@ activate :blog do |blog|
 end
 
 helpers do
+  def javaapi_index()
+    path_prefix = "documentation/api/java/"
+    current_package = current_page.path[path_prefix.length..-1].split("/")[0..-2].join(".")
+    current_class = current_page.path.split("/")[-1].split(".")[0]
+    return index(current_package, current_class)
+  end
+  
   def active_js_accordion(current_path)
     # Extract JS namespace from URL, e.g. "Class.Echo.Foo.Bar" -> "Echo"
     current_path.split('/')[-1].split('.')[1]

@@ -5,8 +5,8 @@
 	font-size: 14pt;
 	text-align: center;
 	padding: 10px;
-	
 }
+
 .navbar-nav > li > a:hover {
 	color: white;
 }
@@ -50,10 +50,6 @@ footer {
 code {
 	color: #333;
 }
-
-
-# Code highlighting
-# source: https://gist.github.com/andrewpthorp/5134070
 
 .CodeRay .annotation { color:#007 }
 .CodeRay .attribute-name { color:#f08 }

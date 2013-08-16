@@ -1,23 +1,19 @@
 <% wrap_layout :layout do %>
 	<% content_for :assets do %>
-	  <%= stylesheet_link_tag 'javaapi' %>
+	  <%= stylesheet_link_tag 'documentation' %>
 	<% end %>
 
   <% content_for :sidebar do %>
-	 <div>
+	<div>
 		<ul style="margin-top: 15px" class="nav nav-pills nav-stacked">
 		  <li class="sidebar-head"><a href="/documentation">Documentation</a></li>
 		  <li class="sidebar-section"><a href="/documentation/guides">Developer's Guide</a></li>
 		  <li class="sidebar-section"><a href="/documentation/api">API</a></li>
 		  <li class="sidebar-subsection"><a href="/documentation/api/java">Java API</a></li>
-		</ul>
-		<%= javaapi_index %>
-		<ul class="nav nav-pills nav-stacked">
-			<li class="sidebar-subsection"><a href="/documentation/api/js">JavaScript API</a></li>
+		  <li class="sidebar-subsection"><a href="/documentation/api/js">JavaScript API</a></li>
 		</ul>
 	</div>
   <% end %>
 
   <%= yield %>
-
 <% end %>
