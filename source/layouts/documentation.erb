@@ -5,11 +5,11 @@
 
   <% content_for :sidebar do %>
 	<div>
-		<ul style="margin-top: 15px" class="nav nav-pills nav-stacked">
+		<ul class="nav nav-pills nav-stacked">
 		  <li class="sidebar-head"><a href="/documentation">Documentation</a></li>
 		  <li class="sidebar-section"><a href="/documentation/guides">Developer's Guide</a></li>
 		  <li class="sidebar-section"><a href="/documentation/api">API</a></li>
-		  <li class="sidebar-section"><a href="/documentation/articles">Articles</a></li>
+		  <li class="sidebar-section <%= current_page.path == 'documentation/articles.html' ? 'active' : ''%>"><a href="/documentation/articles">Articles</a></li>
 		</ul>
 	</div>
   <% end %>

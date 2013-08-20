@@ -27,6 +27,10 @@
 	padding-left: 10px;
 }
 
+.topNav {
+	margin-top: 15px;
+}
+
 .topNav ul {
 	padding-left: 0;
 }
@@ -97,19 +101,19 @@ code {
 }
 
 ul > .package {
-	padding-left: 5px;
+	padding-left: 20px;
 }
 
 ul > .type {
-	padding-left: 10px;
+	padding-left: 25px;
 }
 
 ul > .type a {
-	color: black;
+	color: rgb(68, 68, 68);;
 }
 
 ul > .class {
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 ul > .class a {
@@ -119,7 +123,7 @@ ul > .class a {
 
 
 pre {
-	background-color: #fff;
+	background-color: auto;
 	border: none;
 	color: #005F00;
 }

@@ -6,3 +6,23 @@ span.DetailPropertyName {
 	font-weight: bold;
 	color: #2e8bcc;
 }
+
+dl > dd > ul {
+	padding-left: 15px;
+}
+
+.sidebar-subsubsection  {
+	border: none;
+}
+
+ul.breadcrumb {
+	margin-top:15px;
+}
+
+ul.breadcrumb li.active {
+	color: #777;
+}
+
+a.accordion-toggle {
+	font-weight: bold;
+}

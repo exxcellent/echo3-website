@@ -1,0 +1,124 @@
+
+<ul class="breadcrumb">
+    <li>
+    Echo.Client
+  </li>
+    <li class="active">
+    OutdatedBrowserWarning
+  </li>
+</ul>
+
+<span class="badge badge-important">Abstract</span>
+
+<dl>
+<dt><strong>Class Hierarchy:</strong></dt>
+<dd>
+<ul>
+<li>Object</li>
+<li style="margin-left: 15px">
+<code><a href="Class.Echo.Client.OutdatedBrowserWarning">Echo.Client.OutdatedBrowserWarning</a></code>
+</li>
+</ul>
+</dd>
+</dl>
+
+<dl>
+<dt><strong>Direct Known Subclasses:</strong></dt>
+<dd>
+<code><a href="Class.Echo.Client.DefaultOutdatedBrowserWarning">Echo.Client.DefaultOutdatedBrowserWarning</a></code></dd>
+</dl>
+
+
+
+<p><p>Abstract base class for message windows about outdated browser, which is displayed when the client starts up in a browser version that is considered outdated.</p></p>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Field Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Virtual
+</td>
+<td><code><a class="PropertySummaryLink" href="#Field.dispose">dispose</a></code><br/>
+Disposes of the outdated browser warning.
+</td>
+</tr>
+</table>
+<br/>
+
+
+<table class="table">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<tr>
+<th colspan="2">Instance Method Summary</th>
+</tr>
+<tr>
+<td>
+Public
+Abstract
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.show">show(the)</a></code><br/>
+Invoked when the message window about an outdated browser
+should be shown.
+</td>
+</tr>
+</table>
+<br/>
+
+
+
+
+
+
+
+<a name="Constructor"></a>
+
+
+
+
+
+
+<div class="Header">Instance Method Detail</div>
+
+<a name="Method.show"></a>
+<span class="DetailPropertyName">show</span>
+
+<dl>
+<dd>Invoked when the message window about an outdated browser
+should be shown. The implementation should add the message
+to the DOM and provide a way to dismiss the warning message,
+if desired.
+
+<dl>
+<dt><strong>Parameters:</strong></dt>
+<dd>
+<code>the</code> 
+<em>(<a href="Class.Echo.Client">Echo.Client</a>)</em>
+- client</dd>
+</dl>
+
+
+</dd>
+</dl>
+<hr/>
+
+

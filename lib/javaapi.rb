@@ -29,7 +29,3 @@ def index(current_package, current_class)
   f.close
   return packages
 end
-
-# ::Middleman::Extensions.register(:javaapi, JavaAPI)
-
-#puts index()

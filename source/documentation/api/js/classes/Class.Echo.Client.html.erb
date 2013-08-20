@@ -13,8 +13,8 @@
 <dl>
 <dt><strong>Class Hierarchy:</strong></dt>
 <dd>
-<ul style="padding-left: 0px">
-<li style="margin-left: 0px">Object</li>
+<ul>
+<li>Object</li>
 <li style="margin-left: 15px">
 <code><a href="Class.Echo.Client">Echo.Client</a></code>
 </li>
@@ -42,7 +42,13 @@
 </thead>
 <tbody>
 <tr>
+<td><code><a class="PropertySummaryLink" href="Class.Echo.Client.DefaultOutdatedBrowserWarning">Echo.Client.DefaultOutdatedBrowserWarning</a></code></td>
+</tr>
+<tr>
 <td><code><a class="PropertySummaryLink" href="Class.Echo.Client.DefaultWaitIndicator">Echo.Client.DefaultWaitIndicator</a></code></td>
+</tr>
+<tr>
+<td><code><a class="PropertySummaryLink" href="Class.Echo.Client.OutdatedBrowserWarning">Echo.Client.OutdatedBrowserWarning</a></code></td>
 </tr>
 <tr>
 <td><code><a class="PropertySummaryLink" href="Class.Echo.Client.Timer">Echo.Client.Timer</a></code></td>
@@ -247,6 +253,14 @@ Flag indicating wait indicator is active.
 <td>
 Internal
 </td>
+<td><code><a class="PropertySummaryLink" href="#Field._outdatedBrowserWarning">_outdatedBrowserWarning</a></code><br/>
+Outdated browser warning.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
 <td><code><a class="PropertySummaryLink" href="#Field._processApplicationFocusRef">_processApplicationFocusRef</a></code><br/>
 Method reference to this.
 </td>
@@ -349,6 +363,22 @@ Configures/Deconfigures the client.
 </tr>
 <tr>
 <td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._isBrowserOutdated">_isBrowserOutdated()</a></code><br/>
+Returns whether the detected browser is considered outdated for the current echo JS client implementation.
+</td>
+</tr>
+<tr>
+<td>
+Internal
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method._showBrowserWarning">_showBrowserWarning()</a></code><br/>
+Display a warning message about an outdated browser.
+</td>
+</tr>
+<tr>
+<td>
 Public
 </td>
 <td><code><a class="PropertySummaryLink" href="#Method.createInputRestriction">createInputRestriction()</a></code><br/>
@@ -393,6 +423,14 @@ Public
 </td>
 <td><code><a class="PropertySummaryLink" href="#Method.getWaitIndicator">getWaitIndicator()</a></code><br/>
 Returns the configured wait indicator.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.getOutdatedBrowserWarning">getOutdatedBrowserWarning()</a></code><br/>
+Returns the configured outdated browser warning.
 </td>
 </tr>
 <tr>
@@ -459,6 +497,15 @@ Public
 <td><code><a class="PropertySummaryLink" href="#Method.setWaitIndicator">setWaitIndicator(waitIndicator)</a></code><br/>
 Sets the wait indicator that will be displayed when a client-server action takes longer than
 a specified period of time.
+</td>
+</tr>
+<tr>
+<td>
+Public
+</td>
+<td><code><a class="PropertySummaryLink" href="#Method.setOutdatedBrowserWarning">setOutdatedBrowserWarning()</a></code><br/>
+Set the outdated browser warning that will be displayed when the client starts in browser
+browser version that is considered outdated.
 </td>
 </tr>
 <tr>
@@ -667,6 +714,36 @@ disposed (in order to clean up resources).
 </dd>
 </dl>
 <hr/>
+<a name="Method._isBrowserOutdated"></a>
+<span class="DetailPropertyName">_isBrowserOutdated</span>
+
+<dl>
+<dd>Returns whether the detected browser is considered outdated for the current echo JS client implementation.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+
+true, if the browser is outdated - false, if the browser is unknown or supported.
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method._showBrowserWarning"></a>
+<span class="DetailPropertyName">_showBrowserWarning</span>
+
+<dl>
+<dd>Display a warning message about an outdated browser.
+
+
+
+</dd>
+</dl>
+<hr/>
 <a name="Method.createInputRestriction"></a>
 <span class="DetailPropertyName">createInputRestriction</span>
 
@@ -795,6 +872,26 @@ Internet Explorer and the CSS positioning bug in Opera.
 <em>(<a href="Class.Echo.Client.WaitIndicator">Echo.Client.WaitIndicator</a>)</em>
 
 the wait indicator
+</dd>
+
+</dl>
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.getOutdatedBrowserWarning"></a>
+<span class="DetailPropertyName">getOutdatedBrowserWarning</span>
+
+<dl>
+<dd>Returns the configured outdated browser warning.
+
+
+<dl>
+<dt><strong>Returns:</strong></dt>
+<dd>
+<em>(<a href="Class.Echo.Client.OutdatedBrowserWarning">Echo.Client.OutdatedBrowserWarning</a>)</em>
+
+the outdated browser warning
 </dd>
 
 </dl>
@@ -934,6 +1031,18 @@ a specified period of time.
 <em>(<a href="Class.Echo.Client.WaitIndicator">Echo.Client.WaitIndicator</a>)</em>
 - the new wait indicator</dd>
 </dl>
+
+
+</dd>
+</dl>
+<hr/>
+<a name="Method.setOutdatedBrowserWarning"></a>
+<span class="DetailPropertyName">setOutdatedBrowserWarning</span>
+
+<dl>
+<dd>Set the outdated browser warning that will be displayed when the client starts in browser
+browser version that is considered outdated.
+
 
 
 </dd>

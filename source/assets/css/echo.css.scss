@@ -1,14 +1,79 @@
+$text-color: rgb(68,68,68);
+$background-color: rgb(250, 250, 250);
+
+body {
+	color: $text-color;
+	background-color: $background-color;
+}
+
+i {
+  color: $text-color;
+}
+
+.btn i {
+  color: white;
+}
+
+.nav-about {
+  //background-color: #094AB2;
+}
+
+.nav-downloads {
+  //background-color: #008A00;
+}
+
+.nav-demo {
+  //background-color: #D24726;
+}
+
+.nav-documentation {
+  //background-color: #008299;
+}
+
+.nav-community {
+  //background-color: #AC193D;
+}
+
+.nav-blog {
+  //background-color: #D24726;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: $background-color;
+}
+
+.navbar .nav {
+  background-color: #2C3E50;
+}
+
+.navbar {
+	background-color: $background-color;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+a.navbar-brand {
+  background-color: #2C3E50;
+	padding: 0;
+}
+
+a.navbar-brand :hover {
+  background-color: #2C3E50;
+}
+
 .navbar-nav > li > a {
-	width: 175px;
+	width: 188px;
 	height: 40px;
 	color: white;
 	font-size: 14pt;
 	text-align: center;
 	padding: 10px;
+	transition: all 0.2s linear 0s;
 }
 
 .navbar-nav > li > a:hover {
-	color: white;
+	color: #ccc;
+	
 }
 
 .content-wrapper {
@@ -16,8 +81,6 @@
 }
 
 .jumbotron {
-	padding-top: 30px;
-	padding-bottom: 30px;
 	font-weight: normal;
 	color: white;
 	background-color: #2C3E50;
@@ -28,23 +91,97 @@ footer {
 	margin-bottom: 10px;
 }
 
-.sidebar-head {
+.sidebar {
 	background-color: #eee;
+}
+
+.sidebar .nav > li  {
+    margin-top: 0;
+}
+
+.sidebar .nav > li > a {
+    display: block;
+    padding: 5px 5px;
+    position: relative;
+}
+
+.sidebar .nav > li > a:hover {
+    display: block;
+    padding: 5px 5px;
+    position: relative;
+}
+
+.sidebar .nav .active {
+  //border-left: 3px solid orange;
+	color: $text-color;
+	background-color: #ccc;
+}
+
+.sidebar .nav .active a {
+	color: $text-color;
+	background-color: #ccc;
+}
+
+.sidebar .nav li:hover {
+  //border-left: 3px solid orange;
+	background-color: #ccc;
+}
+
+.sidebar .nav a:hover {
+	background-color: #ccc;
+}
+
+.sidebar .nav .active a:hover {
+	background-color: #ccc;
+	color: $text-color;
+
+}
+
+.sidebar .nolink > a, a:active, a:hover {
+	text-decoration: none;
+	color: $text-color;
+}
+
+.sidebar li a {
+  border-radius: 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.sidebar {
+	margin-top: 15px;
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+}
+
+.sidebar a:hover {
+	color: $text-color;
+
+}
+
+.sidebar-head {
+  padding-left: 3px;
 	font-weight: bold;
+	background-color: #eee;
+	border-bottom: 1px solid #bbb;
 }
 
 .sidebar-section {
 	font-weight: bold;
 	padding-left: 5px;
+	border-bottom: 1px solid #bbb;
 }
 
 .sidebar-subsection {
 	font-weight: bold;
 	padding-left: 10px;
+	border-bottom: 1px solid #bbb;
 }
 
 .sidebar-subsubsection {
 	padding-left: 15px;
+	border-bottom: 1px solid #bbb;
 }
 
 code {
@@ -67,7 +204,7 @@ code {
 .CodeRay .decorator { color:#B0B; }
 .CodeRay .definition { color:#099; font-weight:bold }
 .CodeRay .directive { color:#088; font-weight:bold }
-.CodeRay .delimiter { color:black }
+.CodeRay .delimiter { color:$text-color; }
 .CodeRay .doc { color:#970 }
 .CodeRay .doctype { color:#34b }
 .CodeRay .doc-string { color:#D42; font-weight:bold }
@@ -81,7 +218,7 @@ code {
 .CodeRay .hex { color:#058; font-weight:bold }
 .CodeRay .integer { color:#099; }
 .CodeRay .include { color:#B44; font-weight:bold }
-.CodeRay .inline { color: black }
+.CodeRay .inline { color: $text-color; }
 .CodeRay .inline .inline { background: #ccc }
 .CodeRay .inline .inline .inline { background: #bbb }
 .CodeRay .inline .inline-delimiter { color: #D14; }

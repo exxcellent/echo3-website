@@ -9,10 +9,10 @@ title: Blog
     <h3><%= link_to article.title, article %> &ndash; <time><%= article.date.strftime('%b %d, %Y') %></time></h3>
     <% if article.data.author %>
       <h5 class="blog-post-summary-author">
-        posted by: <%= article.data.author %>
+        <span>posted by: <%= article.data.author %></span>
       </h5>
     <% end%>
-    <%= article.summary %>
+    <p><%= article.summary %></p>
     <%= link_to "Read more...", article %>
   </article>
   

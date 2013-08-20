@@ -1,40 +1,43 @@
 <% wrap_layout :layout do %>
-  <div class="row">
-	<div class="col-lg-3">
-		<ul style="margin-top: 20px" class="nav nav-pills nav-stacked">
-		  <li>Recent blog posts</li>
+	<% content_for :assets do %>
+	  <%= stylesheet_link_tag 'blog' %>
+	<% end %>
+	
+	<% content_for :sidebar do %>
+		<ul class="nav nav-pills nav-stacked">
+		  <li class="sidebar-section nolink"><a>Recent blog posts</a></li>
 		  <% blog.articles[0...5].each do |article| %>
-			<li><a href="<%= article.url %>"><%= article.title %></a></li>
+			<li class="sidebar-subsection"><a href="<%= article.url %>"><%= article.title %></a></li>
 		  <% end %>
 		  
-		  <li>Releases</li>
+		  <li class="sidebar-section nolink"><a>Releases</a></li>
 		  <% blog.tags.each do |tag, articles| %>
 		    <% if tag == "release" %>
 				<% articles[0...5].each do |article| %>
-				<li><a href="<%= article.url %>"><%= article.title %></a></li>
+				<li class="sidebar-subsection"><a href="<%= article.url %>"><%= article.title %></a></li>
 				<% end %>
 			<% end %>
 		  <% end %>
 		</ul>
-	</div>
-	<div class="col-lg-9">
-		<% if current_article %>
-		  <article class="blog-post">
-			<h3><%= current_article.title %></h3>
-			<% if current_page.data.author %>
-			  <h5 class="blog-post-author">Posted by: <%= current_page.data.author %> &ndash; <time><%= current_article.date.strftime('%b %d, %Y') %></time></h5>
-			<% end %>
-			<% current_article.tags.each_with_index do |tag, i| %>
-				<span class="label label-info"><%= tag %></span>
-			<% end %>
-
-			<hr>
-
-			<%= yield %>
-		  </article>
-		<% else %>
-		   <%= yield %>
+	<% end %>
+	
+	<!-- Content -->	
+	<% if current_article %>
+	  <article class="blog-post">
+		<h3><%= current_article.title %></h3>
+		<% if current_page.data.author %>
+		  <h5 class="blog-post-author">Posted by: <%= current_page.data.author %> on <time><%= current_article.date.strftime('%b %d, %Y') %></time></h5>
 		<% end %>
-	</div>
-  </div>
+		<% current_article.tags.each_with_index do |tag, i| %>
+			<span class="label label-info"><%= tag %></span>
+		<% end %>
+
+		<hr>
+
+		<%= yield %>
+	  </article>
+	<% else %>
+	   <%= yield %>
+	<% end %>
+
 <% end %>
