@@ -17,9 +17,15 @@
 		  <li class="sidebar-subsection"><a href="/documentation/guides/components">Component Authoring</a></li>
 		  <li class="sidebar-section"><a href="/documentation/api">API</a></li>
 		  <li class="sidebar-section"><a href="/documentation/articles">Articles</a></li>
+		  <li class="sidebar-section"><a href="/documentation/browser-support">Browser Support</a></li>
 		</ul>
 	</div>
   <% end %>
-
+  
+  <div class="title">
+  <h2><%= current_page.data.title %></h2>
+  <a href="<%= guides_base_url() + current_page.path[0..current_page.path.rindex('.html')-1] + '.md'%>"><i alt="Edit document" title="Edit document" class="icon-pencil"></i></a>
+  <hr>
+  </div>
   <%= yield %>
 <% end %>

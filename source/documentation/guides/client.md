@@ -1,10 +1,6 @@
 ---
-title: echo3 - Guides - Client
+title: Client-Side JavaScript Applications
 ---
-
-## Client-Side JavaScript Applications
-
---------
 
 This section discusses the fundamentals of client-side application development with Echo3.
 

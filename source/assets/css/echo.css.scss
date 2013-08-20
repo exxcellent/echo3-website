@@ -4,6 +4,7 @@ $background-color: rgb(250, 250, 250);
 body {
 	color: $text-color;
 	background-color: $background-color;
+	text-rendering: optimizeLegibility;
 }
 
 i {
@@ -80,6 +81,10 @@ a.navbar-brand :hover {
 	min-height: 400px;
 }
 
+.content-wrapper > .row > .col-lg-9 h2 {
+  margin-top: 0px;  
+}
+
 .jumbotron {
 	font-weight: normal;
 	color: white;
@@ -89,10 +94,6 @@ a.navbar-brand :hover {
 footer {
 	color: #777;
 	margin-bottom: 10px;
-}
-
-.sidebar {
-	background-color: #eee;
 }
 
 .sidebar .nav > li  {
@@ -149,7 +150,8 @@ footer {
 }
 
 .sidebar {
-	margin-top: 15px;
+  background-color: #eee;
+	margin-top: 5px;
 	border-top: 1px solid #bbb;
 	border-left: 1px solid #bbb;
 	border-right: 1px solid #bbb;
@@ -187,6 +189,26 @@ footer {
 code {
 	color: #333;
 }
+
+.title h2 {
+  float: left;
+}
+
+.title hr {
+  clear: both;
+}
+
+.title a {
+  margin-top: 1em;
+  margin-right: 5px;
+  float: right;
+}
+
+.title i {
+  color: #ddd;
+  font-size: 150%;
+}
+
 
 .CodeRay .annotation { color:#007 }
 .CodeRay .attribute-name { color:#f08 }

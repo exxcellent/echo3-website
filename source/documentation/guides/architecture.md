@@ -1,10 +1,6 @@
 ---
-title: echo3 - Architectural Overview
+title: Architectural Overview
 ---
-
-## Architectural Overview
-
---------
 
 Echo is best defined as a **component-oriented** and **event-driven** framework for building web-based user interfaces.
 

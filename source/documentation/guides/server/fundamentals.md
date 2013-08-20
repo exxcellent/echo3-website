@@ -2,10 +2,6 @@
 title: Fundamentals
 ---
 
-## Fundamentals
-
---------
-
 ### Components
 
 An Echo user interface is built by assembling `Component`s into hierarchies.  A "Component" is any object which extends from the `nextapp.echo.app.Component` class, such as `Column`, `Label`, `Button`, `TextField`, or `WindowPane`.  `Component`s may have multiple child `Component`s, but only one parent `Component`.  Hierarchies are created and manipulated using the `add()` and `remove()` methods of individual `Component`s.  The following code example demonstrates the building of a hierarchy by adding two `Button`s to a `Column`:

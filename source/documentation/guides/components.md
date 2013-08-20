@@ -1,10 +1,6 @@
 ---
-title: echo3 - Component Authoring
+title: Component Authoring
 ---
-
-## Component Authoring
-
---------
 
 Echo is designed to be extended through the creation of additional components. New components can be
 built both by assembling existing low-level components together to create higher-level components,

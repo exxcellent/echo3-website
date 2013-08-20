@@ -1,3 +1,48 @@
+article h3 {
+	text-transform: uppercase;
+	margin-bottom: 2px;
+}
+
+.blog-post-author {
+	color: #444;
+	text-transform: uppercase;
+	font-size: 90%;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+
 .blog-post-summary-author {
 	color: #444;
+	text-transform: uppercase;
+	font-size: 90%;
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+.blog-post-summary time {
+	text-transform: uppercase;
+}
+
+.blog-post hr {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.blog article {
+	border-bottom: 1px solid #E0E0E0;
+	margin: 0 0 3em;
+	padding: 0 0 3em;
+}
+
+.blog article.blog-post > h3 {
+	margin-top: 2px;
+}
+
+
+.blog-post-summary:first-of-type {
+	margin-top: 2em;
+}
+
+.blog article:last-child {
+	border-bottom: medium none;
 }
