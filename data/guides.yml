@@ -1,0 +1,25 @@
+"Server-Side Java Applications":
+  url: "server"
+  sections:
+    - title: "Hello World"
+      url: "hello"
+    - title: "Fundamentals"
+      url: "fundamentals"
+      
+"Client-Side Java Applications":
+  url: "client"
+  sections:
+    - title: "Hello World"
+      url: "hello"
+      
+"Architectural Overview":
+  url: "architecture"
+  sections:
+    - title: "Modules"
+      url: "modules"
+  
+"Component Authoring":
+  url: "components"
+  
+"Browser Support":
+  url: "browser-support"

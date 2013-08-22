@@ -4,14 +4,17 @@ title: Browser Support
 
 ### Echo 3.1+
 
-Echo 3.1+ targets modern, standard-compliant browsers such as WebKit-based browsers (Google Chrome, Safari),
-Internet Explorer 9+ and Firefox.
+Echo 3.1+ targets modern, more standard-compliant browsers such as WebKit-based browsers (Google Chrome, Safari,
+Opera 15+), Internet Explorer 8+, Firefox and recent Opera versions.
 
-Beginning with Echo **3.1**, support for older browsers, especially Internet Explorer 7 and below, will be of low
-priority and eventually dropped. This is done in order to speed up development since modern browsers are usually
-much more standard-compliant and don't require individual workarounds for all kinds of rendering issues.
+Beginning with Echo **3.1**, support for older browsers, especially Internet Explorer 7 and below is of low
+priority and will eventually be dropped. This is done in order to speed up development since modern browsers 
+usually require fewer individual workarounds for all kinds of rendering issues and have support for modern
+HTML5 and CSS3 features such as WebSockets.
 
 It is highly recommended to turn on IE-edge mode, i.e. force IE to use the latest rendering engine available.
+This can be done by enabling `ServerConfiguration.IE_EDGE_MODE` for Java-based applications or by including the
+HTML meta tag `<meta http-equiv="X-UA-Compatible" content="IE=edge" />` for JavaScript-based applications.
   
 ### Echo Stable 3.0.x
   

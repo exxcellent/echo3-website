@@ -2,19 +2,20 @@ require 'redcarpet' # Markdown parser
 
 Dir['./lib/*'].each { |f| require f }
 
+Time.zone = "Berlin"
+
 # Reload the browser automatically whenever files change
 activate :livereload
-Time.zone = "Berlin"
+# make URLs to assets relative
 activate :relative_assets
+# table of contents helper for guides
+activate :toc
+# Automatically create directories with an index.html for *.html files -> pretty URLs
+activate :directory_indexes
 
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/img'
-
-# Automatically create directories with an index.html for *.html files -> pretty URLs
-activate :directory_indexes
-
-page "documentation/api/java/*", :directory_index => false
 
 # Set Markdown parser options
 set :markdown_engine, :redcarpet
@@ -22,12 +23,13 @@ set :markdown, :layout_engine => :erb,
                :fenced_code_blocks => true,
                :lax_html_blocks => true,
                :renderer => Highlighter::HighlightedHTML.new
-               
+
+# Code highlighting
 activate :highlighter
                
-
 # Custom layouts
 
+page "documentation/api/java/*", :directory_index => false
 page "documentation*", :layout => :documentation
 page "documentation/guides*", :layout => :guides
 page "documentation/api*", :layout => :api
@@ -36,6 +38,12 @@ page "documentation/api/java*", :layout => :javaapi
 page "blog/*", :layout => :blog
 page "blog/feed.xml", :layout => false
 
+# Pass in guides structure to guide layout processing
+page 'guides*', layout: :guide do
+  @guides = data.guides
+end
+
+# Blog
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.summary_separator = /SUMMARY-END/ # content before this marker in blog posts can be used as summary

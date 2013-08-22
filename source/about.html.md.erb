@@ -1,11 +1,11 @@
 ---
-title: About
+title: About Echo3
 ---
 
 ## About Echo3
 
 <blockquote>
-<p style="font-size: 14px; line-height: 20px">
+<p style="font-size: 14px; font-weight: normal; line-height: 20px">
 Echo is an open-source framework for developing rich web applications. From the 
 developer's perspective, Echo behaves as a user interface toolkit -- like Swing or 
 Eclipse SWT. 
@@ -37,6 +37,12 @@ web tier. Echo3's Java API is robust, has a low footprint (two JAR files
 with less than 1 MB) and no external dependencies other than a Java servlet
 container to deploy the application.
 
+### Two Frameworks in One
+
+Echo can be thought of as being [**two frameworks in one**](/documentation/guides/architecture):
+a client-side JavaScript framework and a server-side Java framework. If desired,
+developers can choose one of the two frameworks and create applications without ever learning the other.
+
 <div class="row">
 	<div class="col-lg-6">
 		<h3 class="text-center">Server-Side Java Development</h3>
@@ -55,8 +61,9 @@ container to deploy the application.
 		  without any server round trips. This allows to shift between Server-Side and 
 		  Client-Side Web Application paradigms.</p>
 		  
-		  <p>It also allows you to write server-side logic
-		  in the language or framework that suits you best and connect it to your GUI application by techniques such as Ajax or WebSocket.</p>
+		  <p>It also allows developers to write server-side logic
+		  in the language or framework that suits them  best and connect it to their
+		  user interface by techniques such as Ajax or WebSocket.</p>
 		  <p>
 		  	Echo3 client-side applications are written in CoreJS, a JavaScript library that helps organizing and structuring code
 		  	and enables developers to write enterprise applications in JavaScript more easily.
@@ -130,8 +137,8 @@ HelloWorldApp = Core.extend(Echo.Application, {
     <div class="tab-pane active" id="tab3">
     	<ul>
   		<li><strong>Single-Page Application:</strong>   
-		    <p>Because an Echo3 application is displayed in a single browser page that
-		    doesn't change, users get the fluid experience of traditional desktop applications.
+		    <p>Echo3 applications are displayed in a single browser page that
+		    doesn't change and so users get the fluid experience of traditional desktop applications.
 		   </li>
 		<li><strong>Reduced Bandwidth Requirements:</strong>   
 		    <p>Echo3 uses much less bandwidth than classic page-oriented applications because
@@ -208,3 +215,5 @@ HelloWorldApp = Core.extend(Echo.Application, {
  	
   </div>
 </div>
+
+

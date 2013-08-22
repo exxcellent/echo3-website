@@ -3,8 +3,8 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   xml.title "Echo3 Blog"
   xml.subtitle "Echo3 News and Updates"
   xml.id "http://echo3.echo3/echo3 TODO"
-  xml.link "href" => "http://echo3.echo3/echo3"
-  xml.link "href" => "http://echo3.echo3/echo3/feed.xml", "rel" => "self"
+  xml.link "href" => "http://echo3.echo3/echo3 TODO"
+  xml.link "href" => "http://echo3.echo3/echo3/feed.xml TODO", "rel" => "self"
   xml.updated blog.articles.first.date.to_time.iso8601
   xml.author { xml.name "Echo3" }
 
