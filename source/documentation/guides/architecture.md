@@ -18,7 +18,7 @@ host server.  A client-side Echo application can be hosted on a server with no d
 even on a CD-ROM as a series of HTML and JavaScript files.
 
 All code written in the Echo3's client-side JavaScript framework is run on the remote client browser.  Should code need
-to interact with a server, it can do so using HTTP.  As with any code that is being executed on a remote client, security
+to interact with a server, it can do so using HTTP (Ajax) or WebSocket. As with any code that is being executed on a remote client, security
 needs to be handled entirely on the server, as the remote client cannot be trusted.
 
 ### Server-Side Java Framework
