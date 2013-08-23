@@ -50,6 +50,10 @@ activate :blog do |blog|
 end
 
 helpers do
+  def archived_releases()
+    data.archived_releases
+  end
+  
   def guides_base_url()
     "https://github.com/exxcellent/echo3-website/blob/master/source/"
   end

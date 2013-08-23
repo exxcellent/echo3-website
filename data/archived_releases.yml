@@ -1,0 +1,13 @@
+archive:
+    - date: "2013-05-28"
+      version: "3.0.1 Maintenance Release"
+      zip_url: "https://github.com/echo3/echo3/releases/download/v3.0.1/echo3-3.0.1.zip"
+      tar_url: "https://github.com/echo3/echo3/archive/v3.0.1.tar.gz"
+    - date: "2013-05-17"
+      version: "3.0.0 Community Release"
+      zip_url: "https://github.com/echo3/echo3/releases/download/v3.0.0/echo3-3.0.0.zip"
+      tar_url: "https://github.com/echo3/echo3/archive/v3.0.0.tar.gz"
+    - date: "2013-02-04"
+      version: "3.0.0 Release Candidate"
+      zip_url: ""
+      tar_url: "https://github.com/echo3/echo3/archive/v3.0rc1.tar.gz"

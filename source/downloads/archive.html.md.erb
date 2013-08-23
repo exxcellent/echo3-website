@@ -5,23 +5,25 @@ title: Download archive
 ## Archived Releases
 
 This page contains non-current Echo3 releases. Visit the [download page](/downloads) to
-get the latest current release.
+get the latest current release. 
 
 <table class="table table-striped">
 	<thead>
 		<tr>
 			<th>Date</th>
 			<th>Version</th>
-			<th>ZIP Format</th>
-			<th>TAR/GZip Format</th>
+			<th>Release</th>
+			<th>Source code</th>
 		</tr>
 	</thead>
 	<tbody>
+	<% archived_releases.archive.each do |entry| %>
 		<tr>
-			<td>August 6, 2009</td>
-			<td>3.0.beta8</td>
-			<td>link</td>
-			<td>link2</td>
+			<td><%= entry.date %></td>
+			<td><%= entry.version %></td>
+			<td><a href="<%= entry.zip_url %>">zip</a></td>
+			<td><a href="<%= entry.tar_url %>">tar.gz</a></td>
 		</tr>
+	<% end %>
 	</tbody>
 </table>
