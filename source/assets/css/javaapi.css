@@ -85,6 +85,33 @@
 	border-bottom: 1px solid #ccc;
 }
 
+
+.blockListLast > li {
+	display: inline;
+}
+
+.blockListLast {
+	padding-left: 5px;
+}
+
+.blockListLast li dd {
+	padding-left: 10px;
+}
+
+.blockListLast h3 {
+	margin-top: 5px;
+}
+
+.blockListLast hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.details .blockListLast ul {
+	border-bottom: 1px solid #ccc;
+}
+
+
 .summary > ul > li > ul > li > ul {
 	padding-left: 20px;
 	padding-right: 20px;

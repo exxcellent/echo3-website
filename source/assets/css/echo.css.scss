@@ -13,7 +13,7 @@ i {
 }
 
 i:hover {
-  color: darken($text-color, 10%);
+  color: darken($text-color, 5%);
 }
 
 .btn i {
@@ -101,9 +101,17 @@ a.navbar-brand :hover {
 	background-color: #2C3E50;
 }
 
+.jumbotron a:hover, a:active {
+  color: #ccc;
+}
+
 footer {
 	color: #777;
 	margin-bottom: 10px;
+}
+
+footer a i {
+  margin-right: 7px;
 }
 
 .sidebar .nav > li  {

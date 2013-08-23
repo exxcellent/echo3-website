@@ -21,8 +21,8 @@ get the latest current release.
 		<tr>
 			<td><%= entry.date %></td>
 			<td><%= entry.version %></td>
-			<td><a href="<%= entry.zip_url %>">zip</a></td>
-			<td><a href="<%= entry.tar_url %>">tar.gz</a></td>
+			<td><% if entry.zip_url %><a href="<%= entry.zip_url %>">zip</a><% end %></td>
+			<td><% if entry.tar_url %><a href="<%= entry.tar_url %>">tar.gz</a><% end %></td>
 		</tr>
 	<% end %>
 	</tbody>

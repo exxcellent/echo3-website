@@ -9,5 +9,4 @@ archive:
       tar_url: "https://github.com/echo3/echo3/archive/v3.0.0.tar.gz"
     - date: "2013-02-04"
       version: "3.0.0 Release Candidate"
-      zip_url: ""
       tar_url: "https://github.com/echo3/echo3/archive/v3.0rc1.tar.gz"

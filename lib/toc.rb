@@ -35,7 +35,7 @@ module TOC
             </li>
         }
         
-        if chapter.sections 
+        if chapter.sections
           chapter.sections.each do |section|
             current = (chapter.url == current_url and section.url == sub_url)
             result << %Q{
