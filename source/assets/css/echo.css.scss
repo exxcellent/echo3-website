@@ -20,28 +20,60 @@ i:hover {
   color: white;
 }
 
+.nav > li > a:hover {
+  background: none;
+}
+
+.navbar .nav > li {
+  transition: all 0.2s linear 0s;
+}
+
 .nav-about {
-  //background-color: #094AB2;
+  background-color: #094AB2;
+}
+
+.nav-about:hover {
+  background-color: darken(#094AB2, 5%);
 }
 
 .nav-downloads {
-  //background-color: #008A00;
+  background-color: #008A00;
+}
+
+.nav-downloads:hover {
+  background-color: darken(#008A00, 5%);
 }
 
 .nav-demo {
-  //background-color: #D24726;
+  background-color: #D24726;
+}
+
+.nav-demo:hover {
+  background-color: darken(#D24726, 5%);
 }
 
 .nav-documentation {
-  //background-color: #008299;
+  background-color: #008299;
+}
+
+.nav-documentation:hover {
+  background-color: darken(#008299, 5%);
 }
 
 .nav-community {
-  //background-color: #AC193D;
+  background-color: #AC193D;
+}
+
+.nav-community:hover {
+  background-color: darken(#AC193D, 5%);
 }
 
 .nav-blog {
-  //background-color: #D24726;
+  background-color: #D24726;
+}
+
+.nav-blog:hover {
+  background-color: darken(#D24726, 5%);
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -49,23 +81,21 @@ i:hover {
 }
 
 .navbar .nav {
-  background-color: #2C3E50;
+  //background-color: #2C3E50;
 }
 
 .navbar {
-	background-color: #2C3E50;
+	//background-color: #2C3E50;
 	padding-left: 0;
 	padding-right: 0;
+	border: none;
 }
 
 a.navbar-brand {
-  background-color: #2C3E50;
+  //background-color: #2C3E50;
 	padding: 0;
 }
 
-a.navbar-brand :hover {
-  background-color: #2C3E50;
-}
 
 .navbar-nav > li > a {
 	width: 183px;
@@ -74,17 +104,11 @@ a.navbar-brand :hover {
 	font-size: 14pt;
 	text-align: center;
 	padding: 10px;
-	transition: all 0.2s linear 0s;
+
 }
 
 .btn {
   transition: all 0.2s linear 0s;
-}
-
-.navbar-nav > li > a:hover {
-  color: #ccc;
-	background-color: #2C3E50;
-	
 }
 
 .content-wrapper {
