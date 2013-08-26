@@ -5,16 +5,16 @@
 	
 	<% content_for :sidebar do %>
 		<ul class="nav nav-pills nav-stacked">
-		  <li class="sidebar-section"><a href="/blog">Recent blog posts</a></li>
+		  <li class="sidebar-section"><a href="<%= url_for '/blog/index.html' %>">Recent blog posts</a></li>
 		  <% blog.articles[0...5].each do |article| %>
-			<li class="sidebar-subsection"><a href="<%= article.url %>"><%= article.title %></a></li>
+			<li class="sidebar-subsection"><a href="<%= site_base_path + article.url %>"><%= article.title %></a></li>
 		  <% end %>
 		  
-		  <li class="sidebar-section"><a href="/blog/releases">Releases</a></li>
+		  <li class="sidebar-section"><a href="<%= url_for '/blog/releases.html' %>">Releases</a></li>
 		  <% blog.tags.each do |tag, articles| %>
 		    <% if tag == "release" %>
 				<% articles[0...5].each do |article| %>
-				<li class="sidebar-subsection"><a href="<%= article.url %>"><%= article.title %></a></li>
+				<li class="sidebar-subsection"><a href="<%= site_base_path + article.url %>"><%= article.title %> </a></li>
 				<% end %>
 			<% end %>
 		  <% end %>

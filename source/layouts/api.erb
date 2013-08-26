@@ -6,12 +6,12 @@
   <% content_for :sidebar do %>
 	<div>
 		<ul class="nav nav-pills nav-stacked">
-		  <li class="sidebar-head"><a href="/documentation">Documentation</a></li>
-		  <li class="sidebar-section"><a href="/documentation/guides">Developer's Guide</a></li>
-		  <li class="sidebar-section active"><a href="/documentation/api">API</a></li>
-		  <li class="sidebar-subsection"><a href="/documentation/api/java">Java API</a></li>
-		  <li class="sidebar-subsection"><a href="/documentation/api/js">JavaScript API</a></li>
-		  <li class="sidebar-section"><a href="/documentation/articles">Articles</a></li>
+		  <li class="sidebar-head"><a href="<%= url_for '/documentation.html' %>">Documentation</a></li>
+		  <li class="sidebar-section"><a href="<%= url_for '/documentation/guides.html' %>">Developer's Guide</a></li>
+		  <li class="sidebar-section active"><a href="<%= url_for '/documentation/api.html' %>">API</a></li>
+		  <li class="sidebar-subsection"><a href="<%= url_for '/documentation/api/java.html' %>">Java API</a></li>
+		  <li class="sidebar-subsection"><a href="<%= url_for '/documentation/api/js.html' %>">JavaScript API</a></li>
+		  <li class="sidebar-section"><a href="<%= url_for '/documentation/articles.html' %>">Articles</a></li>
 		</ul>
 	</div>
   <% end %>

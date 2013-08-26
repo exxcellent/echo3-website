@@ -3,49 +3,65 @@ title: Welcome to Echo3
 ---
 
 <div class="jumbotron"> 
-  <div style="float: left; width: 70%">
-  <h1>Echo3</h1>
-  <p>Empower your browser, spare your backend. Echo3 is a <a href="/downloads">free and open-source</a>, 
-  <a href="about">JavaScript-based client</a> and <a href="/about">Java-based server</a>
-  web application framework with blazing performance and simplicity.</p>
-  <p><a style="width: 100px" class="btn btn-primary" href="/about">Learn more</a> <a style="width: 100px" class="btn btn-primary" href="/downloads">Download</a></p> 
+  <div class="row">
+	  <div class="col-lg-10">
+	  <h1>Echo3</h1>
+	  </div>
+	  <div class="col-lg-2">
+		  <img style="width: 100px" src="assets/img/logo.png"/>
+	  </div>
+	  <div style="margin-top: 1em;" class="col-lg-9">
+	  	  <p>Empower your browser, spare your backend. Echo3 is a <a href="<%= url_for 'downloads.html' %>">free and open-source</a>, 
+	  <a href="<%= url_for 'about.html' %>">JavaScript-based client</a> and <a href="<%= url_for 'about.html' %>">Java-based server</a>
+	  web application framework with blazing performance and simplicity.</p>
+	  <p style="margin-top: 1em"><a style="width: 100px" class="btn btn-primary" href="about">Learn more</a> <a style="width: 100px" class="btn btn-primary" href="downloads">Download</a></p> 
+	  </div>
   </div>
-  <img style="clear: both; margin-left: 40px; width: 200px" src="/assets/img/logo.png"/>
-  <!--
-  <div style="text-align: center; clear: both">
-    <a href="https://github.com/echo3/echo3/releases/download/v3.0.2/echo3-3.0.2.zip" class="btn btn-primary btn-success">
-		<h4><i style="vertical-align: middle; padding-right: 5px" class="icon-cloud-download"></i><strong>Download</strong></h4>
-		<small><strong>Version 3.0.2, 7932 k</strong></small>
-    </a>
-  </div>
-  -->
 </div>
 
 <div class="row">
-	<div class="col-lg-4"><a style="text-decoration: none; color: #333" href="/demo">
-		<h3><i style="float:left; margin-right: 20px; vertical-align: middle" class="icon-camera icon-2x"></i></h3><h3>Demo</h3></a>
-		<small>Explore Echo's features in demo applications</small>
+	<div class="col-lg-4">
+		<div class="col-lg-2"><a style="text-decoration: none; color: #333" href="demo"><h3><i class="icon-camera icon-2x"></i></h3></a></div>
+		<div class="col-lg-10">
+			<h3>Demo</h3>
+			<small>Explore Echo's features in demo applications</small>
+		</div>
 	</div>
-	<div class="col-lg-4"><a style="text-decoration: none; color: #333" href="/documentation">
-		<h3><i style="float:left; margin-right: 20px; vertical-align: middle" class="icon-book icon-2x"></i> Developer's Guide</h3></a>
-		<small>Get started developing Echo applications</small>
+	<div class="col-lg-4">
+		<div class="col-lg-2"><a style="text-decoration: none; color: #333" href="documentation"><h3><i class="icon-book icon-2x"></i></h3></a></div>
+		<div class="col-lg-10">
+			<h3>Developer's Guide</h3>
+			<small>Get started developing Echo applications</small>
+		</div>
 	</div>
-	<div class="col-lg-4"><a style="text-decoration: none; color: #333" href="/documentation/api">
-		<h3><i style="float:left; margin-right: 20px; vertical-align: middle" class="icon-cog icon-2x"></i> API</h3></a>
-		<small>Comprehensive API documentation</small>
+	<div class="col-lg-4">
+		<div class="col-lg-2"><a style="text-decoration: none; color: #333" href="documentation/api"><h3><i class="icon-cog icon-2x"></i></h3></a></div>
+		<div class="col-lg-10">
+			<h3>API</h3>
+			<small>Comprehensive API documentation</small>
+		</div>
 	</div>
 </div>
 <div class="row" style="margin-top: 20px">
-	<div class="col-lg-4"><a style="text-decoration: none; color: #333" href="/community">
-		<h3><i style="float:left; margin-right: 20px; vertical-align: middle" class="icon-group icon-2x"></i> Community</h3></a>
-		<small>Found a problem? Want a new feature? Get involved!</small>
+	<div class="col-lg-4">
+		<div class="col-lg-2"><a style="text-decoration: none; color: #333" href="community"><h3><i class="icon-group icon-2x"></i></h3></a></div>
+		<div class="col-lg-10">
+			<h3>Community</h3>
+			<small>Found a problem? Want a new feature? Get involved!</small>
+		</div>
 	</div>
-	<div class="col-lg-4"><a style="text-decoration: none; color: #333" href="/downloads">
-		<h3><i style="float:left; margin-right: 20px; vertical-align: middle" class="icon-cloud-download icon-2x"></i> Downloads</h3></a>
-		<small>Start developing now!</small>
+	<div class="col-lg-4">
+		<div class="col-lg-2"><a style="text-decoration: none; color: #333" href="downloads"><h3><i class="icon-cloud-download icon-2x"></i></h3></a></div>
+		<div class="col-lg-10">
+			<h3>Downloads</h3>
+			<small>Start developing now!</small>
+		</div>
 	</div>
-	<div class="col-lg-4"><a style="text-decoration: none; color: #333" href="/blog">
-		<h3><i style="float:left; margin-right: 20px; vertical-align: middle" class="icon-pencil icon-2x"></i> Blog</h3></a>
-		<small>Read news and articles about Echo!</small>
+	<div class="col-lg-4">
+		<div class="col-lg-2"><a style="text-decoration: none; color: #333" href="blog"><h3><i class="icon-pencil icon-2x"></i></h3></a></div>
+		<div class="col-lg-10">
+			<h3>Blog</h3>
+			<small>Read news and articles about Echo</small>
+		</div>
 	</div>
 </div>

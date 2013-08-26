@@ -28,6 +28,7 @@ Single repository with common testapp, CI etc. for components developed by the c
 			<th>Peer review</th>
 		</tr>
 	</thead>
+	<tbody>
 		<tr>
 			<td>Value Slider</td>
 			<td>Value, Min/Max Range</td>
@@ -37,6 +38,5 @@ Single repository with common testapp, CI etc. for components developed by the c
 			<td>Stable, needs some formatting though</td>
 			<td>Not yet</td>
 		</tr>
-	<tbody>
 	</tbody>
 </table>

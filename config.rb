@@ -13,6 +13,8 @@ activate :toc
 # Automatically create directories with an index.html for *.html files -> pretty URLs
 activate :directory_indexes
 
+set :relative_links, true
+
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/img'
@@ -45,11 +47,15 @@ end
 
 # Blog
 activate :blog do |blog|
-  blog.prefix = "blog"
+  blog.prefix = "/blog"
   blog.summary_separator = /SUMMARY-END/ # content before this marker in blog posts can be used as summary
 end
 
 helpers do
+  def site_base_path()
+    '/echo'
+  end
+  
   def archived_releases()
     data.archived_releases
   end

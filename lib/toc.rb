@@ -19,7 +19,7 @@ module TOC
   module Helpers
     def index_for(data)
       result = ''
-      
+
       request_path_splits = request.path.split('/')
 
       current_url = request_path_splits[2]
@@ -29,18 +29,23 @@ module TOC
         
       data.each_entry do |chapter_name, chapter|
         current = (chapter.url == current_url and not sub_url)
+        
+        url = url_for '/documentation/guides/' + chapter.url + '.html'
+        
         result << %Q{
           <li class="sidebar-subsection #{current ? 'active' : ''}">
-            <a href="/documentation/guides/#{chapter.url}">#{chapter_name}</a>
+            <a href="#{url}">#{chapter_name}</a>
             </li>
         }
         
         if chapter.sections
           chapter.sections.each do |section|
             current = (chapter.url == current_url and section.url == sub_url)
+            url = url_for '/documentation/guides/' + chapter.url + '/' + section.url + '.html'
+            
             result << %Q{
               <li class="sidebar-subsubsection #{current ? 'active' : ''}">
-                <a href="/documentation/guides/#{chapter.url}/#{section.url}">#{section.title}</a>
+                <a href="#{url}">#{section.title}</a>
                 </li>
             }
           end

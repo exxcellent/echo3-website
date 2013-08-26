@@ -31,5 +31,5 @@ for client-side JavaScript.  We recommend reading both, but feel free to read th
 
 #### Available guides
 
-* [Server-Side Java Applications](/documentation/guides/server)
-* [Client-Side Java Applications](/documentation/guides/server)
+* [Server-Side Java Applications](<%= url_for '/documentation/guides/server.html' %>)
+* [Client-Side Java Applications](<%= url_for '/documentation/guides/server.html' %>)
