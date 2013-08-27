@@ -12,14 +12,10 @@
     
     <!-- CSS -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>   
-    <%= stylesheet_link_tag 'bootstrap.min' %>
-    <%= stylesheet_link_tag 'echo' %>
-    <%= stylesheet_link_tag 'font-awesome' %>
-    <%= stylesheet_link_tag 'font-awesome-modern' %>
-    
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <%= javascript_include_tag 'bootstrap.min' %>
+    <%= stylesheet_link_tag 'bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'echo.css' %>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'font-awesome-modern.css' %>
 
 	<!-- Site-specific assets -->
     <%= yield_content :assets %>
@@ -87,5 +83,9 @@
 			</div>
       </footer>
    </div>
+   
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -16,7 +16,12 @@ title: Blog - Releases
 	        <span>posted by: <%= article.data.author %></span>
 	      </h5>
 	    <% end%>
-	    <p><%= article.summary %></p>
+	        <div class="blog-tags">
+	    <% article.tags.each_with_index do |tag, i| %>
+				<span class="label label-info"><%= tag %></span>
+		<% end %>
+		</div>
+	    <p class="blog-summary"><%= article.summary %></p>
 	    <%= link_to "Read more...", article %>
 	  </article>
 	  <% end %>

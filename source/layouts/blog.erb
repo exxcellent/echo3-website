@@ -28,10 +28,11 @@
 		<% if current_page.data.author %>
 		  <h5 class="blog-post-author">Posted by: <%= current_page.data.author %> on <time><%= current_article.date.strftime('%b %d, %Y') %></time></h5>
 		<% end %>
+		<div class="blog-tags">
 		<% current_article.tags.each_with_index do |tag, i| %>
 			<span class="label label-info"><%= tag %></span>
 		<% end %>
-
+		</div>
 		<hr>
 
 		<%= yield %>

@@ -11,12 +11,15 @@ article h3 {
 	margin-bottom: 0.5em;
 }
 
+.blog-summary {
+	margin-top: 2em;
+}
+
 .blog-post-summary-author {
 	color: #444;
 	text-transform: uppercase;
 	font-size: 90%;
 	margin-top: 0;
-	margin-bottom: 2em;
 }
 
 .blog-post-summary time {
