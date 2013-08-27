@@ -9,7 +9,7 @@ def index(current_package, current_class)
     package_path = a.xpath("@href").text().split("/")[0..-2].join("/")
     package = a.xpath("@href").text().split("/")[0..-2].join(".")
     if current_page.path.end_with?("api/java.html")
-      url = 'java/' + package_path + "/package-summary.html"
+      url = package_path + "/package-summary.html"
     else
       url = url_for("/documentation/api/java/" + package_path + "/package-summary.html")
     end

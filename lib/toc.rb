@@ -30,7 +30,7 @@ module TOC
       data.each_entry do |chapter_name, chapter|
         current = (chapter.url == current_url and not sub_url)
         
-        url = url_for '/documentation/guides/' + chapter.url
+        url = url_for '/documentation/guides/' + chapter.url + '.html'
         
         result << %Q{
           <li class="sidebar-subsection #{current ? 'active' : ''}">
@@ -41,7 +41,7 @@ module TOC
         if chapter.sections
           chapter.sections.each do |section|
             current = (chapter.url == current_url and section.url == sub_url)
-            url = url_for '/documentation/guides/' + chapter.url + '/' + section.url
+            url = url_for '/documentation/guides/' + chapter.url + '/' + section.url + '.html'
             
             result << %Q{
               <li class="sidebar-subsubsection #{current ? 'active' : ''}">

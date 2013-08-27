@@ -22,5 +22,5 @@ If you are not familiar with any of these tools, we recommend looking to the fol
 
 **Content**
 
-* [Hello World](hello)
-* [Fundamentals](fundamentals)
+* [Hello World](hello/)
+* [Fundamentals](fundamentals/)
