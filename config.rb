@@ -31,12 +31,12 @@ activate :highlighter
                
 # Custom layouts
 
-page "documentation/api/java/*", :directory_index => false
 page "documentation*", :layout => :documentation
 page "documentation/guides*", :layout => :guides
 page "documentation/api*", :layout => :api
 page "documentation/api/js*", :layout => :jsapi
-page "documentation/api/java*", :layout => :javaapi
+page "documentation/api/java.html", :layout => :javaapi
+page "documentation/api/java/*", :layout => :javaapi, :directory_index => false
 page "blog/*", :layout => :blog
 page "blog/feed.xml", :layout => false
 

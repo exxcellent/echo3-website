@@ -2,6 +2,10 @@
 title: Welcome to Echo3
 ---
 
+	<% content_for :assets do %>
+	  <%= stylesheet_link_tag 'blog' %>
+	<% end %>
+
 <div class="jumbotron"> 
   <div class="row">
 	  <div class="col-lg-10">
@@ -65,3 +69,81 @@ title: Welcome to Echo3
 		</div>
 	</div>
 </div>
+
+<h3 style="margin-top: 2em; margin-bottom: 1.5em" class="text-center">Companies & Projects Using Echo3</h3>
+
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+</div>
+
+<h3></h3>
+
+<div  class="row">
+  <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="assets/img/logo-dark.png" alt="...">
+    </a>
+  </div>
+</div>
+
+<h3 style="margin-top: 2em"></h3>
+
+<div class="row">
+	<div class="col-lg-7">
+		<h3 class="text-center">From the Blog</h3>
+		<% blog.articles[0...3].each_with_index do |article, i| %>
+		<article class="blog-post-summary">
+		    <h3><%= link_to article.title, article %></h3>
+		    		<% if article.data.author %>
+			  <h5 class="blog-post-author"><time><%= article.date.strftime('%b %d, %Y') %></time></h5>
+			<% end %>
+
+		    <p class="blog-summary"><%= article.summary %></p>
+		    <%= link_to "Read more...", article %>
+		</article>
+		<% end %>
+	</div>
+	<div class="col-lg-1"></div>
+	<div class="col-lg-4">
+		<h3 class="text-center">Latest tweets</h3>
+		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ceari1" data-tweet-limit="3" data-widget-id="372284149135982593" data-chrome="noscrollbar noheader transparent">Tweets by @ceari1</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+</div>
+
+
+
