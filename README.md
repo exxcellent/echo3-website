@@ -31,7 +31,7 @@ which starts a web server at [http://localhost:4567/](http://localhost:4567/)
 To build the static version of the website for deployment run
 
     bundle exec middleman build
-    
+ 
 Overview
 --------
 
@@ -41,3 +41,5 @@ Overview
   lib/javaapi.rb
 * The JavaScript documentation is generated using a modified CoreDoc output formatter. The navigation  
   is currently created more or less manually by modifying documentation/api/js/_Navigation.html.erb
+* Bootstrap customizer with settings used: [http://getbootstrap.com/customize/?id=6350366](http://getbootstrap.com/customize/?id=6350366)
+
