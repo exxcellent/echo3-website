@@ -31,6 +31,7 @@ activate :highlighter
                
 # Custom layouts
 
+page "demoapp/*", :directory_index => false
 page "documentation*", :layout => :documentation
 page "documentation/guides*", :layout => :guides
 page "documentation/api*", :layout => :api
@@ -63,7 +64,7 @@ helpers do
   def guides_base_url()
     "https://github.com/exxcellent/echo3-website/blob/master/source/"
   end
-  
+
   def javaapi_index()
     path_prefix = "documentation/api/java/"
     current_package = current_page.path[path_prefix.length..-1].split("/")[0..-2].join(".")

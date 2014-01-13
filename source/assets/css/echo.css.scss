@@ -20,6 +20,8 @@ i:hover {
   color: white;
 }
 
+// Navigation bar styling
+
 .nav > li > a:hover {
   background: none;
 }
@@ -96,7 +98,6 @@ a.navbar-brand {
 	padding: 0;
 }
 
-
 .navbar-nav > li > a {
 	width: 183px;
 	//height: 40px;
@@ -104,8 +105,9 @@ a.navbar-brand {
 	font-size: 14pt;
 	text-align: center;
 	padding: 10px;
-
 }
+
+// General styling
 
 .btn {
   transition: all 0.2s linear 0s;
@@ -137,6 +139,8 @@ footer {
 footer a i {
   margin-right: 7px;
 }
+
+// Sidebar styling
 
 .sidebar .nav > li  {
     margin-top: 0;
@@ -236,6 +240,8 @@ code {
 	color: #333;
 }
 
+// Guides page title and edit link styling
+
 .title h2 {
   float: left;
 }
@@ -260,6 +266,7 @@ code {
   transition: all 0.3s linear 0s;
 }
 
+// Code styling
 
 .CodeRay .annotation { color:#007 }
 .CodeRay .attribute-name { color:#f08 }
